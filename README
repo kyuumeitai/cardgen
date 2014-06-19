@@ -21,6 +21,7 @@ misc\import\mwsToLand.bat: Rebuilds a data\cards-language.csv file from an MWS m
 ------------
 
 The card database for the utility exists in "data/cards.csv". This CSV file is not a decklist, rather it holds all the data about every MTG card. This file can be modified or replaced, allowing you to generate cards with your own content.
+The images are loaded from the internet, specifically mtgimage.com.  The config/config.txt file reflects this and can be updated if you have a different url.
 
 ------------
 
