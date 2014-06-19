@@ -101,7 +101,7 @@ class ArtDB {
 		} else {
 			if ($config['art.debug']) echo "\n";
 			foreach ($this->setDB->getAbbrevs($set) as $abbrev) {
-				$fileName = $this->findImage($this->root . '/' . $abbrev . '/', $name, $pic);
+				$fileName = $this->findImage($this->root . '/', $name, $pic);
 				if ($fileName)
 					break;
 			}
@@ -128,24 +128,24 @@ class ArtDB {
 				$fileNameLowercase = $path . strtolower($name) . str_replace('%', $pic, $pattern) . $this->ext;
 				if ($config['art.debug']) {
 					echo "Looking for art: $fileName";
-					if (file_exists($fileName)) echo ' *found*';
-					elseif (file_exists($fileNameLowercase)) echo ' *found*';
+					if (url_validate($fileName)) echo ' *found*';
+					elseif (url_validate($fileNameLowercase)) echo ' *found*';
 					echo "\n";
 				}
-				if (file_exists($fileName)) return $fileName;
-				elseif (file_exists($fileNameLowercase)) return $fileNameLowercase;
+				if (url_validate($fileName)) return $fileName;
+				elseif (url_validate($fileNameLowercase)) return $fileNameLowercase;
 			}
 		} else {
 			$fileName = $path . $name . $this->ext;
 			$fileNameLowercase = $path . strtolower($name) . $this->ext;
 			if ($config['art.debug']) {
 				echo "Looking for art: $fileName";
-				if (file_exists($fileName)) echo ' *found*';
-				elseif (file_exists($fileNameLowercase)) echo ' *found*';
+				if (url_validate($fileName)) echo ' *found*';
+				elseif (url_validate($fileNameLowercase)) echo ' *found*';
 				echo "\n";
 			}
-			if (file_exists($fileName)) return $fileName;
-			elseif (file_exists($fileNameLowercase)) return $fileNameLowercase;
+			if (url_validate($fileName)) return $fileName;
+			elseif (url_validate($fileNameLowercase)) return $fileNameLowercase;
 		}
 		return null;
 	}
@@ -157,10 +157,10 @@ class ArtDB {
 		$fileName = $path . $name . $this->ext;
 		if ($config['art.debug']) {
 			echo "\nLooking for art: $fileName";
-			if (file_exists($fileName)) echo ' *found*';
+			if (url_validate($fileName)) echo ' *found*';
 			echo "\n";
 		}
-		if (file_exists($fileName)) $images[$fileName] = true;
+		if (url_validate($fileName)) $images[$fileName] = true;
 
 		// Find all images with picture numbers.
 		$i = 1;

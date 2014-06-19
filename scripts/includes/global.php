@@ -259,4 +259,50 @@ function fopen_utf8 ($filename, $mode) {
 	if ($bom != "\xEF\xBB\xBF") rewind($file);
 	return $file;
 }
+
+function url_validate( $link )
+    {        
+        $url_parts = @parse_url( $link );
+
+        if ( empty( $url_parts["host"] ) ) return( false );
+
+        if ( !empty( $url_parts["path"] ) )
+        {
+            $documentpath = $url_parts["path"];
+        }
+        else
+        {
+            $documentpath = "/";
+        }
+
+        if ( !empty( $url_parts["query"] ) )
+        {
+            $documentpath .= "?" . $url_parts["query"];
+        }
+
+        $host = $url_parts["host"];
+        $port = 80;
+        // Now (HTTP-)GET $documentpath at $host";
+
+        if (empty( $port ) ) $port = "80";
+        $socket = @fsockopen( $host, $port, $errno, $errstr, 30 );
+        if (!$socket)
+        {
+            return(false);
+        }
+        else
+        {
+            fwrite ($socket, "HEAD ".$documentpath." HTTP/1.0\r\nHost: $host\r\n\r\n");
+            $http_response = fgets( $socket, 22 );
+            
+            if ( ereg("200 OK", $http_response, $regs ) )
+            {
+                return(true);
+                fclose( $socket );
+            } else
+            {
+                return(false);
+            }
+        }
+    }
 ?>

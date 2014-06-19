@@ -63,7 +63,7 @@ output.card.offsets.y =
 [cropped art]
 art.random = 0
 art.keep.aspect.ratio = 1
-art.directory = f:\mtg\pics
-art.extension = jpg
+art.directory = http://mtgimage.com/card/
+art.extension = crop.hq.jpg
 art.error.when.missing = 0
 art.debug = 0
