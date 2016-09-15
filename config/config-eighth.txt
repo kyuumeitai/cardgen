@@ -56,6 +56,19 @@ font.text.japanese = 22, mtgrulej.ttf, leading:28, color:255,255,255 shadow:true
 font.pt = 36, MatrixBoldSmallCaps.ttf>GaramondB.ttf, centerY:true centerX:true
 font.promo.text.type = 8, GothamMedium.ttf
 
+[fonts - mgdnyxpromo]
+font.title = 35, MatrixB.ttf/MatrixBI.ttf>GaramondB.ttf/GaramondBI.ttf
+font.title.russian = 35, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf>MatrixB.ttf/MatrixBI.ttf
+font.title.japanese = 35, mtgnamej.ttf
+font.type = 30, MatrixB.ttf>GaramondB.ttf, color:255,255,255 shadow:true
+font.type.russian = 30, MinionPro-BoldCn.ttf, color:255,255,255 shadow:true
+font.type.japanese = 30, mtgnamej.ttf, color:255,255,255 shadow:true
+font.text = 28, MPlantin.ttf/MPlantinI.ttf, leading:28, color:255,255,255 shadow:true
+font.text.russian = 28, MinionPro-Cn.ttf/MinionPro-CnItalic.ttf, leading:28, color:255,255,255 shadow:true
+font.text.japanese = 22, mtgrulej.ttf, leading:28, color:255,255,255 shadow:true
+font.pt = 36, MatrixBoldSmallCaps.ttf>GaramondB.ttf, centerY:true centerX:true
+font.promo.text.type = 8, GothamMedium.ttf
+
 [fonts - mgdnotypepromo]
 font.title = 35, MatrixB.ttf/MatrixBI.ttf>GaramondB.ttf/GaramondBI.ttf
 font.title.russian = 35, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf>MatrixB.ttf/MatrixBI.ttf
@@ -313,6 +326,20 @@ text.bottom = 956
 text.right = 687
 
 [layout - mgdpromo]
+art.left = 22
+art.bottom = 962
+art.right = 732
+type.y = 707
+rarity.center.y = 695
+text.top = 742
+text.left = 50
+text.bottom = 956
+text.right = 687
+
+[layout - mgdnyxpromo]
+title.y = 84
+cost.top = 50
+cost.top.dual = 49
 art.left = 22
 art.bottom = 962
 art.right = 732

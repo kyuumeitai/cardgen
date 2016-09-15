@@ -108,10 +108,11 @@ class CardDB {
 							foreach ($cards as $card) {
 								if ($card->set == $setDB->normalize($row[1]) && @$card->pic == @$row[3]) {
 									$card->flavor = $row[2];
-									if (!@$this->titleToLocalizedFlavors[$title]) $this->titleToLocalizedFlavors[$title] = array(); // Add flavor to localized flavors for possible randomization..
-									$this->titleToLocalizedFlavors[(string)$title][] = $card;
-									break;
+									if (!@$this->titleToLocalizedFlavors[$englishTitle]) $this->titleToLocalizedFlavors[$title] = array(); // Add flavor to localized flavors for possible randomization..
+									$this->titleToLocalizedFlavors[(string)$englishTitle][] = $card->flavor;
+									continue;
 								}
+								
 							}
 						}
 						fclose($file);
@@ -303,7 +304,7 @@ class CardDB {
 			}
 		} else if ($config["card.localized.flavor.random"] && ($language && $language != 'english')) {
 			// Pick a localized flavor text that hasn't been picked yet.
-			$flavors = @$this->titleToLocalizedFlavors[(string)$card->title];
+			$flavors = @$this->titleToLocalizedFlavors[(string)strtolower($card->title)];
 			if (!$flavors || count($flavors) == 0) {
 				$cardWithSameTitle = @$this->titleToCards[(string)strtolower($card->title)];
 				foreach ($cardWithSameTitle as $cardWithSameTitle)

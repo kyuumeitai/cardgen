@@ -8,7 +8,7 @@ cardgen.error.log = cardgen_errors.txt
 [card generation]
 card.set.random = 1
 card.flavor.random = 0
-card.localized.flavor.random = 1
+card.localized.flavor.random = 0
 card.larger.regular.symbols = 0
 card.old.tap.symbol = 1
 card.original.tap.symbol.sets = LEA,LEB,2ED,3ED,ATQ,ARN,DRK,FEM
@@ -64,7 +64,7 @@ decklist.ignore.picture.numbers = 0
 output.directory = output/
 output.suffix = .full
 output.extension = jpg
-output.language = french
+output.language = ;
 output.english.flavor.text = 0
 output.english.title.on.translated.card = 0
 output.clean = 1

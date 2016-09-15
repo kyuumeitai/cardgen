@@ -56,6 +56,7 @@ class EighthRenderer extends CardRenderer {
 		case "fuse-left": $useMulticolorFrame = true; break;
 		case "fuse-right": $useMulticolorFrame = true; break;
 		case "mgdpromo": $useMulticolorFrame = true; break;
+		case "mgdnyxpromo": $useMulticolorFrame = true; break;
 		case "mgdnotypepromo": $useMulticolorFrame = true; break;
 		}
 
@@ -166,7 +167,7 @@ class EighthRenderer extends CardRenderer {
 				$bgImage = @imagecreatefrompng("images/eighth/$frameDir/cards/" . $card->color . '.png');
 				if (!$bgImage) error('Background image not found for color "' . $card->color . '" in frame dir: ' . $frameDir);
 				// Border image.
-				if (strlen($costColors) == 2 && $settings['card.multicolor.dual.borders'] && $frameDir != 'mgdpromo'&& $frameDir != 'mgdnotypepromo')
+				if (strlen($costColors) == 2 && $settings['card.multicolor.dual.borders'] && $frameDir != 'mgdpromo'&&$frameDir != 'mgdnyxpromo'&& $frameDir != 'mgdnotypepromo')
 					$borderImage = @imagecreatefrompng("images/eighth/$frameDir/borders/$costColors.png");
 			}
 		}
@@ -433,7 +434,7 @@ class EighthRenderer extends CardRenderer {
 		}
 
 		// Guild sign.
-		if ($card->set == "DIS"||$card->set == "GPT"||$card->set == "RAV"||$card->set == "RTR"||$card->set == "GTC"||$card->set == "DGM"||in_array($card->set,$promoset) && ($frameDir != 'mgdpromo'||$frameDir != 'mpr'||$frameDir != 'mgdnotypepromo') && $card->getDisplaySet() != 'IDW') {
+		if ($card->set == "DIS"||$card->set == "GPT"||$card->set == "RAV"||$card->set == "RTR"||$card->set == "GTC"||$card->set == "DGM"||in_array($card->set,$promoset) && ($frameDir != 'mgdpromo'||$frameDir != 'mgdnyxpromo'||$frameDir != 'mpr'||$frameDir != 'mgdnotypepromo') && $card->getDisplaySet() != 'IDW') {
 			if ($guild = $this->getGuild($card->title)) {
 				list($image, $width, $height) = getPNG("images/watermarks/guilds/$guild.png", "Guild image not found for: $guild");
 				if ($titleToFuse = $this->getFuse($card->title)) {
@@ -475,7 +476,7 @@ class EighthRenderer extends CardRenderer {
 		}
 		
 		// Clan sign.
-		if($card->set == "KTK"||$card->set == "FRF"||$card->set == "DTK"||in_array($card->set,$promoset) && ($frameDir != 'mgdpromo'||$frameDir != 'mpr'||$frameDir != 'mgdnotypepromo') && $card->getDisplaySet() != 'IDW') {
+		if($card->set == "KTK"||$card->set == "FRF"||$card->set == "DTK"||in_array($card->set,$promoset) && ($frameDir != 'mgdpromo'||$frameDir != 'mgdnyxpromo'||$frameDir != 'mpr'||$frameDir != 'mgdnotypepromo') && $card->getDisplaySet() != 'IDW') {
 			if ($clan = $this->getClan($card->title)) {
 				list($image, $width, $height) = getPNG("images/watermarks/clans/$clan.png", "Clan image not found for: $clan");
 				imagecopy($canvas, $image, 373 - ($width / 2), 652, 0, 0, $width, $height);
@@ -495,7 +496,7 @@ class EighthRenderer extends CardRenderer {
 		}
 
 		// Phyrexia/Mirran sign.
-		if($card->set == "SOM"||$card->set == "MBS"||$card->set == "NPH"||in_array($card->set,$promoset) && ($frameDir != 'mgdpromo'||$frameDir != 'mpr'||$frameDir != 'mgdnotypepromo') && $card->getDisplaySet() != 'IDW') {
+		if($card->set == "SOM"||$card->set == "MBS"||$card->set == "NPH"||in_array($card->set,$promoset) && ($frameDir != 'mgdpromo'||$frameDir != 'mgdnyxpromo'||$frameDir != 'mpr'||$frameDir != 'mgdnotypepromo') && $card->getDisplaySet() != 'IDW') {
 			if ($phyrexia = $this->getPhyrexia($card->title)) {
 				list($image, $width, $height) = getPNG("images/watermarks/phyrexia/$phyrexia.png", "Phyrexia/Mirran image not found for: $phyrexia");
 				imagecopy($canvas, $image, 373 - ($width / 2), 652, 0, 0, $width, $height);
@@ -706,8 +707,10 @@ class EighthRenderer extends CardRenderer {
 		if ($frameDir == 'futureshiftedcreature' && in_array($set, $futureshifted) === FALSE) $frameDir = "regular";
 		if ($frameDir == 'futureshiftedtextless' && in_array($set, $futureshifted) === FALSE) $frameDir = "regular";
 		if ($frameDir == 'fuse-' && in_array($set, $fuse) === FALSE) $frameDir = "regular";
+		if ($frameDir == 'nyxstars' && in_array($set, $gameday) !== FALSE) $frameDir = "mgdnyxpromo";
 		if ($frameDir == 'nyxstars' && in_array($set, $nyxstars) === FALSE) $frameDir = "regular";
 		if ($frameDir == 'mgdpromo' && in_array($set, $gameday) === FALSE) $frameDir = "regular";
+		if ($frameDir == 'mgdnyxpromo' && in_array($set, $gameday) === FALSE) $frameDir = "regular";
 		if ($frameDir == 'mgdnotypepromo' && in_array($set, $gameday) === FALSE) $frameDir = "regular";
 		if ($frameDir == 'mpr' && in_array($set, $mpr) === FALSE) $frameDir = "regular";
 		return $frameDir;
