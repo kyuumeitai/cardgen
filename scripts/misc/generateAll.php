@@ -1,4 +1,4 @@
-<?
+<?php
 ////////////////////////////////////////////////////////////////////////
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -14,6 +14,9 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ////////////////////////////////////////////////////////////////////////
 require_once 'scripts/includes/global.php';
+require_once 'scripts/includes/newfunctions.php';
+mb_internal_encoding("UTF-8");
+mb_regex_encoding("UTF-8");
 
 echo "Card Generator v$version - Generate All\n\n";
 

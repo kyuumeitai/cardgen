@@ -1,4 +1,4 @@
-<?
+<?php
 ////////////////////////////////////////////////////////////////////////
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -36,12 +36,17 @@ class Card {
 	public $artFileName;
 	public $copyright;
 
+	// Display properties.
 	private $displayTitle;
+	private $displaySet;
+	private $m15DisplaySet;
+	private $displayRarity;
+	private $displayAtist;
 
 	public function isBasicLand () {
 		$title = strtolower($this->title);
 		$title = str_replace('snow-covered ', '', $title);
-		return $title == 'swamp' || $title == 'plains' || $title == 'island' || $title == 'mountain' || $title == 'forest';
+		return $title == 'swamp' || $title == 'plains' || $title == 'island' || $title == 'mountain' || $title == 'forest' || $title == 'wastes';
 	}
 
 	public function isLand () {
@@ -56,8 +61,46 @@ class Card {
 		return (stripos($this->englishType, 'Eldrazi') !== false);
 	}
 
+	public function isDevoid () {
+		$array = array('Devoid', 'Carence', '虚色', '虛色', 'Fahl', 'Vacuità', '欠色', '결여', 'Desprovido', 'Лишение', 'Vacío.');
+		return (strpos_arr($this->legal, $array) !== false);
+	}
+
+	public function isConspiracy () {
+		return (stripos($this->englishType, 'Conspiracy') !== false);
+	}
+	
+	public function isHero () {
+		return (stripos($this->englishType, 'Hero') !== false);
+	}	
+	
 	public function isPlaneswalker () {
-		return (stripos($this->englishType, 'Planeswalker') !== false);
+		return (stripos($this->englishType, 'Planeswalker') !== false || stripos($this->type, 'Arpenteur') !== false);
+	}
+	
+	public function isEnchantment () {
+		return (stripos($this->englishType, 'Enchantment') !== false);
+	}
+	
+	public function isToken () {
+		return (stripos($this->englishType, 'Token') !== false||$this->title == 'Morph'||$this->title == 'Manifest'||$this->title == 'The Monarch');
+	}
+	
+	public function isScheme () {
+		return (stripos($this->englishType, 'Scheme') !== false);
+	}
+	
+	public function isEmblem () {
+		return (stripos($this->englishType, 'Emblem') !== false);
+	}
+	
+	public function isCreature () {
+		return (stripos($this->englishType, 'Creature') !== false);
+	}
+	
+	public function isFuse () {
+		$array  = array('Fuse','融咒','融咒','Fusion','Fusione','融合','Fundir','Слияние','Fusionar','융합');
+		return (strpos_arr($this->legal, $array) !== false);
 	}
 
 	public function getCostSymbols () {
@@ -91,6 +134,9 @@ class Card {
 		if (!$title) $title = $this->title;
 		$title = str_replace('Avatar: ', '', $title);
 		$title = str_replace('AE', 'Æ', $title);
+		$title = str_replace('OE', 'Œ', $title);
+		$title = str_replace("'", '’', $title);
+
 		//card specific
 		$title = str_replace('El-Hajjaj', 'El-Hajjâj', $title);
 		$title = str_replace('Junun', 'Junún', $title);
@@ -106,16 +152,58 @@ class Card {
 		$title = str_replace('Dandan', 'Dandân', $title);
 		$title = str_replace('Bosium', 'Bösium', $title);
 		$title = str_replace('Seance', 'Séance', $title);
+		$title = str_replace('Saute', 'Sauté', $title);
+		$title = str_replace('Sarpadian Empires, Vol. VII', '#Sarpadian Empires, Vol. VII#', $title);
+		$title = str_replace('The Ultimate Nightmare of Wizards of the Coast Customer Service', 'The Ultimate Nightmare of Wizards of the Coast® Customer Service', $title);
+		$title = str_replace('B.F.M.', 'B.F.M. (Big Furry Monster)', $title);
 
 		if ($useExtendedCharacters) {
 			// These characters are not stored for card titles because they are hard to type.
 			// Convert them for display, but only if the font for the card title has the glyphs (eg, the pre8th font does not).
-			$title = str_replace("'", '’', $title);
 			$title = str_replace(' en-', ' #en#-', $title);
 			$title = str_replace(' il-', ' #il#-', $title);
-			$title = str_replace('Sarpadian Empires, Vol. VII', '#Sarpadian Empires, Vol. VII#', $title);
 		}
 		return $title;
+	}
+	
+	public function setDisplaySet ($set) {
+		$this->displaySet = $set;
+	}
+
+	public function getDisplaySet () {
+		$set = $this->displaySet;
+		if (!$set) $set = $this->set;
+		return $set;
+	}
+	
+	public function setM15DisplaySet ($set) {
+		$this->m15DisplaySet = $set;
+	}
+
+	public function getM15DisplaySet () {
+		$set = $this->m15DisplaySet;
+		if (!$set) $set = $this->set;
+		return $set;
+	}
+	
+	public function setDisplayRarity ($rarity) {
+		$this->displayRarity = $rarity;
+	}
+
+	public function getDisplayRarity () {
+		$rarity = $this->displayRarity;
+		if (!$rarity) $rarity = $this->rarity;
+		return $rarity;
+	}
+	
+	public function setDisplayArtist ($artist) {
+		$this->displayArtist = $artist;
+	}
+
+	public function getDisplayArtist () {
+		$artist = $this->displayArtist;
+		if (!$artist) $artist = $this->artist;
+		return $artist;
 	}
 
 	public function __toString () {

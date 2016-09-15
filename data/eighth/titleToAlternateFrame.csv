@@ -5,7 +5,7 @@ Calciderm,timeshifted
 Damnation,timeshifted
 Dunerider Outlaw,timeshifted
 Essence Warden,timeshifted
-"Fa'adiyah Seer",timeshifted
+Fa'adiyah Seer,timeshifted
 Frozen Aether,timeshifted
 Gaea's Anthem,timeshifted
 Gossamer Phantasm,timeshifted
@@ -43,6 +43,83 @@ Sinew Sliver,timeshifted
 Skirk Shaman,timeshifted
 Sunlance,timeshifted
 Vampiric Link,timeshifted
+Arcanum Wings,futureshifted
+Aven Mindcensor,futureshiftedcreature
+"Baru, Fist of Krosa",futureshiftedcreature
+Bitter Ordeal,futureshifted
+Blade of the Sixth Pride,futureshiftedtextless
+Blind Phantasm,futureshiftedtextless
+Bloodshot Trainee,futureshiftedcreature
+Boldwyr Intimidator,futureshiftedcreature
+Bonded Fetch,futureshiftedcreature
+Bound in Silence,futureshifted
+Bridge from Below,futureshifted
+Centaur Omenreader,futureshiftedcreature
+Darksteel Garrison,futureshifted
+Daybreak Coronet,futureshifted
+Death Rattle,futureshifted
+Deepcavern Imp,futureshiftedcreature
+Dryad Arbor,futureshiftedcreature
+Edge of Autumn,futureshifted
+Emblem of the Warmind,futureshifted
+Fleshwrither,futureshiftedcreature
+Flowstone Embrace,futureshifted
+Fomori Nomad,futureshiftedtextless
+Frenzy Sliver,futureshiftedcreature
+Ghostfire,futureshifted
+Goldmeadow Lookout,futureshiftedcreature
+Grave Scrabbler,futureshiftedcreature
+Graven Cairns,futureshifted
+Grinning Ignus,futureshiftedcreature
+Grove of the Burnwillows,futureshifted
+Henchfiend of Ukor,futureshiftedcreature
+Homing Sliver,futureshiftedcreature
+Horizon Canopy,futureshifted
+Imperial Mask,futureshifted
+Imperiosaur,futureshiftedcreature
+"Korlash, Heir to Blackblade",futureshiftedcreature
+"Linessa, Zephyr Mage",futureshiftedcreature
+Logic Knot,futureshifted
+Lucent Liminid,futureshiftedcreature
+Lumithread Field,futureshifted
+Lymph Sliver,futureshiftedcreature
+Mass of Ghouls,futureshiftedtextless
+Mesmeric Sliver,futureshiftedcreature
+Mistmeadow Skulk,futureshiftedcreature
+Muraganda Petroglyphs,futureshifted
+Nacatl War-Pride,futureshiftedcreature
+Narcomoeba,futureshiftedcreature
+Nessian Courser,futureshiftedtextless
+Nimbus Maze,futureshifted
+Nix,futureshifted
+"Oriss, Samite Guardian",futureshiftedcreature
+Patrician's Scorn,futureshifted
+Phosphorescent Feast,futureshifted
+Quagnoth,futureshiftedcreature
+River of Tears,futureshifted
+Sarcomite Myr,futureshiftedcreature
+Second Wind,futureshifted
+Seht's Tiger,futureshiftedcreature
+Shah of Naar Isle,futureshiftedcreature
+Shapeshifter's Marrow,futureshifted
+Skizzik Surger,futureshiftedcreature
+Snake Cult Initiation,futureshifted
+Spellweaver Volute,futureshifted
+Spellwild Ouphe,futureshiftedcreature
+Spin into Myth,futureshifted
+Sporoloth Ancient,futureshiftedcreature
+Steamflogger Boss,futureshiftedcreature
+Tarmogoyf,futureshiftedcreature
+Tarox Bladewing,futureshiftedcreature
+Thornweald Archer,futureshiftedcreature
+Thunderblade Charge,futureshifted
+Tombstalker,futureshiftedcreature
+Virulent Sliver,futureshiftedcreature
+Whetwheel,futureshifted
+Whip-Spine Drake,futureshiftedcreature
+Witch's Mist,futureshifted
+Yixlid Jailer,futureshiftedcreature
+Zoetic Cavern,futureshifted
 Banishing Stroke,miracle
 Blessings of Nature,miracle
 Bonfire of the Damned,miracle
@@ -54,3 +131,305 @@ Temporal Mastery,miracle
 Terminus,miracle
 Thunderous Wrath,miracle
 Vanishment,miracle
+The Protector,hero
+The Philosopher,hero
+The Avenger,hero
+The Warrior,hero
+The Hunter,hero
+The Harvester,hero
+The Slayer,hero
+The General,hero
+The Savant,hero
+The Tyrant,hero
+The Warmonger,hero
+The Provider,hero
+The Explorer,hero
+The Vanquisher,hero
+Spear of the General,heroartifact
+Cloak of the Philosopher,heroartifact
+Lash of the Tyrant,heroartifact
+Axe of the Warmonger,heroartifact
+Bow of the Hunter,heroartifact
+The Destined,hero
+The Champion,hero
+Alive,fuse-left
+Well,fuse-right
+Armed,fuse-left
+Dangerous,fuse-right
+Beck,fuse-left
+Call,fuse-right
+Breaking,fuse-left
+Entering,fuse-right
+Catch,fuse-left
+Release,fuse-right
+Down,fuse-left
+Dirty,fuse-right
+Far,fuse-left
+Away,fuse-right
+Flesh,fuse-left
+Blood,fuse-right
+Give,fuse-left
+Take,fuse-right
+Profit,fuse-left
+Loss,fuse-right
+Protect,fuse-left
+Serve,fuse-right
+Ready,fuse-left
+Willing,fuse-right
+Toil,fuse-left
+Trouble,fuse-right
+Turn,fuse-left
+Burn,fuse-right
+Wear,fuse-left
+Tear,fuse-right
+Plains,fullartbasicland
+Forest,fullartbasicland
+Island,fullartbasicland
+Mountain,fullartbasicland
+Swamp,fullartbasicland
+Supplant Form,mgdpromo
+Chief Engineer,mgdpromo
+Conclave Naturalists,mgdpromo
+Black Sun's Zenith,mgdnotypepromo
+Cryptborn Horror,mgdpromo
+Deathless Angel,mgdnotypepromo
+Dictate of Kruphix,mgdpromo
+Diregraf Ghoul,mgdnotypepromo
+Dryad Militant,mgdpromo
+Dungrove Elder,mgdnotypepromo
+Elite Inquisitor,mgdnotypepromo
+Elvish Mystic,mgdpromo
+Emeria Angel,mgdnotypepromo
+Firemane Avenger,mgdpromo
+Goblin Diplomats,mgdpromo
+Hada Freeblade,mgdnotypepromo
+Heir of the Wilds,mgdpromo
+Hive Stirrings,mgdpromo
+Killing Wave,mgdpromo
+Kalastria Highborn,mgdnotypepromo
+Kiora's Follower,mgdpromo
+Languish,mgdpromo
+Latch Seeker,mgdpromo
+Liliana's Specter,mgdnotypepromo
+Magmaquake,mgdpromo
+Mardu Shadowspear,mgdpromo
+"Melek, Izzet Paragon",mgdpromo
+Memnite,mgdnotypepromo
+Mitotic Slime,mgdnotypepromo
+Mwonvuli Beast Tracker,mgdpromo
+Mycoid Shepherd,mgdnotypepromo
+Myr Superion,mgdnotypepromo
+Nighthowler,mgdpromo
+Nissa's Chosen,mgdnotypepromo
+Pain Seer,mgdpromo
+Phalanx Leader,mgdpromo
+Priest of Urabrask,mgdnotypepromo
+Radiant Flames,mgdpromo
+Reclamation Sage,mgdpromo
+Scaleguard Sentinels,mgdpromo
+Squelching Leeches,mgdpromo
+Staggershock,mgdnotypepromo
+Stasis Snare,mgdpromo
+Stormblood Berserker,mgdnotypepromo
+Strangleroot Geist,mgdpromo
+Tempered Steel,mgdnotypepromo
+Thunderbreak Regent,mgdpromo
+Treasure Mage,mgdnotypepromo
+Trostani's Summoner,mgdpromo
+Utter End,mgdpromo
+Zameck Guildmage,mgdpromo
+Zombie Apocalypse,mgdnotypepromo
+Disorienting Glower,challenge
+Distract the Hydra,challenge
+Grown from the Stump,challenge
+Hydra Head,challengecreature
+Hydra's Impenetrable Hide,challenge
+Neck Tangle,challenge
+Noxious Hydra Breath,challenge
+Ravenous Brute Head,challengecreature
+Savage Vigor Head,challengecreature
+Shrieking Titan Head,challengecreature
+Snapping Fang Head,challengecreature
+Strike the Weak Spot,challenge
+Swallow the Hero Whole,challenge
+Torn Between Heads,challenge
+Unified Lunge,challenge
+Blood Knight,mgdnotypepromo
+Bramblewood Paragon,mgdnotypepromo
+"Doran, the Siege Tower",mgdnotypepromo
+Electrolyze,mgdnotypepromo
+Groundbreaker,mgdnotypepromo
+Imperious Perfect,mgdnotypepromo
+Mutavault,mgdnotypepromo
+"Niv-Mizzet, the Firemind",mgdnotypepromo
+Rakdos Guildmage,mgdnotypepromo
+Serra Avenger,mgdnotypepromo
+Urza's Factory,mgdnotypepromo
+Voidslime,mgdnotypepromo
+Bituminous Blast,mpr
+Blightning,mpr
+Brave the Elements,mpr
+Burst Lightning,mpr
+Cancel,mpr
+Celestial Purge,mpr
+Condemn,mpr
+Corrupt,mpr
+Cruel Edict,mpr
+Cryptic Command,mpr
+Damnation,mpr
+Day of Judgment,mpr
+Disenchant,mpr
+Doom Blade,mpr
+Fireball,mpr
+Flame Javelin,mpr
+Giant Growth,mpr
+Harmonize,mpr
+Harrow,mpr
+Hinder,mpr
+Incinerate,mpr
+Infest,mpr
+Lightning Bolt,mpr
+Lightning Helix,mpr
+Mana Leak,mpr
+Mana Tithe,mpr
+Mortify,mpr
+Nameless Inversion,mpr
+Negate,mpr
+Oxidize,mpr
+Ponder,mpr
+Psionic Blast,mpr
+Putrefy,mpr
+Pyroclasm,mpr
+Rampant Growth,mpr
+Reciprocate,mpr
+Recollect,mpr
+Remove Soul,mpr
+Searing Blaze,mpr
+Sign in Blood,mpr
+Terminate,mpr
+Terror,mpr
+Tidings,mpr
+Treasure Hunt,mpr
+Unmake,mpr
+Volcanic Fallout,mpr
+Wrath of God,mpr
+Zombify,mpr
+Incorrigible Youths,mgdpromo
+Anguished Unmaking,mgdpromo
+Minotaur Goreseeker,challengecreature
+Minotaur Younghorn,challengecreature
+Mogis's Chosen,challengecreature
+Phoberos Reaver,challengecreature
+Reckless Minotaur,challengecreature
+Consuming Rage,challenge
+Descend on the Prey,challenge
+Intervention of Keranos,challenge
+Touch of the Horned God,challenge
+Unquenchable Fury,challenge
+Altar of Mogis,challenge
+Massacre Totem,challenge
+Plundered Statue,challenge
+Refreshing Elixir,challenge
+Vitality Salve,challenge
+Xenagos Ascended,challengecreaturenyx
+Maddened Oread,challengecreaturenyx
+Ecstatic Piper,challengecreature
+Pheres-Band Revellers,challengecreature
+Rollicking Throng,challengecreature
+Serpent Dancers,challengecreature
+Wild Maenads,challengecreature
+Impulsive Charge,challenge
+Impulsive Destruction,challenge
+Impulsive Return,challenge
+Rip to Pieces,challenge
+Xenagos's Scorn,challenge
+Xenagos's Strike,challenge
+Dance of Flame,challenge
+Dance of Panic,challenge
+Aegis of the Gods,nyxstars
+Agent of Erebos,nyxstars
+Archetype of Aggression,nyxstars
+Archetype of Courage,nyxstars
+Archetype of Endurance,nyxstars
+Archetype of Finality,nyxstars
+Archetype of Imagination,nyxstars
+"Athreos, God of Passage",nyxstars
+Baleful Eidolon,nyxstars
+Bident of Thassa,nyxstars
+Boon Satyr,nyxstars
+Bow of Nylea,nyxstars
+Brain Maggot,nyxstars
+Cavern Lampad,nyxstars
+Celestial Archon,nyxstars
+Chromanticore,nyxstars
+Courser of Kruphix,nyxstars
+Crystalline Nautilus,nyxstars
+Cyclops of Eternal Fury,nyxstars
+Doomwake Giant,nyxstars
+Dreadbringer Lampads,nyxstars
+Eidolon of Blossoms,nyxstars
+Eidolon of Countless Battles,nyxstars
+Eidolon of Rhetoric,nyxstars
+Eidolon of the Great Revel,nyxstars
+"Ephara, God of the Polis",nyxstars
+"Erebos, God of the Dead",nyxstars
+Erebos's Emissary,nyxstars
+Everflame Eidolon,nyxstars
+Fate Unraveler,nyxstars
+Flitterstep Eidolon,nyxstars
+Forgeborn Oreads,nyxstars
+Ghostblade Eidolon,nyxstars
+Gnarled Scarhide,nyxstars
+Goldenhide Ox,nyxstars
+Grim Guardian,nyxstars
+Hammer of Purphoros,nyxstars
+Harvestguard Alseids,nyxstars
+"Heliod, God of the Sun",nyxstars
+Heliod's Emissary,nyxstars
+Herald of Torment,nyxstars
+Hopeful Eidolon,nyxstars
+Humbler of Mortals,nyxstars
+Hypnotic Siren,nyxstars
+"Iroas, God of Victory",nyxstars
+"Karametra, God of Harvests",nyxstars
+"Keranos, God of Storms",nyxstars
+"Kruphix, God of Horizons",nyxstars
+Leafcrown Dryad,nyxstars
+Master of the Feast,nyxstars
+"Mogis, God of Slaughter",nyxstars
+Mogis's Warhound,nyxstars
+Nighthowler,nyxstars
+Nimbus Naiad,nyxstars
+Noble Quarry,nyxstars
+"Nylea, God of the Hunt",nyxstars
+Nylea's Emissary,nyxstars
+Nyx Weaver,nyxstars
+Nyxborn Eidolon,nyxstars
+Nyxborn Rollicker,nyxstars
+Nyxborn Shieldmate,nyxstars
+Nyxborn Triton,nyxstars
+Nyxborn Wolf,nyxstars
+Nyx-Fleece Ram,nyxstars
+Oakheart Dryads,nyxstars
+Observant Alseid,nyxstars
+Perplexing Chimera,nyxstars
+"Pharika, God of Affliction",nyxstars
+"Phenax, God of Deception",nyxstars
+"Purphoros, God of the Forge",nyxstars
+Purphoros's Emissary,nyxstars
+Riptide Chimera,nyxstars
+Satyr Firedancer,nyxstars
+Sightless Brawler,nyxstars
+Spear of Heliod,nyxstars
+Spearpoint Oread,nyxstars
+Spirespine,nyxstars
+Spirit of the Labyrinth,nyxstars
+Spiteful Returned,nyxstars
+"Thassa, God of the Sea",nyxstars
+Thassa's Devourer,nyxstars
+Thassa's Emissary,nyxstars
+Thoughtrender Lamia,nyxstars
+Underworld Coinsmith,nyxstars
+Whip of Erebos,nyxstars
+Whitewater Naiads,nyxstars
+"Xenagos, God of Revels",nyxstars

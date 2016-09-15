@@ -1,0 +1,202 @@
+#HQ Card Generator
+Notable changes will be documented in this file.
+
+##[Unreleased]
+Working on getting non-english flavor text as random if no translation was found for set
+
+##[9.0.16]
+Changed EMA set symbols to vector rendered versions.
+Lots of cleanup, syntax update, space normalisation in french ...
+lots of cleanup and corrected some missing « or » in french
+correct some quotes errors on french
+Added set symbol for EMN
+New vector based symbol for W16
+Updated some expansion symbols with better quality.
+Corrected DTK symbol colors
+Corrected translucent background on Eldrazi frames
+Updated EighthRenderer with same changes as M15 renderer for multi color transform cards
+Updated sets.txt with upcoming sets
+Added English EMN to cards.csv
+Added new lands to titleToLandColors
+Added new transform cards to titleToTransfrorm
+Added english language version to translationToTitle for transform card flip side
+Fixed M15Renderer and TransformRenderer to be able to use new transform frames
+Adjusted title placement for new frames
+Correcting M15 transform frames
+Added EMN Emblems
+Added EMN tokens
+Fixed some promo overrides
+Corrected some missing overrides for PRE from Recent blocks
+Fixed regex picking up 2 digit picture number in Decklist.php
+Renamed transform-walker to transform-ignite
+Added more overrides for promo cards
+Corrected decklist picture number with more than 1 digit not resolving.
+Corrected symbol on Moon/Eldrazi transform frames
+Corrected Spark transform frames
+Added proper border for Challenge Deck card titles
+Added CD2
+
+##[9.0.15]
+Added SOI Prerelease/Game Day/Launch cards Added 2016 Judge Cards Fixed frame for Judge basic lands to ZEN frame
+Corrected cropped text on planeswalkers
+Adjusted frames for some cards to proper frame
+Fixed some watermarks
+Updated scrips to begin with "<?php" to be more linux friendly Added linux shell scripts for the card generation
+Added missing cards to DB, fixed some more land colors
+Changed the way M15Renderer looks for full art basic lands (using BFZ/OGW frames as default M15 Full art basic land frame
+Added a swich for renderer override so it will render properly if render.m15, render.eighth, or render.preEighth are turned off (won't render frames that are turned off).
+Added card.use.symbol.pre6th.core.set to config-preEighth.txt to turn on or off using set symbols for Alpha, Beta, Unlimited, Revised, 4th, and 5th editions
+Fixed shell scripts from CRLF to LF
+Decklist overhaul. Added a whole bunch of newer sets, plus filled in a few older ones. All decklists are now aware of alternate art as well, to make generation easier.
+Updated titleToLandColors, replaced WUBRG with A
+Couple DB fixes Changed Markov's Servant to Markov’s Servant in relevant files so that the night side will properly render
+Added option in PreEighth and Eighth config files to have white border for certain sets.
+Added M15 style tmeshifted frames Set up timeshifted in m15-config
+M15 fuse rendering should work properly again.
+Added some missing french flavor for multiversion cards (Abbey Matron for exemple)
+Fixed the SOI MGD promos rendering with the wrong frame.
+Added option in config.txt to use pre-exodus all black symbols.
+Updated GathererExtractor to pull card pic to language flavor file.
+fontSizes.csv updated
+TSP Assembly-Worker should now be distinguished from the token Assembly-Worker in decklists
+Added option to disable reminder on pre mirage sets
+Corrected / added lots of missing french reminder text for Mirage to Pre-eighth cards
+Fixed UGL basic land art dimensions
+Ajusted Pre-Mirage removal of reminder text to trigger only if $config['card.reminder.text'] is not already off and already set to remove reminder text Ajusted Pre-Mirage removal of reminder text to not trigger on classic dual lands reminder text. Ajusted UGL basic land art dimensions
+Cleaned up B.F.M. from UGL
+Punctuation after symbol shouldn't wrap now.
+Fixed some issues with Portal card variants.
+Made generation shell scripts executable.
+Media inserts decklist for Mana Crypt & friends
+Fixed a couple of expansion symbols.
+Ajusted the M15 card scaling and placement in page rendering Cleaned up a bit of the code in the expansion symbol renderer
+Added missing cards to ABU decklists
+Fixed the way that addCard looked for Assembly-Worker, fixes generateAllTokens
+Corrected futuresight art frame size
+Updated EMA tokens and emblems
+Added EMA to cards.csv
+
+##[9.0.14]
+Adjusted devoid and eldrazi frames to have 90% transparency on the type bar
+Added SOI to database
+satsuki fixed some missing frames for MGD and CHP
+Added W16 to database
+DDQ Blessed vs. Cursed added in english
+Added Eldritch Moon to sets
+Adjusted the positioning and dimensions of the M15 paged renders
+Added more transform titles to title to transform Adjusted M15 renderer to not have holofoil on night side of transform cards Adjusted renderer.php so a symbol followed by a period non-whitespace will properly wrap.
+Corrected some missing translation, flavor, and syntax cleanup
+Updated M15 Planeswalker frames with satsuki's frames Fixed color on night side text
+replaced many untranslated "Planeswalker" with "Arpenteur" in french
+Added override to check new french translation of Planeswalker
+Added SOI tokens
+Moved titleToTransform.csv to /data
+Added frames for MPR created by satsuki
+Added satsuki's MGD frames
+Started adding challenge decks, nowhere near complete yet.
+Updated MGD no type promo frames by satsuki.
+Gruesome Slaughter and Korlash, Heir to Blackblade should now have correct frames for the promo version.
+Updated tokens so Clue renders correctly.
+Added proper MPR frames.
+
+##[9.0.13] 2016-02-26
+Moved hero cards to tokens.csv for easier translations
+Added option to change token image subdirectory. (config.txt, art.subdirectory.token)
+Moved token title beveling option to config-tokens.txt (card.title.beveling)
+Emblems can now be rendered (still needs some tweaking)
+Added some missing tokens
+Fixed M15 token frames (thanks to satsuki)
+Paged output should now work with all cards. Output is 315 dpi
+Corrected some fonts to have accent characters
+Added some additional options for error reporting
+
+##[9.0.12] 2016-01-30
+Added option to randomize localized flavor text (card.localized.flavor.random)
+Added Pre8th token frames and rendering working
+8th edition token title border now has proper variable width based on title length, long title names still spilling over the edge
+Added Russian and Japanese font options so font changes don't have to be done manually
+Tokens fully localized for French
+Added nyx stars frames for enchantment creature tokens
+Second style of 8th Edition game day full art frames are working, still need to create the first style
+Added option to output token names in the format for forge. Change config.txt output.tokens.for.forge to 1 to enable
+
+##[9.0.11] 2016-01-19
+M15 game day full art promos working
+Corrected right alignment of artist and copyright text on futureshifted cards
+UGL lands should have text in the proper place.
+Added 1/2 non-mana symbol for UNH
+Corrected shadow for HalfW, HalfR, and 1000000 symbol for UNH
+Token translations for 8th edition frames should be able to be rendered for languages with latin based characters with beveled text (cyrillic based characters and asian languages not supported yet)
+Added option to turn off token beveled text (change config.txt card.text.token.beveling to 0 to disable)
+
+##[9.0.10] 2016-01-12
+Added M15 style transform frames
+Fixed futuresight bug that wouldn't render if there was a supertype
+Corrected spelling on Kolaghan (shouldn't be Kologhan...)
+Phenomenon should now render when language is set to other than English
+Classic dual lands should have centered text regardless of language
+Fixed the placement of the Unhinged symbol putting it back to it's proper place on non-basic land cards
+Added OGW English cards (translations will be available as soon as I can get them)
+
+##[9.0.09] 2016-01-07
+Fixed bug with futureshifted cards not rendering in languages other than English
+isDevoid now looks at languages other than English
+Corrected the included font files for Russian language
+
+##[9.0.08] 2015-12-22
+Corrected M15 Collector Number to three digits always
+Added Alternate Art MTGO Cube cards as CUB set
+Added Vintage and Eternal championship prizes as PRM set
+Added World Magic Cup prizes as WMC
+Updated Zendikar Expeditions frames
+Corrected scaling issue with Futureshifted land icon
+Duplicated database with {C} changes, to revert use cards.orig.csv
+Added new Colorless symbol as {C}, Chaos symbol is now {CHAOS}
+
+##[9.0.07] 2015-11-30
+Bug fixes
+
+##[9.0.06] 2015-11-29
+Added support for futureshifted cards (artist and copyright line are giving some trouble being right justified)
+Option to remove flavor text added
+Added the option for creating custom Planeswalkers, Planes, and Schemes to misc/createCard.bat
+Changed token name formatting (1,Angel,ISD)
+
+##[9.0.05] 2015-11-12
+Eighth edition style tokens now have the proper beveling in the title
+Corrected token picture dimensions.
+Now looks for tokens art under {artdir}/{SET}/tokens
+Cleaned up some issues with non-english card formatting
+Added the option to render transform cards as split. Change card.transform.as.split to 1 if you want to use
+Added the option to have proper symbol on promo cards, default on. Change card.corrected.promo.symbol to turn off
+
+##[9.0.04] 2015-11-07
+Added token support (formatting: 1,Angel 4/4,ISD)
+Added importer for Gatherer Extractor data
+Updated translation files
+
+##[9.0.03] 2015-10-25
+Corrected bug in Eighth Planeswalker renderer
+Added missing land colors for Theros and Tarkir blocks
+
+##[9.0.02] 2015-10-17
+Added support for Fuse Split cards
+Added support for Consiracy cards
+Corrected support for Transform cards with different sides
+Moved 4 ability planeswalkers to csv file for easier changes
+Made it so Sarpadian Empires, Vol. VII has an italic title
+Added a toggle for PreEighth edition to have indicator mark
+
+##[9.0.01] - 2015-10-11
+Combined support for M15 cards as well as Eighth and PreEighth
+M15 cards render at 720x1020 (print at 300 dpi), Eighth and PreEighth render at 736x1050 (print at 315 dpi)
+Added support for BFZ
+Added support for TPR
+Added support for BFZ Devoid cards
+Added support for EXP lands
+Added support for BFZ basic lands
+Added support for UNH basic lands
+Added support for ZEN basic lands
+Added support for ORI spark planeswalkers
+
+##[9.0.00]

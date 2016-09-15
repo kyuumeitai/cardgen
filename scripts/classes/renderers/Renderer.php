@@ -1,4 +1,4 @@
-<?
+<?php
 ////////////////////////////////////////////////////////////////////////
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -134,7 +134,11 @@ abstract class Renderer {
 		$textHeight = $font->getHeight();
 		$textLeading = $textHeight * $font->leadingPercent;
 		$symbolHeight = $textHeight * ($config['card.text.symbol.height.percentage'] / 100);
-		$symbolSpacing = $config['card.text.symbol.spacing'];
+		if ($this instanceof TokenRenderer) {
+			$symbolSpacing = 1;
+		} else {
+			$symbolSpacing = $config['card.text.symbol.spacing'];
+		}
 		$belowBaseline = 0;
 		$xOffset = 0;
 		$belowBaseline = 0;
@@ -144,18 +148,22 @@ abstract class Renderer {
 				$xOffset += $symbolSpacing;
 				// Wrap if this symbol and any following symbols or non-whitespace text are too long.
 				$nonWrappedChunksWidth = 0;
-				for ($ii=$i; $ii < $n; $ii++) {
+				for ($ii=$i+1; $ii < $n; $ii++) {
 					$nextChunk = $chunks[$ii];
 					if ($nextChunk->isSymbol) {
 						// Don't wrap in between symbols.
+						list($symbolWidth) = $this->drawSymbol(null, 0, 0, $symbolHeight, $chunk->value, false, true);
+						$nonWrappedChunksWidth += $symbolWidth;
 						list($symbolWidth) = $this->drawSymbol(null, 0, 0, $symbolHeight, $nextChunk->value, false, true);
 						$nonWrappedChunksWidth += $symbolSpacing + $symbolWidth;
 						if ($ii < $n - 1) $nonWrappedChunksWidth += $symbolSpacing; // Don't add spacing if this is the last chunk.
 					} else {
 						// Don't wrap in between a symbol and text (eg, when a period follows a symbol).
-						if (preg_match('/^([^\w]*)\w/', $nextChunk->value, $matches)) {
+						if (preg_match('/^([^\w]*)(\w|\)|[\p{P}])/', $nextChunk->value, $matches)) {
 							// Text starts with non-whitespace characters. Get their width.
 							$textSize = $font->getSize($matches[0], $nextChunk->isItalic);
+							list($symbolWidth) = $this->drawSymbol(null, 0, 0, $symbolHeight, $chunk->value, false, true);
+							$nonWrappedChunksWidth += $symbolSpacing + $symbolWidth;
 							$nonWrappedChunksWidth += $textSize['width'];
 						}
 						break;
@@ -186,6 +194,15 @@ abstract class Renderer {
 				$spaceSize = $font->getSize(' ', $chunk->isItalic);
 				$spaceWidth = $spaceSize['width'];
 				if (substr($chunk->value, 0, 1) == ' ') $xOffset += $spaceWidth; // Starts with space.
+				// Add Nonbreaking space to some punctuation.
+				$chunk->value = str_replace(' »', " »", $chunk->value);
+				$chunk->value = str_replace('« ', "« ", $chunk->value);
+				//$chunk->value = str_replace(' «', " «", $chunk->value);
+				$chunk->value = str_replace(' ;', " ;", $chunk->value);
+				$chunk->value = str_replace(' :', " :", $chunk->value);
+				$chunk->value = str_replace(' !', " !", $chunk->value);
+				$chunk->value = str_replace(' ?', " ?", $chunk->value);
+				$chunk->value = str_replace(' .', " .", $chunk->value);
 				// Break text into words and build an array of lines.
 				$words = explode(' ', $chunk->value);
 				$lines = array();
@@ -199,7 +216,56 @@ abstract class Renderer {
 					$testLine .= $word;
 					$lineSize = $font->getSize($testLine, $chunk->isItalic);
 					if (count($lines) == 0) $lineSize['width'] += $xOffset; // Only the first line takes into account the xOffset.
-					if ($lineSize['width'] > $maxWidth) {
+					if (!$canvas && $baseline < 600 && $this instanceof M15Renderer && @M15Renderer::$titleToTransform[strtolower($this->card->title)] == 'day' && $left < 75 && ($baseline + ((count($lines)) * $textLeading)) >= 197 && $this->card->pt != ''){
+						$maxWidth = 567;
+					} else if ($this instanceof M15Renderer && @M15Renderer::$titleToTransform[strtolower($this->card->title)] == 'day' && $left < 75 && ($baseline + ((count($lines)) * $textLeading)) >= 844 && $this->card->pt != ''){
+						$maxWidth = 567;
+					}
+					if (!$canvas && $baseline < 600 && $this instanceof M15Renderer && $left < 75 && ($baseline + ((count($lines)) * $textLeading)) >= 265 && $this->card->pt != ''){
+						$maxWidth = 514;
+					}
+					else if ($this instanceof M15Renderer && $left < 75 && ($baseline + ((count($lines)) * $textLeading)) >= 912 && $this->card->pt != ''){
+						$maxWidth = 514;
+					}
+					if (preg_match("/(\p{P} $|\p{P}$)/", $word)) {
+					$nonWrappedChunksWidth = 0;
+					for ($ii=$i+1; $ii < $n; $ii++) {
+					$nextChunk = $chunks[$ii];
+					$secondChunk = @$chunks[$ii+1];
+					$thirdChunk = @$chunks[$ii+2];
+					$fourthChunk = @$chunks[$ii+3];
+						if ($nextChunk->isSymbol) {
+							// Don't wrap in between punctuation and symbol.
+							$textSize = $font->getSize($word, $chunk->isItalic);
+							$nonWrappedChunksWidth += $textSize['width'];
+							list($symbolWidth) = $this->drawSymbol(null, 0, 0, $symbolHeight, $nextChunk->value, false, true);
+							$nonWrappedChunksWidth += $symbolSpacing + $symbolWidth;
+							if ($ii < $n - 1) $nonWrappedChunksWidth += $symbolSpacing; // Don't add spacing if this is the last chunk.
+							if (@$secondChunk->isSymbol) {
+								// Don't wrap in between symbol and symbol.
+								list($symbolWidth) = $this->drawSymbol(null, 0, 0, $symbolHeight, $secondChunk->value, false, true);
+								$nonWrappedChunksWidth += $symbolSpacing + $symbolWidth;
+								if ($ii+1 < $n - 1) $nonWrappedChunksWidth += $symbolSpacing; // Don't add spacing if this is the last chunk.
+								if (@$thirdChunk->isSymbol) {
+									// Don't wrap in between symbol and symbol.
+									list($symbolWidth) = $this->drawSymbol(null, 0, 0, $symbolHeight, $thirdChunk->value, false, true);
+									$nonWrappedChunksWidth += $symbolSpacing + $symbolWidth;
+									if ($ii+1 < $n - 1) $nonWrappedChunksWidth += $symbolSpacing; // Don't add spacing if this is the last chunk.
+									}
+									if (@$fourthChunk->isSymbol) {
+										// Don't wrap in between symbol and symbol.
+										list($symbolWidth) = $this->drawSymbol(null, 0, 0, $symbolHeight, $fourthChunk->value, false, true);
+										$nonWrappedChunksWidth += $symbolSpacing + $symbolWidth;
+										if ($ii+1 < $n - 1) $nonWrappedChunksWidth += $symbolSpacing; // Don't add spacing if this is the last chunk.
+									}
+								} 
+							} 
+							break;
+						}
+					} else {
+						$nonWrappedChunksWidth = 0;
+					}
+					if ($lineSize['width'] + @$nonWrappedChunksWidth > $maxWidth) {
 
 						// Check if after a comma only one word was added.
 						// If the codition was true then remove the previous word, start a new line and put the previous word plus current one.
@@ -236,7 +302,7 @@ abstract class Renderer {
 				}
 				if ($lineCount > 1) $baseline -= $textLeading; // Stay on the last line written.
 				$xOffset += $lineSize['width']; // Last line width.
-				if (substr($chunk->value, -1) == ' ') $xOffset += $spaceWidth; // Ends with space.
+				if (substr($chunk->value, -1) == ' ' || mb_substr($chunk->value, -1) == ' ') $xOffset += $spaceWidth; // Ends with space.
 			}
 		}
 		return array(
@@ -254,7 +320,8 @@ abstract class Renderer {
 		$maxHeight = $bottom - $top - $heightAdjust; // heightAdjust affects text height scaling but not centering.
 		$tempFont = clone $font;
 		while (true) {
-			$textSize = $this->testChunksWrapped($right - $left, $chunks, $tempFont);
+			/*if ($this instanceof M15Renderer) $textSize = $this->drawChunksWrapped(null, $bottom, $left, $right, $chunks, $tempFont);
+			else */$textSize = $this->testChunksWrapped($right - $left, $chunks, $tempFont);
 			if ($textSize["height"] < $maxHeight) break;
 			$difference = $textSize["height"] - $maxHeight;
 			if ($difference < 15)
@@ -274,6 +341,19 @@ abstract class Renderer {
 		}
 		// Distance below baseline is not used for centering.
 		$offset = !$center ? 0 : ($bottom - $top - ($textSize["height"] - $textSize["belowBaseline"])) / 2;
+		if ($tempFont->shadow) {
+			$shadowFont = clone $tempFont;
+			$shadowFont->setColor('0,0,0');
+			$this->drawChunksWrapped($canvas, $top + $tempFont->getHeight() + $offset + 2, $left + 2, $right + 2, $chunks, $shadowFont);
+		}
+		if($tempFont->glow) {
+			$glowFont = clone $tempFont;
+			$glowFont->setColor('255,255,255');
+			$this->drawChunksWrapped($canvas, $top + $tempFont->getHeight() + $offset + 2, $left, $right, $chunks, $glowFont);
+			$this->drawChunksWrapped($canvas, $top + $tempFont->getHeight() + $offset - 2, $left, $right, $chunks, $glowFont);
+			$this->drawChunksWrapped($canvas, $top + $tempFont->getHeight() + $offset, $left + 2, $right + 2, $chunks, $glowFont);
+			$this->drawChunksWrapped($canvas, $top + $tempFont->getHeight() + $offset, $left - 2, $right - 2, $chunks, $glowFont);
+		}
 		$this->drawChunksWrapped($canvas, $top + $tempFont->getHeight() + $offset, $left, $right, $chunks, $tempFont);
 		return $tempFont->size;
 	}
@@ -281,8 +361,14 @@ abstract class Renderer {
 	// Draws a single symbol.
 	public function drawSymbol ($canvas, $top, $left, $height, $symbol, $shadow, $fixedSize = false, $color = '0,0,0') {
 		global $config;
+		$language = strtolower($config['output.language']);
 
-		if ($color != '255,255,255') $color = '0,0,0';
+		if ($symbol == '*' && $color != '255,255,255') {
+			if ($color != '127,127,127') $color = '0,0,0';
+		}
+		else if ($color != '255,255,255') {
+			$color = '0,0,0';
+		}
 
 		$scale = true;
 		$yOffset = 0; //only used when $scale == true
@@ -305,10 +391,75 @@ abstract class Renderer {
 			$scale = false;
 			$yOffset = $height/3;
 		}
+		if ($symbol == 'brush2') {
+			$symbol = "brush2_$color";
+			$shadow = null;
+			$scale = false;
+			$yOffset = $height/8;
+		}
 		if ($symbol == 'gear') {
 			$symbol = "gear_$color";
 			$shadow = null;
 			$scale = false;
+		}
+		//Future Sight type symbols
+		if ($symbol == 'Artifact') {
+			$symbol = "futuresight/Artifact_$color";
+			$shadow = null;
+			$scale = true;
+		}
+		if ($symbol == 'Creature') {
+			$symbol = "futuresight/Creature_$color";
+			$shadow = null;
+			$scale = true;
+		}
+		if ($symbol == 'Enchantment') {
+			$symbol = "futuresight/Enchantment_$color";
+			$shadow = null;
+			$scale = true;
+		}
+		if ($symbol == 'Instant') {
+			$symbol = "futuresight/Instant_$color";
+			$shadow = null;
+			$scale = true;
+		}
+		if ($symbol == 'Land') {
+			$symbol = "futuresight/Land_$color";
+			$shadow = null;
+			$scale = true;
+		}
+		if ($symbol == 'Multiple') {
+			$symbol = "futuresight/Multiple_$color";
+			$shadow = null;
+			$scale = true;
+		}
+		if ($symbol == 'Planeswalker') {
+			$symbol = "futuresight/Planeswalker_$color";
+			$shadow = null;
+			$scale = true;
+		}
+		if ($symbol == 'Sorcery') {
+			$symbol = "futuresight/Sorcery_$color";
+			$shadow = null;
+			$scale = true;
+		}
+		// Eighth edition token title converted to symbols for beveling
+		if (preg_match('/Img(\p{L}+)/iu', $symbol, $matches) && $this instanceof TokenRenderer) {
+			$symbol = "tokenfont/$matches[1]";
+			$shadow = null;
+			if ($language && $language != 'english') {
+				$scale = true;
+			} else if ($this->card->isEmblem()) {
+				$scale = true;
+				$yOffset = $height;
+			} else {
+				if (strlen(preg_replace('/{Img(\p{L}+)}/iu', ' ', $this->card->getDisplayTitle())) > 18) {
+					$scale = true;
+					$yOffset = 10;
+				}
+				else $scale = false;
+			}
+			
 		}
 
 		// If a dual symbol or always using larger symbols, use a larger symbol.
@@ -337,7 +488,12 @@ abstract class Renderer {
 			imagedestroy($sliceImage);
 		}
 		else {
-			if($symbol == 'T' && $this instanceof PreEighthRenderer && $config['card.old.tap.symbol']) {
+			$oldManaSets = explode(',', $config['card.old.mana.symbols.sets']);
+			$origTapSymbolSets = explode(',', $config['card.original.tap.symbol.sets']);
+			if ($symbol == 'T' && $config['card.old.tap.symbol'] && in_array(@$this->card->set, $origTapSymbolSets)) {
+				$symbol .= "_old";
+			}
+			else if(($symbol == 'T' && $config['card.old.tap.symbol']|| preg_match('/(W|U|B|R|G)/s', $symbol) && $config['card.old.mana.symbols'] && in_array(@$this->card->set, $oldManaSets)) && $this instanceof PreEighthRenderer) {
 				$symbol .= "_pre";
 			}
 			list($image, $srcWidth, $srcHeight) = getPNG("images/symbols/$symbol.png", "Symbol image not found: $symbol");
@@ -345,9 +501,21 @@ abstract class Renderer {
 		$width = $height * ($srcWidth / $srcHeight);
 		if ($canvas) {
 			if ($shadow) {
-				$shadowImage = @imagecreatefrompng('images/symbols/shadow.png');
-				if (!$shadowImage) error('Symbol shadow image not found.');
-				imagecopyresampled($canvas, $shadowImage, $left - 2, $top + 2, 0, 0, $width + 2, $width + 2, 134, 134);
+				$extention = null;
+				if ($symbol == '1000000') {
+					$extention = 'long';
+				}
+				else if ($symbol == 'P1') {
+					$extention = 'P';
+				}
+				else if ($symbol == 'T1') {
+					$extention = 'T';
+				}
+				else if (preg_match('/(Half[WR])/', $symbol)) {
+					$extention = 'half';
+				}
+				list($shadowImage, $widthshadow, $heightshadow) = getPNG("images/symbols/shadow$extention.png", "Symbol shadow$extention image not found.");
+				imagecopyresampled($canvas, $shadowImage, $left - 2, $top + 2, 0, 0, $width + 2, $height + 2, $widthshadow, $heightshadow);
 				imagedestroy($shadowImage);
 			}
 			if($scale)

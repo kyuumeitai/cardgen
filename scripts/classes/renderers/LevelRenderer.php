@@ -1,4 +1,4 @@
-<?
+<?php
 ////////////////////////////////////////////////////////////////////////
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -21,6 +21,17 @@ class LevelRenderer extends CardRenderer {
 	public function render () {
 		global $config;
 
+		$languageFont = null;
+		$language = strtolower($config['output.language']);
+		if ($language && $language != 'english') {
+			if ($language == 'russian') $languageFont = '.russian';
+			if ($language == 'japanese') $languageFont = '.japanese';
+			if ($this->card->title == $this->card->getDisplayTitle()) $languageFont = null;
+		}
+		
+		/*if ($config['card.corrected.promo.symbol'] != FALSE) {
+			$this->card = CardDB::correctPromoSymbols($this->card);
+			}*/
 		echo $this->card . '...';
 		$card = $this->card;
 		$settings = $this->getSettings();
@@ -32,7 +43,12 @@ class LevelRenderer extends CardRenderer {
 		$canvas = imagecreatetruecolor(736, 1050);
 
 		// Art image.
-		$this->drawArt($canvas, $card->artFileName, $settings['art.top'], $settings['art.left'], $settings['art.bottom'], $settings['art.right'], !$config['art.keep.aspect.ratio']);
+		if ($config['art.use.xlhq.full.card'] != false && stripos($card->artFileName,'xlhq') != false) {
+			$this->drawArt($canvas, $card->artFileName, $settings['art.xlhq.top'], $settings['art.xlhq.left'], $settings['art.xlhq.bottom'], $settings['art.xlhq.right'], !$config['art.keep.aspect.ratio']);
+		}
+		else {
+			$this->drawArt($canvas, $card->artFileName, $settings['art.top'], $settings['art.left'], $settings['art.bottom'], $settings['art.right'], !$config['art.keep.aspect.ratio']);
+		}
 
 		echo '.';
 
@@ -63,35 +79,37 @@ class LevelRenderer extends CardRenderer {
 		echo '.';
 
 		// Set and rarity.
-		$rarityLeft = $this->drawRarity($canvas, $card->rarity, $card->set, $settings['rarity.right'], $settings['rarity.center.y'], $settings['rarity.height'], $settings['rarity.width'], false);
+		$rarityLeft = $this->drawRarity($canvas, $card->getDisplayRarity(), $card->getDisplaySet(), $settings['rarity.right'], $settings['rarity.center.y'], $settings['rarity.height'], $settings['rarity.width'], false);
 
 		// Card title.
-		$this->drawText($canvas, $settings['title.x'], $settings['title.y'], $costLeft - $settings['title.x'], $card->getDisplayTitle(), $this->font('title'));
+		$this->drawText($canvas, $settings['title.x'], $settings['title.y'], $costLeft - $settings['title.x'], $card->getDisplayTitle(), $this->font("title$languageFont"));
 
 		echo '.';
 
 		// Type.
-		$this->drawText($canvas, $settings['type.x'], $settings['type.y'], $rarityLeft - $settings['type.x'], $card->type, $this->font('type'));
+		$this->drawText($canvas, $settings['type.x'], $settings['type.y'], $rarityLeft - $settings['type.x'], $card->type, $this->font("type$languageFont"));
 
 		// Legal text.
-		if(!preg_match_all('/(.*?)\r?\n(.*?) ([0-9\-\+]+?)\r?\n([0-9\*\-\+\/]{3,})\r?\n(.*?)\r?\n?((?<=\n)[^\s]*?(?=\s)) ([0-9\-\+]+?)\r?\n([0-9\*\-\+\/]{3,})\r?\n?(.*?)$/s', $card->legal, $matches))
+		$card->legal = str_replace("-----\n", '', $card->legal);
+		if(!preg_match_all('/(.*?)\r?\n(.*?) ([0-9\-\+]+?)\r?\n([0-9\*\-\+\/]{3,})\r?\n(.*?)\r?\n?((?<=\n)[^\s]*?(?=\s)) ([0-9\-\+]+?)\r?\n([0-9\*\-\+\/]{3,})\r?\n?(.*?)$/su', $card->legal, $matches))
 			error('Wrong format for legal text: ' . $card->title);
 
+		
 		//1
 		$this->drawText($canvas, $settings['pt.1.center.x'], $settings['pt.1.center.y'], $settings['pt.1.width'], $card->pt, $this->font('pt'));
-		$this->drawLegalAndFlavorText($canvas, $settings['text.1.top'], $settings['text.1.left'], $settings['text.1.bottom'], $settings['text.1.right'], $matches[1][0], null, $this->font('text'), 0);
+		$this->drawLegalAndFlavorText($canvas, $settings['text.1.top'], $settings['text.1.left'], $settings['text.1.bottom'], $settings['text.1.right'], $matches[1][0], null, $this->font("text$languageFont"), 0);
 
 		//2
 		$this->drawText($canvas, $settings['pt.2.center.x'], $settings['pt.2.center.y'], $settings['pt.2.width'], $matches[4][0], $this->font('pt'));
-		$this->drawText($canvas, $settings['name.2.center.x'], $settings['name.2.center.y'], $settings['name.2.width'], $matches[2][0], $this->font('pt', 'glow:true'));
+		$this->drawText($canvas, $settings['name.2.center.x'], $settings['name.2.center.y'], $settings['name.2.width'], $matches[2][0], $this->font("pt$languageFont", 'glow:true'));
 		$this->drawText($canvas, $settings['level.2.center.x'], $settings['level.2.center.y'], $settings['level.2.width'], $matches[3][0], $this->font('pt', 'glow:true'));
-		$this->drawLegalAndFlavorText($canvas, $settings['text.2.top'], $settings['text.2.left'], $settings['text.2.bottom'], $settings['text.2.right'], $matches[5][0], null, $this->font('text'), 0);
+		$this->drawLegalAndFlavorText($canvas, $settings['text.2.top'], $settings['text.2.left'], $settings['text.2.bottom'], $settings['text.2.right'], $matches[5][0], null, $this->font("text$languageFont"), 0);
 
 		//3
 		$this->drawText($canvas, $settings['pt.3.center.x'], $settings['pt.3.center.y'], $settings['pt.3.width'], $matches[8][0], $this->font('pt'));
-		$this->drawText($canvas, $settings['name.3.center.x'], $settings['name.3.center.y'], $settings['name.3.width'], $matches[6][0], $this->font('pt', 'glow:true'));
+		$this->drawText($canvas, $settings['name.3.center.x'], $settings['name.3.center.y'], $settings['name.3.width'], $matches[6][0], $this->font("pt$languageFont", 'glow:true'));
 		$this->drawText($canvas, $settings['level.3.center.x'], $settings['level.3.center.y'], $settings['level.3.width'], $matches[7][0], $this->font('pt', 'glow:true'));
-		$this->drawLegalAndFlavorText($canvas, $settings['text.3.top'], $settings['text.3.left'], $settings['text.3.bottom'], $settings['text.3.right'], $matches[9][0], null, $this->font('text'), 10);
+		$this->drawLegalAndFlavorText($canvas, $settings['text.3.top'], $settings['text.3.left'], $settings['text.3.bottom'], $settings['text.3.right'], $matches[9][0], null, $this->font("text$languageFont"), 10);
 
 
 		// Artist and copyright.

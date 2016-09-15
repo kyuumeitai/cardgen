@@ -1,4 +1,4 @@
-<?
+<?php
 ////////////////////////////////////////////////////////////////////////
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -25,7 +25,10 @@ class ArtDB {
 
 		$this->setDB = $setDB;
 
-		$this->ext = '.' . $config['art.extension'];
+		/*if ($config['art.use.xlhq.full.card'] != false) {
+			$this->ext = '.' . $config['art.xlhq.extension'] . '.' . $config['art.extension'];
+		}
+		else */$this->ext = '.' . $config['art.extension'];
 
 		$this->root = $config['art.directory'];
 		if (!$this->root) error('Missing art.directory from config.txt.');
@@ -75,9 +78,15 @@ class ArtDB {
 		}
 
 		$name = $title;
+		//$name = preg_replace('/([\w\s\,\-\p{L}]+)([ 0-3]{0,2})/', '\\1', $name);
 		$name = str_replace('Avatar: ', '', $name);
 		$name = str_replace(':', '', $name);
 		$name = str_replace('"', '', $name);
+		$name = str_replace('?', '', $name);
+		$name = str_replace('’', "'", $name);
+		$name = str_replace('“', '', $name);
+		$name = str_replace('”', '', $name);
+		$name = str_replace('é', 'e', $name);
 
 		$fileName = null;
 		if ($config['art.random']) {
@@ -100,20 +109,34 @@ class ArtDB {
 			}
 		} else {
 			if ($config['art.debug']) echo "\n";
+			if ($config['art.subdirectory.token'] != '') {
+				$tokenDir = $config['art.subdirectory.token'] . '/';
+			}
+			else {
+				$tokenDir = null;
+			}
+			$titleToToken = csvToArray('data/titleToToken.csv');
+			$tokenAndCard = array('Kobolds of Kher Keep', 'Festering Goblin', 'Goldmeadow Harrier', 'Llanowar Elves', 'Metallic Sliver', 'Spark Elemental', 'Cloud Sprite', 'Illusion', 'Shapeshifter', 'Assembly-Worker', 'Giant Adephage');
+			
 			foreach ($this->setDB->getAbbrevs($set) as $abbrev) {
-				$fileName = $this->findImage($this->root . '/' . $abbrev . '/', $name, $pic);
+				if ((array_key_exists(strtolower($name), $titleToToken) && in_array($name, $tokenAndCard) == FALSE) || (in_array($name, $tokenAndCard) && ($set == 'FUT'||$set == 'C13'||$set == 'TSP' && $name == 'Kobolds of Kher Keep'||$set == 'TSP' && $name == 'Assembly-Worker' && $pic == 'token'||$set == 'GTC' && $name == 'Giant Adephage' && $pic == 'token'||$name == 'Illusion' && $set != 'APC'||$set == 'C15'||$set == 'LRW')) || strpos($name, 'Emblem') !== FALSE) {
+					$fileName = $this->findImage($this->root . '/' . $abbrev . '/' . $tokenDir, $name, $pic);
+					if (!$fileName) $fileName = $this->findImage($this->root . '/' . $abbrev . '/', $name, $pic);
+				} else {
+					$fileName = $this->findImage($this->root . '/' . $abbrev . '/', $name, $pic);
+				}
 				if ($fileName)
 					break;
 			}
 		}
 
-		if (!$fileName && $config['art.error.when.missing']) error('No art found for card: ' . $title);
+		if (!$fileName && $config['art.error.when.missing']) error('No art found for card: ' . $title . ' [' . $set . ']');
 
 		if ($config['art.debug']) {
 			if ($fileName)
 				echo "Using art: $fileName\n";
 			else
-				echo "Art not found for: $title\n";
+				echo "Art not found for: $title [$set]\n";
 		}
 
 		return $fileName;
@@ -124,6 +147,8 @@ class ArtDB {
 
 		if ($pic) {
 			foreach ($this->picPatterns as $pattern) {
+				$fileNameXLHQ = $path . $name . str_replace('%', $pic, $pattern) . '.' . $config['art.xlhq.extension'] . $this->ext;
+				$fileNameXLHQLowercase = $path . strtolower($name) . str_replace('%', $pic, $pattern) . '.' . $config['art.xlhq.extension'] . $this->ext;
 				$fileName = $path . $name . str_replace('%', $pic, $pattern) . $this->ext;
 				$fileNameLowercase = $path . strtolower($name) . str_replace('%', $pic, $pattern) . $this->ext;
 				if ($config['art.debug']) {
@@ -132,10 +157,14 @@ class ArtDB {
 					elseif (file_exists($fileNameLowercase)) echo ' *found*';
 					echo "\n";
 				}
-				if (file_exists($fileName)) return $fileName;
+				if (file_exists($fileNameXLHQ) && $config['art.use.xlhq.full.card'] != false) return $fileNameXLHQ;
+				elseif (file_exists($fileNameXLHQLowercase) && $config['art.use.xlhq.full.card'] != false) return $fileNameXLHQLowercase;
+				elseif (file_exists($fileName)) return $fileName;
 				elseif (file_exists($fileNameLowercase)) return $fileNameLowercase;
 			}
 		} else {
+			$fileNameXLHQ =  $path . $name . '.' . $config['art.xlhq.extension'] . $this->ext;
+			$fileNameXLHQLowercase =  $path . strtolower($name) . '.' . $config['art.xlhq.extension'] . $this->ext;
 			$fileName = $path . $name . $this->ext;
 			$fileNameLowercase = $path . strtolower($name) . $this->ext;
 			if ($config['art.debug']) {
@@ -144,7 +173,9 @@ class ArtDB {
 				elseif (file_exists($fileNameLowercase)) echo ' *found*';
 				echo "\n";
 			}
-			if (file_exists($fileName)) return $fileName;
+			if (file_exists($fileNameXLHQ) && $config['art.use.xlhq.full.card'] != false) return $fileNameXLHQ;
+			elseif (file_exists($fileNameXLHQLowercase) && $config['art.use.xlhq.full.card'] != false) return $fileNameXLHQLowercase;
+			elseif (file_exists($fileName)) return $fileName;
 			elseif (file_exists($fileNameLowercase)) return $fileNameLowercase;
 		}
 		return null;
@@ -154,13 +185,15 @@ class ArtDB {
 		global $config;
 
 		// Look for a file with no picture number.
+		$fileNameXLHQ =  $path . $name . '.' . $config['art.xlhq.extension'] . $this->ext;
 		$fileName = $path . $name . $this->ext;
 		if ($config['art.debug']) {
 			echo "\nLooking for art: $fileName";
 			if (file_exists($fileName)) echo ' *found*';
 			echo "\n";
 		}
-		if (file_exists($fileName)) $images[$fileName] = true;
+		if (file_exists($fileNameXLHQ) && $config['art.use.xlhq.full.card'] != false) $images[$fileName] = true;
+		else if (file_exists($fileName)) $images[$fileName] = true;
 
 		// Find all images with picture numbers.
 		$i = 1;

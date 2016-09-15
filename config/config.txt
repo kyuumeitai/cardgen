@@ -1,30 +1,59 @@
 
 [prompt]
 output.clean = 1
+log.errors.and.warnings = 0
+exit.on.error = 1
+cardgen.error.log = cardgen_errors.txt
 
 [card generation]
-card.set.random = 0
+card.set.random = 1
 card.flavor.random = 0
+card.localized.flavor.random = 1
 card.larger.regular.symbols = 0
 card.old.tap.symbol = 1
+card.original.tap.symbol.sets = LEA,LEB,2ED,3ED,ATQ,ARN,DRK,FEM
+card.old.mana.symbols = 1
+card.old.mana.symbols.sets = LEA,LEB,2ED,3ED,4ED,ATQ,ARN,DRK,FEM,HML,LEG
 card.artist.and.copyright = 1
-card.copyright = "&#8482; & &#169; 1993-2013 Wizards of the Coast LLC"
+card.artist.and.copyright.m15 = 1
+card.copyright = "&#8482; & &#169; 1993-2016 Wizards of the Coast LLC"
+card.copyright.m15 = "&#8482; & &#169; 2016 Wizards of the Coast"
+card.copyright.ugl = "&#169; 1993-2016 Wizards of the Coast, Inc."
 card.reminder.text = 1
+card.premirage.disable.reminder = 1
+card.premirage.sets = LEA,LEB,2ED,ARN,ATQ,3ED,LEG,DRK,FEM,4ED,ICE,ALL,HML,CHR,MED,ME2,ME3,ME4,ATH
+card.flavor.text = 1
+card.lang = "EN"
+card.transform.as.split = 0
+card.load.token.only = 0
+card.use.symbol.on.mox = 0
+card.corrected.promo.symbol = 1
+card.promo.symbols = ARE,CHP,CVP,FBP,FNM,GAM,D15,GTW,JGC,JUN,LGE,LND,MGD,MIN,MPR,PRE,PTR,REL,SUM,UGF,WLD,WMC,THG,PCP,PP2,ARS,PR1,PR2,PR3,PR4,PRM,URC,HHL,H14,H15,MBP,CP1,CP2,CP3
+card.use.preexodus.all.black.set.symbol = 0
+card.preexodus.sets = LEA,LEB,2ED,ARN,ATQ,3ED,LEG,DRK,FEM,4ED,ICE,ALL,HML,CHR,5ED,EXO,MIR,POR,STH,TMP,VIS,WTH
+card.short.pic = 1
 
 [card text]
 card.text.use.font.size.cache = 0
 card.text.symbol.spacing = 2
 card.text.symbol.height.percentage = 110
 card.text.double.spacing = 50
+card.text.token.beveling = 1
 
 [renderers]
+;Render Specific Card Frames
+render.m15 = 1
 render.eighth = 1
 render.preEighth = 1
 render.preEighth.basic.land.frames = 1
-render.decklist = 1
+render.decklist = 0
 render.vanguard = 1
 render.planeswalker = 1
 render.plane = 1
+render.scheme = 1
+render.hero = 1
+render.token = 1
+render.emblem = 1
 
 [decklist parsing]
 decklist.delimiter = ,
@@ -33,15 +62,16 @@ decklist.ignore.picture.numbers = 0
 
 [output - general]
 output.directory = output/
-output.suffix =
-output.extension = png
-output.language = ;
+output.suffix = .full
+output.extension = jpg
+output.language = french
 output.english.flavor.text = 0
 output.english.title.on.translated.card = 0
 output.clean = 1
+output.tokens.for.forge = 0
 
 [output - card images]
-output.card.width =
+output.card.width = 
 output.card.set.directories = 0
 output.skip.existing.images = 0
 
@@ -49,21 +79,24 @@ output.skip.existing.images = 0
 output.page.rows = 3
 output.page.columns = 3
 output.page.rotate = 0
-output.page.rotate.last.rows = 1
+output.page.rotate.last.rows = 0
 output.page.rotate.align.right = 0
 output.page.offset.top = 0
 output.page.offset.left = 0
 output.page.offset.bottom = 0
 output.page.offset.right = 0
-output.card.border = 45
-output.card.spacing = 10
+output.card.border = 35
+output.card.spacing = 2
 output.card.offsets.x =
 output.card.offsets.y =
 
 [cropped art]
 art.random = 0
 art.keep.aspect.ratio = 1
-art.directory = f:\mtg\pics
+art.directory = C:\Users\Brenton\Downloads\Backup\MTG\Pictures\HQ
+art.subdirectory.token = tokens
+art.use.xlhq.full.card = 0
+art.xlhq.extension = xlhq
 art.extension = jpg
 art.error.when.missing = 0
 art.debug = 0

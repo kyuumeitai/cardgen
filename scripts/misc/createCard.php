@@ -1,4 +1,4 @@
-<?
+<?php
 ////////////////////////////////////////////////////////////////////////
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -14,6 +14,9 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ////////////////////////////////////////////////////////////////////////
 require_once 'scripts/includes/global.php';
+require_once 'scripts/includes/newfunctions.php';
+mb_internal_encoding("UTF-8");
+mb_regex_encoding("UTF-8");
 
 echo "Card Generator v$version - Create Card\n\n";
 
@@ -24,9 +27,9 @@ $writer = new ImageWriter();
 $writer->setOutputType(false, false);
 
 echo "Collecting card data...\n";
-echo "Card type (R=Regular, L=Land, V=Vanguard, S=Split, F=Flip, FL=Flip Land):\n";
+echo "Card type (R=Regular, L=Land, V=Vanguard, S=Split, F=Flip, FL=Flip Land, PW=Planeswalker, PL=Plane, PH=Phenomenon, SC=Scheme):\n";
 $cardType = strtolower(trim(fgets(STDIN)));
-if ($cardType != 'r' && $cardType != 'l' && $cardType != 'v' && $cardType != 's' && $cardType != 'f' && $cardType != 'fl') error('Invalid card type.');
+if ($cardType != 'r' && $cardType != 'l' && $cardType != 'v' && $cardType != 's' && $cardType != 'f' && $cardType != 'fl' && $cardType != 'pw' && $cardType != 'pl' && $cardType != 'ph' && $cardType != 'sc') error('Invalid card type.');
 if ($cardType == 's') {
 	$card = promptCardInfo($cardType, false);
 	$card2 = promptCardInfo($cardType, true);
@@ -106,7 +109,15 @@ function promptCardInfo ($cardType, $isLastCard = true) {
 		echo "Type (ex: Creature - Human):\n";
 		$card->type = str_replace('-', '&#8211;', upperCaseWords(trim(fgets(STDIN))));
 
-		if ($cardType != 'l' && $cardType != 'fl') {
+		if (strpos($card->type, "Planeswalker")!== FALSE && $cardType == 'pw') {
+			$card->englishType = $card->type;
+			echo "Starting Loyalty:\n";
+			$card->pt = '/' . trim(fgets(STDIN));
+		}
+		if ((strpos($card->type, "Plane") !== FALSE && $cardType == 'pl') || (strpos($card->type, "Phenomenon") !== FALSE && $cardType== 'ph') || (strpos($card->type, "Scheme") !== FALSE && $cardType == 'sc')) {
+			$card->englishType = $card->type;
+		}
+		if ($cardType != 'l' && $cardType != 'fl' && $cardType != 'pw' && $cardType != 'ph' && $cardType != 'pl' && $cardType != 'sc') {
 			echo "Power/toughness (ex: 3/4):\n";
 			$card->pt = trim(fgets(STDIN));
 		}
@@ -121,9 +132,15 @@ function promptCardInfo ($cardType, $isLastCard = true) {
 		$text .= $input;
 	}
 	$text = str_replace('-', '&#8211;', $text);
+		if (strpos($card->type, "Planeswalker")!== FALSE && $cardType == 'pw') {
+			$text = str_replace("\n&#8211;", "\n-", $text);
+		}
+		if (strpos($card->type, "Plane") !== FALSE && $cardType == 'pl') {
+			$text = str_replace("\n", "\n ", $text);
+		}
 	$card->legal = $text;
 
-	if ($cardType != 'f' && $cardType != 'fl') {
+	if ($cardType != 'f' && $cardType != 'fl' && $cardType != 'pw') {
 		echo "Flavor text:\n";
 		$text = '';
 		while (true) {
@@ -151,11 +168,16 @@ function promptCardInfo ($cardType, $isLastCard = true) {
 		echo "Artist:\n";
 		$card->artist = trim(fgets(STDIN));
 
-		echo "Copyright (ex: (tm) & (c) 2006 Lizards on a Post, Inc. 42/175):\n";
+		echo "Copyright (ex: (tm) & (c) 2006 Lizards on a Post, Inc.):\n";
 		$card->copyright = trim(fgets(STDIN));
 		$card->copyright = str_replace('(tm)', '&#8482;', $card->copyright);
 		$card->copyright = str_replace('(c)', '&#169;', $card->copyright);
 		if (!$card->copyright) $card->copyright = ' ';
+		
+		echo "Collector Number (ex: 43/145):\n";
+		$card->collectorNumber = trim(fgets(STDIN));
+		$card->collectorNumber = str_replace('\\', '/', $card->collectorNumber);
+		if (!$card->collectorNumber) $card->collectorNumber = '1/1';
 	}
 
 	if ($cardType != 'v' && (($cardType != 'f' && $cardType != 'fl') || $isLastCard) && ($cardType != 's' || $isLastCard)) {

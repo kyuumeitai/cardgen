@@ -1,24 +1,25 @@
-﻿Abandoned Outpost,W
+Abandoned Outpost,W
 Academy Ruins,C
 Adarkar Wastes,WU
-Adventurers' Guildhouse,A
+Adventurers' Guildhouse,C
 Akoum Refuge,BR
 Alchemist's Refuge,C
 Ancient Amphitheater,RW
 Ancient Den,W
 Ancient Spring,WUB
 Ancient Tomb,C
-Ancient Ziggurat,WURBG
+Ancient Ziggurat,A
 An-Havva Township,RGW
+Arcane Lighthouse,C
 Arcane Sanctum,WUB
-Archaeological Dig,WUBRG
+Archaeological Dig,A
 Arctic Flats,GW
-Arena,A
+Arena,C
 Arid Mesa,A
 Auntie's Hovel,BR
 Aysen Abbey,GWU
 Azorius Chancery,WU
-Azorius Guildgate,WB
+Azorius Guildgate,WU
 Bad River,A
 Badlands,BR
 Balduvian Trading Post,R
@@ -27,7 +28,7 @@ Barbarian Ring,R
 Barren Moor,B
 Battlefield Forge,RW
 Bayou,BG
-Bazaar of Baghdad,A
+Bazaar of Baghdad,C
 Blackcleave Cliffs,BR
 Blasted Landscape,C
 Blinkmoth Nexus,C
@@ -38,6 +39,7 @@ Bog Wreckage,B
 Bojuka Bog,B
 Boreal Shelf,WU
 Boros Garrison,RW
+Boros Guildgate,RW
 "Boseiju, Who Shelters All",C
 Bottomless Vault,B
 Breeding Pool,GU
@@ -49,22 +51,23 @@ Calciform Pools,WU
 Caldera Lake,UR
 Cascade Bluffs,UR
 Castle Sengir,UBR
-Cathedral of Serra,A
+Cathedral of Serra,C
 Cathedral of War,C
-Cavern of Souls,C
+Cavern of Souls,A
 Caves of Koilos,WB
 Celestial Colonnade,WU
 Centaur Garden,G
 Cephalid Coliseum,U
 Cinder Marsh,BR
-City of Brass,WUBRG
+City of Ass,A
+City of Brass,A
 City of Shadows,C
 City of Traitors,C
 Clifftop Retreat,RW
 Cloudcrest Lake,WU
 Cloudpost,C
 Coastal Tower,WU
-Command Tower,WURBG
+Command Tower,A
 Contested Cliffs,C
 Contested War Zone,C
 Copperline Gorge,RG
@@ -73,11 +76,11 @@ Creeping Tar Pit,UB
 Crosis's Catacombs,UBR
 Crumbling Necropolis,UBR
 Crypt of Agadeem,B
-Crystal Quarry,WUBRG
+Crystal Quarry,A
 Crystal Vein,C
 Dakmor Salvage,B
 Darigaaz's Caldera,BRG
-Dark Depths,A
+Dark Depths,C
 Darkslick Shores,UB
 Darksteel Citadel,C
 Darkwater Catacombs,UB
@@ -85,8 +88,9 @@ Daru Encampment,C
 Desert,C
 Deserted Temple,C
 Desolate Lighthouse,C
-Diamond Valley,A
+Diamond Valley,C
 Dimir Aqueduct,UB
+Dimir Guildgate,UB
 Dormant Volcano,R
 Dragonskull Summit,BR
 Dread Statuary,C
@@ -105,47 +109,51 @@ Eldrazi Temple,C
 Elephant Graveyard,C
 Elfhame Palace,GW
 "Emeria, the Sky Ruin",W
+Encroaching Wastes,C
 Esper Panorama,C
 Everglades,B
-Evolving Wilds,A
-Exotic Orchard,WURBG
-Eye of Ugin,A
+Evolving Wilds,C
+Exotic Orchard,A
+Eye of Ugin,C
 Faerie Conclave,U
 Fetid Heath,WB
 Fire-Lit Thicket,RG
 Flagstones of Trokair,W
+Flamekin Village,R
 Flood Plain,A
 Flooded Grove,GU
 Flooded Strand,A
-Forbidden Orchard,WUBRG
+Forbidden Orchard,A
 Forbidding Watchtower,W
+Foundry of the Consuls,C
 Forest,G
 Forgotten Cave,R
-Forsaken City,WUBRG
+Forsaken City,A
 Fountain of Cho,W
 Frost Marsh,UB
 Fungal Reaches,RG
 Gaea's Cradle,G
 Gargoyle Castle,C
 Gavony Township,C
-Gemstone Caverns,WUBRG
-Gemstone Mine,WUBRG
+Gem Bazaar,C
+Gemstone Caverns,A
+Gemstone Mine,A
 Geothermal Crevice,BRG
 Ghitu Encampment,R
 Ghost Quarter,C
 Ghost Quarter,C
 Ghost Town,C
 Gilt-Leaf Palace,BG
-Glacial Chasm,A
+Glacial Chasm,C
 Glacial Fortress,WU
 Glimmerpost,C
-Glimmervoid,WUBRG
+Glimmervoid,A
 Goblin Burrows,C
 Godless Shrine,WB
 "Gods' Eye, Gate to the Reikai",C
 Golgari Guildgate,BG
 Golgari Rot Farm,BG
-Grand Coliseum,WUBRG
+Grand Coliseum,A
 Grasslands,A
 Graven Cairns,BR
 Graypelt Refuge,GW
@@ -155,17 +163,18 @@ Grim Backwoods,C
 Grixis Panorama,C
 Grove of the Burnwillows,RG
 Grove of the Guardian,C
+Gruul Guildgate,RG
 Gruul Turf,RG
 Halimar Depths,U
 Hall of the Bandit Lord,C
 Hallowed Fountain,WU
-Halls of Mist,A
+Halls of Mist,C
 Hammerheim,R
 Haunted Fengraf,C
 Havenwood Battleground,G
 Heart of Yavimaya,G
 Hellion Crucible,C
-Henge of Ramos,WUBRG
+Henge of Ramos,A
 Hickory Woodlot,G
 High Market,C
 Highland Weald,RG
@@ -175,11 +184,11 @@ Homeward Path,C
 Horizon Canopy,GW
 Howltooth Hollow,B
 Icatian Store,W
-Ice Floe,A
+Ice Floe,C
 Inkmoth Nexus,C
 Irrigation Ditch,GWU
 Island,U
-Island of Wak-Wak,A
+Island of Wak-Wak,C
 Isolated Chapel,WB
 Izzet Boilerworks,UR
 Izzet Guildgate,UR
@@ -194,6 +203,7 @@ Karplusan Forest,RG
 Kazandu Refuge,RG
 Keldon Megaliths,R
 Keldon Necropolis,C
+Kessig Wolf Run,C
 Khalni Garden,G
 Kher Keep,C
 Kjeldoran Outpost,W
@@ -210,18 +220,19 @@ Library of Alexandria,C
 Llanowar Reborn,G
 Llanowar Wastes,BG
 Lonely Sandbar,U
-Lotus Vale,WUBRG
+Lotus Vale,A
 Madblind Mountain,R
 "Magosi, the Waterveil",U
 Marsh Flats,A
-Maze of Ith,A
+Maze of Ith,C
 Maze of Shadows,C
+Maze's End,C
 Mercadian Bazaar,R
-Meteor Crater,WUBRG
+Meteor Crater,A
 "Mikokoro, Center of the Sea",C
 "Minamo, School at Water's Edge",U
 "Miren, the Moaning Well",C
-Mirrodin's Core,WUBRG
+Mirrodin's Core,A
 Mishra's Factory,C
 Mishra's Workshop,C
 Mistveil Plains,W
@@ -233,11 +244,12 @@ Moorland Haunt,C
 Mossfire Valley,RG
 Mosswort Bridge,G
 Mountain,R
-Mountain Stronghold,A
+Mountain Stronghold,C
 Mountain Valley,A
 Mouth of Ronom,C
 Murmuring Bosk,BGW
 Mutavault,C
+Myriad Landscape,C
 Mystic Gate,WU
 Mystifying Maze,C
 Nantuko Monastery,C
@@ -248,42 +260,48 @@ Nimbus Maze,WU
 "Nivix, Aerie of the Firemind",C
 Nomad Stadium,W
 "Novijen, Heart of Progress",C
-Oasis,A
+Oasis,C
 "Oboro, Palace in the Clouds",U
-"Okina, Temple to the Grandfathers",GW
+"Okina, Temple to the Grandfathers",G
+Opal Palace,A
 "Oran-Rief, the Vastwood",G
 Orzhov Basilica,WB
+Orzhov Guildgate,WB
 "Orzhova, the Church of Deals",C
 Overgrown Tomb,BG
 Peat Bog,B
 Pendelhaven,G
 Petrified Field,C
 Phyrexian Tower,B
-Pillar of the Paruns,WUBRG
+Phyrexia's Core,C
+Pillar of the Paruns,A
 Pine Barrens,BG
 Pinecrest Ridge,RG
 Piranha Marsh,B
 Plains,W
+"Paliano, the High City",A
 Plateau,RW
 Polluted Delta,A
 Polluted Mire,B
 "Prahv, Spires of Order",C
-Primal Beyond,WUBRG
+Primal Beyond,A
 Quicksand,C
+R&D's Secret Lair,C
+Radiant Fountain,C
 Raging Ravine,RG
-Rainbow Vale,WUBRG
+Rainbow Vale,A
 Rakdos Carnarium,BR
 Rakdos Guildgate,BR
 Rath's Edge,C
 Ravaged Highlands,R
 Razorverge Thicket,GW
-Reflecting Pool,WUBRG
-Reflecting Pool,WUBRG
+Reflecting Pool,A
+Reflecting Pool,A
 Reliquary Tower,C
 Remote Farm,W
 Remote Isle,UB
 Remote Isle,U
-Rhystic Cave,WUBRG
+Rhystic Cave,A
 Riftstone Portal,C
 Riptide Laboratory,C
 Rishadan Port,C
@@ -297,11 +315,11 @@ Rootbound Crag,RG
 Rootwater Depths,UB
 Rugged Prairie,RW
 Ruins of Trokair,W
-Rupture Spire,WURBG
+Rupture Spire,A
 Rushwood Grove,G
 Rustic Clachan,W
 Sacred Foundry,RW
-Safe Haven,A
+Safe Haven,C
 Salt Flats,WB
 Salt Marsh,UB
 Saltcrusted Steppe,GW
@@ -314,13 +332,13 @@ Savage Lands,BRG
 Savannah,GW
 Scabland,RW
 Scalding Tarn,A
-School of the Unseen,WUBRG
+School of the Unseen,A
 Scorched Ruins,C
 Scorned Villager,G
 Scrubland,WB
 Scrying Sheets,C
 Seachrome Coast,WU
-Seafarer's Quay,A
+Seafarer's Quay,C
 Seafloor Debris,U
 Seaside Citadel,GWU
 Seaside Haven,C
@@ -336,18 +354,20 @@ Serra's Sanctum,W
 Shadowblood Ridge,BR
 Shelldock Isle,U
 Sheltered Valley,C
-Shimmering Grotto,WUBRG
+Shimmering Grotto,A
 "Shinka, the Bloodsoaked Keep",R
 Shivan Gorge,C
 Shivan Oasis,RG
 Shivan Reef,UR
 "Shizo, Death's Storehouse",B
 Simic Growth Chamber,GU
+Simic Guildgate,GU
 "Skarrg, the Rage Pits",C
 Skycloud Expanse,WU
 Skyshroud Forest,GU
 Slayers' Stronghold,C
 Slippery Karst,G
+Sliver Hive,A
 Smoldering Crater,R
 Smoldering Spires,R
 Snow-Covered Forest,G
@@ -357,7 +377,7 @@ Snow-Covered Plains,W
 Snow-Covered Swamp,B
 Soaring Seacliff,U
 Soldevi Excavations,U
-Sorrow's Path,A
+Sorrow's Path,C
 Spawning Pool,B
 Spinerock Knoll,R
 Springjack Pasture,C
@@ -385,20 +405,31 @@ Tainted Field,WB
 Tainted Isle,UB
 Tainted Peak,BR
 Tainted Wood,BG
-Tarnished Citadel,WUBRG
+Tarnished Citadel,A
 Tectonic Edge,C
 Teetering Peaks,R
 Teferi's Isle,U
 Temple Garden,GW
 Temple of the False God,C
-Tendo Ice Bridge,WUBRG
+Temple of Emlightenment,WU
+Temple of Silence,WB
+Temple of Deceit,UB
+Temple of Ephipany,UR
+Temple of Malice,BR
+Temple of Malady,BG
+Temple of Abandon,RG
+Temple of Triumph,RW
+Temple of Plenty,GW
+Temple of Mystery,GU
+Tendo Ice Bridge,A
 Terminal Moraine,C
 Terrain Generator,C
-Terramorphic Expanse,A
+Terramorphic Expanse,C
 Thalakos Lowlands,WU
-Thawing Glaciers,A
-The Tabernacle at Pendrell Vale,A
-Thran Quarry,WUBRG
+Thawing Glaciers,C
+The Tabernacle at Pendrell Vale,C
+Thespian's Stage,C
+Thran Quarry,A
 Timberland Ruins,G
 Timberline Ridge,RG
 Tinder Farm,RGW
@@ -409,7 +440,7 @@ Tomb of Urami,B
 Tower of the Magistrate,C
 Tranquil Garden,GW
 Tranquil Thicket,G
-Transguild Promenade,WURBG
+Transguild Promenade,A
 Tree of Tales,G
 Treetop Village,G
 Tresserhorn Sinks,BR
@@ -420,8 +451,8 @@ Turntimber Grove,G
 Twilight Mire,BG
 Underground River,UB
 Underground Sea,UB
-Undiscovered Paradise,WUBRG
-Unholy Citadel,A
+Undiscovered Paradise,A
+Unholy Citadel,C
 Unholy Grotto,C
 Unstable Frontier,C
 "Untaidake, the Cloud Keeper",C
@@ -440,17 +471,18 @@ Veldt,GW
 Verdant Catacombs,A
 Vesuva,A
 "Vitu-Ghazi, the City-Tree",C
-Vivid Crag,WUBRG
-Vivid Creek,WUBRG
-Vivid Grove,WUBRG
-Vivid Marsh,WUBRG
-Vivid Meadow,WUBRG
+Vivid Crag,R
+Vivid Creek,U
+Vivid Grove,G
+Vivid Marsh,B
+Vivid Meadow,W
 Volcanic Island,UR
 Volrath's Stronghold,C
 Wanderwine Hub,WU
 Wasteland,C
 Waterveil Cavern,UB
 Watery Grave,UB
+Westvale Abbey,C
 Windbrisk Heights,W
 Winding Canyons,C
 Windswept Heath,A
@@ -463,3 +495,97 @@ Woodland Cemetery,BG
 Yavimaya Coast,GU
 Yavimaya Hollow,C
 Zoetic Cavern,C
+Bloodfell Caves,BR
+Blossoming Sands,GW
+Crucible of the Spirit Dragon,A
+Dismal Backwater,UB
+Frontier Bivouac,A
+Haven of the Spirit Dragon,A
+Jungle Hollow,BG
+Mystic Monastery,A
+Nomad Outpost,A
+Opulent Palace,A
+Rugged Highlands,RG
+Sandsteppe Citadel,A
+Scoured Barrens,WB
+Swiftwater Cliffs,UR
+Thornwood Falls,GU
+Tomb of the Spirit Dragon,C
+Tranquil Cove,WU
+Wind-Scarred Crag,RW
+"Nykthos, Shrine to Nyx",A
+Temple of Abandon,RG
+Temple of Deceit,UB
+Temple of Enlightenment,WU
+Temple of Epiphany,UR
+Temple of Malady,BG
+Temple of Malice,BR
+Temple of Mystery,GU
+Temple of Plenty,GW
+Temple of Silence,WB
+Temple of Triumph,RW
+Unknown Shores,A
+Blighted Cataract,C
+Blighted Fen,C
+Blighted Gorge,C
+Blighted Steppe,C
+Blighted Woodland,C
+Canopy Vista,GW
+Cinder Glade,RG
+Fertile Thicket,G
+Looming Spires,R
+Lumbering Falls,GU
+Mortuary Mire,B
+Prairie Stream,WB
+Sanctum of Ugin,C
+Sandstone Bridge,W
+Shrine of the Forsaken Gods,C
+Skyline Cascade,U
+Spawning Bed,C
+Sunken Hollow,UB
+Ally Encampment,A
+Shambling Vent,WB
+Smoldering Marsh,BR
+Mana Confluence,A
+Command Beacon,C
+Wastes,C
+Crumbling Vestige,C
+Blighted Crossroads,A
+Sea Gate Ruins,C
+Spire's Needle,RW
+Serene Valley,GW
+Mooreland Ash,BR
+Meandering Stream,WU
+Tectonic Edge,C
+Cinder Barrens,BR
+Corrupted Crossroads,A
+Crumbling Vestige,C
+Hissing Quagmire,BG
+Holdout Settlement,A
+Meandering River,WU
+Mirrorpool,C
+Needle Spires,RW
+Ruins of Oran-Rief,C
+Sea Gate Wreckage,C
+Submerged Boneyard,UB
+Timber Gorge,RG
+Tranquil Expanse,GW
+Wandering Fumarole,UR
+Mage-Ring Network,C
+Mishra's Toy Workshop,C
+Drownyard Temple,C
+Forsaken Sanctuary,WB
+Highland Lake,UR
+Foul Orchard,BG
+Stone Quarry,RW
+Woodland Stream,GU
+Warped Landscape,C
+Port Town,WU
+Game Trail,RG
+Foreboding Ruins,BR
+Fortified Village,GW
+Choked Estuary,UB
+Hanweir Battlements,C
+Geier Reach Sanitarium,C
+Nephalia Academy,C
+Throne of the High City,C

@@ -1,31 +1,58 @@
 Vintage (T1)
 BANNED
+Advantageous Proclamation
 Amulet of Quoz
+Backup Plan
+Brago's Favor
 Bronze Tablet
 Chaos Orb
 Contract from Below
 Darkpact
 Demonic Attorney
+Double Stroke
 Falling Star
+Immediate Action
+Iterative Analysis
 Jeweled Bird
+Muzzio's Preparations
+Power Play
 Rebirth
+Secret Summoning
+Secrets of Paradise
+Sentinel Dispatch
 Shahrazad
 Tempest Efreet
 Timmerian Fiends
+Unexpected Potential
+Worldknit
+Adriana's Valor
+Assemble the Rank and Vile
+Echoing Boon
+Emissary's Ploy
+Hired Heist
+Hold the Perimeter
+Hymn of the Wilds
+Incendiary Dissent
+Natural Unity
+Sovereign's Realm
+Summoner's Bond
+Weight Advantage
 RESTRICTED
 Ancestral Recall
 Balance
 Black Lotus
 Brainstorm
+Chalice of the Void
 Channel
 Demonic Consultation
 Demonic Tutor
+Dig Through Time
 Fastbond
 Flash
-Gifts Ungiven
 Imperial Seal
 Library of Alexandria
 Lion's Eye Diamond
+Lodestone Golem
 Lotus Petal
 Mana Crypt
 Mana Vault
@@ -40,15 +67,14 @@ Mox Sapphire
 Mystical Tutor
 Necropotence
 Ponder
-Regrowth
 Sol Ring
 Strip Mine
-Thirst for Knowledge
 Time Vault
 Time Walk
 Timetwister
 Tinker
 Tolarian Academy
+Treasure Cruise
 Trinisphere
 Vampiric Tutor
 Wheel of Fortune
@@ -59,48 +85,114 @@ SETS
 Promo - Release Events
 Promo - Prerelease Events
 Promo - Judge Gift Cards
+Promo - Legends Membership
 Promo - Gateway
 Promo - FNM
+Promo - Convention Promo
 Promo - Champs
+Promo - Media Inserts
+Promo - Vintage/Legacy Championship Oversized Cards
 Promo - Arena
 Promo - Two-Headed Giant
 Promo - Summer of Magic
+Promo - Dragon Con
 Promo - Happy Holidays
+Promo - Magic Game Day Mirran
 Promo - DCI Legend Membership
 Promo - Pro Tour
-Promo - Convention
 Promo - Video Game
 Promo - Grand Prix
 Promo - Stores
+Promo - Gatherer
 Promo - Junior Series
+Promo - Hero Cards
+Promo - DCI
+Promo - Ugin's Fate
+Promo - World Magic Cup
 Full Box Promotion
 Magic Game Day
-Book Inserts
-Magazine Inserts
-Comic Inserts
 Alternate Art Lands
 Magic Player Rewards
 World Championship Cards
-Vanguard
 Starter 1999
 Starter 2000
 Deckmasters 2001
+8th Edition Box Set
+9th Edition Box Set
 Beatdown
 Anthologies
 Battle Royale
-Duel Decks: Elves vs Goblins
-From the Vault: Dragons
-Duel Decks: Jace vs Chandra
-Duel Decks: Divine vs Demonic
+Masters Edition
+Masters Edition II
+Masters Edition III
+Masters Edition IV
 Planechase
 Planechase 2012 Edition
+Planechase Anthology
 From the Vault: Exiled
+From the Vault: Dragons
+From the Vault: Relics
+From the Vault: Legends
+From the Vault: Realms
+From the Vault: Twenty
+From the Vault: Annihilation
+From the Vault: Angels
+From the Vault: Lore
 Premium Deck Series: Slivers
+Premium Deck Series: Fire and Lightning
+Premium Deck Series: Graveborn
+Duel Decks: Elves vs Goblins
+Duel Decks: Jace vs Chandra
+Duel Decks: Divine vs Demonic
 Duel Decks: Garruk vs. Liliana
 Duel Decks: Phyrexia vs. the Coalition
+Duel Decks: Elspeth vs. Tezzeret
+Duel Decks: Knights vs. Dragons
+Duel Decks: Ajani vs. Nicol Bolas
+Duel Decks: Venser vs. Koth
+Duel Decks: Izzet vs. Golgari
+Duel Decks: Sorin vs. Tibalt
+Duel Decks: Heroes vs. Monsters
+Duel Decks: Jace vs. Vraska
+Duel Decks: Speed vs. Cunning
+Duel Decks: Kiora vs. Elspeth
+Duel Decks: Zendikar vs. Eldrazi
+Duel Decks: Blessed vs. Cursed
+Duel Decks: Nissa vs. Ob Nixilis
+Duel Decks Anthology: Elves vs Goblins
+Duel Decks Anthology: Jace vs Chandra
+Duel Decks Anthology: Divine vs Demonic
+Duel Decks Anthology: Garruk vs. Liliana
+Clash Pack: Fate and Fury
+Clash Pack: Power and Profit
+Clash Pack: Armed and Dangerous
+Challenge Deck 1: Face the Hydra
+Challenge Deck 2: Battle the Horde
+Challenge Deck 3: Defeat a God
 Archenemy
 Duels of the Planeswalker
+Duels of the Planeswalkers 2011
+Duels of the Planeswalkers 2012
+Duels of the Planeswalkers 2013
+Duels of the Planeswalkers 2014
+Duels of the Planeswalkers 2015
 Introductory Two-Player Starter
+Commander
+Commander's Arsenal
+Commander 2013 Edition
+Commander 2014 Edition
+Commander 2015 Edition
+Commander 2016 Edition
+Magic The Gathering Online Cube Alternate Art
+Conspiracy
+Conspiracy: Take the Crown
+Modern Event Deck 2014
+Modern Masters
+Modern Masters 2015
+Vintage Masters
+Tempest Remastered
+Eternal Masters
+Welcome Deck 2016
 Alpha
 Beta
 Unlimited
@@ -144,8 +236,8 @@ Judgment
 Onslaught
 Legions
 Scourge
-Mirrodin
 Eighth Edition
+Mirrodin
 Darksteel
 Fifth Dawn
 Champions of Kamigawa
@@ -181,15 +273,35 @@ Dark Ascension
 Avacyn Restored
 Magic 2013
 Return to Ravnica
+Gatecrash
+Dragon's Maze
+Magic 2014
+Theros
+Born of the Gods
+Journey into Nyx
+Magic 2015
+Khans of Tarkir
+Fate Reforged
+Dragons of Tarkir
+Magic Origins
+Battle for Zendikar
+Zendikar Expeditions
+Oath of the Gatewatch
+Shadows over Innistrad
+Eldritch Moon
+Kaladesh
+Aether Revolt
 
 Legacy (T1.5)
 BANNED
+Advantageous Proclamation
 Amulet of Quoz
 Ancestral Recall
+Backup Plan
 Balance
 Bazaar of Baghdad
 Black Lotus
-Black Vise
+Brago's Favor
 Bronze Tablet
 Channel
 Chaos Orb
@@ -198,6 +310,8 @@ Darkpact
 Demonic Attorney
 Demonic Consultation
 Demonic Tutor
+Dig Through Time
+Double Stroke
 Earthcraft
 Falling Star
 Fastbond
@@ -206,7 +320,9 @@ Frantic Search
 Goblin Recruiter
 Gush
 Hermit Druid
+Immediate Action
 Imperial Seal
+Iterative Analysis
 Jeweled Bird
 Library of Alexandria
 Mana Crypt
@@ -222,10 +338,15 @@ Mox Jet
 Mox Pearl
 Mox Ruby
 Mox Sapphire
+Muzzio's Preparations
 Mystical Tutor
 Necropotence
 Oath of Druids
+Power Play
 Rebirth
+Secret Summoning
+Secrets of Paradise
+Sentinel Dispatch
 Shahrazad
 Skullclamp
 Sol Ring
@@ -238,58 +359,138 @@ Timetwister
 Timmerian Fiends
 Tinker
 Tolarian Academy
+Treasure Cruise
+Unexpected Potential
 Vampiric Tutor
 Wheel of Fortune
 Windfall
-Worldgorger Dragon
+Worldknit
 Yawgmoth's Bargain
 Yawgmoth's Will
+Adriana's Valor
+Assemble the Rank and Vile
+Echoing Boon
+Emissary's Ploy
+Hired Heist
+Hold the Perimeter
+Hymn of the Wilds
+Incendiary Dissent
+Natural Unity
+Sovereign's Realm
+Summoner's Bond
+Weight Advantage
 SETS
 Promo - Release Events
 Promo - Prerelease Events
 Promo - Judge Gift Cards
+Promo - Legends Membership
 Promo - Gateway
 Promo - FNM
+Promo - Convention Promo
 Promo - Champs
+Promo - Media Inserts
+Promo - Vintage/Legacy Championship Oversized Cards
 Promo - Arena
 Promo - Two-Headed Giant
 Promo - Summer of Magic
+Promo - Dragon Con
 Promo - Happy Holidays
+Promo - Magic Game Day Mirran
 Promo - DCI Legend Membership
 Promo - Pro Tour
-Promo - Convention
 Promo - Video Game
 Promo - Grand Prix
 Promo - Stores
+Promo - Gatherer
 Promo - Junior Series
+Promo - Hero Cards
+Promo - DCI
+Promo - Ugin's Fate
+Promo - World Magic Cup
 Full Box Promotion
 Magic Game Day
-Book Inserts
-Magazine Inserts
-Comic Inserts
 Alternate Art Lands
 Magic Player Rewards
 World Championship Cards
-Vanguard
 Starter 1999
 Starter 2000
 Deckmasters 2001
+8th Edition Box Set
+9th Edition Box Set
 Beatdown
 Anthologies
 Battle Royale
-Duel Decks: Elves vs Goblins
-From the Vault: Dragons
-Duel Decks: Jace vs Chandra
-Duel Decks: Divine vs Demonic
+Masters Edition
+Masters Edition II
+Masters Edition III
+Masters Edition IV
 Planechase
 Planechase 2012 Edition
+Planechase Anthology
 From the Vault: Exiled
+From the Vault: Dragons
+From the Vault: Relics
+From the Vault: Legends
+From the Vault: Realms
+From the Vault: Twenty
+From the Vault: Annihilation
+From the Vault: Angels
+From the Vault: Lore
 Premium Deck Series: Slivers
+Premium Deck Series: Fire and Lightning
+Premium Deck Series: Graveborn
+Duel Decks: Elves vs Goblins
+Duel Decks: Jace vs Chandra
+Duel Decks: Divine vs Demonic
 Duel Decks: Garruk vs. Liliana
 Duel Decks: Phyrexia vs. the Coalition
+Duel Decks: Elspeth vs. Tezzeret
+Duel Decks: Knights vs. Dragons
+Duel Decks: Ajani vs. Nicol Bolas
+Duel Decks: Venser vs. Koth
+Duel Decks: Izzet vs. Golgari
+Duel Decks: Sorin vs. Tibalt
+Duel Decks: Heroes vs. Monsters
+Duel Decks: Jace vs. Vraska
+Duel Decks: Speed vs. Cunning
+Duel Decks: Kiora vs. Elspeth
+Duel Decks: Zendikar vs. Eldrazi
+Duel Decks: Blessed vs. Cursed
+Duel Decks: Nissa vs. Ob Nixilis
+Duel Decks Anthology: Elves vs Goblins
+Duel Decks Anthology: Jace vs Chandra
+Duel Decks Anthology: Divine vs Demonic
+Duel Decks Anthology: Garruk vs. Liliana
+Clash Pack: Fate and Fury
+Clash Pack: Power and Profit
+Clash Pack: Armed and Dangerous
+Challenge Deck 1: Face the Hydra
+Challenge Deck 2: Battle the Horde
+Challenge Deck 3: Defeat a God
 Archenemy
 Duels of the Planeswalker
+Duels of the Planeswalkers 2011
+Duels of the Planeswalkers 2012
+Duels of the Planeswalkers 2013
+Duels of the Planeswalkers 2014
+Duels of the Planeswalkers 2015
 Introductory Two-Player Starter
+Commander
+Commander's Arsenal
+Commander 2013 Edition
+Commander 2014 Edition
+Commander 2015 Edition
+Commander 2016 Edition
+Magic The Gathering Online Cube Alternate Art
+Conspiracy
+Conspiracy: Take the Crown
+Modern Event Deck 2014
+Modern Masters
+Modern Masters 2015
+Vintage Masters
+Tempest Remastered
+Eternal Masters
+Welcome Deck 2016
 Alpha
 Beta
 Unlimited
@@ -333,8 +534,8 @@ Judgment
 Onslaught
 Legions
 Scourge
-Mirrodin
 Eighth Edition
+Mirrodin
 Darksteel
 Fifth Dawn
 Champions of Kamigawa
@@ -370,15 +571,281 @@ Dark Ascension
 Avacyn Restored
 Magic 2013
 Return to Ravnica
+Gatecrash
+Dragon's Maze
+Magic 2014
+Theros
+Born of the Gods
+Journey into Nyx
+Magic 2015
+Khans of Tarkir
+Fate Reforged
+Dragons of Tarkir
+Magic Origins
+Battle for Zendikar
+Zendikar Expeditions
+Oath of the Gatewatch
+Shadows over Innistrad
+Eldritch Moon
+Kaladesh
+Aether Revolt
 
-Extended (T1.x)
+Commander (Singleton)
 BANNED
-Jace, the Mind Sculptor
-Mental Misstep
-Ponder
-Preordain
-Stoneforge Mystic
+Advantageous Proclamation
+Amulet of Quoz
+Ancestral Recall
+Backup Plan
+Balance
+Biorhythm
+Black Lotus
+Brago's Favor
+Braids, Cabal Minion
+Bronze Tablet
+Chaos Orb
+Coalition Victory
+Channel
+Contract from Below
+Darkpact
+Demonic Attorney
+Double Stroke
+Emrakul, the Aeons Torn
+Erayo, Soratami Ascendant
+Falling Star
+Fastbond
+Gifts Ungiven
+Griselbrand
+Immediate Action
+Iterative Analysis
+Jeweled Bird
+Karakas
+Library of Alexandria
+Limited Resources
+Mox Emerald
+Mox Jet
+Mox Pearl
+Mox Ruby
+Mox Sapphire
+Muzzio's Preparations
+Painter's Servant
+Panoptic Mirror
+Power Play
+Primeval Titan
+Prophet of Kruphix
+Protean Hulk
+Rebirth
+Recurring Nightmare
+Rofellos, Llanowar Emissary
+Secret Summoning
+Secrets of Paradise
+Sentinel Dispatch
+Shahrazad
+Sundering Titan
+Sway of the Stars
+Sylvan Primordial
+Tempest Efreet
+Time Vault
+Time Walk
+Timmerian Fiends
+Tinker
+Tolarian Academy
+Trade Secrets
+Unexpected Potential
+Upheaval
+Worldfire
+Worldknit
+Yawgmoth's Bargain
+Adriana's Valor
+Assemble the Rank and Vile
+Echoing Boon
+Emissary's Ploy
+Hired Heist
+Hold the Perimeter
+Hymn of the Wilds
+Incendiary Dissent
+Natural Unity
+Sovereign's Realm
+Summoner's Bond
+Weight Advantage
 SETS
+Promo - Release Events
+Promo - Prerelease Events
+Promo - Judge Gift Cards
+Promo - Legends Membership
+Promo - Gateway
+Promo - FNM
+Promo - Convention Promo
+Promo - Champs
+Promo - Media Inserts
+Promo - Vintage/Legacy Championship Oversized Cards
+Promo - Arena
+Promo - Two-Headed Giant
+Promo - Summer of Magic
+Promo - Dragon Con
+Promo - Happy Holidays
+Promo - Magic Game Day Mirran
+Promo - DCI Legend Membership
+Promo - Pro Tour
+Promo - Video Game
+Promo - Grand Prix
+Promo - Stores
+Promo - Gatherer
+Promo - Junior Series
+Promo - Hero Cards
+Promo - DCI
+Promo - Ugin's Fate
+Promo - World Magic Cup
+Full Box Promotion
+Magic Game Day
+Alternate Art Lands
+Magic Player Rewards
+World Championship Cards
+Starter 1999
+Starter 2000
+Deckmasters 2001
+8th Edition Box Set
+9th Edition Box Set
+Beatdown
+Anthologies
+Battle Royale
+Masters Edition
+Masters Edition II
+Masters Edition III
+Masters Edition IV
+Planechase
+Planechase 2012 Edition
+Planechase Anthology
+From the Vault: Exiled
+From the Vault: Dragons
+From the Vault: Relics
+From the Vault: Legends
+From the Vault: Realms
+From the Vault: Twenty
+From the Vault: Annihilation
+From the Vault: Angels
+From the Vault: Lore
+Premium Deck Series: Slivers
+Premium Deck Series: Fire and Lightning
+Premium Deck Series: Graveborn
+Duel Decks: Elves vs Goblins
+Duel Decks: Jace vs Chandra
+Duel Decks: Divine vs Demonic
+Duel Decks: Garruk vs. Liliana
+Duel Decks: Phyrexia vs. the Coalition
+Duel Decks: Elspeth vs. Tezzeret
+Duel Decks: Knights vs. Dragons
+Duel Decks: Ajani vs. Nicol Bolas
+Duel Decks: Venser vs. Koth
+Duel Decks: Izzet vs. Golgari
+Duel Decks: Sorin vs. Tibalt
+Duel Decks: Heroes vs. Monsters
+Duel Decks: Jace vs. Vraska
+Duel Decks: Speed vs. Cunning
+Duel Decks: Kiora vs. Elspeth
+Duel Decks: Zendikar vs. Eldrazi
+Duel Decks: Blessed vs. Cursed
+Duel Decks: Nissa vs. Ob Nixilis
+Duel Decks Anthology: Elves vs Goblins
+Duel Decks Anthology: Jace vs Chandra
+Duel Decks Anthology: Divine vs Demonic
+Duel Decks Anthology: Garruk vs. Liliana
+Clash Pack: Fate and Fury
+Clash Pack: Power and Profit
+Clash Pack: Armed and Dangerous
+Challenge Deck 1: Face the Hydra
+Challenge Deck 2: Battle the Horde
+Challenge Deck 3: Defeat a God
+Archenemy
+Duels of the Planeswalker
+Duels of the Planeswalkers 2011
+Duels of the Planeswalkers 2012
+Duels of the Planeswalkers 2013
+Duels of the Planeswalkers 2014
+Duels of the Planeswalkers 2015
+Introductory Two-Player Starter
+Commander
+Commander's Arsenal
+Commander 2013 Edition
+Commander 2014 Edition
+Commander 2015 Edition
+Commander 2016 Edition
+Magic The Gathering Online Cube Alternate Art
+Conspiracy
+Conspiracy: Take the Crown
+Modern Event Deck 2014
+Modern Masters
+Modern Masters 2015
+Vintage Masters
+Tempest Remastered
+Eternal Masters
+Welcome Deck 2016
+Alpha
+Beta
+Unlimited
+Arabian Nights
+Antiquities
+Revised
+Legends
+The Dark
+Fallen Empires
+Fourth Edition
+Chronicles
+Homelands
+Ice Age
+Alliances
+Coldsnap
+Coldsnap Theme Decks
+Portal
+Portal Second Age
+Portal Three Kingdoms
+Mirage
+Fifth Edition
+Visions
+Weatherlight
+Tempest
+Stronghold
+Exodus
+Urza's Saga
+Sixth Edition
+Urza's Legacy
+Urza's Destiny
+Mercadian Masques
+Nemesis
+Prophecy
+Invasion
+Planeshift
+Apocalypse
+Odyssey
+Seventh Edition
+Torment
+Judgment
+Onslaught
+Legions
+Scourge
+Eighth Edition
+Mirrodin
+Darksteel
+Fifth Dawn
+Champions of Kamigawa
+Ninth Edition
+Betrayers of Kamigawa
+Saviors of Kamigawa
+Ravnica: City of Guilds
+Guildpact
+Dissension
+Time Spiral
+Time Spiral Timeshifted
+Planar Chaos
+Future Sight
+Tenth Edition
+Lorwyn
+Morningtide
+Shadowmoor
+Eventide
+Shards of Alara
+Conflux
+Alara Reborn
+Magic 2010
 Zendikar
 Worldwake
 Rise of the Eldrazi
@@ -392,27 +859,48 @@ Dark Ascension
 Avacyn Restored
 Magic 2013
 Return to Ravnica
+Gatecrash
+Dragon's Maze
+Magic 2014
+Theros
+Born of the Gods
+Journey into Nyx
+Magic 2015
+Khans of Tarkir
+Fate Reforged
+Dragons of Tarkir
+Magic Origins
+Battle for Zendikar
+Zendikar Expeditions
+Oath of the Gatewatch
+Shadows over Innistrad
+Eldritch Moon
+Kaladesh
+Aether Revolt
 
 Standard (T2)
 SETS
-Innistrad
-Dark Ascension
-Avacyn Restored
-Magic 2013
-Return to Ravnica
+Dragons of Tarkir
+Magic Origins
+Battle for Zendikar
+Oath of the Gatewatch
+Shadows over Innistrad
+Eldritch Moon
 
 Modern
 BANNED
-Ancestral Vision
 Ancient Den
-Bitterblossom
+Birthing Pod
 Blazing Shoal
+Bloodbraid Elf
 Chrome Mox
 Cloudpost
 Dark Depths
+Deathrite Shaman
+Dig Through Time
 Dread Return
+Eye of Ugin
 Glimpse of Nature
-Golgari Grave-Troll
 Great Furnace
 Green Sun's Zenith
 Hypergenesis
@@ -420,18 +908,22 @@ Jace, the Mind Sculptor
 Mental Misstep
 Ponder
 Preordain
+Punishing Fire
 Rite of Flame
 Seat of the Synod
+Second Sunrise
+Seething Song
 Sensei's Divining Top
-Stoneforge Mystic
 Skullclamp
-Sword of the Meek
+Splinter Twin
+Stoneforge Mystic
+Summer Bloom
+Treasure Cruise
 Tree of Tales
 Umezawa's Jitte
-Valakut, the Molten Pinnacle
 Vault of Whispers
-Wild Nacatl
 SETS
+Modern Masters
 Mirrodin
 Eighth Edition
 Darksteel
@@ -471,3 +963,19 @@ Dark Ascension
 Avacyn Restored
 Magic 2013
 Return to Ravnica
+Gatecrash
+Dragon's Maze
+Magic 2014
+Theros
+Born of the Gods
+Journey into Nyx
+Magic 2015
+Khans of Tarkir
+Fate Reforged
+Dragons of Tarkir
+Magic Origins
+Battle for Zendikar
+Oath of the Gatewatch
+Zendikar Expeditions
+Shadows over Innistrad
+Eldritch Moon

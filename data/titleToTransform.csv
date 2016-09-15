@@ -1,0 +1,185 @@
+﻿Scorned Villager,day
+Moonscarred Werewolf,night
+Loyal Cathar,day,W
+Unhallowed Cathar,night,B
+Ludevic's Test Subject,day
+Ludevic’s Abomination,night
+Mayor of Avabruck,day
+Howlpack Alpha,night
+Mondronen Shaman,day
+Tovolar’s Magehunter,night
+Ravenous Demon,day
+Archdemon of Greed,night
+Reckless Waif,day
+Merciless Predator,night
+Lambholt Elder,day
+Silverpelt Werewolf,night
+Screeching Bat,day
+Stalking Vampire,night
+Thraben Sentry,day
+Thraben Militia,night
+Tormented Pariah,day
+Rampaging Werewolf,night
+Ulvenwald Mystics,day
+Ulvenwald Primordials,night
+Village Ironsmith,day
+Ironfang,night
+Villagers of Estwald,day
+Howlpack of Estwald,night
+Wolfbitten Captive,day
+Krallenhorde Killer,night
+Afflicted Deserter,day
+Werewolf Ransacker,night
+"Elbrus, the Binding Blade",day,Art
+Withengar Unbound,night,B
+Bloodline Keeper,day
+Lord of Lineage,night
+Chosen of Markov,day
+Markov’s Servant,night
+Civilized Scholar,day,U
+Homicidal Brute,night,R
+Cloistered Youth,day,W
+Unholy Fiend,night,B
+Daybreak Ranger,day
+Nightfall Predator,night
+Delver of Secrets,day
+Insectile Aberration,night
+Kruin Outlaw,day
+Terror of Kruin Pass,night
+Gatstaf Shepherd,day
+Gatstaf Howler,night
+Grizzled Outcasts,day
+Krallenhorde Wantons,night
+Hanweir Watchkeep,day
+Bane of Hanweir,night
+Hinterland Hermit,day
+Hinterland Scourge,night
+Huntmaster of the Fells,day,RG
+Ravager of the Fells,night,RG
+Instigator Gang,day
+Wildblood Pack,night
+Chalice of Life,day
+Chalice of Death,night
+Garruk Relentless,day,G
+"Garruk, the Veil-Cursed",night,BG
+Soul Seizer,day
+Ghastly Haunting,night
+"Nissa, Vastwood Seer",spark,G
+"Nissa, Sage Animist",ignite,G
+"Gideon, Battle-Forged",ignite,W
+"Kytheon, Hero of Akros",spark,W
+"Jace, Vryn's Prodigy",spark,U
+"Jace, Telepath Unbound",ignite,U
+"Liliana, Heretical Healer",spark,B
+"Liliana, Defiant Necromancer",ignite,B
+"Chandra, Fire of Kaladesh",spark,R
+"Chandra, Roaring Flame",ignite,R
+Archangel Avacyn,day,W
+"Avacyn, the Purifier",night,R
+Thing in the Ice,day,U
+Awoken Horror,night,U
+Elusive Tormentor,day,B
+Insidious Mist,night,U
+Hinterland Logger,day,G
+Timber Shredder,night,G
+Aberrant Researcher,day,U
+Perfected Form,night,U
+Duskwatch Recruiter,day,G
+Krallenhorde Howler,night,G
+Heir of Falkenrath,day,B
+Heir to the Night,night,B
+Avacynian Missionaries,day,W
+Lunarch Inquisitors,night,W
+Town Gosipmonger,day,W
+Incited Rabble,night,R
+Pious Avangel,day,W
+Wayward Disciple,night,B
+Daring Sleuth,day,U
+Bearer of Overwhelming Truths,night,U
+Uninvited Geist,day,U
+Unimpeded Trespasser,night,U
+Accursed Witch,day,B
+Infectious Curse,night,B
+Kindly Stranger,day,B
+Demon-Possessed Witch,night,B
+Breakneck Rider,day,R
+Neck Breaker,night,R
+Convicted Killer,day,R
+Branded Howler,night,R
+Gatstaf Arsonists,day,R
+Gatstaf Ravagers,night,R
+Kessig Forgemaster,day,R
+Flameheart Werewolf,night,R
+Skin Invasion,day,R
+Skin Shedder,night,R
+Village Messenger,day,R
+Moonrise Intruder,night,R
+Autumnal Gloom,day,G
+Ancient of the Equinox,night,G
+Lambholt Pacifist,day,G
+Lambholt Butcher,night,G
+Solitary Hunter,day,G
+One of the Pack,night,G
+Harvest Hand,day,Art
+Scrounged Scythe,night,Art
+Neglected Heirloom,day,Art
+Ashmouth Blade,night,Art
+Thraben Gargoyle,day,Art
+Stonewing Antagonizer,night,Art
+Startled Awake,day,U
+Persistent Nightmare,night,U
+Sage of Ancient Lore,day,G
+Werewolf of Ancient Hunger,night,G
+Arlinn Kord,day,RG
+"Arlinn, Embraced by the Moon",night,RG
+Westvale Abbey,day,C
+"Ormendahl, Profane Prince",night,B
+Hanweir Militia Captain,day,W
+Westvale Cult Leader,night,W
+Geier Reach Bandit,day,R
+Vildin-Pack Alpha,night,R
+Hermit of the Natterknolls,day,G
+Lone Wolf of the Natterknolls,night,G
+Pious Evangel,day,W
+Wayward Disciple,night,B
+Town Gossipmonger,day,W
+Incited Rabble,night,R
+Hanweir Battlements,moon,C
+Hanweir Garrison,moon,R
+"Hanweir, the Writhing Township",eldrazi,Art
+"Gisela, the Broken Blade",moon,W
+"Bruna, the Fading Light",moon,W
+"Brisela, Voice of Nightmares",eldrazi,Art
+Graf Rats,moon,B
+Midnight Scavengers,moon,B
+Chittering Host,eldrazi,Art
+Lone Rider,moon,W
+It That Rides as One,eldrazi,Art
+Docent of Perfection,moon,U
+Final Iteration,eldrazi,Art
+Grizzled Angler,moon,U
+Grisly Anglerfish,eldrazi,Art
+Ulrich of the Krallenhorde,day,RG
+"Ulrich, Uncontested Alpha",night,RG
+Cryptolith Fragment,moon,Art
+Aurora of Emrakul,eldrazi,Art
+Extricator of Sin,moon,W
+Extricator of Flesh,eldrazi,Art
+Curious Homunculus,moon,U
+Voracious Reader,eldrazi,Art
+Voldaren Pariah,moon,B
+Abolisher of Bloodlines,eldrazi,Art
+Conduit of Storms,moon,R
+Conduit of Emrakul,eldrazi,Art
+Smoldering Werewolf,moon,R
+Erupting Dreadwolf,eldrazi,Art
+Vildin-Pack Outcast,moon,R
+Dronepack Kindred,eldrazi,Art
+Kessig Prowler,moon,G
+Sinuous Predator,eldrazi,Art
+Shrill Howler,moon,G
+Howling Chorus,eldrazi,Art
+Tangleclaw Werewolf,moon,G
+Fibrous Entangler,eldrazi,Art
+Ulvenwald Captive,moon,G
+Ulvenwald Abomination,eldrazi,Art

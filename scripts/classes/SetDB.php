@@ -1,4 +1,4 @@
-<?
+<?php
 ////////////////////////////////////////////////////////////////////////
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@ class SetDB {
 	private $setToMainSet = array();
 	private $mainSetToOrdinal = array();
 	private $pre8thSets = array();
+	private $m15Sets = array();
+	private $eighthSets = array();
 
 	public function __construct () {
 		$file = fopen_utf8('data/sets.txt', 'r');
@@ -53,6 +55,22 @@ class SetDB {
 			if (!$set) error('Error parsing "data/sets-pre8th.txt". Unknown set: ' . $line);
 			$this->pre8thSets[(string)$set] = true;
 		}
+		$file = fopen_utf8('data/sets-eighth.txt', 'r');
+		while (!feof($file)) {
+			$line = trim(fgets($file, 6000));
+			if (!$line) continue;
+			$set = $this->normalize($line);
+			if (!$set) error('Error parsing "data/sets-eighth.txt". Unknown set: ' . $line);
+			$this->eighthSets[(string)$set] = true;
+		}
+		$file = fopen_utf8('data/sets-m15.txt', 'r');
+		while (!feof($file)) {
+			$line = trim(fgets($file, 6000));
+			if (!$line) continue;
+			$set = $this->normalize($line);
+			if (!$set) error('Error parsing "data/sets-m15.txt". Unknown set: ' . $line);
+			$this->m15Sets[(string)$set] = true;
+		}
 	}
 
 	public function normalize ($set) {
@@ -69,6 +87,14 @@ class SetDB {
 
 	public function isPre8th ($set) {
 		return @$this->pre8thSets[(string)$this->normalize($set)];
+	}
+	
+	public function isEighth ($set) {
+		return @$this->eighthSets[(string)$this->normalize($set)];
+	}
+	
+	public function isM15 ($set) {
+		return @$this->m15Sets[(string)$this->normalize($set)];
 	}
 }
 

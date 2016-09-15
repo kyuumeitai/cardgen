@@ -1,0 +1,132 @@
+
+[prompt]
+
+[card generation]
+card.artist.gears = 0
+card.multicolor.gold.frame = 1
+
+[fonts]
+font.text = 20, MPlantin.ttf/MPlantinI.ttf, leading:30
+font.text.russian = 20, MinionPro-Cn.ttf/MinionPro-CnItalic.ttf, leading:30
+font.text.japanese = 14, mtgrulej.ttf, leading:20
+font.collection = 14, GothamMedium.ttf, leading:40
+font.artist = 15, BelerenBoldSmallCaps.ttf
+font.copyright = 13, MPlantin.ttf
+font.loyalty.starting = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+font.loyalty.change = 24, MPlantinB.ttf, centerY:true centerX:true
+font.promo.text.type = 12, GothamMedium.ttf
+
+[fonts - regular]
+font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 32, mtgnamej.ttf
+font.type = 25, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 25, mtgnamej.ttf
+font.promo.text.type = 12, GothamMedium.ttf
+
+[fonts - transform-day]
+font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 32, mtgnamej.ttf
+font.type = 25, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 25, mtgnamej.ttf
+font.promo.text.type = 12, GothamMedium.ttf
+
+[fonts - transform-night]
+font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf, color:255,255,255
+font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf, color:255,255,255
+font.title.japanese = 32, mtgnamej.ttf, color:255,255,255
+font.type = 25, JaceBeleren-Bold.ttf>BelerenB.ttf, color:255,255,255
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf, color:255,255,255
+font.type.japanese = 25, mtgnamej.ttf, color:255,255,255
+font.promo.text.type = 12, GothamMedium.ttf
+
+[fonts - transform-ignite]
+font.title = 30, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 32, mtgnamej.ttf
+font.type = 25, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 25, mtgnamej.ttf
+font.promo.text.type = 12, GothamMedium.ttf
+
+[layout - transform-day]
+title.x = 105
+pt.transform.center.x = 610
+pt.transform.center.y = 935
+pt.transform.width = 80
+
+[layout - transform-night]
+title.x = 105
+type.x = 87
+type.art.x = 52
+
+[layout - transform-ignite]
+title.x = 105
+title.y = 64
+type.x = 87
+type.art.x = 52
+
+[layout - regular]
+title.x = 51
+title.y = 68
+cost.right = 677
+cost.top = 35
+cost.top.dual = 37
+cost.size = 35
+art.top = 0
+art.left = 0
+art.bottom = 1020
+art.right = 720
+art.xlhq.top = -10
+art.xlhq.left = -12
+art.xlhq.bottom = 1030
+art.xlhq.right = 733
+type.x = 51
+type.y = 616
+rarity.center.y = 604
+rarity.right = 675
+rarity.height = 41
+rarity.width = 0
+
+text.1.top = 645
+text.1.left = 122
+text.1.bottom = 725
+text.1.right = 673
+
+text.2.top = 745
+text.2.left = 122
+text.2.bottom = 825
+text.2.right = 673
+
+text.3.top = 840
+text.3.left = 122
+text.3.bottom = 910
+text.3.right = 673
+
+text.pt.height.adjust = 7
+
+loyalty.starting.center.y = 943
+loyalty.starting.center.x = 641
+loyalty.starting.width = 114
+
+loyalty.1.center.x = 60
+loyalty.1.center.y = 686
+loyalty.1.center.width = 114
+
+loyalty.2.center.x = 60
+loyalty.2.center.y = 785
+loyalty.2.center.width = 114
+
+loyalty.3.center.x = 60
+loyalty.3.center.y = 875
+loyalty.3.center.width = 114
+
+collection.x = 37
+collection.y = 977
+artistOffset.x = 25
+artist.y = 996
+copyrightLeft.x = 40
+copyrightPT.y = 996
