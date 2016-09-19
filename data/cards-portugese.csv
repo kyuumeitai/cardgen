@@ -846,7 +846,7 @@ Enquanto Alvanel estiver emparelhado com outra criatura, cada uma dessas criatur
 Swamp,Pântano,Terreno Básico — Pântano,
 "Tamiyo, the Moon Sage","Tamiyo, a Sábia da Lua",Planeswalker — Tamiyo,"+1: Vire a permanente alvo. Ela não desvira durante a próxima etapa de desvirar de seu controlador.
 -2: Compre um card para cada criatura virada que o jogador alvo controla.
--8: Você ganha um emblema com ""Não há limite para o número máximo de cards em sua mão"" e ""Toda vez que um card é colocado no seu cemitério vindo de qualquer lugar, você pode devolvê-lo para a sua mão."""
+-8: Você ganha um emblema com “Não há limite para o número máximo de cards em sua mão” e ""Toda vez que um card é colocado no seu cemitério vindo de qualquer lugar, você pode devolvê-lo para a sua mão."""
 Tandem Lookout,Vigilante em Tandem,Criatura — Humano Batedor,"Elo espiritual #(Você pode emparelhar esta criatura com outra criatura não emparelhada quando uma delas entrar no campo de batalha. Elas permanecem emparelhadas enquanto você controlar ambas.)#
 Enquanto Vigilante em Tandem estiver emparelhado com outra criatura, cada uma dessas criaturas terá ""Toda vez que esta criatura causar dano a um oponente, compre um card."""
 Temporal Mastery,Maestria Temporal,Feitiço,"Jogue um turno extra após este. Exile Maestria Temporal.
@@ -1951,7 +1951,7 @@ Bloodthirsty Ogre,Ogre Sanguinário,Criatura — Xamã Guerreiro Ogre,"{T}: Colo
 "Boseiju, Who Shelters All","Boseiju, O Que Tudo Protege",Terreno Lendário,"Boseiju, O Que Tudo Protege entra em jogo virado.
 {T}, Pague 2 pontos de vida: Adiciona {1} à sua reserva de mana. Se essa mana for gasta numa mágica instantânea ou num feitiço, a mágica não pode ser anulada por mágicas nem habilidades."
 Brothers Yamazaki,Irmãos Yamazaki,Criatura Lendária — Samurai Humano,"Bushido 1 #(Toda vez que esta bloquear ou for bloqueada, ela recebe +1/+1 até o final do turno.)# 
-Se houver exatamente duas permanentes com o nome de Irmãos Yamazaki em jogo, a ""regra das lendas"" não se aplica a elas. Cada outra criatura com o nome de Irmãos Yamazaki recebe +2/+2 e tem ímpeto."
+Se houver exatamente duas permanentes com o nome de Irmãos Yamazaki em jogo, a “regra das lendas” não se aplica a elas. Cada outra criatura com o nome de Irmãos Yamazaki recebe +2/+2 e tem ímpeto."
 Brutal Deceiver,Impostor Brutal,Criatura — Espírito,"{1}: Olhe o card do topo de seu grimório.
 {2}: Revele o card do topo de seu grimório. Se for um terreno, Impostor Brutal recebe +1/+0 e ganha iniciativa até o final do turno. Use esta habilidade somente uma vez a cada turno."
 Budoka Gardener,Jardineiro Budoka,Criatura — Monge Humano,"{T}: Você pode colocar em jogo um card de terreno de sua mão. Se você controlar dez ou mais terrenos, gire Jardineiro Budoka.-----
@@ -1984,7 +1984,7 @@ Unir em Arcana {3}{U} #(Conforme joga uma mágica Arcana, você pode revelar est
 Counsel of the Soratami,Conselho dos Soratamis,Feitiço,Compre dois cards.
 Cranial Extraction,Extração Craniana,Feitiço — Arcana,"Nomeie um card que não seja um terreno. Procure no cemitério, na mão e no grimório do jogador alvo todos os cards com aquele nome e remova-os de jogo. Depois, aquele jogador embaralha o seu próprio grimório."
 Cruel Deceiver,Impostor Cruel,Criatura — Espírito,"{1}: Olhe o card do topo de seu grimório.
-{2}: Revele o card do topo de seu grimório. Se for um terreno, Impostor Cruel ganha ""Toda vez que Impostor Cruel causar dano a uma criatura, destrói aquela criatura"" até o final do turno. Use esta habilidade somente uma vez a cada turno."
+{2}: Revele o card do topo de seu grimório. Se for um terreno, Impostor Cruel ganha “Toda vez que Impostor Cruel causar dano a uma criatura, destrói aquela criatura” até o final do turno. Use esta habilidade somente uma vez a cada turno."
 Crushing Pain,Dor Esmagadora,Mágica Instantânea — Arcana,Dor Esmagadora causa 6 pontos de dano à criatura alvo que sofreu dano neste turno.
 Cursed Ronin,Ronin Amaldiçoado,Criatura — Samurai Humano,"Bushido 1 #(Quando este bloquear ou for bloqueado, ele recebe +1/+1 até o final do turno.)#
 {B}: Ronin Amaldiçoado recebe +1/+1 até o final do turno."
@@ -2048,7 +2048,7 @@ Hair-Strung Koto,Koto de Cordas de Cabelo,Artefato,Vire uma criatura desvirada q
 Hall of the Bandit Lord,Salão do Senhor Bandido,Terreno Lendário,"Salão do Senhor Bandido entra em jogo virado. {T}, Pague 3 pontos de vida: Adiciona {1} à sua reserva de mana. Se essa mana for gasta numa mágica de criatura, aquela criatura ganha ímpeto."
 Hana Kami,Kami da Hana,Criatura — Espírito,"{1}{G}, Sacrifique Kami da Hana: Devolve o card alvo de Arcana de seu cemitério para sua mão."
 Hanabi Blast,Explosão de Hanabi,Mágica Instantânea,"Explosão de Hanabi causa 2 pontos de dano à criatura ou ao jogador alvo. Devolva Explosão de Hanabi para a mão de seu dono, depois descarte um card aleatoriamente."
-Hankyu,Hankyu,Artefato — Equipamento,"A criatura equipada tem ""{T}: Coloque um marcador de mira em Hankyu"" e ""{T}, Remova todos os marcadores de mira de Hankyu: Esta criatura causa uma quantidade de dano à critura ou ao jogador alvo igual ao número de marcadores de mira removidos"".
+Hankyu,Hankyu,Artefato — Equipamento,"A criatura equipada tem “{T}: Coloque um marcador de mira em Hankyu” e “{T}, Remova todos os marcadores de mira de Hankyu: Esta criatura causa uma quantidade de dano à critura ou ao jogador alvo igual ao número de marcadores de mira removidos”.
 Equipar {4} #({4}: Anexe à criatura alvo que você controla. Equipe somente quando puder jogar um feitiço.)#"
 Harsh Deceiver,Impostor Rigoroso,Criatura — Espírito,"{1}: Olhe o card do topo de seu grimório.
 {2}: Revele o card do topo de seu grimório. Se for um terreno, desvire Impostor Rigoroso e ele recebe +1/+1 até o final do turno. Use esta habilidade somente uma vez a cada turno."
@@ -2280,7 +2280,7 @@ Transmigração da Alma 3 #(Quando esta for colocada num cemitério vinda de jog
 "Ryusei, the Falling Star","Ryusei, a Estrela Cadente",Criatura Lendária — Espírito Dragão,"Voar
 Quando Ryusei, a Estrela Cadente for colocado num cemitério vindo de jogo, ele causa 5 pontos de dano a cada criatura sem a habilidade de voar."
 "Sachi, Daughter of Seshiro","Sachi, Filha de Seshiro",Criatura Lendária — Xamã Cobra,"As outras Cobras que você controla recebem +0/+1.
-Os Xamãs que você controla têm ""{T}: Adiciona {G}{G} à sua reserva de mana""."
+Os Xamãs que você controla têm “{T}: Adiciona {G}{G} à sua reserva de mana”."
 Sakura-Tribe Elder,Ancião da Tribo Sakura,Criatura — Xamã Cobra,"Sacrifique Ancião da Tribo Sakura: Procure em seu grimório por um card de terreno básico, coloque-o em jogo virado e depois embaralhe seu grimório."
 Samurai Enforcers,Impositores Samurais,Criatura — Samurai Humano,"Bushido 2 #(Quando este bloquear ou for bloqueado, ele recebe +2/+2 até o final do turno.)#"
 Samurai of the Pale Curtain,Samurai da Cortina Pálida,Criatura — Samurai Raposa,"Bushido 1 #(Quando este bloquear ou for bloqueado, ele recebe +1/+1 até o final do turno.)#
@@ -2368,7 +2368,7 @@ Through the Breach,Através da Brecha,Mágica Instantânea — Arcana,"Coloque e
 Unir em Arcana {2}{R}{R} #(Conforme joga uma mágica Arcana, você pode revelar este card de sua mão e pagar o seu custo de união. Se o fizer, adicione os efeitos deste card àquela mágica.)#"
 Tide of War,Curso da Guerra,Encantamento,"Toda vez que uma ou mais criaturas bloquearem, lance uma moeda. Se você vencer, o jogador defensor sacrifica todas as criaturas bloqueadoras. Do contrário, o jogador atacante sacrifica todas as criaturas que foram bloqueadas."
 Time of Need,Tempo de Necessidade,Feitiço,"Procure em seu grimório por um card de criatura lendária, revele-o e coloque-o em sua mão. Depois, embaralhe seu grimório."
-Time Stop,Parar o Tempo,Mágica Instantânea,"Termine o turno. #(Remova de jogo todas as mágicas e habilidades que estiverem na pilha, inclusive este card. O jogador controlador do turno descarta cards até atingir o número máximo de cards permitido na mão. O dano desaparece e efeitos que ocorrem ""neste turno"" e ""até o final do turno"" cessam.)#"
+Time Stop,Parar o Tempo,Mágica Instantânea,"Termine o turno. #(Remova de jogo todas as mágicas e habilidades que estiverem na pilha, inclusive este card. O jogador controlador do turno descarta cards até atingir o número máximo de cards permitido na mão. O dano desaparece e efeitos que ocorrem “neste turno” e “até o final do turno” cessam.)#"
 Tranquil Garden,Jardim Tranqüilo,Terreno,"{T}: Adiciona {1} à sua reserva de mana.
 {T}: Adiciona {G} ou {W} à sua reserva de mana. Jardim Tranqüilo não desvira durante a sua próxima etapa de desvirar."
 Uba Mask,Máscara de Uba,Artefato,"Se um jogador fosse comprar um card, em vez disso aquele jogador remove aquele card de jogo com a face voltada para cima.
@@ -2387,7 +2387,7 @@ Venerable Kumo,Kumo Venerável,Criatura — Espírito,"Kumo Venerável pode bloq
 Transmigração da Alma 4 #(Quando esta for colocada num cemitério vinda de jogo, você pode devolver o card alvo de Espírito com custo de mana convertido menor ou igual a 4 de seu cemitério para sua mão.)#"
 Vigilance,Vigilância,Encantar Criatura,A criatura encantada tem vigilância. #(Ela não é virada para atacar.)#
 Villainous Ogre,Ogre Torpe,Criatura — Guerreiro Ogre,"Ogre Torpe não pode bloquear.
-Enquanto você controlar um Demônio, Ogre Torpe tem ""{B}: Regenera Ogre Torpe""."
+Enquanto você controlar um Demônio, Ogre Torpe tem “{B}: Regenera Ogre Torpe”."
 Vine Kami,Kami das Vinhas,Criatura — Espírito,"Kami das Vinhas só pode ser bloqueado por duas ou mais criaturas.
 Transmigração da Alma 6 #(Quando esta for colocada num cemitério vinda de jogo, você pode devolver o card alvo de Espírito com custo de mana convertido menor ou igual a 6 de seu cemitério para sua mão.)#"
 Waking Nightmare,Pesadelo Inquietante,Feitiço — Arcana,O jogador alvo descarta dois cards.
@@ -3269,7 +3269,7 @@ Blood Feud,Rixa de Sangue,Feitiço,A criatura alvo luta com outra criatura alvo.
 Bone to Ash,De Ossos a Cinzas,Mágica Instantânea,"Anule a mágica de criatura alvo.
 Compre um card."
 Break of Day,Raiar do Dia,Mágica Instantânea,"As criaturas que você controla recebem +1/+1 até o final do turno.
-Hora fatal — Se você tiver 5 ou menos pontos de vida, aquelas criaturas também serão indestrutíveis neste turno. #(Nem dano letal nem efeitos que dizem ""destrua"" podem destruí-las.)#"
+Hora fatal — Se você tiver 5 ou menos pontos de vida, aquelas criaturas também serão indestrutíveis neste turno. #(Nem dano letal nem efeitos que dizem “destrua” podem destruí-las.)#"
 Briarpack Alpha,Alfa da Alcateia dos Espinhos,Criatura — Lobo,"Lampejo #(Você poderá conjurar esta mágica a qualquer momento em que puder conjurar uma mágica instantânea.)# 
 Quando Alfa da Alcateia dos Espinhos entra no campo de batalha, a criatura alvo recebe +2/+2 até o final do turno."
 Burden of Guilt,Fardo da Culpa,Encantamento — Aura,"Encantar criatura
@@ -3595,7 +3595,7 @@ Criatura — Lobisomem
 2/2
 {3}{G}: Matador de Krallenhorde recebe +4/+4 até o final do turno. Ative esta habilidade apenas uma vez a cada turno.
 No início de cada manutenção, se um jogador tiver conjurado duas ou mais mágicas no último turno, transforme Matador de Krallenhorde."
-Wolfhunter's Quiver,Aljava do Caçador de Lobos,Artefato — Equipamento,"A criatura equipada tem ""{T}: Esta criatura causa 1 ponto de dano à criatura ou ao jogador alvo"" e ""{T}: Esta criatura causa 3 pontos de dano à criatura alvo do tipo Lobisomem.""
+Wolfhunter's Quiver,Aljava do Caçador de Lobos,Artefato — Equipamento,"A criatura equipada tem “{T}: Esta criatura causa 1 ponto de dano à criatura ou ao jogador alvo” e ""{T}: Esta criatura causa 3 pontos de dano à criatura alvo do tipo Lobisomem.""
 Equipar {5}"
 Wrack with Madness,Naufragar na Loucura,Feitiço,A criatura alvo causa a si própria uma quantidade de dano igual ao seu poder.
 Young Wolf,Lobo Jovem,Criatura — Lobo,"Imortal #(Quando esta criatura morrer, se ela não tiver nenhum marcador +1/+1, devolva-a ao campo de batalha sob o controle de seu dono com um marcador +1/+1.)#"
@@ -3649,21 +3649,21 @@ Quando Dragonete de Escamas Cromadas entra em jogo, revele os três cards do top
 Coretapper,Conversor do Núcleo,Criatura Artefato — Myr,"{T}: Coloque um marcador de carga no artefato alvo.
 Sacrifique Conversor do Núcleo: Coloque dois marcadores de carga no artefato alvo."
 Crazed Goblin,Goblin Enlouquecido,Criatura — Guerreiro Goblin,Goblin Enlouquecido ataca a cada turno se estiver apto.
-Darksteel Brute,Bruto de Aço Negro,Artefato,"Bruto de Aço Negro é indestrutível. #(Nem os efeitos que ""Destroem"" nem o dano letal o destroem.)#
+Darksteel Brute,Bruto de Aço Negro,Artefato,"Bruto de Aço Negro é indestrutível. #(Nem os efeitos que “Destroem” nem o dano letal o destroem.)#
 {3}: Bruto de Aço Negro torna-se uma criatura artefato 2/2 até o final do turno."
-Darksteel Citadel,Cidadela de Aço Negro,Terreno Artefato,"Indestrutível #(Os efeitos que dizem ""destrua"" não destroem este terreno.)#
+Darksteel Citadel,Cidadela de Aço Negro,Terreno Artefato,"Indestrutível #(Os efeitos que dizem “destrua” não destroem este terreno.)#
 {T}: Adicione {1} à sua reserva de mana."
 Darksteel Colossus,Colosso de Aço Negro,Criatura Artefato — Golem,"Atropelar
 Colosso de Aço Negro é indestrutível.
 Se Colosso de Aço Negro seria colocado num cemitério vindo de qualquer lugar, em vez disso, revele Colosso de Aço Negro e embaralhe-o no grimório de seu dono."
 Darksteel Forge,Forja de Aço Negro,Artefato,Os artefatos que você controla têm indestrutível. #(Os efeitos que dizem "destrua" não os destroem. As criaturas artefato com indestrutível não podem ser destruídas por pontos de dano.)#
 Darksteel Gargoyle,Gárgula de Aço Negro,Criatura Artefato — Gárgula,"Voar
-Gárgula de Aço Negro é indestrutível. #(Nem os efeitos que ""Destroem"" nem o dano letal a destroem.)#"
-Darksteel Ingot,Lingote de Aço Negro,Artefato,"Indestrutível #(Os efeitos que dizem ""destrua"" não destroem este artefato.)# 
+Gárgula de Aço Negro é indestrutível. #(Nem os efeitos que “Destroem” nem o dano letal a destroem.)#"
+Darksteel Ingot,Lingote de Aço Negro,Artefato,"Indestrutível #(Os efeitos que dizem “destrua” não destroem este artefato.)# 
 {T}: Adicione um mana de qualquer cor à sua reserva de mana."
-Darksteel Pendant,Pingente de Aço Negro,Artefato,"Pingente de Aço Negro é indestrutível. #(Nem os efeitos que ""Destroem"" nem o dano letal o destroem.)#
+Darksteel Pendant,Pingente de Aço Negro,Artefato,"Pingente de Aço Negro é indestrutível. #(Nem os efeitos que “Destroem” nem o dano letal o destroem.)#
 {1}, {T}: Olhe o card do topo de seu grimório. Você pode colocar aquele card no fundo de seu grimório."
-Darksteel Reactor,Reator de Aço Negro,Artefato,"Reator de Aço Negro é indestrutível. #(Nem os efeitos que ""Destroem"" nem o dano letal o destroem.)#
+Darksteel Reactor,Reator de Aço Negro,Artefato,"Reator de Aço Negro é indestrutível. #(Nem os efeitos que “Destroem” nem o dano letal o destroem.)#
 No início de sua manutenção, você pode colocar um marcador de carga em Reator de Aço Negro.
 Quando Reator de Aço Negro tiver vinte ou mais marcadores de carga nele, você vence o duelo."
 Death Cloud,Nuvem Mortal,Feitiço,"Cada jogador perde X pontos de vida, depois descarta X cards da própria mão, sacrifica X criaturas e, por último, sacrifica X terrenos."
@@ -3745,7 +3745,7 @@ Mycosynth Lattice,Treliça Micossintetizadora,Artefato,"Todas as permanentes sã
 Todos os cards que não estão em jogo, as mágicas e as permanentes são incolores.
 Os jogadores podem usar mana como se ela fosse de qualquer cor."
 Myr Landshaper,Myr Moldaterreno,Criatura Artefato — Myr,{T}: O terreno alvo torna-se um artefato em adição aos seus outros tipos até o final do turno.
-Myr Matrix,Matriz de Myrs,Artefato,"Matriz de Myrs é indestrutível. #(Nem os efeitos que ""Destroem"" nem o dano letal o destroem.)#
+Myr Matrix,Matriz de Myrs,Artefato,"Matriz de Myrs é indestrutível. #(Nem os efeitos que “Destroem” nem o dano letal o destroem.)#
 Todos os Myrs recebem +1/+1.
 {5}: Coloque em jogo uma ficha de criatura artefato 1/1 do tipo Myr."
 Myr Moonvessel,Receptáculo Lunar dos Myrs,Criatura Artefato — Myr,"Quando Receptáculo Lunar dos Myrs for colocado num cemitério vindo de jogo, adicione {1} à sua reserva de mana."
@@ -3800,7 +3800,7 @@ Entrelaçar {U} #(Escolha ambos se pagar o custo de entrelaçar.)#"
 Serum Powder,Pó de Soro,Artefato,"{T}: Adiciona {1} à sua reserva de mana.
 A qualquer momento em que você puder fazer um mulligan e Pó de Soro estiver em sua mão, você pode remover de jogo os cards de sua mão e depois comprar aquele mesmo número de cards. #(Você pode fazer isso em adição a fazer mulligans.)#"
 Shield of Kaldra,Escudo de Kaldra,Artefato Lendário — Equipamento,"Os Equipamentos com os nomes Espada de Kaldra, Escudo de Kaldra e Elmo de Kaldra são indestrutíveis.
-A criatura equipada é indestrutível. #(Nem oss efeitos que ""Destroem"" nem o dano letal não a destroem.)#
+A criatura equipada é indestrutível. #(Nem oss efeitos que “Destroem” nem o dano letal não a destroem.)#
 Equipar {4}"
 Shriveling Rot,Apodrecimento Atrofiante,Mágica Instantânea,"Escolha um — Até o final do turno, toda vez que uma criatura sofrer dano, destrua-a; ou até o final do turno, toda vez que uma criatura for colocada num cemitério vinda de jogo, seu controlador perde uma quantidade de pontos de vida igual à resistência dela.
 Entrelaçar {2}{B} #(Escolha ambos se pagar o custo de entrelaçar.)#"
@@ -4303,7 +4303,7 @@ Devolva o card alvo de seu cemitério para sua mão.
 -----
 Fundir#(Você pode conjurar uma ou ambas as metades desse card a partir de sua mão.)#"
 Dragonshift,Dragonshift,Instant,"Until end of turn, target creature you control becomes a 4/4 blue and red Dragon, loses all abilities, and gains flying.
-Overload {3}{U}{U}{R}{R} #(You may cast this spell for its overload cost. If you do, change its text by replacing all instances of ""target"" with ""each."")#"
+Overload {3}{U}{U}{R}{R} #(You may cast this spell for its overload cost. If you do, change its text by replacing all instances of “target” with ""each."")#"
 Drown in Filth,Drown in Filth,Sorcery,"Choose target creature. Put the top four cards of your library into your graveyard, then that creature gets -1/-1 until end of turn for each land card in your graveyard."
 Emmara Tandris,Emmara Tandris,Legendary Creature — Elf Shaman,Prevent all damage that would be dealt to creature tokens you control.
 "Exava, Rakdos Blood Witch","Exava, Rakdos Blood Witch",Legendary Creature — Human Cleric,"First strike, haste
@@ -4507,7 +4507,7 @@ Wake the Reflections,Wake the Reflections,Sorcery,Populate. #(Put a token onto t
 Warleader's Helix,Warleader's Helix,Instant,Warleader's Helix deals 4 damage to target creature or player and you gain 4 life.
 Warped Physique,Warped Physique,Instant,"Target creature gets +X/-X until end of turn, where X is the number of cards in your hand."
 Weapon Surge,Weapon Surge,Instant,"Target creature you control gets +1/+0 and gains first strike until end of turn.
-Overload {1}{R} #(You may cast this spell for its overload cost. If you do, change its text by replacing all instances of ""target"" with ""each."")#"
+Overload {1}{R} #(You may cast this spell for its overload cost. If you do, change its text by replacing all instances of “target” with ""each."")#"
 Woodlot Crawler,Woodlot Crawler,Creature — Insect,"Forestwalk, protection from green"
 Zhur-Taa Ancient,Zhur-Taa Ancient,Creature — Beast,"Whenever a player taps a land for mana, that player adds one mana to his or her mana pool of any type that land produced."
 Zhur-Taa Druid,Zhur-Taa Druid,Creature — Human Druid,"{T}: Add {G} to your mana pool.
@@ -5088,7 +5088,7 @@ Megrim,Enxaqueca,Encantamento,"Toda vez que um oponente descarta um card, Enxaqu
 Merchant of Secrets,Mercador de Segredos,Criatura — Mago,"Quando Mercador de Segredos entra em jogo, compre um card."
 Merchant Scroll,Pergaminho dos Mercadores,,
 Might of Oaks,Força dos Carvalhos,,
-Mind Bend,Contraverter a Mente,Mágica Instantânea,"Mude o texto da permanente alvo substituindo todas as palavras relativas a uma cor por outra, ou um tipo de terreno básico por outro. #(Por exemplo, você pode mudar ""criatura que não seja preta"" para ""criatura que não seja verde"" ou ""travessia de floresta"" para ""travessia de ilha"". Este efeito não cessa no final do turno.)#"
+Mind Bend,Contraverter a Mente,Mágica Instantânea,"Mude o texto da permanente alvo substituindo todas as palavras relativas a uma cor por outra, ou um tipo de terreno básico por outro. #(Por exemplo, você pode mudar “criatura que não seja preta” para “criatura que não seja verde” ou “travessia de floresta” para “travessia de ilha”. Este efeito não cessa no final do turno.)#"
 Mind Slash,Golpe Mental,,
 Mind Sludge,Imundície Mental,Feitiço,O jogador alvo descarta um card para cada Pântano que você controla.
 Mogg Sentry,Sentinela Mogg,,
@@ -6697,7 +6697,7 @@ Suspender 3 — {2}{W} #(Em vez de jogar este card da sua mão, você pode pagar
 Cloud Key,Abre-Nuvem,Artefato,"Quando Abre-Nuvem entra em jogo, escolha artefato, criatura, encantamento, mágica instantânea ou feitiço.
 As mágicas que você jogar do tipo escolhido custam {1} a menos para serem jogadas."
 Cloudseeder,Semeanuvem,Criatura — Fada Magimodeladora,"Voar
-{U}, {T}, Descarte um card: Coloque em jogo uma ficha de criatura azul 1/1 do tipo Fada chamada Sílfide das Nuvens com habilidade de voar e ""Sílfide das Nuvens pode bloquear apenas criaturas com habilidade de voar""."
+{U}, {T}, Descarte um card: Coloque em jogo uma ficha de criatura azul 1/1 do tipo Fada chamada Sílfide das Nuvens com habilidade de voar e “Sílfide das Nuvens pode bloquear apenas criaturas com habilidade de voar”."
 Coalition Relic,Relíquia da Coalizão,Artefato,"{T}: Adicione um mana de qualquer cor à sua reserva de mana.
 {T}: Coloque um marcador de carga em Relíquia da Coalizão.
 No início da sua fase principal pré-combate, remova todos os marcadores de carga de Relíquia da Coalizão. Adicione um mana de qualquer cor à sua reserva de mana para cada marcador removido desse modo."
@@ -6718,7 +6718,7 @@ Destrua a criatura alvo que não seja verde. Ela não pode ser regenerada."
 Deepcavern Imp,Diabrete de Gruta Profunda,Criatura — Diabrete Rebelde,"Voar, ímpeto
 #Eco# — Descarte um card. #(No início de sua manutenção, se este passou a estar sob o seu controle desde o início de sua última manutenção, sacrifique-o, a menos que você pague seu custo de eco.)#"
 Delay,Atrasar,Mágica Instantânea,"Anule a mágica alvo. Se a mágica for anulada dessa maneira, remova-a do jogo com três marcadores temporais sobre ela em vez de colocá-la no cemitério de seu dono. Se não tiver suspender, ele vai receber suspender. #(No início da manutenção de seu dono, remova um marcador desse card. Quando o último for removido, o jogador pode jogá-lo sem pagar seu custo de mana. Se for uma criatura, ela tem ímpeto.)#"
-Dryad Arbor,Arvoredo Dríade,Terreno Criatura — Floresta Dríade,"#(Arvoredo Dríade não é uma mágica, é afetado por enjôo de invocação e tem ""{T}: Adicione {G} à sua reserva de mana"".)#
+Dryad Arbor,Arvoredo Dríade,Terreno Criatura — Floresta Dríade,"#(Arvoredo Dríade não é uma mágica, é afetado por enjôo de invocação e tem “{T}: Adicione {G} à sua reserva de mana”.)#
 Arvoredo Dríade é verde."
 Dust of Moments,Cinza das Horas,Mágica Instantânea,Escolha um — Remova dois marcadores temporais de cada permanente e de cada card suspenso; ou coloque dois marcadores temporais em cada permanente com um marcador temporal sobre ela e em cada card suspenso.
 Edge of Autumn,Confim Outonal,Feitiço,"Se você controla quatro ou menos terrenos, procure em seu grimório um card de terreno básico, coloque-o virado em jogo e embaralhe seu grimório.
@@ -6804,7 +6804,7 @@ A criatura encantada recebe +3/+3 e não desvira na etapa de desvirar de seu con
 #Grandeza# — Descarte outro card chamado Linessa, Maga Zéfira: O jogador alvo devolve uma criatura controlada por ele para a mão de seu dono, depois repete esse processo para um artefato, encantamento e terreno."
 Llanowar Augur,Auguratriz de Llanowar,Criatura — Xamã Elfo,Sacrifique Auguratriz de Llanowar: A criatura alvo recebe +3/+3 e ganha a habilidade de atropelar até o final do turno. Use esta habilidade somente durante sua manutenção.
 Llanowar Empath,Telepata de Llanowar,Criatura — Elfo Xamã,"Quando Telepata de Llanowar entrar no campo de batalha, use vidência 2, depois revele o card do topo de seu grimório. Se este for um card de criatura, coloque-o em sua mão. #(Para usar vidência 2, olhe os dois cards do topo do seu grimório. Depois, coloque qualquer número deles no fundo do seu grimório e o restante no topo em qualquer ordem.)#"
-Llanowar Mentor,Mentor de Llanowar,Criatura — Magimodelador Elfo,"{G}, {T}, Descarte um card: Coloque em jogo uma ficha de criatura verde 1/1 do tipo Druida Elfo chamada Elfos de Llanowar com ""{T}: Adicione {G} à sua reserva de mana""."
+Llanowar Mentor,Mentor de Llanowar,Criatura — Magimodelador Elfo,"{G}, {T}, Descarte um card: Coloque em jogo uma ficha de criatura verde 1/1 do tipo Druida Elfo chamada Elfos de Llanowar com “{T}: Adicione {G} à sua reserva de mana”."
 Llanowar Reborn,Renascimento de Llanowar,Terreno,"Renascimento de Llanowar entra em jogo virado.
 {T}: Adicione {G} à sua reserva de mana.
 Enxerto 1 #(Este terreno entra em jogo com um marcador +1/+1 sobre ele. Toda vez que uma criatura entra em jogo, você pode mover um marcador +1/+1 deste terreno para aquela criatura.)#"
@@ -6830,7 +6830,7 @@ Marshaling Cry,Grito Bélico,Feitiço,"As criaturas que você controla recebem +
 Reciclar {2} #({2}, Descarte este card: Compre um card.)#
 Recapitular {3}{W} #(Você pode jogar este card de seu cemitério pagando seu custo de recapitulação. Depois, remova-o do jogo.)#"
 Mass of Ghouls,Horda de Carniçais,Criatura — Zumbi Guerreiro,
-Mesmeric Sliver,Fractius Mesmérico,Criatura — Fractius,"Todos os fractius têm ""Quando esta permanente entra em jogo, você pode usar predestinar 1"". #(Seu controlador olha o card do topo do grimório de um oponente e, em seguida, coloca esse card no fundo daquele grimório.)#"
+Mesmeric Sliver,Fractius Mesmérico,Criatura — Fractius,"Todos os fractius têm “Quando esta permanente entra em jogo, você pode usar predestinar 1”. #(Seu controlador olha o card do topo do grimório de um oponente e, em seguida, coloca esse card no fundo daquele grimório.)#"
 Minions' Murmurs,Murmúrios dos Asseclas,Feitiço,"Você compra X cards e perde X pontos de vida, sendo X igual ao número de criaturas que você controla."
 Mistmeadow Skulk,Camuflador de Nevoplanície,Criatura — Kithkin Ladino,"Vínculo com a vida, proteção contra custo de mana convertido maior ou igual a 3."
 Molten Disaster,Desastre Fundente,Feitiço,"Reforçar {R} #(Você pode pagar um custo adicional de {R} ao jogar esta mágica.)#
@@ -8837,7 +8837,7 @@ Agent of Erebos,Agente de Érebo,Criatura Encantamento — Zumbi,"#Constelação
 +1: Olhe os quatro cards do topo do seu grimório. Você pode revelar um card de Aura, criatura ou planeswalker dentre eles e colocá-lo em sua mão. Coloque o resto no fundo de seu grimório em qualquer ordem.
 -8: Você ganha 100 pontos de vida."
 Ajani's Presence,Presença de Ajani,Mágica Instantânea,"#Esforço# — Presença de Ajani custa {2}{W} a mais para ser conjurado para cada alvo além do primeiro.
-Qualquer número de criaturas alvo recebe +1/+1 e ganha indestrutível até o final do turno. #(Nem dano nem efeitos que dizem ""destrua"" podem destruí-las.)#"
+Qualquer número de criaturas alvo recebe +1/+1 e ganha indestrutível até o final do turno. #(Nem dano nem efeitos que dizem “destrua” podem destruí-las.)#"
 Akroan Line Breaker,Desformador Acrosano,Criatura — Humano Guerreiro,"#Heroico# — Toda vez que você conjura uma mágica cujo alvo é Desformador Acrosano, Desformador Acrosano recebe +2/+0 e ganha intimidar até o final do turno."
 Akroan Mastiff,Mastim Acrosano,Criatura — Sabujo,"{W}, {T}: Vire a criatura alvo."
 Armament of Nyx,Armamento de Nyx,Encantamento — Aura,"Encantar criatura
@@ -9604,7 +9604,7 @@ Sandsteppe Citadel,Cidadela da Estepe Arenosa,Terreno,"Cidadela da Estepe Arenos
 {T}: Adicione {W}, {B} ou {G} à sua reserva de mana."
 "Sarkhan, the Dragonspeaker","Sarkhan, Porta-voz dos Dragões",Planeswalker — Sarkhan,"+1: Até o final do turno, Sarkhan, Porta-voz dos Dragões, torna-se uma criatura lendária vermelha 4/4 do tipo Dragão com voar, indestrutível e ímpeto. #(Ele não perde lealdade enquanto não for um planeswalker.)#
 -3: Sarkhan, Porta-voz dos Dragões, causa 4 pontos de dano à criatura alvo.
--6: Você ganha um emblema com ""No início da sua etapa de compra, compre dois cards adicionais"" e ""No início da sua etapa final, descarte a sua mão."""
+-6: Você ganha um emblema com “No início da sua etapa de compra, compre dois cards adicionais” e ""No início da sua etapa final, descarte a sua mão."""
 Savage Knuckleblade,Soqueiro Pungente Selvagem,Criatura — Ogro Guerreiro,"{2}{G}: Soqueiro Pungente Selvagem recebe +2/+2 até o final do turno. Ative esta habilidade apenas uma vez a cada turno.
 {2}{U}: Devolva Soqueiro Pungente Selvagem para a mão de seu dono.
 {R}: Soqueiro Pungente Selvagem ganha ímpeto até o final do turno."
@@ -10523,7 +10523,7 @@ Quando a criatura encantada se tornar o alvo de uma mágica ou habilidade, destr
 Illusionary Servant,Servo Ilusório,Criatura — Ilusão,"Voar
 Quando Servo Ilusório tornar-se alvo de uma mágica ou habilidade, sacrifique-o."
 Indestructibility,Indestrutibilidade,Encantamento — Aura,"Encantar permanente
-A permanente encantada tem indestrutível. #(Os efeitos que dizem ""destrua"" não destroem aquela permanente. Uma criatura com indestrutível não pode ser destruída por dano.)#"
+A permanente encantada tem indestrutível. #(Os efeitos que dizem “destrua” não destroem aquela permanente. Uma criatura com indestrutível não pode ser destruída por dano.)#"
 Inferno Elemental,Elemental do Inferno,Criatura — Elemental,"Toda vez que Elemental do Inferno bloquear ou for bloqueado por uma criatura, ele causará 3 pontos de dano a essa criatura."
 Jackal Familiar,Familiar Chacal,Criatura — Sabujo,Familiar Chacal não pode atacar nem bloquear sozinho.
 Kalonian Behemoth,Behemoth de Kalonia,Criatura — Besta,Manto #(Esta criatura não pode ser alvo de mágicas ou habilidades.)#
@@ -10705,7 +10705,7 @@ Jace's Erasure,Apagador de Jace,Encantamento,"Toda vez que você compra um card,
 Jace's Ingenuity,Engenhosidade de Jace,Mágica Instantânea,Compre três cards.
 Jinxed Idol,Ídolo Amaldiçoado,,
 Knight Exemplar,Exemplar Cavaleiro,Criatura — Humano Cavaleiro,"Iniciativa #(Esta criatura causa dano de combate antes das criaturas sem iniciativa.)#
-As outras criaturas do tipo Cavaleiro que você controla recebem +1/+1 e são indestrutíveis. #(Nem dano letal nem efeitos que dizem ""destrua"" podem destruí-las.)#"
+As outras criaturas do tipo Cavaleiro que você controla recebem +1/+1 e são indestrutíveis. #(Nem dano letal nem efeitos que dizem “destrua” podem destruí-las.)#"
 Leyline of Anticipation,Linha de Força da Antecipação,Encantamento,"Se Linha de Força da Antecipação estiver em sua mão de abertura, você poderá começar o jogo com ela no campo de batalha.
 Você pode conjurar cards que não sejam terrenos como se tivessem lampejo. #(Você pode conjurá-los a qualquer momento em que puder conjurar uma mágica instantânea.)#"
 Leyline of Punishment,Linha de Força da Punição,Encantamento,"Se Linha de Força da Punição estiver em sua mão de abertura, você poderá começar o jogo com ela no campo de batalha.
@@ -10800,7 +10800,7 @@ Adaptive Automaton,Autômato Adaptável,Criatura Artefato — Constructo,"Confor
 Autômato Adaptável é do tipo escolhido além de seus outros tipos.
 As outras criaturas do tipo escolhido que você controla recebem +1/+1."
 Aegis Angel,Anjo da Égide,Criatura — Anjo,"Voar #(Esta criatura só pode ser bloqueada por criaturas com voar ou alcance.)# 
-Quando Anjo da Égide entrar no campo de batalha, outra permanente alvo ganhará indestrutível enquanto você controlar Anjo da Égide. #(Os efeitos que dizem ""destrua"" não a destroem. Uma criatura com indestrutível não pode ser destruída por dano.)#"
+Quando Anjo da Égide entrar no campo de batalha, outra permanente alvo ganhará indestrutível enquanto você controlar Anjo da Égide. #(Os efeitos que dizem “destrua” não a destroem. Uma criatura com indestrutível não pode ser destruída por dano.)#"
 Alabaster Mage,Mago Alabastro,Criatura — Humano Mago,{1}{W}: A criatura alvo que você controla ganha vínculo com a vida até o final do turno. #(O dano causado pela criatura também faz com que seu controlador ganhe uma quantidade equivalente de pontos de vida.)#
 Amphin Cutthroat,Degolador Amphin,Criatura — Salamandra Ladino,
 Angelic Destiny,Destino Angelical,Encantamento — Aura,"Encantar criatura
@@ -10954,7 +10954,7 @@ Quando Aranha Lança-Ferrão entra no campo de batalha, você pode destruir a cr
 Stonehorn Dignitary,Dignitário Corno-de-Pedra,Criatura — Rinoceronte Soldado,"Quando Dignitário Corno-de-Pedra entra no campo de batalha, o oponente alvo pula sua próxima fase de combate."
 Stormblood Berserker,Amoque do Sangue Tempestuoso,Criatura — Humano Amoque,"Sede de sangue 2 #(Se um oponente tiver sofrido dano neste turno, esta criatura entrará no campo de batalha com dois marcadores +1/+1 sobre ela.)#
 Amoque do Sangue Tempestuoso só pode ser bloqueado por duas ou mais criaturas."
-Sundial of the Infinite,Meridiana do Infinito,Artefato,"{1}, {T}: Termine o turno. Ative esta habilidade apenas durante o seu próprio turno. #(Exile todas as mágicas e habilidades na pilha. Descarte cards até atingir o seu número máximo permitido de cards na mão. O dano desaparece e efeitos que ocorrem ""neste turno"" e ""até o final do turno"" cessam.)#"
+Sundial of the Infinite,Meridiana do Infinito,Artefato,"{1}, {T}: Termine o turno. Ative esta habilidade apenas durante o seu próprio turno. #(Exile todas as mágicas e habilidades na pilha. Descarte cards até atingir o seu número máximo permitido de cards na mão. O dano desaparece e efeitos que ocorrem “neste turno” e “até o final do turno” cessam.)#"
 Swiftfoot Boots,Botas Pé-ligeiro,Artefato — Equipamento,"A criatura equipada tem resistência à magia e ímpeto. #(Ela não pode ser alvo de mágicas nem de habilidades que seus oponentes controlam, e pode atacar e {T} assim que entra sob seu controle.)#
 Equipar {1} #({1}: Anexe a uma criatura alvo que você controla. Equipe somente quando puder jogar um feitiço.)#"
 Taste of Blood,Gosto de Sangue,Feitiço,Gosto de Sangue causa 1 pontos de dano ao jogador alvo e você ganha 1 ponto de vida.
@@ -11352,7 +11352,7 @@ Staff of the Wild Magus,Cajado do Magus da Natureza,Artefato,"Toda vez que você
 Steelform Sliver,Fractius Aciforme,Criatura — Fractius,As criaturas do tipo Fractius que você controla recebem +0/+1.
 Stonehorn Chanter,Magitrovador Corno-de-pedra,Criatura — Rinoceronte Clérigo,{5}{W}: Magitrovador Corno-de-pedra ganha vigilância e vínculo com a vida até o final do turno. #(Esta criatura não é virada para atacar. O dano causado por ela também faz com que você ganhe uma quantidade equivalente de pontos de vida.)#
 Striking Sliver,Fractius Golpeador,Criatura — Fractius,As criaturas do tipo Fractius que você controla têm iniciativa. #(Elas causam dano de combate antes das criaturas sem iniciativa.)#
-Strionic Resonator,Ressonador Estriônico,Artefato,"{2}, {T}: Copie a habilidade desencadeada alvo que você controla. Você pode escolher novos alvos para a cópia. #(Uma habilidade desencadeada usa as expressões ""quando"", ""toda vez que"" ou ""no/na"".)#"
+Strionic Resonator,Ressonador Estriônico,Artefato,"{2}, {T}: Copie a habilidade desencadeada alvo que você controla. Você pode escolher novos alvos para a cópia. #(Uma habilidade desencadeada usa as expressões “quando”, “toda vez que” ou ""no/na"".)#"
 Syphon Sliver,Fractius Sifão,Criatura — Fractius,As criaturas do tipo Fractius que você controla têm vínculo com a vida. #(O dano causado por uma criatura do tipo Fractius que você controla também faz com que você ganhe uma quantidade equivalente de pontos de vida.)#
 Tenacious Dead,Morto Tenaz,Criatura — Esqueleto Guerreiro,"Quando Morto Tenaz morre, você pode pagar {1}{B}. Se fizer isso, devolva-o ao campo de batalha virado sob o controle de seu dono."
 Thorncaster Sliver,Fractius Lança-espinhos,Criatura — Fractius,"As criaturas do tipo Fractius que você controla têm ""Toda vez que esta criatura ataca, ela causa 1 ponto de dano à criatura ou jogador alvo."""
@@ -11436,7 +11436,7 @@ Coloque o card de criatura alvo de um cemitério no campo de batalha sob o seu c
 Ensoul Artifact,Vivificar Artefato,Encantamento — Aura,"Encantar artefato
 O artefato encantado é uma criatura com 5/5 de poder e resistência básicos além de seus outros tipos."
 Ephemeral Shields,Escudos Efêmeros,Mágica Instantânea,"Convocar #(Suas criaturas podem ajudar a conjurar esta mágica. Cada criatura que você vira ao conjurar esta mágica paga {1} ou um mana da cor daquela criatura.)#
-A criatura alvo ganha indestrutível até o final do turno. #(O dano e os efeitos que dizem ""destrua"" não a destroem.)#"
+A criatura alvo ganha indestrutível até o final do turno. #(O dano e os efeitos que dizem “destrua” não a destroem.)#"
 Eternal Thirst,Sede Eterna,Encantamento — Aura,"Encantar criatura
 A criatura encantada tem vínculo com a vida e ""Toda vez que uma criatura que um oponente controla morrer, coloque um marcador +1/+1 nesta criatura."" #(O dano causado por uma criatura com vínculo com a vida também faz com que seu controlador ganhe uma quantidade equivalente de pontos de vida.)#"
 Feast on the Fallen,Banquete de Cadáveres,Encantamento,"No início de cada manutenção, se um oponente tiver perdido pontos de vida no último turno, coloque um marcador +1/+1 na criatura alvo que você controla."
@@ -11625,7 +11625,7 @@ Soul of Zendikar,Alma de Zendikar,Criatura — Avatar,"Alcance
 Spectra Ward,Defesa Espectral,Encantamento — Aura,"Encantar criatura
 A criatura encantada recebe +2/+2 e tem proteção contra todas as cores. Este efeito não remove Auras. #(Ela não pode ser bloqueada, ser alvo ou sofrer dano de nada que seja branco, azul, preto, vermelho ou verde.)#"
 Spirit Bonds,Laços Espirituais,Encantamento,"Toda vez que uma criatura que não seja ficha entra no campo de batalha sob seu controle, você pode pagar {W}. Se fizer isso, coloque no campo de batalha uma ficha de criatura branca 1/1 do tipo Espírito com voar.
-{1}{W}, Sacrifique um Espírito: A criatura alvo que não seja Espírito ganha indestrutível até o final do turno. #(O dano e os efeitos que dizem ""destrua"" não a destroem.)#"
+{1}{W}, Sacrifique um Espírito: A criatura alvo que não seja Espírito ganha indestrutível até o final do turno. #(O dano e os efeitos que dizem “destrua” não a destroem.)#"
 Stab Wound,Ferimento de Estocada,Encantamento — Aura,"Encantar criatura
 A criatura encantada recebe -2/-2.
 No início da manutenção do controlador da criatura encantada, aquele jogador perde 2 pontos de vida."
@@ -11747,7 +11747,7 @@ Dark Dabbling,Experimentação Sombria,Mágica Instantânea,"Regenere a criatura
 Maestria em magia — Se houver dois ou mais cards de mágica instantânea ou feitiço no seu cemitério, também regenere todas as outras criaturas que você controla."
 Dark Petition,Petição Obscura,Feitiço,"Procure um card em seu grimório e coloque aquele card em sua mão. Depois, embaralhe seu grimório.
 Maestria em magia — Se houver dois ou mais cards de mágica instantânea ou feitiço no seu cemitério, adicione {B}{B}{B} à sua reserva de mana."
-Day's Undoing,Desfazer do Dia,Feitiço,"Cada jogador embaralha a própria mão e cemitério no próprio grimório e depois compra sete cards. Se for o seu turno, termine o turno. #(Exile todas as mágicas e habilidades que estiverem na pilha, inclusive este card. Descarte cards até atingir o seu número máximo permitido de cards na mão. O dano termina e efeitos que ocorrem ""neste turno"" e ""até o final do turno"" cessam.)#"
+Day's Undoing,Desfazer do Dia,Feitiço,"Cada jogador embaralha a própria mão e cemitério no próprio grimório e depois compra sete cards. Se for o seu turno, termine o turno. #(Exile todas as mágicas e habilidades que estiverem na pilha, inclusive este card. Descarte cards até atingir o seu número máximo permitido de cards na mão. O dano termina e efeitos que ocorrem “neste turno” e “até o final do turno” cessam.)#"
 Deadbridge Shaman,Xamã da Ponte Mortífera,Criatura — Elfo Xamã,"Quando Xamã da Ponte Mortífera morre, o oponente alvo descarta um card."
 Deep-Sea Terror,Terror das Profundezas,Criatura — Serpente,Terror das Profundezas não pode atacar a menos que haja sete cards ou mais em seu cemitério.
 Demonic Pact,Pacto Demoníaco,Encantamento,"No início da sua manutenção, escolha um que não tenha sido escolhido —• Pacto Demoníaco causa 4 pontos de dano à criatura ou ao jogador alvo e você ganha 4 pontos de vida.
@@ -11771,7 +11771,7 @@ Se outra fonte vermelha sob seu controle for causar dano a uma permanente ou jog
 Enlightened Ascetic,Asceta Iluminada,Criatura — Felino Monge,"Quando Asceta Iluminada entra no campo de batalha, você pode destruir o encantamento alvo."
 Enshrouding Mist,Névoa Envolvente,Mágica Instantânea,"A criatura alvo recebe +1/+1 até o final do turno. Previna todo o dano que seria causado a ela neste turno. Se ela for renomada, desvire-a."
 Enthralling Victor,Campeão Hipnotizante,Criatura — Humano Guerreiro,"Quando Campeão Hipnotizante entrar no campo de batalha, ganhe o controle da criatura alvo que um oponente controla com poder igual ou inferior a 2 até o final do turno. Desvire aquela criatura. Ela ganha ímpeto até o final do turno. #(Ela pode atacar e {T} neste turno.)#"
-Erebos's Titan,Titã de Érebo,Criatura — Gigante,"Enquanto seus oponentes não controlarem criaturas, Titã de Érebo terá indestrutível. #(O dano e os efeitos que dizem ""destrua"" não a destroem.)# 
+Erebos's Titan,Titã de Érebo,Criatura — Gigante,"Enquanto seus oponentes não controlarem criaturas, Titã de Érebo terá indestrutível. #(O dano e os efeitos que dizem “destrua” não a destroem.)# 
 Toda vez que um card de criatura deixar o cemitério de um oponente, você poderá descartar um card. Se fizer isso, devolva Titã de Érebo de seu cemitério para sua mão."
 Evolutionary Leap,Salto Evolutivo,Encantamento,"{G}, Sacrifique uma criatura: Revele cards do topo de seu grimório até revelar um card de criatura. Coloque aquele card na sua mão e o restante no fundo de seu grimório em ordem aleatória."
 Exquisite Firecraft,Excelência em Pirotecnia,Feitiço,"Excelência em Pirotecnia causa 4 pontos de dano à criatura ou ao jogador alvo.
@@ -13242,7 +13242,7 @@ Dewdrop Spy,Espiã da Gota de Orvalho,Criatura — Fada Ladino,"Lampejo
 Voar
 Quando Espiã da Gota de Orvalho entrar em jogo, olhe o card do topo do grimório do jogador alvo."
 Distant Melody,Melodia Distante,Feitiço,Escolha um tipo de criatura. Compre um card para cada permanente daquele tipo que você controla.
-Diviner's Wand,Varinha do Adivinho,Artefato Tribal — Equipamento Mago,"A criatura equipada tem ""Toda vez que você compra um card, esta criatura recebe +1/+1 e ganha a habilidade de voar até o final do turno"" e ""{4}: Compre um card"".
+Diviner's Wand,Varinha do Adivinho,Artefato Tribal — Equipamento Mago,"A criatura equipada tem ""Toda vez que você compra um card, esta criatura recebe +1/+1 e ganha a habilidade de voar até o final do turno“ e ”{4}: Compre um card"".
 Toda vez que uma criatura do tipo Mago entra em jogo, você pode anexar Varinha do Adivinho a ela.
 Equipar {3}"
 Earthbrawn,Força Terrena,Mágica Instantânea,"A criatura alvo recebe +3/+3 até o final do turno.
@@ -13412,7 +13412,7 @@ Taurean Mauler,Esmagador Taurino,Criatura — Metamorfo,"Morfolóide #(Este card
 Toda vez que um oponente joga uma mágica, você pode colocar um marcador +1/+1 sobre Esmagador Taurino."
 Thieves' Fortune,Sorte dos Ladrões,Mágica Instantânea Tribal — Ladino,"Espreitar {U} #(Você pode jogar este card pagando seu custo de espreitar se você causou dano de combate a um jogador neste turno com um Ladino.)#
 Olhe os quatro cards do topo de seu grimório. Coloque um deles na sua mão e os restantes no fundo do seu grimório em qualquer ordem."
-Thornbite Staff,Cajado Mordiscante,Artefato Tribal — Equipamento Xamã,"A criatura equipada tem ""{2}, {T}: Esta criatura causa 1 ponto de dano à criatura ou ao jogador alvo"" e ""Toda vez que uma criatura for colocada num cemitério vinda do jogo, desvire esta criatura"".
+Thornbite Staff,Cajado Mordiscante,Artefato Tribal — Equipamento Xamã,"A criatura equipada tem “{2}, {T}: Esta criatura causa 1 ponto de dano à criatura ou ao jogador alvo” e “Toda vez que uma criatura for colocada num cemitério vinda do jogo, desvire esta criatura”.
 Toda vez que uma criatura do tipo Xamã entra em jogo, você pode anexar Cajado Mordiscante a ela.
 Equipar {4}"
 Titan's Revenge,Vingança do Titã,Feitiço,"Vingança do Titã causa X pontos de dano à criatura ou ao jogador alvo. Confronte um oponente. Se você vencer, devolva Vingança do Titã para a mão de seu dono. #(Cada jogador confrontante revela o card do topo de seu próprio grimório e depois o coloca no topo ou no fundo deste. Vence o jogador que tiver o card com o maior custo de mana convertido.)#"
@@ -15186,7 +15186,7 @@ Tranquil Thicket,Bosque Sereno,Terreno,"Bosque Sereno entra em jogo virado.
 {T}: Adiciona {G} à sua reserva de mana.
 Reciclar {G} #({G}, Descarte este card de sua mão: Compre um card.)#"
 Treespring Lorian,Lóris Salta-Árvores,Criatura — Besta,Metamorfose {5}{G} #(Você pode baixar este card com a face voltada para baixo como uma criatura 2/2 por {3}. Volte sua face para cima a qualquer momento pagando seu custo de metamorfose.)#
-Tribal Golem,Golem Tribal,Criatura Artefato — Golem,"Golem Tribal tem a habilidade de atropelar desde que você controle uma Besta, ímpeto desde que você controle um Goblin, iniciativa desde que você controle um Soldado, voar desde que você controle um Mago e ""{B}: Regenera Golem Tribal"" desde que você controle um Zumbi."
+Tribal Golem,Golem Tribal,Criatura Artefato — Golem,"Golem Tribal tem a habilidade de atropelar desde que você controle uma Besta, ímpeto desde que você controle um Goblin, iniciativa desde que você controle um Soldado, voar desde que você controle um Mago e “{B}: Regenera Golem Tribal” desde que você controle um Zumbi."
 Tribal Unity,Unidade Tribal,Mágica Instantânea,As criaturas do tipo de sua escolha recebem +X/+X até o final do turno.
 Trickery Charm,Medalhão da Trapaça,Mágica Instantânea,Escolha um A criatura alvo ganha a habilidade de voar até o final do turno; ou a criatura alvo torna-se do tipo de criatura de sua escolha até o final do turno; ou olhe os quatro cards do topo de seu grimório e depois coloque-os de volta em qualquer ordem.
 True Believer,Adepto da Verdade,Criatura — Humano Clérigo,Você tem manto. #(Você não pode ser alvo de mágicas ou habilidades.)#
@@ -15296,7 +15296,7 @@ Toda vez que um marcador temporal for removido de Detritívoro enquanto ele esti
 Dichotomancy,Dicotomancia,Feitiço,"Para cada permanente virada que não seja um terreno controlada pelo oponente alvo, procure no grimório daquele jogador por um card com o mesmo nome daquela permanente e coloque-o em jogo sob o seu controle. Depois, aquele jogador embaralha seu próprio grimório.
 Suspender 3 — {1}{U}{U}"
 Dismal Failure,Fracasso Funesto,Mágica Instantânea,Anule a mágica alvo. Seu controlador descarta um card.
-Dormant Sliver,Fractius Hibernante,Criatura — Fractius,"Todos os Fractius têm defensor e ""Quando esta criatura entrar em jogo, compre um card""."
+Dormant Sliver,Fractius Hibernante,Criatura — Fractius,"Todos os Fractius têm defensor e “Quando esta criatura entrar em jogo, compre um card”."
 Dreamscape Artist,Artista Paisagilusionista,Criatura — Magimodelador Humano,"{2}{U}, {T}, Descarte um card, Sacrifique um terreno: Procure em seu grimório até dois cards de terreno básico e coloque-os em jogo. Depois, embaralhe seu grimório."
 Dunerider Outlaw,Bandido Ginete das Dunas,Criatura — Humano Rebelde Ladino,"Proteção contra o verde
 No final do turno, se Bandido Ginete das Dunas tiver causado dano a um oponente neste turno, coloque um marcador +1/+1 sobre ele."
@@ -15494,7 +15494,7 @@ Uktabi Drake,Dragonete de Uktabi,Criatura — Dragonete,"Voar, ímpeto
 Eco {1}{G}{G} #(No início de sua manutenção, se esta permanente passou a estar sob o seu controle desde o início de sua última manutenção, sacrifique-a, a menos que você pague seu custo de eco.)#"
 Utopia Vow,Promessa Utópica,Encantamento — Aura,"Encantar Criatura
 A criatura encantada não pode atacar nem bloquear.
-A criatura encantada tem ""{T}: Adicione um mana de qualquer cor à sua reserva de mana""."
+A criatura encantada tem “{T}: Adicione um mana de qualquer cor à sua reserva de mana”."
 Vampiric Link,Vínculo Vampírico,Encantamento — Aura,"Encantar Criatura
 Toda vez que a criatura encantada causar dano, você ganha aquela quantidade em pontos de vida."
 Veiling Oddity,Aberração Encapuzada,Criatura — Ilusão,"Suspender 4—{1}{U} #(Em vez de jogar este card da sua mão, você pode pagar {1}{U} e removê-lo do jogo com quatro marcadores temporais sobre ele. No início de sua manutenção, remova um marcador temporal. Quando o último for removido, jogue-o sem pagar seu custo de mana. Ele tem ímpeto.)#
@@ -15930,7 +15930,7 @@ Quando Punhos de Carvalho entra em jogo, coloque em jogo duas fichas de criatura
 A criatura encantada tem a habilidade de atropelar."
 Flame Fusillade,Fuzilaria de Chamas,Feitiço,"Até o final do turno, as permanentes que você controla ganham ""{T}: Esta permanente causa 1 ponto de dano à criatura alvo ou ao jogador alvo."""
 Flame-Kin Zealot,Zelote do Clã das Chamas,Criatura — Elemental Amoque,"Quando Zelote do Clã das Chamas entra em jogo, as criaturas que você controla recebem +1/+1 e ganham ímpeto até o final do turno."
-Flash Conscription,Conscrição Relâmpago,Mágica Instantânea,"Desvire a criatura alvo e ganhe o controle dela até o final do turno. Aquela criatura ganha ímpeto até o final do turno. Se {W} foi gasto para jogar Conscrição Relâmpago, a criatura ganha ""Toda vez que esta criatura causa dano de combate, você ganha aquela quantidade em pontos de vida"" até o final do turno."
+Flash Conscription,Conscrição Relâmpago,Mágica Instantânea,"Desvire a criatura alvo e ganhe o controle dela até o final do turno. Aquela criatura ganha ímpeto até o final do turno. Se {W} foi gasto para jogar Conscrição Relâmpago, a criatura ganha “Toda vez que esta criatura causa dano de combate, você ganha aquela quantidade em pontos de vida” até o final do turno."
 Flickerform,Forma Intermitente,Encantamento — Aura,"Encantar Criatura
 {2}{W}{W}: Remova do jogo a criatura encantada e todas as Auras anexadas a ela. No final do turno, devolva aquele card ao jogo sob o controle de seu dono. Se o fizer, devolva aquelas Auras ao jogo sob o controle de seus donos, encantando aquela criatura."
 Flight of Fancy,Vôo da Imaginação,Encantamento — Aura,"Encantar Criatura
@@ -16264,7 +16264,7 @@ Blistercoil Weird,Bizarro da Helicosfera,Criatura — Bizarro,"Toda vez que voc�
 Bloodfray Giant,Gigante da Cólera Sanguinária,Criatura — Gigante,"Atropelar
 Liberar #(Você pode fazer com que esta criatura entre no campo de batalha com um marcador +1/+1. Ela não poderá bloquear enquanto tiver um marcador +1/+1.)#"
 Blustersquall,Rajada Tempestuosa,Mágica Instantânea,"Vire a criatura alvo que você não controla.
-Sobrecarga {3}{U} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de ""a criatura alvo"" por ""cada criatura"".)#"
+Sobrecarga {3}{U} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de “a criatura alvo” por “cada criatura”.)#"
 Brushstrider,Salta-mato,Criatura — Besta,Vigilância
 Call of the Conclave,Chamado do Conclave,Feitiço,Coloque no campo de batalha uma ficha de criatura verde 3/3 do tipo Centauro.
 Carnival Hellsteed,Corcel Infernal Festivo,Criatura — Pesadelo Cavalo,"Iniciativa, ímpeto
@@ -16275,7 +16275,7 @@ Chaos Imps,Diabretes do Caos,Criatura — Diabrete,"Voar
 Liberar #(Você pode fazer com que esta criatura entre no campo de batalha com um marcador +1/+1. Ela não poderá bloquear enquanto tiver um marcador +1/+1.)#
 Diabretes do Caos terá atropelar enquanto tiver um marcador +1/+1."
 Chemister's Trick,Truque do Quimiomante,Mágica Instantânea,"A criatura alvo que você não controla recebe -2/-0 até o final do turno e ataca neste turno se estiver apta.
-Sobrecarga {3}{U}{R} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de ""a criatura alvo"" por ""cada criatura"".)#"
+Sobrecarga {3}{U}{R} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de “a criatura alvo” por “cada criatura”.)#"
 Chorus of Might,Coro do Poder,Mágica Instantânea,"Até o final do turno, a criatura alvo recebe +1/+1 para cada criatura que você controla e ganha atropelar."
 Chromatic Lantern,Lanterna Cromática,Artefato,"Os terrenos que você controla têm: ""{T}: Adicione um mana de qualquer cor à sua reserva de mana.""
 {T}: Adicione um mana de qualquer cor à sua reserva de mana."
@@ -16293,13 +16293,13 @@ Conjured Currency,Moeda Conjurada,Encantamento,"No início de sua manutenção, 
 Corpsejack Menace,Ameaça Guia de Cadáver,Criatura — Fungo,"Se um ou mais marcadores +1/+1 seriam colocados em uma criatura que você controla, em vez disso, é colocado nela o dobro de marcadores +1/+1."
 Counterflux,Controfluxo,Mágica Instantânea,"Controfluxo não pode ser anulado por mágicas ou habilidades.
 Anule a mágica alvo que você não controla.
-Sobrecarga {1}{U}{U}{R} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de ""a mágica alvo"" por ""cada mágica"".)#"
+Sobrecarga {1}{U}{U}{R} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de “a mágica alvo” por “cada mágica”.)#"
 Coursers' Accord,Acordo dos Caçadores,Feitiço,Coloque no campo de batalha uma ficha de criatura verde 3/3 do tipo Centauro e depois povoe. #(Coloque no campo de batalha uma ficha que seja uma cópia de uma ficha de criatura que você controla.)#
 Crosstown Courier,Mensageiro Transurbano,Criatura — Vedalkeano,"Toda vez que Mensageiro Transurbano causa dano de combate a um jogador, aquele jogador coloca uma quantidade equivalente de cards do topo do grimório dele no próprio cemitério."
 Cryptborn Horror,Horror Criptonato,Criatura — Horror,"Atropelar
 Horror Criptonato entra no campo de batalha com X marcadores +1/+1, sendo X igual ao total de pontos de vida perdidos por seus oponentes neste turno."
 Cyclonic Rift,Fenda Ciclônica,Mágica Instantânea,"Devolva a permanente alvo que não seja um terreno e que você não controle para a mão de seu dono.
-Sobrecarga {6}{U} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de ""a permanente alvo"" por ""cada permanente"".)#"
+Sobrecarga {6}{U} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de “a permanente alvo” por “cada permanente”.)#"
 Daggerdrome Imp,Diabrete de Cutelódromo,Criatura — Diabrete,"Voar
 Vínculo com a vida #(O dano causado por esta criatura faz com que você ganhe uma quantidade equivalente de pontos de vida.)#"
 Dark Revenant,Espectro Sombrio,Criatura — Espírito,"Voar
@@ -16320,7 +16320,7 @@ A criatura encantada recebe +2/+1 e tem ""{R}: Esta criatura ganha atropelar at�
 Doorkeeper,Porteiro,Criatura — Homúnculo,"Defensor
 {2}{U}, {T}: O jogador alvo coloca os X cards do topo do grimório dele no próprio cemitério, sendo X igual ao número de criaturas com defensor que você controla."
 Downsize,Diminuição,Mágica Instantânea,"A criatura alvo que você não controla recebe -4/-0 até o final do turno.
-Sobrecarga {2}{U} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de ""a criatura alvo"" por ""cada criatura"".)#"
+Sobrecarga {2}{U} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de “a criatura alvo” por “cada criatura”.)#"
 Drainpipe Vermin,Ratazana de Esgoto,Criatura — Rato,"Quando Ratazana de Esgoto morre, você pode pagar {B}. Se fizer isso, o jogador alvo descarta um card."
 Dramatic Rescue,Resgate Dramático,Mágica Instantânea,Devolva a criatura alvo para a mão de seu dono. Você ganha 2 pontos de vida.
 Dreadbore,Perfuração Letal,Feitiço,Destrua a criatura ou planeswalker alvo.
@@ -16330,9 +16330,9 @@ Drudge Beetle,Besouro Servil,Criatura — Inseto,"Necrofagia {5}{G} #({5}{G}, Ex
 Druid's Deliverance,Salvação do Druida,Mágica Instantânea,Previna todo o dano de combate que seria causado a você neste turno. Povoe. #(Coloque no campo de batalha uma ficha que seja uma cópia de uma ficha de criatura que você controla.)#
 Dryad Militant,Militante Dríade,Criatura — Dríade Soldado,"Se um card de mágica instantânea ou feitiço seria colocado em um cemitério vindo de qualquer lugar, em vez disso, exile-o."
 Dynacharge,Dinamocarga,Mágica Instantânea,"A criatura alvo que você controla recebe +2/+0 até o final do turno.
-Sobrecarga {2}{R} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de ""a criatura alvo"" por ""cada criatura"".)#"
+Sobrecarga {2}{R} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de “a criatura alvo” por “cada criatura”.)#"
 Electrickery,Eletrotruque,Mágica Instantânea,"Eletrotruque causa 1 ponto de dano à criatura alvo que você não controla.
-Sobrecarga {1}{R} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de ""a criatura alvo"" por ""cada criatura"".)#"
+Sobrecarga {1}{R} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de “a criatura alvo” por “cada criatura”.)#"
 Epic Experiment,Experimento Épico,Feitiço,"Exile os primeiros X cards do topo de seu grimório. Para cada card de mágica instantânea e feitiço com custo de mana convertido menor ou igual a X entre eles, você pode conjurá-lo sem pagar seu custo de mana. Depois, coloque em seu cemitério todos os cards exilados dessa maneira que não tenham sido conjurados."
 Essence Backlash,Reação Adversa da Essência,Mágica Instantânea,Anule a mágica de criatura alvo. Reação Adversa da Essência causa uma quantidade de dano igual ao poder daquela mágica ao controlador dela.
 Ethereal Armor,Armadura Etérea,Encantamento — Aura,"Encantar criatura
@@ -16423,9 +16423,9 @@ Mercurial Chemister,Quimiomante Volátil,Criatura — Humano Mago,"{U}, {T}: Com
 {R}, {T}, Descarte um card: Quimiomante Volátil causa dano à criatura alvo igual ao custo de mana convertido do card descartado."
 Minotaur Aggressor,Agressor Minotauro,Criatura — Minotauro Amoque,"Iniciativa, ímpeto"
 Mizzium Mortars,Morteiros de Mizzium,Feitiço,"Morteiros de Mizzium causa 4 pontos de dano à criatura alvo que você não controla.
-Sobrecarga {3}{R}{R}{R} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de ""a criatura alvo"" por ""cada criatura"".)#"
+Sobrecarga {3}{R}{R}{R} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de “a criatura alvo” por “cada criatura”.)#"
 Mizzium Skin,Pele de Mizzium,Mágica Instantânea,"A criatura alvo que você controla recebe +0/+1 e ganha resistência à magia até o final do turno.
-Sobrecarga {1}{U} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de ""a criatura alvo"" por ""cada criatura"".)#"
+Sobrecarga {1}{U} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de “a criatura alvo” por “cada criatura”.)#"
 Necropolis Regent,Regente da Necrópole,Criatura — Vampiro,"Voar
 Toda vez que uma criatura que você controla causar dano de combate a um jogador, coloque uma quantidade equivalente de marcadores +1/+1 sobre ela."
 New Prahv Guildmage,Mago de Guilda de Nova Prahv,Criatura — Humano Mago,"{W}{U}: A criatura alvo ganha voar até o final do turno.
@@ -16476,7 +16476,7 @@ Risen Sanctuary,Santuário Elevado,Criatura — Elemental,Vigilância
 Rites of Reaping,Ritos da Ceifa,Feitiço,A criatura alvo recebe +3/+3 até o final do turno. Outra criatura alvo recebe -3/-3 até o final do turno.
 Rix Maadi Guildmage,Mago de Guilda de Rix Maadi,Criatura — Humano Xamã,"{B}{R}: A criatura bloqueadora alvo recebe -1/-1 até o final do turno.
 {B}{R}: O jogador alvo que perdeu pontos de vida neste turno perde 1 ponto de vida."
-Rootborn Defenses,Defensores Radiconatos,Mágica Instantânea,"Povoe. As criaturas que você controla são indestrutíveis neste turno. #(Para povoar, coloque no campo de batalha uma ficha que seja uma cópia de uma ficha de criatura que você controle. Os dano e efeitos que dizem ""destrua"" não destroem criaturas indestrutíveis.)#"
+Rootborn Defenses,Defensores Radiconatos,Mágica Instantânea,"Povoe. As criaturas que você controla são indestrutíveis neste turno. #(Para povoar, coloque no campo de batalha uma ficha que seja uma cópia de uma ficha de criatura que você controle. Os dano e efeitos que dizem “destrua” não destroem criaturas indestrutíveis.)#"
 Rubbleback Rhino,Rinoceronte Calicodorso,Criatura — Rinoceronte,Resistência à magia #(Esta criatura não pode ser alvo de mágicas nem de habilidades que seus oponentes controlam.)#
 Runewing,Asa-rúnica,Criatura — Ave,"Voar
 Quando Asa-rúnica morrer, compre um card."
@@ -16521,7 +16521,7 @@ Liberar #(Você pode fazer com que esta criatura entre no campo de batalha com u
 Stealer of Secrets,Ladrão de Segredos,Criatura — Humano Ladino,"Toda vez que Ladrão de Segredos causar dano de combate a um jogador, compre um card."
 Stonefare Crocodile,Crocodilo de Petreovila,Criatura — Crocodilo,{2}{B}: Crocodilo de Petreovila ganha vínculo com a vida até o final do turno. #(O dano causado por esta criatura também faz com que você ganhe uma quantidade equivalente de pontos de vida.)#
 Street Spasm,Espasmo de Rua,Mágica Instantânea,"Espasmo de Rua causa X pontos de dano à criatura alvo sem voar que você não controla.
-Sobrecarga {X}{X}{R}{R} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de ""a criatura alvo"" por ""cada criatura"".)#"
+Sobrecarga {X}{X}{R}{R} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de “a criatura alvo” por “cada criatura”.)#"
 Street Sweeper,Varredor de Rua,Criatura Artefato — Constructo,"Toda vez que Varredor de Rua atacar, destrua todas as Auras anexadas ao terreno alvo."
 Sundering Growth,Crescimento Despedaçador,Mágica Instantânea,Destrua o artefato ou encantamento alvo e depois povoe. #(Coloque no campo de batalha uma ficha que seja uma cópia de uma ficha de criatura que você controla.)#
 Sunspire Griffin,Grifo da Espiral Solar,Criatura — Grifo,Voar
@@ -16533,7 +16533,7 @@ Tablet of the Guilds,Tabuleta das Guildas,Artefato,"Conforme Tabuleta das Guilda
 Toda vez que você conjurar uma mágica, se ela for de pelo menos uma das cores escolhidas, você ganhará 1 ponto de vida para cada cor escolhida da qual ela for."
 Tavern Swindler,Vigarista da Taverna,Criatura — Humano Ladino,"{T}, Pague 3 pontos de vida: Lance uma moeda. Se vencer, você ganha 6 pontos de vida."
 Teleportal,Teleportal,Feitiço,"A criatura alvo que você controla recebe +1/+0 até o final do turno e não pode ser bloqueada neste turno.
-Sobrecarga {3}{U}{R} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de ""a criatura alvo"" por ""cada criatura"".)#"
+Sobrecarga {3}{U}{R} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de “a criatura alvo” por “cada criatura”.)#"
 Tenement Crasher,Invasor de Habitação,Criatura — Besta,Ímpeto
 Terrus Wurm,Vorme de Terrus,Criatura — Zumbi Vorme,"Necrofagia {6}{B} #({6}{B}, Exile este card de seu cemitério: Coloque uma quantidade de marcadores +1/+1 igual ao poder deste card na criatura alvo. Use necrofagia somente quando puder conjurar um feitiço.)#"
 Thoughtflare,Acelerador Mental,Mágica Instantânea,Compre quatro cards e depois descarte dois cards.
@@ -16559,7 +16559,7 @@ O terreno encantado tem ""Desvire este terreno durante a etapa de desvirar de ca
 Utvara Hellkite,Dragão Avérneo de Utvara,Criatura — Dragão,"Voar
 Toda vez que um Dragão que você controla atacar, coloque no campo de batalha uma ficha de criatura vermelha 6/6 do tipo Dragão com voar."
 Vandalblast,Explosão Vandálica,Feitiço,"Destrua o artefato alvo que você não controla.
-Sobrecarga {4}{R} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de ""o artefato alvo"" por ""cada artefato"".)#"
+Sobrecarga {4}{R} #(Você pode conjurar esta mágica pagando seu custo de sobrecarga. Se fizer isso, altere seu texto substituindo todas as ocorrências de “o artefato alvo” por “cada artefato”.)#"
 Vassal Soul,Alma Vassala,Criatura — Espírito,Voar
 Viashino Racketeer,Extorsionário Viashino,Criatura — Viashino Ladino,"Quando Extorsionário Viashino entra no campo de batalha, você pode descartar um card. Se fizer isso, compre um card."
 Vitu-Ghazi Guildmage,Mago de Guilda de Vitu-Ghazi,Criatura — Dríade Xamã,"{4}{G}{W}: Coloque no campo de batalha uma ficha de criatura verde 3/3 do tipo Centauro.
@@ -17387,15 +17387,15 @@ Darkslick Drake,Dragonete de Mancha Negra,Criatura — Dragonete,"Voar
 Quando Dragonete de Mancha Negra for colocado num cemitério vindo do campo de batalha, compre um card."
 Darkslick Shores,Litorais de Mancha Negra,Terreno,"Litorais de Mancha Negra entra no campo de batalha virado, a menos que você controle dois outros terrenos ou menos.
 {T}: Adicione {U} ou {B} à sua reserva de mana."
-Darksteel Axe,Machado de Aço Negro,Artefato — Equipamento,"Machado de Aço Negro é indestrutível. #(Os efeitos que dizem ""destrua"" não o destroem.)#
+Darksteel Axe,Machado de Aço Negro,Artefato — Equipamento,"Machado de Aço Negro é indestrutível. #(Os efeitos que dizem “destrua” não o destroem.)#
 A criatura equipada recebe +2/+0.
 Equipar {2}"
 Darksteel Juggernaut,Juggernaut de Aço Negro,Criatura Artefato — Juggernaut,"O poder e a resistência de Juggernaut de Aço Negro são ambos iguais ao número de artefatos que você controla.
 Juggernaut de Aço Negro é indestrutível e ataca a cada turno se estiver apto."
-Darksteel Myr,Myr de Aço Negro,Criatura Artefato — Myr,"Myr de Aço Negro é indestrutível. #(Nem dano letal nem efeitos que dizem ""destrua"" podem destruí-la. Se a sua resistência for menor ou igual a 0, ela ainda será colocada no cemitério de seu dono.)#"
+Darksteel Myr,Myr de Aço Negro,Criatura Artefato — Myr,"Myr de Aço Negro é indestrutível. #(Nem dano letal nem efeitos que dizem “destrua” podem destruí-la. Se a sua resistência for menor ou igual a 0, ela ainda será colocada no cemitério de seu dono.)#"
 Darksteel Sentinel,Sentinela de Aço Negro,Criatura Artefato — Golem,"Lampejo #(Você poderá conjurar esta mágica a qualquer momento em que puder conjurar uma mágica instantânea.)#
 Vigilância
-Sentinela de Aço Negro é indestrutível. #(Nem dano letal nem efeitos que dizem ""destrua"" podem destruí-la. Se a sua resistência for menor ou igual a 0, ela ainda será colocada no cemitério de seu dono.)#"
+Sentinela de Aço Negro é indestrutível. #(Nem dano letal nem efeitos que dizem “destrua” podem destruí-la. Se a sua resistência for menor ou igual a 0, ela ainda será colocada no cemitério de seu dono.)#"
 Dispense Justice,Fazer Justiça,Mágica Instantânea,"O jogador alvo sacrifica uma criatura atacante.
 Maestria com Metais — Se você controlar três ou mais artefatos, em vez disso, aquele jogador sacrificará duas criaturas atacantes."
 Dissipation Field,Campo de Dissipação,Encantamento,"Toda vez que uma permanente causar dano a você, devolva-a para a mão de seu dono."
@@ -17671,7 +17671,7 @@ Wall of Tanglecord,Barreira de Corda do Emaranhado,Criatura Artefato — Barreir
 {G}: Barreira de Corda do Emaranhado ganha alcance até o final do turno. #(Ela pode bloquear criaturas com voar.)#"
 Whitesun's Passage,Passagem do Sol Branco,Mágica Instantânea,Você ganha 5 pontos de vida.
 Wing Puncture,Punção de Asas,Mágica Instantânea,A criatura alvo que você controla causa dano igual ao seu poder à criatura alvo com voar.
-Withstand Death,Resistir à Morte,Mágica Instantânea,"A criatura alvo é indestrutível neste turno. #(Nem dano letal nem efeitos que dizem ""destrua"" podem destruí-la. Se a sua resistência for menor ou igual a 0, ela ainda será colocada no cemitério de seu dono.)#"
+Withstand Death,Resistir à Morte,Mágica Instantânea,"A criatura alvo é indestrutível neste turno. #(Nem dano letal nem efeitos que dizem “destrua” podem destruí-la. Se a sua resistência for menor ou igual a 0, ela ainda será colocada no cemitério de seu dono.)#"
 Wurmcoil Engine,Máquina a Vorme Espiralado,Criatura Artefato — Vorme,"Toque mortífero, vínculo com a vida
 Quando Máquina a Vorme Espiralado for colocado num cemitério vindo do campo de batalha, coloque no campo de batalha uma ficha de criatura artefato incolor 3/3 do tipo Vorme com toque mortífero e uma ficha de criatura artefato incolor 3/3 do tipo Vorme com vínculo com a vida."
 Accelerated Mutation,Mutação Acelerada,Mágica Instantânea,"A criatura alvo recebe +X/+X até o final do turno, sendo X igual ao maior custo de mana convertido dentre as permanentes que você controla."
@@ -18088,7 +18088,7 @@ Fossil Find,Encontrar Fóssil,Feitiço,Devolva um card aleatoriamente de seu cem
 Foxfire Oak,Carvalho do Fogo-Fátuo,Criatura — Ent Xamã,{RG}{RG}{RG}: Carvalho do Fogo-Fátuo recebe +3/+0 até o final do turno.
 Fracturing Gust,Rajada Fragmentadora,Mágica Instantânea,Destrua todos os artefatos e encantamentos. Você ganha 2 pontos de vida para cada permanente destruída dessa maneira.
 Fulminator Mage,Mago Fulminador,Criatura — Elemental Xamã,Sacrifique Mago Fulminador: Destrua o terreno alvo não-básico.
-Furystoke Giant,Gigante Atiça-Fúria,Criatura — Gigante Guerreiro,"Quando Gigante Atiça-Fúria entra em jogo, as outras criaturas que você controla ganham ""{T}: Esta criatura causa 2 pontos de dano à criatura ou ao jogador alvo"" até o final do turno.
+Furystoke Giant,Gigante Atiça-Fúria,Criatura — Gigante Guerreiro,"Quando Gigante Atiça-Fúria entra em jogo, as outras criaturas que você controla ganham “{T}: Esta criatura causa 2 pontos de dano à criatura ou ao jogador alvo” até o final do turno.
 Persistir #(Quando esta criatura for colocada num cemitério vinda do jogo, se ela não tiver nenhum marcador -1/-1, devolva-a para o jogo sob o controle de seu dono com um marcador -1/-1.)#"
 Ghastlord of Fugue,Lorde Fantasmal da Fuga,Criatura — Espírito Avatar,"Lorde Fantasmal da Fuga não pode ser bloqueado.
 Toda vez que Lorde Fantasmal da Fuga causa dano de combate a um jogador, esse jogador revela sua própria mão. Escolha um card dela. Aquele jogador remove aquele card do jogo."
@@ -18306,7 +18306,7 @@ Persistir #(Quando esta criatura for colocada num cemitério vinda do jogo, se e
 Scuzzback Scrapper,Sucateiro de Costas Sujas,Criatura — Goblin Guerreiro,Murchar #(Esta fonte causa dano a criaturas na forma de marcadores -1/-1.)#
 Seedcradle Witch,Bruxa Semeadora,Criatura — Elfo Xamã,{2}{G}{W}: A criatura alvo recebe +3/+3 até o final do turno. Desvire aquela criatura.
 Shield of the Oversoul,Escudo da Alma Suprema,Encantamento — Aura,"Encantar criatura
-Enquanto a criatura encantada for verde, ela receberá +1/+1 e será indestrutível. #(Nem dano letal nem efeitos que dizem ""destrua"" podem destruí-la. Se a sua resistência for menor ou igual a 0, ela ainda será colocada no cemitério de seu dono.)#
+Enquanto a criatura encantada for verde, ela receberá +1/+1 e será indestrutível. #(Nem dano letal nem efeitos que dizem “destrua” podem destruí-la. Se a sua resistência for menor ou igual a 0, ela ainda será colocada no cemitério de seu dono.)#
 Enquanto a criatura encantada for branca, ela receberá +1/+1 e terá voar."
 Sickle Ripper,Estripador da Foice,Criatura — Elemental Guerreiro,Murchar #(Esta fonte causa dano a criaturas na forma de marcadores -1/-1.)#
 Silkbind Faerie,Fada Laço-de-Seda,Criatura — Fada Ladino,"Voar
@@ -21703,7 +21703,7 @@ Bygone Bishop,Bispo do Passado,Criatura — Espírito Clérigo,"Voar
 Toda vez que você conjurar uma mágica de criatura com custo de mana convertido igual ou inferior a 3, investigue. #(Coloque no campo de batalha uma ficha de artefato incolor do tipo Pista com ""{2}, Sacrifique este artefato: Compre um card."")#"
 Byway Courier,Mensageiro dos Atalhos,Criatura — Humano Batedor,"Quando Mensageiro dos Atalhos morrer, investigue. #(Coloque no campo de batalha uma ficha de artefato incolor do tipo Pista com ""{2}, Sacrifique este artefato: Compre um card."")#"
 Call the Bloodline,Chamado à Estirpe,Encantamento,"{1}, Descarte um card: Coloque no campo de batalha uma ficha de criatura preta 1/1 do tipo Vampiro Cavaleiro com vínculo com a vida. Ative esta habilidade apenas uma vez a cada turno."
-Cathar's Companion,Companheira do Cátaro,Criatura — Sabujo,"Toda vez que você conjura uma mágica que não seja de criatura, Companheira do Cátaro ganha indestrutível até o final do turno. #(O dano e os efeitos que dizem ""destrua"" não o destroem.)#"
+Cathar's Companion,Companheira do Cátaro,Criatura — Sabujo,"Toda vez que você conjura uma mágica que não seja de criatura, Companheira do Cátaro ganha indestrutível até o final do turno. #(O dano e os efeitos que dizem “destrua” não o destroem.)#"
 Chaplain's Blessing,Bênção da Capelã,Feitiço,Você ganha 5 pontos de vida.
 Choked Estuary,Estuário Estrangulado,Terreno,"Conforme Estuário Estrangulado entra no campo de batalha, você pode revelar um card de Ilha ou Pântano de sua mão. Se não fizer isso, Estuário Estrangulado entrará no campo de batalha virado.
 {T}: Adicione {U} ou {B} à sua reserva de mana."
@@ -22135,7 +22135,7 @@ Voar"
 Strength of Arms,Força de Armas,Mágica Instantânea,"A criatura alvo recebe +2/+2 até o final do turno. Se você controlar um Equipamento, coloque no campo de batalha uma ficha de criatura branca 1/1 do tipo Humano Soldado."
 Stromkirk Mentor,Mentor Stromkirk,Criatura — Vampiro Soldado,"Quando Mentor Stromkirk entrar no campo de batalha, coloque um marcador +1/+1 em outro Vampiro alvo que você controla."
 Structural Distortion,Distorção Estrutural,Feitiço,Exile o artefato ou terreno alvo. Distorção Estrutural causa 2 pontos de dano ao controlador daquela permanente.
-Survive the Night,Sobreviver à Noite,Mágica Instantânea,"A criatura alvo recebe +1/+0 e ganha indestrutível até o final do turno. #(O dano e os efeitos que dizem ""destrua"" não a destroem.)#
+Survive the Night,Sobreviver à Noite,Mágica Instantânea,"A criatura alvo recebe +1/+0 e ganha indestrutível até o final do turno. #(O dano e os efeitos que dizem “destrua” não a destroem.)#
 Investigue. #(Coloque no campo de batalha uma ficha de artefato incolor do tipo Pista com ""{2}, Sacrifique este artefato: Compre um card."")#"
 Tamiyo's Journal,Diário de Tamiyo,Artefato Lendário,"No início de sua manutenção, investigue. #(Coloque no campo de batalha uma ficha de artefato incolor do tipo Pista com ""{2}, Sacrifique este artefato: Compre um card."")#
 {T}, Sacrifique três Pistas: Procure um card em seu grimório e coloque aquele card em sua mão. Depois, embaralhe seu grimório."
@@ -22514,7 +22514,7 @@ Impetuous Devils,Diabos Impetuosos,Criatura — Diabo,"Atropelar, ímpeto
 Quando Diabos Impetuosos ataca, até uma criatura alvo controlada pelo jogador defensor o bloqueia neste combate se estiver apta.
 No início da etapa final, sacrifique Diabos Impetuosos."
 Imprisoned in the Moon,Aprisionados na Lua,Encantamento — Aura,"Encantar criatura, terreno ou planeswalker
-A permanente encantada é um terreno incolor com ""{T}: Adicione {C} a sua reserva de mana"" e perde todos os outros tipos de card e habilidades."
+A permanente encantada é um terreno incolor com “{T}: Adicione {C} a sua reserva de mana” e perde todos os outros tipos de card e habilidades."
 Incendiary Flow,Fluxo Incendiário,Feitiço,"Fluxo Incendiário causa 3 pontos de dano à criatura ou ao jogador alvo. Se uma criatura que sofreu dano dessa maneira morreria neste turno, em vez disso, exile-a."
 Ingenious Skaab,Skaab Engenhoso,Criatura — Zumbi Horror,"Destreza #(Toda vez que você conjura uma mágica que não seja de criatura, esta criatura recebe +1/+1 até o final do turno.)#
 {U}: Skaab Engenhoso recebe +1/-1 até o final do turno."

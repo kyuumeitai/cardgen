@@ -302,7 +302,7 @@ class CardDB {
 				$card->flavor = $flavors[$index];
 				array_splice($flavors, $index, 1);
 			}
-		} else if ($config["card.localized.flavor.random"] && ($language && $language != 'english')) {
+		} else if ($config["card.localized.flavor.random"] && ($language && $language != 'english') && $card->flavor != '') {
 			// Pick a localized flavor text that hasn't been picked yet.
 			$flavors = @$this->titleToLocalizedFlavors[(string)strtolower($card->title)];
 			if (!$flavors || count($flavors) == 0) {

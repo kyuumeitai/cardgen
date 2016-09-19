@@ -519,7 +519,10 @@ abstract class Renderer {
 				imagedestroy($shadowImage);
 			}
 			if($scale)
-				imagecopyresampled($canvas, $image, $left, $top, 0, 0, $width, $height, $srcWidth, $srcHeight);
+				if ($symbol == 'E')
+					imagecopyresampled($canvas, $image, $left, $top + 2, 0, 0, $width, $height, $srcWidth, $srcHeight);
+				else
+					imagecopyresampled($canvas, $image, $left, $top, 0, 0, $width, $height, $srcWidth, $srcHeight);
 			else
 				imagecopy($canvas, $image, $left, $top+$yOffset, 0, 0, $srcWidth, $srcHeight);
 

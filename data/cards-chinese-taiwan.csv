@@ -7711,7 +7711,7 @@ Fossil Find,Fossil Find,Sorcery,"Return a card at random from your graveyard to 
 Foxfire Oak,Foxfire Oak,Creature — Treefolk Shaman,{RG}{RG}{RG}: Foxfire Oak gets +3/+0 until end of turn.
 Fracturing Gust,Fracturing Gust,Instant,Destroy all artifacts and enchantments. You gain 2 life for each permanent destroyed this way.
 Fulminator Mage,Fulminator Mage,Creature — Elemental Shaman,Sacrifice Fulminator Mage: Destroy target nonbasic land.
-Furystoke Giant,Furystoke Giant,Creature — Giant Warrior,"When Furystoke Giant comes into play, other creatures you control gain ""{T}: This creature deals 2 damage to target creature or player"" until end of turn.
+Furystoke Giant,Furystoke Giant,Creature — Giant Warrior,"When Furystoke Giant comes into play, other creatures you control gain “{T}: This creature deals 2 damage to target creature or player” until end of turn.
 Persist #(When this creature is put into a graveyard from play, if it had no -1/-1 counters on it, return it to play under its owner's control with a -1/-1 counter on it.)#"
 Ghastlord of Fugue,Ghastlord of Fugue,Creature — Spirit Avatar,"Ghastlord of Fugue is unblockable.
 Whenever Ghastlord of Fugue deals combat damage to a player, that player reveals his or her hand. Choose a card from it. That player removes that card from the game."
@@ -7931,7 +7931,7 @@ Persist #(When this creature is put into a graveyard from play, if it had no -1/
 Scuzzback Scrapper,Scuzzback Scrapper,Creature — Goblin Warrior,Wither #(This deals damage to creatures in the form of -1/-1 counters.)#
 Seedcradle Witch,Seedcradle Witch,Creature — Elf Shaman,{2}{G}{W}: Target creature gets +3/+3 until end of turn. Untap that creature.
 Shield of the Oversoul,Shield of the Oversoul,Enchantment — Aura,"Enchant creature
-As long as enchanted creature is green, it gets +1/+1 and is indestructible. #(Lethal damage and effects that say ""destroy"" don't destroy it. If its toughness is 0 or less, it's still put into its owner's graveyard.)#
+As long as enchanted creature is green, it gets +1/+1 and is indestructible. #(Lethal damage and effects that say “destroy” don't destroy it. If its toughness is 0 or less, it's still put into its owner's graveyard.)#
 As long as enchanted creature is white, it gets +1/+1 and has flying."
 Sickle Ripper,Sickle Ripper,Creature — Elemental Warrior,Wither #(This deals damage to creatures in the form of -1/-1 counters.)#
 Silkbind Faerie,Silkbind Faerie,Creature — Faerie Rogue,"Flying

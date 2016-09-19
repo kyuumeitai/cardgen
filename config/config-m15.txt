@@ -29,6 +29,7 @@ font.promo.collection = 14, GothamMedium.ttf, leading:40
 font.artist = 15, BelerenBoldSmallCaps.ttf
 font.copyright = 10, MPlantin.ttf
 font.promo.text.type = 12, GothamMedium.ttf
+font.story.text.type = 12, GothamMedium.ttf
 
 [fonts - regular]
 font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf
@@ -39,6 +40,7 @@ font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.type.japanese = 25, mtgnamej.ttf
 font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
 font.promo.text.type = 12, GothamMedium.ttf
+font.story.text.type = 12, GothamMedium.ttf
 
 [fonts - conspiracy]
 font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf
@@ -49,6 +51,7 @@ font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.type.japanese = 25, mtgnamej.ttf
 font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
 font.promo.text.type = 12, GothamMedium.ttf
+font.story.text.type = 12, GothamMedium.ttf
 
 [fonts - mgdpromo]
 font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf
@@ -62,6 +65,7 @@ font.text.russian = 30, MinionPro-Cn.ttf/MinionPro-CnItalic.ttf, leading:30 colo
 font.text.japanese = 20, mtgrulej.ttf, leading:20 color:255,255,255 shadow:true
 font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
 font.promo.text.type = 12, GothamMedium.ttf
+font.story.text.type = 12, GothamMedium.ttf
 
 [fonts - fullartbasicland]
 font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf
@@ -72,6 +76,7 @@ font.type.russian = 24, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.type.japanese = 24, mtgnamej.ttf
 font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
 font.promo.text.type = 12, GothamMedium.ttf
+font.story.text.type = 12, GothamMedium.ttf
 
 [fonts - expedition]
 font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf
@@ -340,6 +345,8 @@ collection.x = 37
 collection.y = 977
 artistOffset.x = 25
 artist.y = 996
+storyLeft.x = 22
+story.y = 977
 copyrightLeft.x = 40
 copyrightPT.y = 996
 copyright.y = 977

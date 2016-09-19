@@ -109,6 +109,16 @@ function csvToArray ($fileName) {
 	return $array;
 }
 
+function csvToArray3 ($fileName) {
+	$array = array();
+	$file = fopen_utf8($fileName, 'r');
+	if (!$file) error('Unable to open file: ' . $fileName);
+	while (($data = fgetcsv($file, 6000, ',')) !== FALSE)
+		$array[(string)strtolower($data[0])] = array(trim($data[1]), isset($data[2]) ? trim($data[2]) : "");
+	fclose($file);
+	return $array;
+}
+
 function getInputFiles ($fileNames) {
 	$files = array();
 

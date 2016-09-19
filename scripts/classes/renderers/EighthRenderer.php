@@ -361,7 +361,7 @@ class EighthRenderer extends CardRenderer {
 			$typex = $settings['type.indicator.x'];
 			if ($frameDir == 'futureshifted'||$frameDir == 'futureshiftedcreature'||$frameDir == 'futureshiftedtextless') {
 				$types = explode(' ', $card->englishType);
-				if ($card->color == 'W' || $card->isArtefact() && ($card->color == 'W' || $card->color == 'Art') || $card->color == 'Lnd' && strlen($landColors) >= 2 && strpos($landColors,'W') == 0 || $card->color == 'Lnd' && $landColors == 'C') {
+				if ($card->color == 'W' || $card->isArtefact() && ($card->color == 'W' || $card->color == 'Art') || $card->color == 'Lnd' && strlen($landColors) >= 2 && strpos($landColors,'W') === 0 || $card->color == 'Lnd' && $landColors == 'C') {
 					$typeColor = '0,0,0';
 					$textColor = '0,0,0';
 				} else if ($card->isArtefact() && $card->color != 'W') {
@@ -404,7 +404,7 @@ class EighthRenderer extends CardRenderer {
 			$typex = ($frameDir == "transform-night" && $card->isArtefact()) ? $settings['type.art.x'] : $settings['type.x'];
 			if ($frameDir == 'futureshifted'||$frameDir == 'futureshiftedcreature'||$frameDir == 'futureshiftedtextless') {
 				$types = explode(' ', $card->englishType);
-				if ($card->color == 'W' || $card->isArtefact() && ($card->color == 'W' || $card->color == 'Art') || $card->color == 'Lnd' && strlen($landColors) >= 2 && strpos($landColors,'W') == 0 || $card->color == 'Lnd' && $landColors == 'C' || $card->title == 'Ghostfire') {
+				if ($card->color == 'W' || $card->isArtefact() && ($card->color == 'W' || $card->color == 'Art') || ($card->color == 'Lnd' && strlen($landColors) >= 2) && strpos($landColors,'W') === 0 || $card->color == 'Lnd' && $landColors == 'C' || $card->title == 'Ghostfire') {
 					$typeColor = '0,0,0';
 					$textColor = '0,0,0';
 				} else if ($card->isArtefact() && $card->color != 'W') {
@@ -576,7 +576,10 @@ class EighthRenderer extends CardRenderer {
 				$this->drawText($canvas, ($settings['text.right'] + $settings['text.left']) / 2, ($settings['text.top'] + $settings['text.bottom']) / 2, 632, $card->legal, $this->font("text$languageFont", 'centerY:true centerX:true'));
 			} else {
 				$heightAdjust = $card->pt ? $settings['text.pt.height.adjust'] : 0;
-				$this->drawLegalAndFlavorText($canvas, $settings['text.top'], $settings['text.left'], $settings['text.bottom'], $settings['text.right'], $card->legal, $card->flavor, $this->font("text$languageFont"), $heightAdjust);
+				if ($card->set == 'FUT' && $card->isLand() && strlen($landColors) == 2 && (substr($landColors, 0, 1) != 'W'||substr($landColors, 0, 1) != 'G')) {
+					$this->drawLegalAndFlavorText($canvas, $settings['text.top'], $settings['text.left'], $settings['text.bottom'], $settings['text.right'], $card->legal, $card->flavor, $this->font("text$languageFont", 'color:255,255,255'), $heightAdjust);
+				}
+				else $this->drawLegalAndFlavorText($canvas, $settings['text.top'], $settings['text.left'], $settings['text.bottom'], $settings['text.right'], $card->legal, $card->flavor, $this->font("text$languageFont"), $heightAdjust);
 			}
 		}
 

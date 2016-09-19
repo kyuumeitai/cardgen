@@ -52,6 +52,7 @@ class TokenRenderer extends CardRenderer {
 		$promoset = explode(',',$config['card.promo.symbols']);
 		//Eighth tokens
 		if ($frameDir == 'token' || $frameDir == 'tokentext' || $frameDir == 'nyxstarstoken' || $frameDir == 'nyxstarstokentext' || $frameDir == 'emblem') {
+			
 			$canvas = imagecreatetruecolor(736, 1050);
 	
 			// Art image.
@@ -1070,14 +1071,14 @@ class TokenRenderer extends CardRenderer {
 		if ($frameDir == 'token' && $title == 'Clue') $frameDir = "m15clue";
 		if ($frameDir == 'token' && $title == 'The Monarch') $frameDir = "monarch";
 		if ($frameDir == 'token' && $this->card->isEnchantment()) $frameDir = "nyxstarstoken";
-		if ($frameDir == 'nyxstarstoken' && $this->card->legal != "") $frameDir = "nyxstarstokentext";
+		if ($frameDir == 'nyxstarstoken' && ($this->card->legal != ''||$this->card->flavor != '')) $frameDir = "nyxstarstokentext";
 		if ($frameDir == 'nyxstarstoken' && $m15Set != FALSE && $config['render.m15'] != FALSE) $frameDir = "m15nyxstarstoken";
 		if ($frameDir == 'nyxstarstokentext' && $m15Set != FALSE && $config['render.m15'] != FALSE) $frameDir = "m15nyxstarstokentext";
 		if ($frameDir == 'token' && $m15Set != FALSE && $config['render.m15'] != FALSE) $frameDir = "m15token";
 		if ($frameDir == 'token' && $pre8thSet != FALSE && $config['render.preEighth'] != FALSE) $frameDir = "pre8thtoken";
 		if ($frameDir == 'token' && $config['render.eighth'] == FALSE) $frameDir = "m15token";
-		if ($frameDir == 'm15token' && $this->card->legal != "") $frameDir = "m15tokentext";
-		if ($frameDir == 'token' && $this->card->legal != "") $frameDir = "tokentext";
+		if ($frameDir == 'm15token' && ($this->card->legal != ''||$this->card->flavor != '')) $frameDir = "m15tokentext";
+		if ($frameDir == 'token' && ($this->card->legal != ''||$this->card->flavor != '')) $frameDir = "tokentext";
 		if ($frameDir == 'emblem' && $m15Set != FALSE && $config['render.m15'] != FALSE) $frameDir = "m15emblem";
 		return $frameDir;
 	}

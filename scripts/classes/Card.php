@@ -82,6 +82,10 @@ class Card {
 		return (stripos($this->englishType, 'Enchantment') !== false);
 	}
 	
+	public function isVehicle () {
+		return (stripos($this->englishType, 'Vehicle') !== false);
+	}
+	
 	public function isToken () {
 		return (stripos($this->englishType, 'Token') !== false||$this->title == 'Morph'||$this->title == 'Manifest'||$this->title == 'The Monarch');
 	}
