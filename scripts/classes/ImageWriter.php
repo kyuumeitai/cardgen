@@ -146,7 +146,8 @@ class ImageWriter {
 		$promoSet = explode(',', $config['card.promo.symbols']);
 		$override = $this->titleToRendererOverride($card->title, $card->set, $card->pic);
 		// Determine the correct CardRenderer.
-		if ($override && !$this instanceof TransformRenderer && in_array($card->set, $promoSet)) {
+		// Check overrides.
+		if ($override && !$this instanceof TransformRenderer && (in_array($card->set, $promoSet) || $card->set == 'TD0')) {
 			switch ($override) {
 				case 'PreEighth' : {
 					switch ($config['render.preEighth']) {
@@ -274,9 +275,17 @@ class ImageWriter {
 		else if (strpos($card->englishType, "Planeswalker")!== FALSE && $config['render.planeswalker']) {
 			$renderer[] = new PlanesWalkerRenderer($this->setDB);
 		}
+		// M15 Planechase Plane and Phenomenon
+		else if ((strpos($card->englishType, "Plane") !== FALSE  || strpos($card->englishType, "Phenomenon") !== FALSE) && $config['render.plane'] && $isM15 !== false) {
+			$renderer[] = new M15PlaneRenderer($this->setDB);
+		}
 		// Planechase Plane and Phenomenon
 		else if ((strpos($card->englishType, "Plane") !== FALSE  || strpos($card->englishType, "Phenomenon") !== FALSE) && $config['render.plane']) {
 			$renderer[] = new PlaneRenderer($this->setDB);
+		}
+		// M15 Archenemy Scheme
+		else if ($card->isScheme() && $config['render.scheme'] && $isM15 !== false) {
+			$renderer[] = new M15SchemeRenderer($this->setDB);
 		}
 		// Archenemy Scheme
 		else if ($card->isScheme() && $config['render.scheme']) {
@@ -325,7 +334,7 @@ class ImageWriter {
 		$outputName = $renderer->getCardName();
 		if ($card->isToken() && $config['output.tokens.for.forge'] == false) {
 			$outputName .= ' Token';
-			if ($card->pic && $card->pic != 'token' && $config['card.short.pic'] != false) $outputName .= $card->pic;
+			if ($card->pic && $card->pic != 'token' && $config['output.short.pic'] != false) $outputName .= $card->pic;
 			else if ($card->pic && $card->pic != 'token') $outputName .= ' (' . $card->pic . ')';
 		}
 		else if ($card->isToken() && $config['output.tokens.for.forge'] != false) {
@@ -335,7 +344,7 @@ class ImageWriter {
 			if ($card->pic) $outputName .= $card->pic;
 			$outputName .= '_' . strtolower($card->set);
 		} else {
-			if ($card->pic && $config['card.short.pic'] != false) $outputName .= $card->pic;
+			if ($card->pic && $config['output.short.pic'] != false) $outputName .= $card->pic;
 			else if ($card->pic) $outputName .= ' (' . $card->pic . ')';
 		}
 		$outputName .= $suffix;
@@ -345,22 +354,24 @@ class ImageWriter {
 		if (strpos($outputName, '?') !== FALSE) $outputName = str_replace('?', '',  $outputName);
 		
 		// Add missing special characters to filenames
-		$outputName = str_replace('El-Hajjaj', 'El-Hajjâj', $outputName);
-        $outputName = str_replace('Junun', 'Junún', $outputName);
-        $outputName = str_replace('Lim-Dul', 'Lim-Dûl', $outputName);
-        $outputName = str_replace('Jotun', 'Jötun', $outputName);
-        $outputName = str_replace('Ghazban', 'Ghazbán', $outputName);
-        $outputName = str_replace('Ifh-Biff', 'Ifh-Bíff', $outputName);
-        $outputName = str_replace('Juzam', 'Juzám', $outputName);
-        $outputName = str_replace('Khabal', 'Khabál', $outputName);
-        $outputName = str_replace('Marton', 'Márton', $outputName);
-        $outputName = str_replace("Ma'ruf", "Ma'rûf", $outputName);
-        $outputName = str_replace('Deja Vu', 'Déjà Vu', $outputName);
-        $outputName = str_replace('Dandan', 'Dandân', $outputName);
-        $outputName = str_replace('Bosium', 'Bösium', $outputName);
-        $outputName = str_replace('Seance', 'Séance', $outputName);
-        $outputName = str_replace('Saute', 'Sauté', $outputName);
-        $outputName = str_replace('Chicken a la King', 'Chicken à la King', $outputName);		
+		if ($config['output.accent.characters.on.filename'] != false) {
+			$outputName = str_replace('El-Hajjaj', 'El-Hajjâj', $outputName);
+			$outputName = str_replace('Junun', 'Junún', $outputName);
+			$outputName = str_replace('Lim-Dul', 'Lim-Dûl', $outputName);
+			$outputName = str_replace('Jotun', 'Jötun', $outputName);
+			$outputName = str_replace('Ghazban', 'Ghazbán', $outputName);
+			$outputName = str_replace('Ifh-Biff', 'Ifh-Bíff', $outputName);
+			$outputName = str_replace('Juzam', 'Juzám', $outputName);
+			$outputName = str_replace('Khabal', 'Khabál', $outputName);
+			$outputName = str_replace('Marton', 'Márton', $outputName);
+			$outputName = str_replace("Ma'ruf", "Ma'rûf", $outputName);
+			$outputName = str_replace('Deja Vu', 'Déjà Vu', $outputName);
+			$outputName = str_replace('Dandan', 'Dandân', $outputName);
+			$outputName = str_replace('Bosium', 'Bösium', $outputName);
+			$outputName = str_replace('Seance', 'Séance', $outputName);
+			$outputName = str_replace('Saute', 'Sauté', $outputName);
+			$outputName = str_replace('Chicken a la King', 'Chicken à la King', $outputName);
+		}
 		
 		return $outputName;
 	}

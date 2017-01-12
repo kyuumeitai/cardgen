@@ -18,6 +18,7 @@ class EighthRenderer extends CardRenderer {
 	static private $titleToGuild;
 	static private $titleToFuse;
 	static private $titleToPhyrexia;
+	static private $TD2ToPhyrexia;
 	static private $titleToClan;
 	static private $titleToQuest;
 	static private $titleToGodStars;
@@ -51,7 +52,7 @@ class EighthRenderer extends CardRenderer {
 		$useMulticolorFrame = (strlen($costColors) > 1 && strpos($settings['card.multicolor.frames'], strval(strlen($costColors))) !== false) || ($card->isDualManaCost() && (strpos($settings['card.multicolor.frames'], strval(strlen($costColors))) !== false || strlen($costColors) == 2));
 		switch ($frameDir) {
 		case "timeshifted": $useMulticolorFrame = false; break;
-		case "transform-day": $useMulticolorFrame = false; $pts = explode("|", $card->pt); $card->pt = $pts[0]; break;
+		case "transform-day": $useMulticolorFrame = false; /*$pts = explode("|", $card->pt); $card->pt = $pts[0]; $card->pt2 = $pts[1]; */break;
 		case "transform-night": $useMulticolorFrame = false; break;
 		case "fuse-left": $useMulticolorFrame = true; break;
 		case "fuse-right": $useMulticolorFrame = true; break;
@@ -226,8 +227,8 @@ class EighthRenderer extends CardRenderer {
 		}
 
 		//Transform P/T
-		if($frameDir == "transform-day" && isset($pts[1])) 
-			$this->drawText($canvas, $settings['pt.transform.center.x'], $settings['pt.transform.center.y'], $settings['pt.transform.width'], $pts[1], $this->font('pt.transform'));
+		if($frameDir == "transform-day" && isset($card->pt2)) 
+			$this->drawText($canvas, $settings['pt.transform.center.x'], $settings['pt.transform.center.y'], $settings['pt.transform.width'], $card->pt2, $this->font('pt.transform'));
 
 		// Casting cost.
 		if ($frameDir == 'futureshifted'||$frameDir == 'futureshiftedcreature'||$frameDir == 'futureshiftedtextless') {
@@ -496,8 +497,17 @@ class EighthRenderer extends CardRenderer {
 		}
 
 		// Phyrexia/Mirran sign.
-		if($card->set == "SOM"||$card->set == "MBS"||$card->set == "NPH"||in_array($card->set,$promoset) && ($frameDir != 'mgdpromo'||$frameDir != 'mgdnyxpromo'||$frameDir != 'mpr'||$frameDir != 'mgdnotypepromo') && $card->getDisplaySet() != 'IDW') {
+		if($card->set == 'SOM'||$card->set == 'MBS'||$card->set == 'NPH'||in_array($card->set,$promoset) && ($frameDir != 'mgdpromo'||$frameDir != 'mgdnyxpromo'||$frameDir != 'mpr'||$frameDir != 'mgdnotypepromo') && $card->getDisplaySet() != 'IDW') {
 			if ($phyrexia = $this->getPhyrexia($card->title)) {
+				list($image, $width, $height) = getPNG("images/watermarks/phyrexia/$phyrexia.png", "Phyrexia/Mirran image not found for: $phyrexia");
+				imagecopy($canvas, $image, 373 - ($width / 2), 652, 0, 0, $width, $height);
+				imagecopy($canvas, $image, 373 - ($width / 2), 652, 0, 0, $width, $height); // Too much alpha, need to apply twice.
+				imagedestroy($image);
+			}
+		}
+		
+		if ($card->set == 'TD2') {
+			if ($phyrexia = $this->getTD2Phyrexia($card->title)) {
 				list($image, $width, $height) = getPNG("images/watermarks/phyrexia/$phyrexia.png", "Phyrexia/Mirran image not found for: $phyrexia");
 				imagecopy($canvas, $image, 373 - ($width / 2), 652, 0, 0, $width, $height);
 				imagecopy($canvas, $image, 373 - ($width / 2), 652, 0, 0, $width, $height); // Too much alpha, need to apply twice.
@@ -667,6 +677,11 @@ class EighthRenderer extends CardRenderer {
 		if (!EighthRenderer::$titleToPhyrexia) EighthRenderer::$titleToPhyrexia = csvToArray('data/eighth/titleToPhyrexia.csv');
 		return @EighthRenderer::$titleToPhyrexia[(string)strtolower($title)];
 	}
+	
+	private function getTD2Phyrexia ($title) {
+		if (!EighthRenderer::$TD2ToPhyrexia) EighthRenderer::$TD2ToPhyrexia = csvToArray('data/eighth/TD2ToPhyrexia.csv');
+		return @EighthRenderer::$TD2ToPhyrexia[(string)strtolower($title)];
+	}
 
 	private function getIndicator ($title) {
 		if (!EighthRenderer::$titleToIndicator) EighthRenderer::$titleToIndicator = csvToArray('data/eighth/titleToIndicator.csv');
@@ -705,17 +720,20 @@ class EighthRenderer extends CardRenderer {
 		if ($frameDir == 'fullartbasicland' && in_array($set, $fullartbasic) === FALSE) $frameDir = "regular";
 		if ($frameDir == 'fullartbasicland' && ($set == 'OGW' && $this->card->pic >= 3||$set == 'BFZ' && $this->card->pic >= 6||$set == 'ZEN' && $this->card->pic >= 5)) $frameDir = "regular";
 		if ($frameDir == 'expedition' && in_array($set, $expedition) === FALSE) $frameDir = "regular";
-		if ($frameDir == 'timeshifted' && in_array($set, $timeshifted) === FALSE) $frameDir = "regular";
-		if ($frameDir == 'futureshifted' && in_array($set, $futureshifted) === FALSE) $frameDir = "regular";
-		if ($frameDir == 'futureshiftedcreature' && in_array($set, $futureshifted) === FALSE) $frameDir = "regular";
-		if ($frameDir == 'futureshiftedtextless' && in_array($set, $futureshifted) === FALSE) $frameDir = "regular";
+		if ($frameDir == 'mpr' && in_array($set, $mpr) === FALSE && in_array($set, $timeshifted) !== FALSE) $frameDir = "timeshifted";
+		if ($frameDir == 'mpr' && in_array($set, $mpr) === FALSE) $frameDir = "regular";
 		if ($frameDir == 'fuse-' && in_array($set, $fuse) === FALSE) $frameDir = "regular";
 		if ($frameDir == 'nyxstars' && in_array($set, $gameday) !== FALSE) $frameDir = "mgdnyxpromo";
 		if ($frameDir == 'nyxstars' && in_array($set, $nyxstars) === FALSE) $frameDir = "regular";
 		if ($frameDir == 'mgdpromo' && in_array($set, $gameday) === FALSE) $frameDir = "regular";
+		if ($frameDir == 'mgdnyxpromo' && in_array($set, $gameday) === FALSE && in_array($set, $nyxstars) !== FALSE) $frameDir = "nyxstars";
 		if ($frameDir == 'mgdnyxpromo' && in_array($set, $gameday) === FALSE) $frameDir = "regular";
 		if ($frameDir == 'mgdnotypepromo' && in_array($set, $gameday) === FALSE) $frameDir = "regular";
-		if ($frameDir == 'mpr' && in_array($set, $mpr) === FALSE) $frameDir = "regular";
+		if ($frameDir == 'timeshifted' && in_array($set, $timeshifted) === FALSE) $frameDir = "regular";
+		if ($frameDir == 'timeshifted' && $set === 'TD0' && $title !== 'Harmonize') $frameDir = "regular";
+		if ($frameDir == 'futureshifted' && in_array($set, $futureshifted) === FALSE) $frameDir = "regular";
+		if ($frameDir == 'futureshiftedcreature' && in_array($set, $futureshifted) === FALSE) $frameDir = "regular";
+		if ($frameDir == 'futureshiftedtextless' && in_array($set, $futureshifted) === FALSE) $frameDir = "regular";
 		return $frameDir;
 	}
 }

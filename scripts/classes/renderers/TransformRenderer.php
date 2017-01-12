@@ -65,7 +65,8 @@ class TransformRenderer extends CardRenderer {
 		
 		if ($this->version == "spark" || $pt2 == "") {
 		} else {
-			$card1->pt .= '|'.$pt2;
+			//$card1->pt .= '|'.$pt2;
+			$card1->pt2 = $pt2;
 			}
 
 		//$title2 = str_replace('AE', 'Æ', $title2);
@@ -168,7 +169,6 @@ class TransformRenderer extends CardRenderer {
 			
 			if (in_array($title, $row)) return (string)$row[0];
 			continue;
-			
 		}
 	}
 }

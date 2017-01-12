@@ -13,6 +13,7 @@ Promo - World Magic Cup
 Duels of the Planeswalkers 2015
 Modern Masters 2015
 Planechase Anthology
+Planechase Anthology Planes
 From the Vault: Annihilation
 From the Vault: Angels
 From the Vault: Lore
@@ -29,6 +30,9 @@ Clash Pack: Fate and Fury
 Clash Pack: Power and Profit
 Clash Pack: Armed and Dangerous
 Archenemy: Nicol Bolas
+Archenemy: Nicol Bolas Schemes
+Magic The Gathering Online Legendary Cube
+Magic The Gathering Online You Make The Cube
 Tempest Remastered
 Modern Event Deck 2014
 Commander 2014 Edition
@@ -51,7 +55,7 @@ Oath of the Gatewatch
 Shadows over Innistrad
 Eldritch Moon
 Kaladesh
-Masterpiece Series
+Masterpiece Series: Kaladesh Inventions
 Aether Revolt
 Amonkhet
 Hour of Devastation

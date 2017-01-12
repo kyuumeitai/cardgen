@@ -17,6 +17,7 @@ class VanguardRenderer extends CardRenderer {
 	static private $settingSections;
 
 	public function render () {
+		global $config;
 		echo $this->card . '...';
 		$card = $this->card;
 

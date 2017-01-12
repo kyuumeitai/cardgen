@@ -98,7 +98,6 @@ Promo - Summer of Magic
 Promo - Dragon Con
 Promo - Happy Holidays
 Promo - Magic Game Day Mirran
-Promo - DCI Legend Membership
 Promo - Pro Tour
 Promo - Video Game
 Promo - Grand Prix
@@ -111,7 +110,9 @@ Promo - Ugin's Fate
 Promo - World Magic Cup
 Full Box Promotion
 Magic Game Day
-Alternate Art Lands
+Asia Pacific Lands
+Guru Lands
+European Lands
 Magic Player Rewards
 World Championship Cards
 Starter 1999
@@ -396,7 +397,6 @@ Promo - Summer of Magic
 Promo - Dragon Con
 Promo - Happy Holidays
 Promo - Magic Game Day Mirran
-Promo - DCI Legend Membership
 Promo - Pro Tour
 Promo - Video Game
 Promo - Grand Prix
@@ -409,7 +409,9 @@ Promo - Ugin's Fate
 Promo - World Magic Cup
 Full Box Promotion
 Magic Game Day
-Alternate Art Lands
+Asia Pacific Lands
+Guru Lands
+European Lands
 Magic Player Rewards
 World Championship Cards
 Starter 1999
@@ -684,7 +686,6 @@ Promo - Summer of Magic
 Promo - Dragon Con
 Promo - Happy Holidays
 Promo - Magic Game Day Mirran
-Promo - DCI Legend Membership
 Promo - Pro Tour
 Promo - Video Game
 Promo - Grand Prix
@@ -697,7 +698,9 @@ Promo - Ugin's Fate
 Promo - World Magic Cup
 Full Box Promotion
 Magic Game Day
-Alternate Art Lands
+Asia Pacific Lands
+Guru Lands
+European Lands
 Magic Player Rewards
 World Championship Cards
 Starter 1999
@@ -880,12 +883,12 @@ Aether Revolt
 
 Standard (T2)
 SETS
-Dragons of Tarkir
-Magic Origins
 Battle for Zendikar
 Oath of the Gatewatch
 Shadows over Innistrad
 Eldritch Moon
+Kaladesh
+Aether Revolt
 
 Modern
 BANNED
@@ -979,3 +982,5 @@ Oath of the Gatewatch
 Zendikar Expeditions
 Shadows over Innistrad
 Eldritch Moon
+Kaladesh
+Aether Revolt

@@ -54,6 +54,7 @@ class PlanesWalkerRenderer extends CardRenderer {
 
 		echo '.';
 
+		$promoset = explode(',',$config['card.promo.symbols']);
 		// Background image.
 		$borderImage = null;
 		$greyTitleAndTypeOverlay = null;

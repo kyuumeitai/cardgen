@@ -13,7 +13,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ////////////////////////////////////////////////////////////////////////
-class PlaneRenderer extends CardRenderer {
+class M15PlaneRenderer extends CardRenderer {
 	static private $settingSections;
 	static private $titleToGuild;
 	static private $titleToFrameDir;
@@ -29,9 +29,6 @@ class PlaneRenderer extends CardRenderer {
 			if ($this->card->title == $this->card->getDisplayTitle()) $languageFont = null;
 		}
 		
-		/*if ($config['card.corrected.promo.symbol'] != FALSE) {
-			$this->card = CardDB::correctPromoSymbols($this->card);
-			}*/
 		echo $this->card . '...';
 		$card = $this->card;
 		$settings = $this->getSettings();
@@ -54,10 +51,10 @@ class PlaneRenderer extends CardRenderer {
 
 		// Background image.
 		if ($card->englishType == "Phenomenon"){
-		$bgImage = @imagecreatefrompng('images/plane/phenomenon.png');
+		$bgImage = @imagecreatefrompng('images/plane/m15phenomenon.png');
 		}
 		else {
-		$bgImage = @imagecreatefrompng('images/plane/plane.png');
+		$bgImage = @imagecreatefrompng('images/plane/m15plane.png');
 		}
 		imagecopy($canvas, $bgImage, 0, 0, 0, 0, 1050, 736);
 		imagedestroy($bgImage);
@@ -65,9 +62,18 @@ class PlaneRenderer extends CardRenderer {
 		echo '.';
 
 		// Set and rarity.
-		if ($card->set == 'PCP') $card->setDisplaySet('HOP');
-		else if ($card->set == 'PP2') $card->setDisplaySet('PC2');
-		else if ($card->set == 'PAP') $card->setDisplaySet('PCA');
+		if ($card->set == 'PCP') {
+			$card->setDisplaySet('HOP');
+			$card->setM15DisplaySet('HOP');
+		}
+		else if ($card->set == 'PP2') {
+			$card->setDisplaySet('PC2');
+			$card->setM15DisplaySet('PC2');
+		}
+		else if ($card->set == 'PAP') {
+			$card->setDisplaySet('PCA');
+			$card->setM15DisplaySet('PCA');
+		}
 		$rarityLeft = $this->drawRarity($canvas, $card->getDisplayRarity(), $card->getDisplaySet(), $settings['rarity.right'], $settings['rarity.center.y'], $settings['rarity.height'], $settings['rarity.width'], false);
 
 		// Card title.
@@ -102,15 +108,34 @@ class PlaneRenderer extends CardRenderer {
 		// Artist and copyright.
 		// The artist color is white if the frame behind it is black.
 		$footerColor = '255,255,255';
+		$lang = $config['card.lang'];
 		if ($card->artist) {
 			if ($settings['card.artist.gears']) {
 				$artistSymbol = '{gear}';
 			} else {
-				$artistSymbol = '{brush}';
+				$artistSymbol = '{brush2}';
 			}
 			$this->drawText($canvas, $settings['artist.x'], $settings['artist.y'], null, $artistSymbol . $card->artist, $this->font('artist', 'color:' . $footerColor));
 		}
-		if ($card->copyright) $this->drawText($canvas, $settings['copyright.x'], $settings['copyright.y'], null, $card->copyright, $this->font('copyright', 'color:' . $footerColor));
+		if (empty($card->collectorNumber)) $card->collectorNumber = '0/0';
+
+		$card->collectorNumber = str_replace("\\", '/', $card->collectorNumber);
+		$collectorNumber = explode('/', $card->collectorNumber);
+		$collectorNumber[0] = str_pad($collectorNumber[0], 3, "0", STR_PAD_LEFT);
+		$collectorNumber[1] = str_pad($collectorNumber[1], 3, "0", STR_PAD_LEFT);
+		$card->collectorNumber = implode('/', $collectorNumber);
+			
+		$CopyrightTXT1 = $card->collectorNumber . ' ' . $card->getM15DisplaySet() . "&#8226;" . $lang;
+		$CopyrightTXT2 = $card->copyright;
+		$font = $settings['font.collection'];
+		$font = str_replace(' ','',$font);
+		$arrayfont=explode(",",$font);
+		$fontName = $arrayfont[1];
+		$fontsize = $arrayfont[0];
+		$lineSizeL1 = imagettfbbox($fontsize,0,"./fonts/$fontName",$CopyrightTXT1);
+		
+		if ($card->collectorNumber) $this->drawText($canvas, $settings['collection.x'], $settings['copyright.y'], null, $CopyrightTXT1, $this->font('collection', 'color:' . $footerColor));
+		if ($card->copyright) $this->drawText($canvas, $settings['collection.x'] + ($lineSizeL1[2]) + 12, $settings['copyright.y'], null, $CopyrightTXT2, $this->font('copyright', 'color:' . $footerColor));
 
 		echo "\n";
 		return $canvas;
@@ -119,7 +144,7 @@ class PlaneRenderer extends CardRenderer {
 		public function getSettings() {
 		global $rendererSettings;
 
-		return $rendererSettings['config/config-plane.txt'];
+		return $rendererSettings['config/config-m15plane.txt'];
 	}
 }
 

@@ -19,6 +19,7 @@ class SetDB {
 	private $pre8thSets = array();
 	private $m15Sets = array();
 	private $eighthSets = array();
+	private $setToDate = array();
 
 	public function __construct () {
 		$file = fopen_utf8('data/sets.txt', 'r');
@@ -34,7 +35,7 @@ class SetDB {
 			$abbreviations = explode(',', substr($line, 0, $spaceIndex));
 			$mainSet = "";
 			foreach($abbreviations as $set)
-				if (strlen($mainSet) < strlen($set) &&  strlen($set)<=3) $mainSet = $set;
+				if (strlen($mainSet) < strlen($set) && strlen($set)<=3 || substr($set, 0, -3) == 'MPS_') $mainSet = $set;
 			$mainSet = strtoupper($mainSet);
 
 			$this->setToMainSet[(string)strtoupper($name)] = $mainSet;
@@ -71,6 +72,7 @@ class SetDB {
 			if (!$set) error('Error parsing "data/sets-m15.txt". Unknown set: ' . $line);
 			$this->m15Sets[(string)$set] = true;
 		}
+		$this->setToDate = csvToArray('data/setToDate.csv');
 	}
 
 	public function normalize ($set) {
@@ -95,6 +97,14 @@ class SetDB {
 	
 	public function isM15 ($set) {
 		return @$this->m15Sets[(string)$this->normalize($set)];
+	}
+	
+	public function getSetDate ($set) {
+		$date = null;
+		foreach ($this->getAbbrevs($set) as $abbrev) {
+			if (isset($this->setToDate[strtolower($abbrev)])) $date = $this->setToDate[strtolower($abbrev)];
+			if ($date) return $this->setToDate[strtolower($abbrev)];
+		}
 	}
 }
 

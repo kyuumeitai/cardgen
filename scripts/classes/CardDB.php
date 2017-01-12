@@ -48,7 +48,7 @@ class CardDB {
 				if ($config['card.corrected.promo.symbol'] != FALSE && in_array($card->set, $promoSet)) {
 					$card = CardDB::correctPromoSymbols($card);
 				}
-	
+				
 				$title = mb_strtolower($card->title);
 				if (!@$this->titleToCards[$title]) $this->titleToCards[$title] = array();
 				$this->titleToCards[(string)$title][] = $card;
@@ -68,6 +68,8 @@ class CardDB {
 					if ($i++ % 10000 == 0) echo '.';
 					// Overwrite some of the english card values with the foreign values.
 					$englishTitle = mb_strtolower($row[0]);
+	
+				if (preg_match('/#\(.*?\)#/',$card->legal) && $card->title == 'Hanweir Battlements') xdebug_break();
 	
 					$cards = @$this->titleToCards[(string)$englishTitle];
 					if (!$cards){
@@ -149,8 +151,6 @@ class CardDB {
 			$title = strtolower($card->title);
 			if (!@$this->titleToCards[$title]) $this->titleToCards[$title] = array();
 			$this->titleToCards[(string)$title][] = $card;
-			/*if (!@$this->titleToTokens[$title]) $this->titleToTokens[$title] = array();
-			$this->titleToTokens[(string)$title][] = $card;*/
 		}
 		fclose($file);
 		echo "\n";		
@@ -180,16 +180,10 @@ class CardDB {
 			$title = strtolower($card->title);
 			if (!@$this->titleToCards[$title]) $this->titleToCards[$title] = array();
 			$this->titleToCards[(string)$title][] = $card;
-			/*if (!@$this->titleToTokens[$title]) $this->titleToTokens[$title] = array();
-			$this->titleToTokens[(string)$title][] = $card;*/
 		}
 		fclose($file);
 		echo "\n";		
 		}
-		/*foreach ($this->titleToTokens as $title => $card) {
-			if (!@$this->titleToCards[$title]) $this->titleToCards[$title][] = $card;
-			else $this->titleToCards[$title][] = $card;
-		}*/
 	}
 	
 	public static function correctPromoSymbols ($card) {
@@ -321,6 +315,11 @@ class CardDB {
 		$card->artFileName = $this->artDB->getArtFileName($card->title, $card->set, $card->pic);
 
 		// Artist and copyright.
+		if ($config['card.use.set.date']) {
+			$date = $this->setDB->getSetDate($card->set);
+			if ($date == null) $date = date("Y");
+		}
+		else $date = date("Y");
 		$override = $this->titleToRendererOverride($card->title, $card->set, $card->pic);
 		if ($override) {
 			switch ($override) {
@@ -383,7 +382,7 @@ class CardDB {
 				} break;
 				default : break;
 			}
-	if ($config['card.artist.and.copyright.m15'] && ($override == 'M15'||$override == 'M15Planeswalker'||$override == 'M15Planeswallker4')){
+		if ($config['card.artist.and.copyright.m15'] && ($override == 'M15'||$override == 'M15Planeswalker'||$override == 'M15Planeswallker4')){
 				$card->copyright = $config['card.copyright.m15'];
 			} else {
 				$card->copyright = $config['card.copyright'] . ' ' . $card->collectorNumber;
@@ -401,6 +400,8 @@ class CardDB {
 			$card->artist = null;
 			$card->copyright = null;
 		}
+		$card->copyright = str_replace('YYYY', "$date", $card->copyright);
+		
 
 		if (!$config['card.reminder.text']) $card->legal = preg_replace('/#\(.*?\)#/', '', $card->legal);
 		
@@ -434,6 +435,7 @@ class CardDB {
 		$card->type = (string)$row[3];
 		$card->englishType = $card->type;
 		$card->pt = (string)str_replace('\\', '/', $row[4]);
+		$card->pt2 = '';
 		$card->flavor = (string)$row[5];
 		$card->rarity = (string)$row[6];
 		$card->cost = (string)@$row[7];
@@ -463,11 +465,11 @@ class CardDB {
 
 		public static function applyCorrectedPromoSymbolToCard ($row, $card) {
 		
-		//if (!empty($row[3])) $card->pic = $row[3];
 		if (!empty($row[3])) $card->setDisplaySet($row[3]);
 		if (!empty($row[4])) $card->setM15DisplaySet($row[4]);
 		if (!empty($row[5])) $card->setDisplayRarity($row[5]);
 		if (!empty($row[6])) $card->collectorNumber = (string)str_replace('\\', '/', @$row[6]);
+		//if (!empty($row[7])) $card->year = $row[7];
 	}
 
 	

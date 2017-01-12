@@ -32,10 +32,10 @@ font.promo.text.type = 12, GothamMedium.ttf
 font.story.text.type = 12, GothamMedium.ttf
 
 [fonts - regular]
-font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.title.japanese = 32, mtgnamej.ttf
-font.type = 25, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.type.japanese = 25, mtgnamej.ttf
 font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
@@ -43,10 +43,10 @@ font.promo.text.type = 12, GothamMedium.ttf
 font.story.text.type = 12, GothamMedium.ttf
 
 [fonts - conspiracy]
-font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.title.japanese = 32, mtgnamej.ttf
-font.type = 25, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.type.japanese = 25, mtgnamej.ttf
 font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
@@ -54,10 +54,10 @@ font.promo.text.type = 12, GothamMedium.ttf
 font.story.text.type = 12, GothamMedium.ttf
 
 [fonts - mgdpromo]
-font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.title.japanese = 32, mtgnamej.ttf
-font.type = 25, JaceBeleren-Bold.ttf>BelerenB.ttf, color:255,255,255 shadow:true
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf, color:255,255,255 shadow:true
 font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf, color:255,255,255 shadow:true
 font.type.japanese = 25, mtgnamej.ttf, color:255,255,255 shadow:true
 font.text = 30, MPlantin.ttf/MPlantinI.ttf, leading:30 color:255,255,255 shadow:true
@@ -68,10 +68,10 @@ font.promo.text.type = 12, GothamMedium.ttf
 font.story.text.type = 12, GothamMedium.ttf
 
 [fonts - fullartbasicland]
-font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.title.japanese = 32, mtgnamej.ttf
-font.type = 24, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.type = 24, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.type.russian = 24, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.type.japanese = 24, mtgnamej.ttf
 font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
@@ -79,29 +79,29 @@ font.promo.text.type = 12, GothamMedium.ttf
 font.story.text.type = 12, GothamMedium.ttf
 
 [fonts - expedition]
-font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.title.japanese = 32, mtgnamej.ttf
-font.type = 24, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.type = 24, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.type.russian = 24, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.type.japanese = 24, mtgnamej.ttf
 font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
 
 [fonts - miracle]
-font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.title.japanese = 32, mtgnamej.ttf
-font.type = 25, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.type.japanese = 25, mtgnamej.ttf
 font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
 font.promo.text.type = 12, GothamMedium.ttf
 
 [fonts - transform-spark]
-font.title = 30, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.title = 30, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.title.russian = 30, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.title.japanese = 30, mtgnamej.ttf
-font.type = 25, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.type.japanese = 25, mtgnamej.ttf
 font.pt = 30,  BelerenBoldSmallCaps.ttf, centerY:true centerX:true
@@ -109,10 +109,10 @@ font.pt.transform = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
 font.promo.text.type = 12, GothamMedium.ttf
 
 [fonts - transform-day]
-font.title = 30, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.title = 30, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.title.russian = 30, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.title.japanese = 30, mtgnamej.ttf
-font.type = 25, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.type.japanese = 25, mtgnamej.ttf
 font.pt = 30,  BelerenBoldSmallCaps.ttf, centerY:true centerX:true
@@ -120,10 +120,10 @@ font.pt.transform = 20, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
 font.promo.text.type = 12, GothamMedium.ttf
 
 [fonts - transform-night]
-font.title = 30, JaceBeleren-Bold.ttf>BelerenB.ttf, color:255,255,255
+font.title = 30, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf, color:255,255,255
 font.title.russian = 30, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf, color:255,255,255
 font.title.japanese = 30, mtgnamej.ttf, color:255,255,255
-font.type = 25, JaceBeleren-Bold.ttf>BelerenB.ttf, color:255,255,255
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf, color:255,255,255
 font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf, color:255,255,255
 font.type.japanese = 25, mtgnamej.ttf, color:255,255,255
 font.pt = 30,  BelerenBoldSmallCaps.ttf, centerY:true centerX:true color:255,255,255
@@ -131,10 +131,10 @@ font.pt.transform = 20, BelerenBoldSmallCaps.ttf, centerY:true centerX:true colo
 font.promo.text.type = 12, GothamMedium.ttf
 
 [fonts - transform-moon]
-font.title = 30, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.title = 30, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.title.russian = 30, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.title.japanese = 30, mtgnamej.ttf
-font.type = 25, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.type.japanese = 25, mtgnamej.ttf
 font.pt = 30,  BelerenBoldSmallCaps.ttf, centerY:true centerX:true
@@ -142,10 +142,10 @@ font.pt.transform = 20, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
 font.promo.text.type = 12, GothamMedium.ttf
 
 [fonts - transform-eldrazi]
-font.title = 30, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.title = 30, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.title.russian = 30, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.title.japanese = 30, mtgnamej.ttf
-font.type = 25, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.type.japanese = 25, mtgnamej.ttf
 font.pt = 30,  BelerenBoldSmallCaps.ttf, centerY:true centerX:true
@@ -153,20 +153,20 @@ font.pt.transform = 20, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
 font.promo.text.type = 12, GothamMedium.ttf
 
 [fonts - nyxstars]
-font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.title.japanese = 32, mtgnamej.ttf
-font.type = 25, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.type.japanese = 25, mtgnamej.ttf
 font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
 font.promo.text.type = 12, GothamMedium.ttf
 
 [fonts - fuse-left]
-font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.title.japanese = 32, mtgnamej.ttf
-font.type = 24, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.type = 24, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.type.japanese = 25, mtgnamej.ttf
 font.text = 30, MPlantin.ttf/MPlantinI.ttf, leading:30
@@ -174,10 +174,10 @@ font.text.russian = 30, MinionPro-Cn.ttf/MinionPro-CnItalic.ttf, leading:30
 font.text.japanese = 20, mtgrulej.ttf, leading:20
 
 [fonts - fuse-right]
-font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.title.japanese = 32, mtgnamej.ttf
-font.type = 24, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.type = 24, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
 font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
 font.type.japanese = 25, mtgnamej.ttf
 font.text = 30, MPlantin.ttf/MPlantinI.ttf, leading:30
@@ -185,16 +185,35 @@ font.text.russian = 30, MinionPro-Cn.ttf/MinionPro-CnItalic.ttf, leading:30
 font.text.japanese = 20, mtgrulej.ttf, leading:20
 
 [fonts - timeshifted]
-font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf, color:255,255,255 shadow:true
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf, color:255,255,255 shadow:true
 font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf, color:255,255,255 shadow:true
 fons.title.japanese = 32, mtgnamej.ttf, color:255,255,255 shadow:true
-font.type = 24, JaceBeleren-Bold.ttf>BelerenB.ttf, color:255,255,255 shadow:true
+font.type = 24, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf, color:255,255,255 shadow:true
 font.type.russian = 25, MinionPro-BoldCn.ttf, color:255,255,255 shadow:true
 font.type.japanese = 25, mtgnamej.ttf, color:255,255,255 shadow:true
 font.text = 30, MPlantin.ttf/MPlantinI.ttf, leading:30
 font.text.russian = 30, MinionPro-Cn.ttf/MinionPro-CnItalic.ttf, leading:30
 font.text.japanese = 20, mtgrulej.ttf, leading:30
 font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true color:255,255,255 shadow:true
+
+[fonts - masterpiece]
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 32, mtgnamej.ttf
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 25, mtgnamej.ttf
+font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+font.promo.text.type = 12, GothamMedium.ttf
+font.story.text.type = 12, GothamMedium.ttf
+
+[layout - masterpiece]
+title.x = 51
+title.y = 86
+cost.right = 677
+cost.top = 53
+cost.top.dual = 55
+cost.size = 35
 
 [layout - miracle]
 
@@ -252,9 +271,11 @@ rarity.height = 41
 rarity.width = 0
 
 [layout - expedition]
+title.x = 51
+title.y = 82
 type.x = 51
-type.y = 876
-rarity.center.y = 867
+type.y = 881
+rarity.center.y = 870
 rarity.right = 675
 rarity.height = 41
 rarity.width = 0
@@ -338,7 +359,7 @@ textPT.bottom = 920
 text.bottom = 930
 text.right = 668
 text.pt.height.adjust = 14
-pt.center.y = 945
+pt.center.y = 942
 pt.center.x = 629
 pt.width = 95
 collection.x = 37

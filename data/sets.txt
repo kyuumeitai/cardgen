@@ -1,12 +1,12 @@
 ﻿REL,RLS,MLP,GLP Promo - Release Events
 PRE Promo - Prerelease Events
 JGC,JCG Promo - Judge Gift Cards
-LGM Promo - Legends Membership
+LGM,DLM Promo - Legends Membership
 GTW,WPN Promo - Gateway
 FNM Promo - FNM
 CVP,15A Promo - Convention Promo
 CHP,CHA Promo - Champs
-MIN,BIN,CIN,IDW,MBP Promo - Media Inserts
+MIN,BIN,CIN,IDW,MBP,GFB,MGB Promo - Media Inserts
 PRM,VCP,LCP Promo - Vintage/Legacy Championship Oversized Cards
 ARE Promo - Arena
 THG,2HG Promo - Two-Headed Giant
@@ -14,7 +14,6 @@ SUM Promo - Summer of Magic
 DGC Promo - Dragon Con
 HHL,HHO,H14,H15 Promo - Happy Holidays
 MRN Promo - Magic Game Day Mirran
-DLM Promo - DCI Legend Membership
 PTR Promo - Pro Tour
 GAM Promo - Video Game
 GPX Promo - Grand Prix
@@ -34,13 +33,15 @@ AS,AST Astral
 DC,SDC Dreamcast
 FBP Full Box Promotion
 MGD,GDC Magic Game Day
-LND,GUR,EUL,EPL,EUR,APL Alternate Art Lands
+APL,APAC Asia Pacific Lands
+GUR Guru Lands
+EUL,EPL,EUR European Lands
 MPR,REW Magic Player Rewards
 WLD,WRL World Championship Cards
 URC,CC Ultra Rare Cards
 VG,VAN Vanguard
 ST,S99 Starter 1999
-S00,P4 Starter 2000
+S00,P4,ST,S2K Starter 2000
 DM,DKM Deckmasters 2001
 8EB 8th Edition Box Set
 9EB 9th Edition Box Set
@@ -51,6 +52,8 @@ ME,MED Masters Edition
 ME2 Masters Edition II
 ME3 Masters Edition III
 ME4 Masters Edition IV
+TD0 Theme Decks Sets
+TD2 Duel Decks: Mirrodin Pure vs. New Phyrexia
 HOP,PCH Planechase
 PCP Planechase Planes
 PC2 Planechase 2012 Edition
@@ -88,10 +91,10 @@ DDP,ZVE Duel Decks: Zendikar vs. Eldrazi
 DDQ,BVC Duel Decks: Blessed vs. Cursed
 DDR,NVO Duel Decks: Nissa vs. Ob Nixilis
 DDS,MVM Duel Decks: Mind vs. Might
-DAA,AEVG,ADDA Duel Decks Anthology: Elves vs Goblins
-DAB,ADDB,ADD2,AJVC Duel Decks Anthology: Jace vs Chandra
-DAC,ADDC,ADVD Duel Decks Anthology: Divine vs Demonic
-DAD,AGVL,ADDD Duel Decks Anthology: Garruk vs. Liliana
+DAA,AEVG,ADDA,DDAEVG Duel Decks Anthology: Elves vs Goblins
+DAB,ADDB,ADD2,AJVC,DDAJVC Duel Decks Anthology: Jace vs Chandra
+DAC,ADDC,ADVD,DDADVD Duel Decks Anthology: Divine vs Demonic
+DAD,AGVL,ADDD,DDAGVL Duel Decks Anthology: Garruk vs. Liliana
 SOR The Sorcerer's Apprentice
 CP1 Clash Pack: Fate and Fury
 CP2 Clash Pack: Power and Profit
@@ -117,9 +120,11 @@ C14 Commander 2014 Edition
 C15 Commander 2015 Edition
 C16 Commander 2016 Edition
 CMA Commander Anthology
+PZ1 Magic The Gathering Online Legendary Cube
+PZ2 Magic The Gathering Online You Make The Cube
 CUB Magic The Gathering Online Cube Alternate Art
-CNS Conspiracy
-CN2 Conspiracy: Take the Crown
+CNS,CNSC Conspiracy
+CN2,CN2C Conspiracy: Take the Crown
 MD1 Modern Event Deck 2014
 MMA,MDM Modern Masters
 MM2 Modern Masters 2015
@@ -228,7 +233,7 @@ OGW Oath of the Gatewatch
 SOI Shadows over Innistrad
 EMN Eldritch Moon
 KLD Kaladesh
-MPS Masterpiece Series
+KDI,MPS_KLD Masterpiece Series: Kaladesh Inventions
 AER Aether Revolt
 AKH Amonkhet
 HOU Hour of Devastation

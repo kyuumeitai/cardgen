@@ -607,7 +607,7 @@ class TokenRenderer extends CardRenderer {
 			if ($config['art.use.xlhq.full.card'] != false && stripos($card->artFileName,'xlhq') != false) {
 				$this->drawArt($canvas, $card->artFileName, $settings['art.xlhq.top'], $settings['art.xlhq.left'], $settings['art.xlhq.bottom'], $settings['art.xlhq.right'], !$config['art.keep.aspect.ratio']);
 			}
-			else if(($card->isEldrazi() && $card->isArtefact()) || ($card->isDevoid() && $card->isArtefact()) || (($frameDir == 'fullartbasicland') && $card->isBasicLand()) || ($card->set == "EXP" && $card->isLand())||(stripos($card->englishType, 'Sliver') !== FALSE && $card->set != 'TPR') || $card->title == 'Spirit' && $card->pic == '1' && $card->set == 'EMA' || $card->title == 'Morph' || $card->title == 'Manifest' || $card->title == 'The Monarch') {
+			else if(($card->isEldrazi() && $card->isArtefact()) || ($card->isDevoid() && $card->isArtefact()) || (($frameDir == 'fullartbasicland') && $card->isBasicLand()) || ($card->set == "EXP" && $card->isLand())||(stripos($card->englishType, 'Sliver') !== FALSE && $card->set != 'TPR') || $card->title == 'Spirit' && $card->pic == '1' && ($card->set == 'EMA' || $card->set == 'C16') || $card->title == 'Morph' || $card->title == 'Manifest' || $card->title == 'The Monarch') {
 				$this->drawArt($canvas, $card->artFileName, 21, 17, 955, 703, !$config['art.keep.aspect.ratio']);
 			} else {
 				$this->drawArt($canvas, $card->artFileName, $settings['art.top'], $settings['art.left'], $settings['art.bottom'], $settings['art.right'], !$config['art.keep.aspect.ratio']);
@@ -618,7 +618,7 @@ class TokenRenderer extends CardRenderer {
 			$borderImage = null;
 			$colorTemp = $card->color;
 				if (strlen($colorTemp) >= 3 && $colorTemp != 'Art') $colorTemp = 'Gld';
-				if($card->isEldrazi() && $card->isArtefact() && !$card->isDevoid()||stripos($card->englishType, 'Sliver') !== FALSE && $card->set != 'TPR' || $card->title == 'Morph' || $card->title == 'Manifest' || stripos($card->englishType, 'Spirit') !== FALSE && $card->isArtefact() && $card->set == 'EMA') {//Eldrazi without color
+				if($card->isEldrazi() && $card->isArtefact() && !$card->isDevoid()||stripos($card->englishType, 'Sliver') !== FALSE && $card->set != 'TPR' || $card->title == 'Morph' || $card->title == 'Manifest' || stripos($card->englishType, 'Spirit') !== FALSE && $card->isArtefact() && ($card->set == 'EMA' || $card->set == 'C16')) {//Eldrazi without color
 					$bgImage = @imagecreatefrompng("images/token/$frameDir/cards/Eldrazi.png");
 				} else if ($card->title == 'Clue' && $card->isArtefact()) {
 					$bgImage = @imagecreatefrompng("images/token/$frameDir/cards/Clue.png");
@@ -1069,6 +1069,7 @@ class TokenRenderer extends CardRenderer {
 		$pre8thSet = $this->setDB->isPre8th($set);
 		if (!$frameDir) $frameDir = "token";
 		if ($frameDir == 'token' && $title == 'Clue') $frameDir = "m15clue";
+		//if ($frameDir == 'token' && $set == 'TD0'&& $config['render.preEighth'] != FALSE) $frameDir = "pre8thtoken";
 		if ($frameDir == 'token' && $title == 'The Monarch') $frameDir = "monarch";
 		if ($frameDir == 'token' && $this->card->isEnchantment()) $frameDir = "nyxstarstoken";
 		if ($frameDir == 'nyxstarstoken' && ($this->card->legal != ''||$this->card->flavor != '')) $frameDir = "nyxstarstokentext";

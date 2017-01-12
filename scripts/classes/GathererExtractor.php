@@ -540,6 +540,7 @@ class GathererExtractor {
 			$legal = str_replace('_#', '#', $legal);
 			$legal = str_replace('£', "\n", $legal);
 			$legal = preg_replace("/([A-Za-z])'([A-Za-z])/", '\1’\2', $legal); // ' to ’
+			$legal = preg_replace("\"\"(.*?)\"\")/", '“\1”', $legal); // "" to “”
 			$legal = preg_replace('/CHAOS/', '{CHAOS}', $legal); // Chaos symbol
 
 			$legal = str_replace("\n———\n", "-----", $legal);

@@ -42,7 +42,7 @@ class PreEighthRenderer extends CardRenderer {
 		if ($config['art.use.xlhq.full.card'] != false && stripos($card->artFileName,'xlhq') != false) {
 			$this->drawArt($canvas, $card->artFileName, $settings['art.xlhq.top'], $settings['art.xlhq.left'], $settings['art.xlhq.bottom'], $settings['art.xlhq.right'], !$config['art.keep.aspect.ratio']);
 		}
-		if(($card->set == "UGL" && $card->isBasicLand()))
+		else if(($card->set == "UGL" && $card->isBasicLand()))
 			$this->drawArt($canvas, $card->artFileName, 73, 56, 927, 690, !$config['art.keep.aspect.ratio']);
 		else 
 			$this->drawArt($canvas, $card->artFileName, $settings['art.top'], $settings['art.left'], $settings['art.bottom'], $settings['art.right'], !$config['art.keep.aspect.ratio']);
@@ -86,7 +86,11 @@ class PreEighthRenderer extends CardRenderer {
 			else if(!$card->isBasicLand() && $landColors != 'A' && $landColors != 'C')
 				$notBasicFrame = 'C';
 			if (in_array(strtolower($card->title), array('badlands','bayou','plateau','savannah','scrubland','taiga','tropical island','tundra','underground sea','volcanic island'))) {
-				$bgImage = @imagecreatefrompng("images/preEighth/land/classicduals/$notBasicFrame$landColors.png");
+				if  ($card->set == 'LEA'||$card->set == 'LEB'||$card->set == '2ED'||$card->set == '3ED') {
+					$bgImage = @imagecreatefrompng("images/preEighth/land/classicduals/$notBasicFrame$landColors.png");
+				} else {
+					$bgImage = @imagecreatefrompng("images/preEighth/land/classicdualsfull/$notBasicFrame$landColors.png");
+				}
 			} else if ($card->set == "UGL" && $card->isBasicLand()) {
 				$bgImage = @imagecreatefrompng("images/preEighth/land/" . $card->set . "_" . $landColors . ".png");
 				if (!$bgImage) error("Background image not found for land color \"$card->set . _$landColors\": " . $card->title);
@@ -114,6 +118,7 @@ class PreEighthRenderer extends CardRenderer {
 		$ptColor = preg_match('/color:(\d{0,3},\d{0,3},\d{0,3})/', $settings['font.pt'], $matches);
 		if (!empty($matches[1])) $ptColor = "$matches[1]";
 		else $ptColor = '255,255,255';
+		$ptWidth = $this->getTextWidth($card->pt, $this->font('pt', 'centerX:false'));
 		$greyTextSets = explode(',', $settings['card.grey.title.type.artist.sets']);
 		if (in_array($card->set, $greyTextSets) && $settings['card.prerevised.grey.text'] != FALSE) $ptColor = '127,127,127';
 		if ($card->set == "UGL" && $card->title == 'B.F.M.' && $card->pic == 'Left'){
@@ -123,9 +128,13 @@ class PreEighthRenderer extends CardRenderer {
 			$porPT[0] .= '{P1}';
 			$porPT[1] .= '{T1}';
 			$card->pt = implode('/',$porPT);
+			//$ptCenter = strlen(string($card->pt)) < 6 ? $settings['pt.center.x'] : $settings['pt.center.x'] - 30;
 			$this->drawText($canvas, $settings['pt.center.x'] - 10, $settings['pt.center.y'], $settings['pt.width'], $card->pt, $this->font('pt', "color:$ptColor"));
 		}
-		else if ($card->pt) $this->drawText($canvas, $settings['pt.center.x'], $settings['pt.center.y'], $settings['pt.width'], $card->pt, $this->font('pt', "color:$ptColor"));
+		else if ($card->pt) {
+			$ptCenter = $ptWidth >= 142 ? $settings['pt.center.x'] - 22 : $settings['pt.center.x'];
+			$this->drawText($canvas, $ptCenter, $settings['pt.center.y'], $settings['pt.width'], $card->pt, $this->font('pt', "color:$ptColor"));
+		}
 
 		// Casting cost.
 		if ($card->set == "UGL" && $card->title == 'B.F.M.' && $card->pic == 'Left'){
@@ -262,11 +271,13 @@ class PreEighthRenderer extends CardRenderer {
 		else $artistColor = '255,255,255';
 		$greyTextSets = explode(',', $settings['card.grey.title.type.artist.sets']);
 		if (in_array($card->set, $greyTextSets) && $settings['card.prerevised.grey.text'] != FALSE) $artistColor = '127,127,127';
+		$artistCenter = $ptWidth >= 142 ? $settings['artist.x'] - 10 : $settings['artist.x'];
+		$copyCenter = $ptWidth >= 142 ? $settings['copyright.x'] - 10 : $settings['copyright.x'];
 		if ($card->set == "UGL" && $card->isBasicLand()) {
 			$this->drawText($canvas, 55, 1020, null, 'Illus. ' . $card->artist, $this->font('artist', 'centerX:false'));
 		}
 		else if ($card->artist) {
-			$this->drawText($canvas, $settings['artist.x'], $settings['artist.y'], null, 'Illus. ' . $card->artist, $this->font('artist', "color:$artistColor"));
+			$this->drawText($canvas, $artistCenter, $settings['artist.y'], null, 'Illus. ' . $card->artist, $this->font('artist', "color:$artistColor"));
 		}
 		if ($card->set == "UGL" && $card->isBasicLand()) {
 			$card->copyright = $config['card.copyright.ugl'] . ' ' . $card->collectorNumber;
@@ -279,7 +290,7 @@ class PreEighthRenderer extends CardRenderer {
 			$copyrightColor = '255,255,255';
 			if ($card->color == 'W') $copyrightColor = '0,0,0';
 			if (in_array($card->set, $greyTextSets) && $settings['card.prerevised.grey.text'] != FALSE) $copyrightColor = $artistColor . ' shadow:true';
-			$this->drawText($canvas, $settings['copyright.x'], $settings['copyright.y'], null, $card->copyright, $this->font('copyright', 'color:' . $copyrightColor));
+			$this->drawText($canvas, $copyCenter, $settings['copyright.y'], null, $card->copyright, $this->font('copyright', 'color:' . $copyrightColor));
 		}
 
 		echo "\n";

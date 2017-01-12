@@ -3,8 +3,8 @@
 
 [card generation]
 card.tombstone = 1
-card.timeshifted.frames = PLC
-card.futureshifted.frames = FUT,PRE
+card.timeshifted.frames = PLC,TD0
+card.futureshifted.frames = FUT,PRE,TD0
 card.fullart.expedition.frames = EXP
 card.fullart.basic.land.frames.set = UGL,UNH,ZEN,BFZ,JGC
 card.split.fuse.set = DGM
@@ -180,12 +180,9 @@ font.promo.text.type = 8, GothamMedium.ttf
 font.title = 35, MatrixB.ttf/MatrixBI.ttf>GaramondB.ttf/GaramondBI.ttf
 font.title.russian = 35, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf>MatrixB.ttf/MatrixBI.ttf
 font.title.japanese = 35, mtgnamej.ttf
-font.type = 30, MatrixB.ttf>GaramondB.ttf, color:255,255,255 shadow:true
-font.type.russian = 30, MinionPro-BoldCn.ttf, color:255,255,255 shadow:true
-font.type.japanese = 30, mtgnamej.ttf, color:255,255,255 shadow:true
-font.text = 28, MPlantin.ttf/MPlantinI.ttf, leading:28, color:255,255,255 shadow:true
-font.text.russian = 28, MinionPro-Cn.ttf/MinionPro-CnItalic.ttf, leading:28, color:255,255,255 shadow:true
-font.text.japanese = 22, mtgrulej.ttf, leading:28, color:255,255,255 shadow:true
+font.type = 30, MatrixB.ttf>GaramondB.ttf
+font.type.russian = 30, MinionPro-BoldCn.ttf
+font.type.japanese = 30, mtgnamej.ttf
 font.pt = 36, MatrixBoldSmallCaps.ttf>GaramondB.ttf, centerY:true centerX:true
 font.promo.text.type = 8, GothamMedium.ttf
 
@@ -434,6 +431,9 @@ indicator.y = 605
 indicator.size = 37
 text.left = 54
 text.bottom = 946
+pt.center.y = 983
+pt.center.x = 638
+pt.width = 114
 artist.x = 58;115
 artist.y = 991
 copyright.x = 59
@@ -471,6 +471,9 @@ indicator.x = 85
 indicator.y = 890
 indicator.size = 37
 text.left = 54
+pt.center.y = 983
+pt.center.x = 638
+pt.width = 114
 artist.x = 58;115
 artist.y = 1006
 copyright.x = 59

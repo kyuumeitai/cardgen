@@ -1,6 +1,7 @@
 ﻿﻿Name,Set,Background,Type,P\T,Flavor,Rarity,Cost,Legal Text,Version,Artist,Collector's Number
 Angel,ORI,W,Token Creature — Angel,4\4,,T,,Flying,,Cyril Van Der Haegen,1\14
-Angel,NMS,W,Token Creature — Angel,4\4,,T,,Flying,,,
+Angel,NMS,W,Token Creature — Angel,4\4,,T,,Flying,,Scott M. Fischer,
+Angel,TD0,W,Token Creature — Angel,4\4,,T,,Flying,,Scott M. Fischer,
 Angel,M14,W,Token Creature — Angel,4\4,,T,,Flying,,James Ryman,2\13
 Angel,SCG,W,Token Creature — Angel,4\4,,T,,Flying,,Scott M. Fischer,
 Angel,PR4,W,Token Creature — Angel,4\4,,T,,Flying,,Scott M. Fischer,
@@ -16,6 +17,7 @@ Angel,GTC,W,Token Creature — Angel,4\4,,T,,Flying,,Steve Argyle,1\8
 Angel,CFX,W,Token Creature — Angel,4\4,,T,,Flying,,Cyril Van Der Haegen,1\2
 Angel,SOI,W,Token Creature — Angel,4\4,,T,,Flying,,Magali Villeneuve,1\18
 Angel,DDQ,W,Token Creature — Angel,4\4,,C,,Flying,,Winona Nelson,1\1
+Antelope,VAN,G,Token Creature — Antelope,2\3,,T,,Forestwalk,,Daren Bader,
 Ape,UNH,G,Token Creature — Ape,3\3,,T,,,2,,
 Ape,MMQ,G,Token Creature — Ape,2\2,,T,,,,,
 Ape,C14,G,Token Creature — Ape,3\3,,T,,,,Lars Grant-West,18\36
@@ -53,7 +55,8 @@ Beast,PR4,G,Token Creature — Beast,3\3,,T,,,,"Edward P. Beard, Jr.",
 Beast,ODY,G,Token Creature — Beast,4\4,,T,,,,Steve Prescott,9\11
 Beast,ZEN,G,Token Creature — Beast,4\4,,T,,,,Steve Prescott,9\11
 Beast,PR1,G,Token Creature — Beast,4\4,"When the prey in Krosa no longer satisfied them, the beasts began to hunt their hunters.",T,,,,Larry Elmore,
-Beast,MRD,G,Token Creature — Beast,5\5,,T,,,,,
+Beast,MRD,G,Token Creature — Beast,5\5,,T,,,,Tim Hildebrandt,
+Beast,TD2,G,Token Creature — Beast,5\5,,T,,,,Tim Hildebrandt,
 Beast,NPH,G,Token Creature — Beast,3\3,,T,,,,Dave Allsop,1\4
 Beast,C14,G,Token Creature — Beast,3\3,,T,,,1,Dave Allsop,19\36
 Beast,C14,G,Token Creature — Beast,4\4,,T,,,2,Steve Prescott,20\36
@@ -68,6 +71,7 @@ Beast,DDD,G,Token Creature — Beast,3\3,,T,,,1,John Donahue,T1
 Beast,DDD,G,Token Creature — Beast,4\4,,T,,,2,Steve Prescott,T2
 Beast,DDL,G,Token Creature — Beast,3\3,,T,,,,Jesper Ejsing,2\2
 Beast,CN2,G,Token Creature — Beast,3\3,,T,,,,Jesper Ejsing,10\12
+Beast,C16,G,Token Creature — Beast,3\3,,T,,,,Jesper Ejsing,14\21
 Beast,KLD,Art,Token Artifact Creature — Beast,6\6,,T,,,,Sara Winters,1\12
 Bird,M12,W,Token Creature — Bird,1\1,,T,,Flying,,Paul Bonner,1\7
 Bird,PR1,U,Token Creature — Bird,1\1,The landbound envey the birds' ultimate freedom in the sky.,T,,Flying,,Michael Sutfin,
@@ -89,6 +93,8 @@ Bird,KTK,W,Token Creature — Bird,3\4,,T,,Flying,,Mark Zug,1\13
 Bird,INV,U,Token Creature — Bird,1\1,,T,,Flying,,,
 Bird,CSP,W,Token Creature — Bird,1\1,,T,,Flying,,,
 Bird,EVE,U,Token Creature — Bird,1\1,,T,,Flying,,Heather Hudson,2\7
+Bird,C16,U,Token Creature — Bird,2\2,,T,,Flying,2,Peter Mohrbacher,7\21
+Bird,C16,W,Token Creature — Bird,1\1,,T,,Flying,1,Winona Nelson,2\21
 Bird Soldier,ARB,W,Token Creature — Bird Soldier,1\1,,T,,Flying,,Matt Cavotta,1\4
 Boar,THS,G,Token Creature — Boar,2\2,,T,,,,James Ryman,8\11
 Boar,VMA,G,Token Creature — Boar,3\3,,T,,,,,
@@ -96,7 +102,9 @@ Boar,PC2,G,Token Creature — Boar,3\3,,T,,,,Jesper Ejsing,
 Butterfly,MMQ,G,Token Creature — Insect,1\1,,T,,Flying,,,
 Camarid,FE,U,Token Creature — Camarid,1\1,,T,,,,,
 Camarid,TSP,U,Token Creature — Camarid,1\1,,T,,,,Heather Hudson,
-Caribou,5ED,W,Token Creature — Caibou,0\1,,T,,,,,
+Camarid,MED,U,Token Creature — Camarid,1\1,,T,,,,Heather Hudson,
+Caribou,5ED,W,Token Creature — Caibou,0\1,,T,,,,Heather Hudson,
+Caribou,ME2,W,Token Creature — Caibou,0\1,,T,,,,Heather Hudson,
 Caribou,IA,W,Token Creature — Caibou,0\1,,T,,,,Heather Hudson,
 Carnivore,TMP,R,Token Creature — Beast,3\1,,T,,,,Trevor Claxton,
 Carnivore,C13,R,Token Creature — Beast,3\1,,T,,,,,
@@ -104,8 +112,10 @@ Carnivore,EMA,R,Token Creature — Beast,3\1,,T,,,,Johann Bodin,7\16
 Cat,MBS,W,Token Creature — Cat,2\2,,T,,,,Scott Chou,1\9
 Cat,M14,W,Token Creature — Cat,2\2,,T,,,,Jesper Ejsing,3\13
 Cat,SOM,W,Token Creature — Cat,2\2,,T,,,,Scott Chou,1\9
+Cat,TD2,W,Token Creature — Cat,2\2,,T,,,,Scott Chou,
 Cat,MRD,G,Token Creature — Cat,1\1,,T,,,,,
 Cat,AP,B,Token Creature — Cat,2\1,,T,,,,Daren Bader,
+Cat,TD0,B,Token Creature — Cat,2\1,,T,,,,Daren Bader,
 Cat,6ED,G,Token Creature — Cat,1\1,,T,,,,,
 Cat,C14,W,Token Creature — Cat,2\2,,T,,,,Scott Chou,2\36
 Cat,M13,W,Token Creature — Cat,2\2,,T,,,,Jesper Ejsing,1\11
@@ -121,6 +131,7 @@ Citizen,TSP,W,Token Creature — Citizen,1\1,,T,,,,Michael Phillippi,
 Citizen,FE,W,Token Creature — Citizen,1\1,,T,,,,Michael Phillippi,
 Citizen,5ED,W,Token Creature — Citizen,1\1,,T,,,,Michael Phillippi,
 Citizen,6ED,W,Token Creature — Citizen,1\1,,T,,,,Michael Phillippi,
+Citizen,MED,W,Token Creature — Citizen,1\1,,T,,,,Michael Phillippi,
 Cleric,THS,W,Token Enchantment Creature — Cleric,2\1,,T,,,,Johann Bodin,1\11
 Cleric,GTC,WB,Token Creature — Cleric,1\1,,T,,"{3}{W}{B}{B}, {T}, Sacrifice this creature: Return a card named Deathpact Angel from your graveyard to the battlefield.",,Jason Chan,4\8
 Cloud Sprite,FUT,U,Token Creature — Faerie,1\1,,T,,"Flying
@@ -153,14 +164,16 @@ Demon,ISD,B,Token Creature — Demon,5\5,,T,,Flying,,Kev Walker,4\12
 Demon,DDC,B,Token Creature — Demon,*\*,,T,,Flying,,Pete Venters,T2
 Demon,C14,B,Token Creature — Demon,*\*,,T,,Flying,1,Pete Venters,12\36
 Demon,C14,B,Token Creature — Demon,5\5,,T,,Flying,2,Kev Walker,13\36
-Deserter,ALL,W,Token Creature — Deserter,0\1,,T,,,,,
-Deserter,CST,W,Token Creature — Deserter,0\1,,T,,,,,
+Deserter,ALL,W,Token Creature — Deserter,0\1,,T,,,,John Matson,
+Deserter,CST,W,Token Creature — Deserter,0\1,,T,,,,John Matson,
+Deserter,ME2,W,Token Creature — Deserter,0\1,,T,,,,John Matson,
 Devil,SOI,R,Token Creature — Devil,1\1,,T,,"When this creature dies, it deals 1 damage to target creature or player.",,Wayne England,6\18
-Djinn,AN,Art,Token Artifact Creature — Djinn,5\5,,T,,Flying,,,
-Djinn,R,Art,Token Artifact Creature — Djinn,5\5,,T,,Flying,,,
-Djinn,4ED,Art,Token Artifact Creature — Djinn,5\5,,T,,Flying,,,
-Djinn,5ED,Art,Token Artifact Creature — Djinn,5\5,,T,,Flying,,,
-Djinn,6ED,Art,Token Artifact Creature — Djinn,5\5,,T,,Flying,,,
+Djinn,AN,Art,Token Artifact Creature — Djinn,5\5,,T,,Flying,,Jim Nelson,
+Djinn,R,Art,Token Artifact Creature — Djinn,5\5,,T,,Flying,,Jim Nelson,
+Djinn,4ED,Art,Token Artifact Creature — Djinn,5\5,,T,,Flying,,Jim Nelson,
+Djinn,ME4,Art,Token Artifact Creature — Djinn,5\5,,T,,Flying,,Jim Nelson,
+Djinn,5ED,Art,Token Artifact Creature — Djinn,5\5,,T,,Flying,,Jim Nelson,
+Djinn,6ED,Art,Token Artifact Creature — Djinn,5\5,,T,,Flying,,Jim Nelson,
 Djinn Monk,DTK,U,Token Creature — Djinn Monk,2\2,,T,,Flying,,Izzy,2\8
 Dragon,ARC,R,Token Creature — Dragon,5\5,,T,,Flying,,,
 Dragon,ONS,R,Token Creature — Dragon,5\5,,T,,Flying,,,
@@ -245,6 +258,7 @@ Elemental,EVE,UR,Token Creature — Elemental,5\5,,T,,Flying,,Randy Gallegos,5\7
 Elemental,DST,R,Token Creature — Elemental,3\3,,T,,,2,,
 Elemental,LRW,G,Token Creature — Elemental,4\4,,T,,,1,Anthony S. Waters,2\11
 Elemental,LRW,R,Token Creature — Elemental,3\1,,T,,,3,,
+Elemental,C16,W,Token Creature — Elemental,4\4,,T,,Flying,,Anthony S. Waters,3\21
 Elemental Cat,JUD,R,Token Creature — Elemental,1\1,,T,,,,,
 Elemental Shaman,DDB,R,Token Creature — Elemental Shaman,3\1,,T,,,,Jim Pavelec,6\11
 Elemental Shaman,LRW,R,Token Creature — Elemental Shaman,3\1,,T,,,,Jim Pavelec,6\11
@@ -280,6 +294,8 @@ Elf Warrior,MOR,G,Token Creature — Elf Warrior,1\1,,T,,,,,
 Elf Warrior,C14,G,Token Creature — Elf Warrior,1\1,,T,,,,William O'Connor,24\36
 Elf Warrior,SHM,GW,Token Creature — Elf Warrior,1\1,,T,,,2,Carl Frank,12\12
 Elf Warrior,SHM,G,Token Creature — Elf Warrior,1\1,,T,,,1,William O'Connor,5\12
+Elf Warrior,C16,G,Token Creature — Elf Warrior,1\1,,T,,,,William O'Connor,15\21
+Etherium Cell,AER,Art,Token Artifact,,,T,,"{T}, Sacrifice this artifact: Add one mana of any color to your mana pool.",,Craig J. Spearing,3\4
 Expansion-Symbol,UNH,Art,Token Creature — Expansion-Symbol,1\1,,T,,,,,
 Faerie,RAV,U,Token Creature — Faerie Rogue,1\1,,T,,Flying,,Greg Staples,
 Faerie Rogue,MM2,B,Token Creature — Faerie Rogue,1\1,,T,,,,Dave Allsop,6\16
@@ -287,17 +303,19 @@ Faerie Rogue,SHM,UB,Token Creature — Faerie Rogue,1\1,,T,,,,E. M. Gist,8\12
 Faerie Rogue,MOR,B,Token Creature — Faerie Rogue,1\1,,T,,,,Jim Nelson,2\3
 Faerie Rogue,MMA,UB,Token Creature — Faerie Rogue,1\1,,T,,,,E. M. Gist,14\16
 Festering Goblin,FUT,B,Token Creature — Zombie Goblin,1\1,,T,,"When Festering Goblin dies, target creature gets -1/-1 until end of turn.",,,
-Fish,C14,U,Token Creature — Fish,3\3,,T,,"When this creature dies, put a 6/6 blue Whale creature token onto the battlefield with ""When this creature dies, put a 9/9 blue Kraken creature token onto the battlefield.""",,Dan Scott,8\36
+Fish,C14,U,Token Creature — Fish,3\3,,T,,"When this creature dies, create a 6/6 blue Whale creature token with “When this creature dies, create a 9/9 blue Kraken creature token”",,Dan Scott,8\36
 Frog Lizard,GTC,G,Token Creature — Frog Lizard,3\3,,T,,,,Jack Wang,3\8
 Frog Lizard,C15,G,Token Creature — Frog Lizard,3\3,,T,,,,Jack Wang,15\24
 Gargoyle,M10,Art,Token Artifact Creature — Gargoyle,3\4,,T,,Flying,,Paul Bonner,3\8
 Gargoyle,C14,Art,Token Artifact Creature — Gargoyle,3\4,,T,,Flying,,Paul Bonner,27\36
 Germ,NPH,B,Token Creature — Germ,0\0,,T,,,,Igor Kieryluk,1\5
 Germ,MBS,B,Token Creature — Germ,0\0,,T,,,,Igor Kieryluk,1\5
-Germ,PC2,B,Token Creature — Germ,0\0,,T,,,,,
+Germ,PC2,B,Token Creature — Germ,0\0,,T,,,,Igor Kieryluk,
+Germ,TD2,B,Token Creature — Germ,0\0,,T,,,,Igor Kieryluk,
 Germ,C14,B,Token Creature — Germ,0\0,,T,,,,Igor Kieryluk,14\36
 Germ,MM2,B,Token Creature — Germ,0\0,,T,,,,Igor Kieryluk,7\16
 Germ,C15,B,Token Creature — Germ,0\0,,T,,,,Igor Kieryluk,7\24
+Germ,C16,B,Token Creature — Germ,0\0,,T,,,,Igor Kieryluk,10\21
 Giant,FUT,R,Token Creature — Giant,4\4,,T,,,,Raymond Swanland,
 Giant Chicken,UGL,R,Token Creature — Chicken,4\4,,T,,,,,
 Giant Teddy Bear,UNH,Art,Token Creature — Giant Teddy Bear,5\5,,T,,This creature is pink.,,,
@@ -309,6 +327,7 @@ Goat,EVE,W,Token Creature — Goat,0\1,,T,,,,Terese Nielsen,1\7
 Goat,C14,W,Token Creature — Goat,0\1,,T,,,,Adam Paquette,3\36
 Goat,M14,W,Token Creature — Goat,0\1,,T,,,,Adam Paquette,4\13
 Goat,M13,W,Token Creature — Goat,0\1,,T,,,,Adam Paquette,2\11
+Goat,C16,W,Token Creature — Goat,0\1,,T,,,,Adam Paquette,4\21
 Goblin,RAV,R,Token Creature — Goblin,1\1,,T,,,,Doug Chaffee,
 Goblin,LGN,R,Token Creature — Goblin,1\1,,T,,,,Doug Chaffee,
 Goblin,RTR,R,Token Creature — Goblin,1\1,,T,,,,Christopher Moeller,6\12
@@ -330,6 +349,7 @@ Goblin,DIS,R,Token Creature — Goblin,2\1,,T,,,,,
 Goblin,10E,R,Token Creature — Goblin,1\1,,T,,,,Dave Kendall,4\6
 Goblin,6ED,R,Token Creature — Goblin,1\1,,T,,,,,
 Goblin,5ED,R,Token Creature — Goblin,1\1,,T,,,,,
+Goblin,ME4,R,Token Creature — Goblin,1\1,Never underestimate the power of overwhelming stupidity in overwhelming numbers.,T,,,,Darrell Riche,
 Goblin,ALA,R,Token Creature — Goblin,1\1,,T,,,,Brandon Kitkouski,8\10
 Goblin,C14,R,Token Creature — Goblin,1\1,,T,,,,Dave Kendall,17\36
 Goblin,ARC,R,Token Creature — Goblin,1\1,,T,,,1,,
@@ -346,6 +366,7 @@ Goblin,MMA,R,Token Creature — Goblin,1\1,,T,,,,Dave Kendall,10\16
 Goblin,HOP,R,Token Creature — Goblin,1\1,,T,,,,,
 Goblin,EMA,R,Token Creature — Goblin,1\1,,T,,,,Dave Kendall,10\16
 Goblin,CN2,R,Token Creature — Goblin,1\1,,T,,This creature can't block.,,Jason A. Engle,8\12
+Goblin,C16,R,Token Creature — Goblin,1\1,,T,,Creatures you control attack each combat if able.,,Wayne Reynolds,12\21
 Goblin Rogue,MMA,B,Token Creature — Goblin Rogue,1\1,,T,,,,Dave Kendall,6\16
 Goblin Rogue,LRW,B,Token Creature — Goblin Rogue,1\1,,T,,,,Richard Sardinha,5\11
 Goblin Rogue,MOR,B,Token Creature — Goblin Rogue,1\1,,T,,,,,
@@ -367,10 +388,12 @@ Golem,ARC,Art,Token Artifact Creature — Golem,4\6,,T,,,,Jesper Ejsing,
 Golem,JGC,Art,Token Artifact Creature — Golem,3\3,,T,,,,Yeong-Hao Han,1\1
 Golem,THS,Art,Token Enchantment Artifact Creature — Golem,3\3,,T,,,,Yeong-Hao Han,10\11
 Golem,SOM,Art,Token Artifact Creature — Golem,3\3,,T,,,,Nic Klein,6\9
-Graveborn,CSP,BR,Token Creature — Graveborn,3\1,,T,,,,,
-Graveborn,CST,BR,Token Creature — Graveborn,3\1,,T,,,,,
-Graveborn,ALL,BR,Token Creature — Graveborn,3\1,,T,,,,,
-Graveborn,C13,BR,Token Creature — Graveborn,3\1,,T,,,,,
+Graveborn,CSP,BR,Token Creature — Graveborn,3\1,,T,,,,Jeff Miracola,
+Graveborn,CST,BR,Token Creature — Graveborn,3\1,,T,,,,Jeff Miracola,
+Graveborn,ME2,BR,Token Creature — Graveborn,3\1,,T,,,,Jeff Miracola,
+Graveborn,ALL,BR,Token Creature — Graveborn,3\1,,T,,,,Jeff Miracola,
+Graveborn,C13,BR,Token Creature — Graveborn,3\1,,T,,,,Jeff Miracola,
+Gremlin,AER,R,Token Creature — Gremlin,2\2,,T,,,,Jason Rainville,1\4
 Griffin,DDH,W,Token Creature — Griffin,2\2,,T,,Flying,,Jim Nelson,1\2
 Griffin,TSP,W,Token Creature — Griffin,2\2,,T,,Flying,,,
 Griffin,DDG,W,Token Creature — Griffin,2\2,,T,,Flying,,,
@@ -380,8 +403,9 @@ Hellion,DDP,R,Token Creature — Hellion,4\4,,T,,,,Anthony Francisco,4\5
 Hellion,ROE,R,Token Creature — Hellion,4\4,,T,,,,Anthony Francisco,3\5
 Hellion,M13,R,Token Creature — Hellion,4\4,,T,,,,Anthony Francisco,7\11
 Hellion,PC2,R,Token Creature — Hellion,4\4,,T,,,,,
-Hippo,ALL,G,Token Creature — Hippo,1\1,,T,,,,,
-Hippo,PLS,G,Token Creature — Hippo,1\1,,T,,,,,
+Hippo,ALL,G,Token Creature — Hippo,1\1,,T,,,,Jeff Laubenstein,
+Hippo,MED,G,Token Creature — Hippo,1\1,,T,,,,Jeff Laubenstein,
+Hippo,PLS,G,Token Creature — Hippo,1\1,,T,,,,Jeff Laubenstein,
 Homunculus,ALA,U,Token Artifact Creature — Homonculus,0\1,,T,,,,Howard Lyon,3\10
 Homunculus,ISD,U,Token Creature — Homonculus,2\2,,T,,,,Johann Bodin,3\12
 Hornet,STH,Art,Token Artifact Creature — Insect,1\1,,T,,"Flying, haste",,,
@@ -390,6 +414,7 @@ Horror,GTC,UB,Token Creature — Horror,1\1,,T,,,,Adam Paquette,5\8
 Horror,C14,B,Token Creature — Horror,*\*,,T,,,,Jason Felix,15\36
 Horror,RAV,B,Token Creature — Horror,4\4,,T,,,,Pete Venters,
 Horror,MBS,Art,Token Artifact Creature — Horror,X\X,,T,,,,Scott Chou,4\5
+Horror,C16,Art,Token Artifact Creature — Horror,X\X,,T,,,,Scott Chou,19\21
 Hound,TMP,G,Token Creature — Hound,1\1,,T,,,,Trevor Claxton,
 Human,AVR,R,Token Creature — Human,1\1,,T,,,2,Ryan Pancoast,7\8
 Human,DKA,W,Token Creature — Human,1\1,,T,,,,John Stanko,1\3
@@ -414,6 +439,7 @@ Insect,PC2,G,Token Creature — Insect,1\1,,T,,,,,
 Insect,M15,G,Token Creature — Insect,1\1,,T,,"Flying, deathtouch",,Martina Pilcerova,6\14
 Insect,M10,G,Token Creature — Insect,1\1,,T,,,,Ron Spencer,5\8
 Insect,5DN,G,Token Creature — Insect,1\1,,T,,,,,
+Insect,TD2,G,Token Creature — Insect,1\1,,T,,,,Ron Spencer,
 Insect,MM2,G,Token Creature — Insect,1\1,,T,,,,Ron Spencer,10\16
 Insect,LGN,G,Token Creature — Insect,1\1,,T,,,,,
 Insect,CM1,G,Token Creature — Insect,1\1,,T,,,,,
@@ -427,7 +453,8 @@ Insect,MRD,G,Token Creature — Insect,1\1,,T,,,,,
 Insect,SOI,G,Token Creature — Insect,1\1,,T,,,,Christopher Moeller,7\18
 Kaldra,5DN,Art,Token Legendary Creature — Avatar,4\4,,T,,,,Donato Giancola,
 Kavu,AP,B,Token Creature — Kavu,3\3,,T,,,,Arnie Swekel,
-Kelp,HML,U,Token Creature — Plant Wall,0\1,,T,,,,,
+Kelp,HML,U,Token Creature — Plant Wall,0\1,,T,,,,Jim Pavaler,
+Kelp,ME2,U,Token Creature — Plant Wall,0\1,,T,,,,Jim Pavaler,
 Kithkin Soldier,CMD,W,Token Creature — Kithkin Soldier,1\1,,T,,,,,
 Kithkin Soldier,EVE,W,Token Creature — Kithkin Soldier,1\1,,T,,,,,
 Kithkin Soldier,MOR,W,Token Creature — Kithkin Soldier,1\1,,T,,,,,
@@ -440,7 +467,8 @@ Knight,DGM,W,Token Creature — Knight,2\2,,T,,Vigilance,,,
 Knight,LGE,W,Token Creature — Knight,2\2,,T,,Vigilance,,Lucas Graciano,1\1
 Knight,ORI,W,Token Creature — Knight,2\2,,T,,Vigilance,,Matt Stewart,2\14
 Knight,C15,W,Token Creature — Knight,2\2,,T,,Vigilance,2,Matt Stweart,5\24
-Knight,ALL,W,Token Creature — Knight,1\1,,T,,Banding,,,
+Knight,ALL,W,Token Creature — Knight,1\1,,T,,Banding,,Adrian Smith,
+Knight,ME2,W,Token Creature — Knight,1\1,,T,,Banding,,Adrian Smith,
 Knight,C13,W,Token Creature — Knight,2\2,,T,,Vigilance,,,
 Knight,C15,W,Token Creature — Knight,2\2,,T,,First Strike,1,Hideaki Takamura,4\24
 Knight,RTR,W,Token Creature — Knight,2\2,,T,,Vigilance,,Matt Stewart,2\12
@@ -472,7 +500,8 @@ Metallic Sliver,FUT,Art,Token Artifact Creature — Sliver,1\1,,T,,,,,
 Minion,DDE,B,Token Creature — Minion,X\X,,T,,,,Dave Kendall,2\3
 Minion,USG,B,Token Creature — Minion,X\X,,T,,,,,
 Minion,PCY,B,Token Creature — Minion,1\1,,T,,,,,
-Minor Demon,LEG,BR,Token Creature — Demon,1\1,,T,,,,,
+Minor Demon,LEG,BR,Token Creature — Demon,1\1,,T,,,,Pete Venters,
+Minor Demon,ME3,BR,Token Creature — Demon,1\1,,T,,,,Pete Venters,
 Minotaur,JOU,R,Token Creature — Minotaur,2\3,,T,,,,Craig J Spearing,3\6
 Minotaur,LGE,R,Token Creature — Minotaur,2\3,,T,,,,Scott Murphy,1\1
 Monk,FRF,W,Token Creature — Monk,1\1,,T,,Prowess,,Steven Belledin,1\4
@@ -489,15 +518,20 @@ Myr,C13,Art,Token Artifact Creature — Myr,1\1,,T,,,,,
 Myr,C14,Art,Token Artifact Creature — Myr,1\1,,T,,,,Ryan Pancoast,28\36
 Myr,MD1,Art,Token Artifact Creature — Myr,1\1,,T,,,,Matt Stewart,3\4
 Myr,MRD,Art,Token Artifact Creature — Myr,1\1,,T,,,,,
+Myr,TD2,Art,Token Artifact Creature — Myr,1\1,,T,,,,Ryan Pancoast,
 Myr,MM2,Art,Token Artifact Creature — Myr,1\1,,T,,,,Ryan Pancoast,16\16
 Myr,PR4,Art,Token Artifact Creature — Myr,1\1,,T,,,,Wayne England,
 Myr,NPH,Art,Token Artifact Creature — Myr,1\1,,T,,,,Matt Stewart,4\4
 Myr,SOM,Art,Token Artifact Creature — Myr,1\1,,T,,,,Ryan Pancoast,7\9
+Myr,C16,Art,Token Artifact Creature — Myr,1\1,,T,,,,Ryan Pancoast,20\21
 Octopus,BFZ,U,Token Creature — Octopus,8\8,,T,,,,Craig J Spearing,7\14
 Ogre,CNS,R,Token Creature — Ogre,4\4,,T,,,,Dave Kendall,3\9
 Ogre,WWK,R,Token Creature — Ogre,3\3,,T,,,,Paul Bonner,3\6
+Ogre,C16,R,Token Creature — Ogre,3\3,,T,,,,Paul Bonner,13\21
 Ooze,M11,G,Token Creature — Ooze,1\1,,T,,,2,Raymond Swanland,6\6
-Ooze,M11,G,Token Creature — Ooze,2\2,,T,,"When this creature dies, put two 1/1 green Ooze creature tokens onto the battlefield.",1,Raymond Swanland,5\6
+Ooze,M11,G,Token Creature — Ooze,2\2,,T,,"When this creature dies, create two 1/1 green Ooze creature tokens.",1,Raymond Swanland,5\6
+Ooze,TD2,G,Token Creature — Ooze,1\1,,T,,,2,Raymond Swanland,6\6
+Ooze,TD2,G,Token Creature — Ooze,2\2,,T,,"When this creature dies, create two 1/1 green Ooze creature tokens.",1,Raymond Swanland,5\6
 Ooze,GTC,G,Token Creature — Ooze,X\X,,T,,,,Marco Nelor,
 Ooze,ISD,G,Token Creature — Ooze,X\X,,T,,This creature's power and toughness are each equal to the number of slime counters on Gutter Grime.,,Erica Yang,10\12
 Ooze,ALA,G,Token Creature — Ooze,X\X,,T,,,,Anthony S. Waters,9\10
@@ -532,6 +566,7 @@ Plant,C13,G,Token Creature — Plant,0\1,,T,,,,Daren Bader,
 Plant,BFZ,G,Token Creature — Plant,1\1,,T,,,,Sam Burley,10\14
 Prism,VIS,Art,Token Artifact Creature — Prism,0\1,,T,,,,,
 Rabid Sheep,UGL,G,Token Creature — Sheep,2\2,,T,,,,,
+Ragavan,AER,R,Token Creature — Monkey,2\2,,T,,,,Daniel Ljunggren,2\4
 Rat,STH,B,Token Creature — Rat,1\1,,T,,,,,
 Rat,TPR,B,Token Creature — Rat,1\1,,T,,,,,
 Rat,SHM,B,Token Creature — Rat,1\1,,T,,,,Carl Critchlow,3\12
@@ -544,7 +579,8 @@ Reflection,INV,W,Token Creature — Reflection,X\X,,T,,,,,
 Rhino,RTR,G,Token Creature — Rhino,4\4,,T,,Trample,,Tomasz Jedruszek,9\12
 Rukh,PR3,R,Token Creature — Bird,4\4,,T,,Flying,,"Edward P. Beard, Jr.",
 Sand,GPT,Art,Token Creature — Sand,1\1,,T,,,,,
-Sand Warrior,LEG,GRW,Token Creature — Sand Warrior,1\1,,T,,,,,
+Sand Warrior,LEG,GRW,Token Creature — Sand Warrior,1\1,,T,,,,Richard Kane Ferguson,
+Sand Warrior,ME3,GRW,Token Creature — Sand Warrior,1\1,,T,,,,Richard Kane Ferguson,
 Saproling,PLS,G,Token Creature — Saproling,1\1,,T,,,,,
 Saproling,PR1,G,Token Creature — Saproling,1\1,The nauseating wriggling of a saproling is exceeded only by the nauseating wriggling of it's prey.,T,,,,Jeff Laubenstein,
 Saproling,RAV,G,Token Creature — Saproling,1\1,,T,,,,,
@@ -579,9 +615,12 @@ Saproling,DPA,G,Token Creature — Saproling,1\1,,T,,,,,
 Saproling,MMA,G,Token Creature — Saproling,1\1,,T,,,,Warren Mahy,12\16
 Saproling,MM2,G,Token Creature — Saproling,1\1,,T,,,,Warren Mahy,11\16
 Saproling,M13,G,Token Creature — Saproling,1\1,,T,,,,Brad Rigney,9\11
+Saproling,ME2,G,Token Creature — Saproling,1\1,The nauseating wriggling of a saproling is exceeded only by the nauseating wriggling of it's prey.,T,,,,Jeff Laubenstein,
 Saproling,INV,G,Token Creature — Saproling,1\1,,T,,,,,
 Saproling,M12,G,Token Creature — Saproling,1\1,,T,,,,Cyril Van Der Haegen,5\7
 Saproling,DIS,G,Token Creature — Saproling,1\1,,T,,,,,
+Saproling,C16,G,Token Creature — Saproling,1\1,,T,,,1,Brad Rigney,16\21
+Saproling,C16,G,Token Creature — Saproling,1\1,,T,,,2,Raoul Vitale,17\21
 Satyr,JOU,RG,Token Creature — Satyr,2\2,,T,,,,Johann Bodin,
 Satyr,THS,RG,Token Creature — Satyr,2\2,,T,,,,Johann Bodin,9\11
 Serf,5ED,B,Token Creature — Serf,0\1,,T,,,,,
@@ -607,6 +646,7 @@ Sliver,TPR,Art,Token Creature — Sliver,1\1,,T,,,,Tony Szczudlo,
 Sliver,STH,Art,Token Creature — Sliver,1\1,,T,,,,Tony Szczudlo,
 Sliver,PR3,Art,Token Creature — Sliver,1\1,Slivers don't learn. They just know.,T,,,,Tony Szczudlo,
 Snake,SOK,G,Token Creature — Snake,1\1,,T,,,,,
+Snake,MED,Art,Token Artifact Creature — Snake,1\1,,T,,"Whenever this creature deals damage to a player, that player gets a poison counter.",,Thomas M. Baxa,
 Snake,VIS,G,Token Creature — Snake,1\1,,T,,,,,
 Snake,WWK,G,Token Creature — Snake,1\1,,T,,,,,
 Snake,ZEN,G,Token Creature — Snake,1\1,,T,,,,Austin Hsu,10\11
@@ -626,7 +666,9 @@ Snake,5ED,Art,Token Artifact Creature — Snake,1\1,,T,,"Whenever this creature 
 Snake,6ED,G,Token Creature — Snake,1\1,,T,,,,,
 Soldier,PR2,W,Token Creature — Soldier,1\1,Duty brings them together. Loyalty keeps them together.,T,,,,Ron Spencer,
 Soldier,RTR,W,Token Creature — Soldier,1\1,,T,,,,Steve Prescott,3\12
-Soldier,SCG,W,Token Creature — Soldier,1\1,,T,,,,,
+Soldier,SCG,W,Token Creature — Soldier,1\1,Duty brings them together. Loyalty keeps them together.,T,,,,Ron Spencer,
+Soldier,TD0,W,Token Creature — Soldier,1\1,,T,,,,Parente,
+Soldier,ME2,W,Token Creature — Soldier,1\1,Duty brings them together. Loyalty keeps them together.,T,,,,Ron Spencer,
 Soldier,ONS,W,Token Creature — Soldier,1\1,,T,,,,,
 Soldier,ORI,W,Token Creature — Soldier,1\1,,T,,,,Steve Prescott,3\14
 Soldier,PLC,W,Token Creature — Soldier,1\1,,T,,,,Alex Horley-Orlandelli,
@@ -662,10 +704,12 @@ Soldier,M10,W,Token Creature — Soldier,1\1,,T,,,,Parente,6\8
 Soldier,EMA,W,Token Creature — Soldier,1\1,,T,,,,Greg Staples,2\16
 Soldier,CN2,W,Token Creature — Soldier,1\1,,T,,,1,Greg Staples,2\12
 Soldier,CN2,W,Token Creature — Soldier,1\2,,T,,Defender,2,Jason A. Engle,3\12
+Soldier,C16,W,Token Creature — Soldier,1\1,,T,,,,Seb McKinnon,5\21
 Soldier Ally,WWK,W,Token Creature — Soldier Ally,1\1,,T,,,,Kekai Kotaki,1\6
 Spark Elemental,FUT,R,Token Creature — Elemental,3\1,,T,,"Trample, haste
 At the beginning of the end step, sacrifice Spark Elemental.",,,
-Spawn,DST,Art,Token Artifact Creature — Spawn,2\2,,T,,,,,
+Spawn,DST,Art,Token Artifact Creature — Spawn,2\2,,T,,,,David Martin,
+Spawn,TD2,Art,Token Artifact Creature — Spawn,2\2,,T,,,,David Martin,
 Sphinx,JOU,U,Token Creature — Sphinx,4\4,,T,,Flying,,Jesper Ejsing,1\6
 Spider,MMA,B,Token Creature — Spider,2\4,,T,,Reach,,Lars Grant-West,7\16
 Spider,SHM,G,Token Creature — Spider,1\2,,T,,Reach,,Thomas M. Baxa,6\12
@@ -684,7 +728,8 @@ Spirit,MMQ,W,Token Creature — Spirit,1\1,,T,,Flying,,,
 Spirit,SOK,Art,Token Creature — Spirit,1\1,,T,,,,,
 Spirit,AVR,U,Token Creature — Spirit,1\1,,T,,Flying,2,Dan Scott,4\8
 Spirit,PLS,W,Token Creature — Spirit,1\1,The joy of rebirth overshadows the fear of death.,T,,Flying,,John Matson,
-Spirit,5ED,B,Token Creature — Spirit,X\X,,T,,,,,
+Spirit,5ED,B,Token Creature — Spirit,X\X,,T,,,,Ron Spencer,
+Spirit,ME2,B,Token Creature — Spirit,X\X,,T,,,,Ron Spencer,
 Spirit,RAV,W,Token Creature — Spirit,1\1,,T,,Flying,,Dave Allsop,
 Spirit,AVR,W,Token Creature — Spirit,1\1,,T,,Flying,1,Ryan Yee,3\8
 Spirit,TMP,W,Token Creature — Spirit,1\1,,T,,Flying,,,
@@ -715,9 +760,12 @@ Spirit,SOI,W,Token Creature — Spirit,1\1,,T,,Flying,,,3\18
 Spirit,EMA,Art,Token Creature — Spirit,1\1,,T,,,1,Daniel Ljunggren,1\16
 Spirit,EMA,W,Token Creature — Spirit,1\1,,T,,Flying,2,Ryan Yee,3\16
 Spirit,CN2,W,Token Creature — Spirit,1\1,,T,,Flying,,Jeff Simpson,4\12
+Spirit,C16,W,Token Creature — Spirit,1\1,,T,,Flying,2,Mike Sass,6\21
+Spirit,C16,Art,Token Creature — Spirit,1\1,,T,,,1,Hugh Jamieson,1\21
 Spirit Warrior,KTK,BG,Token Creature — Spirit Warrior,*\*,,T,,,,Ryan Alexander Lee,10\13
 Squid,LGE,U,Token Creature — Squid,1\1,,T,,Islandwalk,,Richard Wright,1\1
 Squid,M15,U,Token Creature — Squid,1\1,,T,,Islandwalk,,Jack Wang,8\14
+Squid,C16,U,Token Creature — Squid,1\1,,T,,Islandwalk,,Jack Wang,8\21
 Squirrel,WTH,G,Token Creature — Squirrel,1\1,,T,,,,,
 Squirrel,PCY,G,Token Creature — Squirrel,1\1,,T,,,,,
 Squirrel,PR2,G,Token Creature — Squirrel,1\1,It's surprising how well cute and vicious go together.,T,,,,Ron Spencer,
@@ -730,16 +778,21 @@ Squirrel,UNH,G,Token Creature — Squirrel,1\1,,T,,,,,
 Squirrel,VMA,G,Token Creature — Squirrel,1\1,,T,,,,,
 Squirrel,UGL,G,Token Creature — Squirrel,1\1,,T,,,,Ron Spencer,94\94
 Squirrel,ULG,G,Token Creature — Squirrel,1\1,,T,,,,,
-Stangg Twin,LEG,RG,Token Legendary Creature — Human Warrior,3\4,,T,,,,,
-Starfish,ALL,U,Token Creature — Starfish,0\1,,T,,,,,
+Stangg Twin,LEG,RG,Token Legendary Creature — Human Warrior,3\4,,T,,,,Mark Poole,
+Stangg Twin,ME3	,RG,Token Legendary Creature — Human Warrior,3\4,,T,,,,Mark Poole,
+Starfish,ALL,U,Token Creature — Starfish,0\1,,T,,,,Alan Pollack,
+Starfish,ME3,U,Token Creature — Starfish,0\1,,T,,,,Alan Pollack,
 Stoneforged Blade,C14,Art,Token Artifact - Equipment,,,T,,"Indestructible
 Equipped creature gets +5/+5 and has double strike.
 Equip {0}",,Eric Deschamps,30\36
-Survivor,ALL,R,Token Creature — Survivor,1\1,,T,,,,,
+Survivor,ALL,R,Token Creature — Survivor,1\1,,T,,,,Richard Whitters,
+Survivor,MED,R,Token Creature — Survivor,1\1,,T,,,,Richard Whitters,
 Tetravite,4ED,Art,Token Artifact Creature — Tetravite,1\1,,T,,"Flying
-This creature can't be enchanted.",,,
+This creature can't be enchanted.",,Thomas M. Baxa,
 Tetravite,AQ,Art,Token Artifact Creature — Tetravite,1\1,,T,,"Flying
-This creature can't be enchanted.",,,
+This creature can't be enchanted.",,Thomas M. Baxa,
+Tetravite,ME4,Art,Token Artifact Creature — Tetravite,1\1,,T,,"Flying
+This creature can't be enchanted.",,Thomas M. Baxa,
 The Monarch,CN2,Art,,,,T,,"At the beginning of your end step, draw a card.
 Whenever a creature deals combat damage to you, its controller becomes the monarch.",,Mike Bierek,1\12
 Thopter,ORI,Art,Token Artifact Creature — Thopter,1\1,,T,,Flying,1,Adam Paquette,10\14
@@ -753,8 +806,10 @@ Thopter,C13,U,Token Artifact Creature — Thopter,1\1,,T,,Flying,,Andrew Murray,
 Thopter,KLD,Art,Token Artifact Creature — Thopter,1\1,,T,,Flying,1,Adam Paquette,7\12
 Thopter,KLD,Art,Token Artifact Creature — Thopter,1\1,,T,,Flying,2,Svetlin Velinov,8\12
 Thopter,KLD,Art,Token Artifact Creature — Thopter,1\1,,T,,Flying,3,Richard Wright,9\12
+Thopter,C16,U,Token Artifact Creature — Thopter,1\1,,T,,Flying,,Andrew Murray,4\10
 Thrull,5ED,B,Token Creature — Thrull,0\1,,T,,,,,
-Thrull,TSP,B,Token Creature — Thrull,1\1,,T,,,,,Mark Tedin
+Thrull,MED,B,Token Creature — Thrull,0\1,,T,,,,Véronique Meignaud,
+Thrull,TSP,B,Token Creature — Thrull,1\1,,T,,,,Mark Tedin,
 Thrull,C13,B,Token Creature — Thrull,1\1,,T,,,,,
 Thrull,DDC,B,Token Creature — Thrull,0\1,,T,,,,Véronique Meignaud,T3
 Thrull,MM2,B,Token Creature — Thrull,1\1,,T,,,,Mark Tedin,8\16
@@ -770,7 +825,7 @@ Triskelavite,CMD,Art,Token Artifact Creature — Triskelavite,1\1,,T,,"Flying
 Sacrifice this creature: This creature deals 1 damage to target creature or player.",,,
 Tuktuk the Returned,ROE,Art,Token Legendary Artifact Creature — Goblin Golem,5\5,,T,,,,Franz Vohwinkel,5\5
 Tuktuk the Returned,C14,Art,Token Artifact Creature — Goblin Golem,5\5,,T,,Tuktuk the Returned is Legendary.,,Franz Vohwinkel,31\36
-Twin,DST,Art,Token Artifact Creature — Construct,*\*,,T,,,,,
+Twin,DST,Art,Token Artifact Creature — Construct,*\*,,T,,,,Jim Nelson,
 Urami,SOK,B,Token Creature — Demon Spirit,5\5,,T,,Flying,,Alex Horley-Orlandelli,
 Vampire,DKA,B,Token Creature — Vampire,1\1,,T,,Lifelink,,Peter Mohrbacher,2\3
 Vampire,ISD,B,Token Creature — Vampire,2\2,,T,,Flying,,Svetlin Velinov,5\12
@@ -791,7 +846,7 @@ Warrior,DTK,W,Token Creature — Warrior,1\1,,T,,,,Aaron Miller,1\8
 Wasp,10E,Art,Token Artifact Creature — Wasp,1\1,,T,,Flying,,Ron Spencer,6\6
 Weird,DDJ,U,Token Creature — Weird,3\3,,T,,,,,
 Weird,GPT,U,Token Creature — Weird,3\3,,T,,,,Hideaki Takamura,
-Whale,C14,U,Token Creature — Whale,6\6,,T,,,,Dan Scott,10\36
+Whale,C14,U,Token Creature — Whale,6\6,,T,,"When this creature dies, create a 9/9 blue Kraken creature token",,Dan Scott,10\36
 Wolf,CSP,G,Token Creature — Wolf,1\1,,T,,This creature gets +1/+1 for each card named Sound the Call in each graveyard.,,,
 Wolf,ZEN,G,Token Creature — Wolf,2\2,,T,,,,Daren Bader,11\11
 Wolf,CNS,G,Token Creature — Wolf,2\2,,T,,,,Raoul Vitale,6\9
@@ -818,6 +873,7 @@ Wood,MIR,G,Token Creature — Wall,0\1,,T,,Defender,,,
 Worm,EVE,BG,Token Creature — Worm,1\1,,T,,,,Chuck Lukacs,6\7
 Worm,MM2,BG,Token Creature — Worm,1\1,,T,,,,Chuck Lukacs,14\16
 Worm,MMA,BG,Token Creature — Worm,1\1,,T,,,,Chuck Lukacs,15\16
+Worm,C16,BG,Token Creature — Worm,1\1,,T,,,,Chuck Lukacs,18\21
 Wurm,TSP,G,Token Creature — Wurm,X\X,,T,,,,,
 Wurm,SOM,Art,Token Artifact Creature — Wurm,3\3,,T,,Lifelink,2,Raymond Swanland,9\9
 Wurm,VMA,G,Token Creature — Wurm,6\6,,T,,,1,,
@@ -860,6 +916,7 @@ Zombie,C13,B,Token Creature — Zombie,2\2,,T,,,,,
 Zombie,ALL,B,Token Creature — Zombie,2\2,,T,,,,,
 Zombie,ALA,B,Token Creature — Zombie,2\2,,T,,,,Dave Kendall,6\10
 Zombie,ARC,B,Token Creature — Zombie,2\2,,T,,,,,
+Zombie,MED,B,Token Creature — Zombie,2\2,,T,,,,Dana Knutson,
 Zombie,BNG,B,Token Enchantment Creature — Zombie,2\2,,T,,,,Winona Nelson,6\11
 Zombie,AVR,B,Token Creature — Zombie,2\2,,T,,,,Lucas Graciano,6\8
 Zombie,JOU,B,Token Creature — Zombie,*\*,,T,,,,Zack Stella,2\6
@@ -878,15 +935,16 @@ Zombie,EMA,B,Token Creature — Zombie,2\2,,T,,,,Lucas Graciano,4\10
 Zombie,EMN,B,Token Creature — Zombie,2\2,,T,,,1,Tomasz Jedruszek,3\10
 Zombie,EMN,B,Token Creature — Zombie,2\2,,T,,,2,Seb McKinnon,4\10
 Zombie,EMN,B,Token Creature — Zombie,2\2,,T,,,3,Anna Steinbauer,5\10
-Zombie,EMN,B,Token Creature — Zombie,2\2,,T,,,4,Daarken,6\16
+Zombie,EMN,B,Token Creature — Zombie,*\*,,T,,,4,Daarken,6\10
 Zombie,PRE,B,Token Creature — Zombie,2\2,,T,,,1,Tomasz Jedruszek,1\1
 Zombie,PRE,B,Token Creature — Zombie,2\2,,T,,,2,Anna Steinbauer,1\1
 Zombie,CN2,B,Token Creature — Zombie,2\2,,T,,,,Seb McKinnon,1\1
+Zombie,C16,B,Token Creature — Zombie,2\2,,T,,,,Lucas Graciano,11\21
 Zombie Giant,ZEN,B,Token Creature — Zombie Giant,5\5,,T,,,,Igor Kieryluk,7\11
-Zombie Giant,DDR,Art,Token Creature — Zombie Giant,5\5,,C,,,,Igor Kieryluk,73\72
+Zombie Giant,DDR,B,Token Creature — Zombie Giant,5\5,,C,,,,Igor Kieryluk,73\72
 Zombie Horror,DTK,B,Token Creature — Zombie Horror,*\*,,T,,,,Nils Hamm,4\8
 Zombie Wizard,ARB,UB,Token Creature — Zombie Wizard,1\1,,T,,,,Dave Allsop,4\4
-Axe of the Warmonger,HRO,Art,Hero Artifact — Equipment,,,R,,"Whenever equipped creature deals damage, put a 1/1 white Soldier token on the battlefield.
+Axe of the Warmonger,HRO,Art,Hero Artifact — Equipment,,,R,,"Whenever equipped creature deals damage, create a 1/1 white Soldier token.
 Equipped creature gets +2/+1 and has haste.
 Equip {2}",8,Chuck Lukacs,7d\9
 Axe of the Warmonger,HRO,Art,Hero Artifact — Equipment,,,R,,"Equipped creature has double strike.
@@ -915,7 +973,7 @@ Equip {2}",6,Chuck Lukacs,7e\9
 Bow of the Hunter,HRO,Art,Hero Artifact — Equipment,,,R,,"Whenever equipped creature deals damage, put a +1/+1 counter on it.
 Equipped creature has “{T}: This creature deals 2 damage to target creature or player.”
 Equip {2}",5,Chuck Lukacs,7e\9
-Bow of the Hunter,HRO,Art,Hero Artifact — Equipment,,,R,,"Whenever equipped creature deals damage, put a 1/1 white Soldier token on the battlefield.
+Bow of the Hunter,HRO,Art,Hero Artifact — Equipment,,,R,,"Whenever equipped creature deals damage, create a 1/1 white Soldier token.
 Equipped creature has “{T}: This creature deals 2 damage to target creature or player.”
 Equip {2}",8,Chuck Lukacs,7e\9
 Bow of the Hunter,HRO,Art,Hero Artifact — Equipment,,,R,,"Equipped creature has protection from enchantments.
@@ -940,7 +998,7 @@ Cloak of the Philosopher,HRO,Art,Hero Artifact — Equipment,,,R,,"Whenever equi
 Equipped creature gets +1/+1.
 2: Untap equipped creature
 Equip {2}",5,Chuck Lukacs,7b\9
-Cloak of the Philosopher,HRO,Art,Hero Artifact — Equipment,,,R,,"Whenever equipped creature deals damage, put a 1/1 white Soldier token on the battlefield.
+Cloak of the Philosopher,HRO,Art,Hero Artifact — Equipment,,,R,,"Whenever equipped creature deals damage, create a 1/1 white Soldier token.
 Equipped creature gets +1/+1.
 2: Untap equipped creature
 Equip {2}",8,Chuck Lukacs,7b\9
@@ -969,7 +1027,7 @@ Equip {2}",6,Chuck Lukacs,7c\9
 Lash of the Tyrant,HRO,Art,Hero Artifact — Equipment,,,R,,"Whenever equipped creature deals damage, put a +1/+1 counter on it.
 Equipped creature gets +1/+2 and has deathtouch.
 Equip {2}",5,Chuck Lukacs,7c\9
-Lash of the Tyrant,HRO,Art,Hero Artifact — Equipment,,,R,,"Whenever equipped creature deals damage, put a 1/1 white Soldier token on the battlefield.
+Lash of the Tyrant,HRO,Art,Hero Artifact — Equipment,,,R,,"Whenever equipped creature deals damage, create 1/1 white Soldier token.
 Equipped creature gets +1/+2 and has deathtouch.
 Equip {2}",8,Chuck Lukacs,7c\9
 Lash of the Tyrant,HRO,Art,Hero Artifact — Equipment,,,R,,"Equipped creature has protection from enchantments.
@@ -1000,7 +1058,7 @@ Equip {2}",2,Chuck Lukacs,7a\9
 Spear of the General,HRO,Art,Hero Artifact — Equipment,,,R,,"Equipped creature has protection from enchantments.
 Equipped creature gets +2/+0 and has first strike.
 Equip {2}",7,Chuck Lukacs,7a\9
-Spear of the General,HRO,Art,Hero Artifact — Equipment,,,R,,"Whenever equipped creature deals damage, put a 1/1 white Soldier token on the battlefield.
+Spear of the General,HRO,Art,Hero Artifact — Equipment,,,R,,"Whenever equipped creature deals damage, create a 1/1 white Soldier token.
 Equipped creature gets +2/+0 and has first strike.
 Equip {2}",8,Chuck Lukacs,7a\9
 Spear of the General,HRO,Art,Hero Artifact — Equipment,,,R,,"Whenever equipped creature deals damage, put a +1/+1 counter on it.
@@ -1027,4 +1085,4 @@ Your maximum hand size is increased by 1.",,Chuck Lukacs,6\9
 The Warmonger,HRO,R,Hero,,,U,,Exile The Warmonger: Creatures you control get +2/+0 and gain haste until end of turn.,,Chuck Lukacs,4d\9
 The Warrior,HRO,G,Hero,,,C,,{T}: Target creature you control gains haste until end of turn.,,Chuck Lukacs,1d\9
 Giant Adephage,GTC,G,Token Creature — Insect,7\7,,T,{5}{G}{G},"Trample
-Whenever Giant Adephage deals combat damage to a player, put a token onto the battlefield that’s a copy of Giant Adephage.",token,Christine Choi,121\249
+Whenever Giant Adephage deals combat damage to a player, create a token that’s a copy of Giant Adephage.",token,Christine Choi,121\249

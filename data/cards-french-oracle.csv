@@ -283,7 +283,7 @@ Guerrilla Tactics,Tactiques de guérilla,Éphémère,"Les Tactiques de guérilla
 Quand un sort ou une capacité contrôlés par un adversaire vous contraint à vous défausser des Tactiques de guérilla, les Tactiques de guérilla infligent 4 blessures à une cible, créature ou joueur."
 Gustha's Scepter,Sceptre de Gustha,,
 Hail Storm,Orage de grêle,Éphémère,L'Orage de grêle inflige 2 blessures à chaque créature attaquante et 1 blessure à vous et à chaque créature que vous contrôlez.
-Heart of Yavimaya,COEur de la Yavimaya,,
+Heart of Yavimaya,Cœur de la Yavimaya,,
 Helm of Obedience,Heaume d'obéissance,,
 Inheritance,Héritage,,
 Insidious Bookworms,Anobies insidieux,,
@@ -7879,7 +7879,7 @@ Erg Raiders,Pillards de l'erg,,
 Errantry,Lutte solitaire,,
 Eternal Warrior,Guerrier éternel,,
 Evil Presence,Présence malveillante,,
-Eye for an Eye,OEil pour OEil,,
+Eye for an Eye,Œil pour Œil,,
 Feedback,Rétroaction,,
 Feldon's Cane,Canne de Feldonn,Artefact,"{T}, retirez la Canne de Feldonn de la partie : Mélangez votre cimetière dans votre bibliothèque."
 Feroz's Ban,Bannissement selon Feroz,Artefact,Les sorts de créatures coûtent {2} de plus à jouer.
@@ -12501,7 +12501,9 @@ Prized Elephant,Éléphant prisé,Créature : éléphant,"L'Éléphant prisé ga
 {G} : L'Éléphant prisé acquiert le piétinement jusqu'à la fin du tour. #(Si cette créature attribue suffisamment de blessures de combat à ses bloqueurs pour les détruire, vous pouvez faire qu'elle attribue le reste de ses blessures au joueur ou au planeswalker défenseur.)#"
 Public Execution,Exécution publique,Éphémère,Détruisez une créature ciblée qu'un adversaire contrôle. Chaque autre créature que ce joueur contrôle gagne -2/-0 jusqu'à la fin du tour.
 Quirion Dryad,Dryade quirionaise,Créature : dryade,"À chaque fois que vous jouez un sort blanc, bleu, noir ou rouge, mettez un marqueur +1/+1 sur la Dryade quirionaise."
-Rancor,RancOEur,,
+Rancor,Rancœur,Enchantement : aura,"Enchanter : créature
+La créature enchantée gagne +2/+0 et a le piétinement.
+Quand la Rancœur est mise dans un cimetière depuis le champ de bataille, renvoyez la Rancœur dans la main de son propriétaire."
 Ranger's Path,Chemin du ranger,Rituel,Cherchez dans votre bibliothèque jusqu'à deux cartes de forêt et mettez-les sur le champ de bataille engagées. Mélangez ensuite votre bibliothèque.
 Reckless Brute,Brute téméraire,Créature : ogre et guerrier,"Célérité #(Cette créature peut attaquer et {T} dès le tour où elle arrive sous votre contrôle.)#
 La Brute téméraire attaque à chaque tour si possible."
@@ -14957,7 +14959,7 @@ Defiant Vanguard,Avant-garde provocante,Créature : humain et rebelle,"Quand l'A
 Divining Witch,Sorcier devin,,
 Downhill Charge,Charge en pente,,
 Ensnare,Enchevêtrement,,
-Eye of Yawgmoth,OEil de yaugzebul,,
+Eye of Yawgmoth,Œil de yaugzebul,,
 Fanatical Devotion,Dévotion fanatique,,
 Flame Rift,Ride flammes,,
 Flint Golem,Golem de silex,,
@@ -15055,7 +15057,7 @@ La créature enchantée gagne +1/+1 et elle ne peut être bloquée que par des c
 Trickster Mage,Mage escroc,,
 Voice of Truth,Voix de la Vérité,,
 Volrath the Fallen,Wöhlrajh le déchu,,
-Wandering Eye,OEil vagabond,,
+Wandering Eye,Œil vagabond,,
 Wild Mammoth,Mammouth sauvage,,
 Woodripper,Eventrebois,,
 Alloy Myr,Myr d'alliage,Créature—artefact : myr,{T} : Ajoutez un mana de la couleur de votre choix à votre réserve.
@@ -21927,7 +21929,7 @@ Damping Engine,Niveleur,,
 Darkwatch Elves,Gardes-sombre elfes,,
 Defender of Chaos,Défenseur du Chaos,,
 Defender of Law,Défenseur de la Loi,,
-Defense of the Heart,Défense du cOEur de la forêt,,
+Defense of the Heart,Défense du cœur de la forêt,,
 Deranged Hermit,Ermite fêlé,,
 Devout Harpist,Harpiste fervente,,
 Eviscerator,Éviscérateur,,
@@ -22384,7 +22386,7 @@ Goblin Grenadiers,Grenadiers gobelins,,
 Goblin Vandal,Vandale gobelin,,
 Harvest Wurm,Guivre des moissons,,
 Haunting Misery,Douleur obsédante,,
-Heart of Bogardan,COEur du Bogardân,,
+Heart of Bogardan,Cœur du Bogardân,,
 Heat Stroke,Coup de chaleur,,
 Hurloon Shaman,Shamane de l'Hurloon,,
 Infernal Tribute,Hommage infernal,,

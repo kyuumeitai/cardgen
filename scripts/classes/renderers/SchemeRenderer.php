@@ -58,6 +58,12 @@ class SchemeRenderer extends CardRenderer {
 		echo '.';
 
 		// Set and rarity.
+		if ($card->set == 'ARS') {
+			$card->setDisplaySet('ARC');
+		}
+		else if ($card->set == 'ANS') {
+			$card->setDisplaySet('ANN');
+		}
 		$rarityLeft = $this->drawRarity($canvas, $card->getDisplayRarity(), $card->getDisplaySet(), $settings['rarity.right'], $settings['rarity.center.y'], $settings['rarity.height'], $settings['rarity.width'], false);
 
 		// Card title.

@@ -2,7 +2,74 @@
 Notable changes will be documented in this file.
 
 ##[Unreleased]
-Working on getting non-english flavor text as random if no translation was found for set
+
+##[9.0.18]
+Corrected error in M15Renderer returning empty array instead of null
+Added new style PT boxes to conspiracy frames
+Corrected position of vehicle PT box
+Updated timeshifted PT box for M15
+Fixed bug adding additional space if $chunk->value == ' '
+Added C16 english
+Corrected some XLHQ issues
+
+##[9.0.17]
+Corrected the token picture placement in M15 frames.
+Corrected type and expansion symbol alignment in M15 frames
+Emblem title EMBLEM is now larger
+Added Clash Pack 3
+Corrected regex for decklist to be able to recognize more picture formats
+Added Giant Adephage token
+Corrected some tokens with the wrong data
+Added Conspiracy - Take the Crown
+Fixed a couple of promo overrides
+Added Duel Deck Anthology
+Corrected tokens that have token picture to not be suffixed with (token)
+Added M15 level frames and renderer
+Moved watermarks (clan, guild, phyrexian) to watermarks folder
+Added new frames for M15 style conspiracy and draft matters cards
+Updated M15Renderer for new conspiracy frames
+Added The Monarch token with frame and render support
+Added English CN2 tokens
+Added English V16
+Corrected wrong frame for Dark Depths
+Fixed DecklistRenderer for large deck legality
+Updated Banned/Restricted and sets in formats.txt
+Added option to have picture number with the name (e.g. Forest1 instead of Forest (1)) card.short.pic is the option in config.txt
+Added CN2 draft matters and conspiracy cards to Z08 - Draft Matters-Conspiracy.mwDeck
+Added option to use full XLHQ cards for art in eighth, m15, and preeighth
+Updated language files with EMN
+Updated sets with new product
+Updated all renderers to be able to use XLHQ images
+Updated config-m15planeswalker.txt to have XLHQ settings
+Added promo set text to M15 and Eighth cards
+Added tombstone to select eighth promo cards
+Removed Artist from titleToAltSet.csv, replaced with M15 display set
+M15 display set on promo cards should overwrite for correct card set on M15 set at bottom of card
+Added energy symbol {E} to symbols for KLD cards
+Corrected CHAOS symbol with more accurate CHAOS symbol
+Added Portal power and toughness symbols and option to toggle.
+Added nyxstars frame for eighth
+Added new frames for Expeditions and BFZ Full art land
+Added DDR set
+Corrected  titleToLocalizedFlavors in CardDB to properly collect non-English flavor texts for randomization
+Corrected size of BFZ Full art land mana symbol
+Added Vehicle frames
+Corrected some coloring on futureshifted cards
+Fixed token with flavor having wrong frame
+Localized cards without flavor shouldn't get random flavor any more with card.localized.flavor.random active
+corrected one of the EMN zombie
+Added EMN, CN2,EMA, and V16 tokens
+Added EMN and EMA Emblems
+Added corrected EXP frames
+Corrected M15 transform text over p/t
+Fixed PT images
+Changed "Put token onto the battlefield" to "Create token" in english
+added CD2
+Corrected C14 Whale token to have proper text.
+Changed tokens to current Create wording as opposed to put on batlefield.
+Changed the way TransformRenderer looks for the 2nd pt
+Added vector MPS_KLD symbol
+Masterpiece series cards should have MPS_(SET) and the program now looks for that properly
 
 ##[9.0.16]
 Changed EMA set symbols to vector rendered versions.

@@ -1,0 +1,44 @@
+
+[prompt]
+
+[card generation]
+card.artist.gears = 0
+
+[fonts]
+font.text = 20, MPlantin.ttf/MPlantinI.ttf, leading:45
+font.text.russian = 20, MinionPro-Cn.ttf/MinionPro-CnItalic.ttf, leading:45
+font.text.japanese = 14, mtgrulej.ttf, leading:30
+font.artist = 18, BelerenBoldSmallCaps.ttf, centerX:true
+font.copyright = 9, MPlantin.ttf, centerX:true
+font.title = 26, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf, centerX:true
+font.title.russian = 26, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf>MatrixB.ttf/MatrixBI.ttf, centerX:true
+font.title.japanese = 26, mtgnamej.ttf, centerX:true
+font.type = 22, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf, centerX:false
+font.type.russian = 22, MinionPro-BoldCn.ttf, centerX:false
+font.type.japanese = 22, mtgnamej.ttf, centerX:false
+
+[layout]
+title.x = 368
+title.y = 89
+art.top = 0
+art.left = 0
+art.bottom = 1050
+art.right = 736
+art.xlhq.top = -27
+art.xlhq.left = -28
+art.xlhq.bottom = 1077
+art.xlhq.right = 765
+type.x = 110
+type.y = 718
+rarity.center.y = 708
+rarity.right = 630
+rarity.height = 32
+rarity.width = 0
+text.top = 728
+text.left = 113
+text.bottom = 956
+text.right = 628
+artist.x = 368
+artist.y = 994
+copyright.x = 368
+copyright.y = 1014

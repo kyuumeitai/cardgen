@@ -18,6 +18,7 @@ require_once 'version.php';
 set_time_limit(0);
 ini_set('memory_limit', '1024M');
 srand((float) microtime() * 10000000);
+date_default_timezone_set("America/Los_Angeles");
 
 $config = parse_ini_file('config/config.txt', false);
 
@@ -109,12 +110,12 @@ function csvToArray ($fileName) {
 	return $array;
 }
 
-function csvToArray3 ($fileName) {
+function csvToArray13 ($fileName) {
 	$array = array();
 	$file = fopen_utf8($fileName, 'r');
 	if (!$file) error('Unable to open file: ' . $fileName);
 	while (($data = fgetcsv($file, 6000, ',')) !== FALSE)
-		$array[(string)strtolower($data[0])] = array(trim($data[1]), isset($data[2]) ? trim($data[2]) : "");
+		$array[(string)strtolower($data[0])] = array(trim($data[1]), isset($data[2]) ? trim($data[2]) : "", isset($data[3]) ? trim($data[3]) : "", isset($data[4]) ? trim($data[4]) : "", isset($data[5]) ? trim($data[5]) : "", isset($data[6]) ? trim($data[6]) : "", isset($data[7]) ? trim($data[7]) : "", isset($data[8]) ? trim($data[8]) : "", isset($data[9]) ? trim($data[9]) : "", isset($data[10]) ? trim($data[10]) : "", isset($data[11]) ? trim($data[11]) : "", isset($data[12]) ? trim($data[12]) : "", isset($data[13]) ? trim($data[13]) : "");
 	fclose($file);
 	return $array;
 }
@@ -515,6 +516,23 @@ function mb_wordwrap($string, $width = 75, $break = "\n", $cut = false) {
   }
 
   return $result;
+}
+
+function imagettftextSp($image, $size, $angle, $x, $y, $color, $font, $text, $spacing = 0) {
+    if ($spacing == 0) {
+        imagettftext($image, $size, $angle, $x, $y, $color, $font, $text);
+    } else {
+        $temp_x = $x;
+        $temp_y = $y;
+        //to avoid special char problems
+        $char_array = preg_split('//u',$text, -1, PREG_SPLIT_NO_EMPTY);
+        foreach($char_array as $char) {
+            imagettftext($image, $size, $angle, $temp_x, $temp_y, $color, $font, $char);
+            $bbox = imagettfbbox($size, 0, $font, $char);
+            $temp_x += cos(deg2rad($angle)) * ($spacing + ($bbox[2] - $bbox[0]));
+            $temp_y -= sin(deg2rad($angle)) * ($spacing + ($bbox[2] - $bbox[0]));
+        }
+    }
 }
 
 ?>

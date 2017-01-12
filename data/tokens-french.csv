@@ -23,6 +23,7 @@ Ape,Grand singe,PLC,Créature-jeton : grand singe,,,
 "Ashaya, the Awoken World","Ashaya, le Monde éveillé",ORI,Créature-jeton légendaire : élémental,,,
 Assassin,Assassin,RTR,Créature-jeton : assassin,"À chaque fois que cette créature inflige des blessures de combat à un joueur, ce joueur perd la partie.",,
 Assassin,Assassin,DDM,Créature-jeton : assassin,"À chaque fois que cette créature inflige des blessures de combat à un joueur, ce joueur perd la partie.",,
+Assassin,Assassin,CN2,Créature-jeton : assassin,"Célérité, contact mortel",,
 Assembly-Worker,Ouvrier spécialisé,TSP,Créature-artefact-jeton : ouvrier spécialisé,,,token
 Avatar,Avatar,M11,Créature-jeton : avatar,La force et l'endurance de cette créature sont chacune égale à votre total de points de vie.,,
 Avatar,Avatar,LRW,Créature-jeton : avatar,La force et l'endurance de cette créature sont chacune égale à votre total de points de vie.,,
@@ -41,6 +42,8 @@ Bear,Ours,KTK,Créature-jeton : ours,,,
 Bear,Ours,ODY,Créature-jeton : ours,,"La dernière chose dont un braconnier dans la forêt de Krosan entend est le son brutal de griffes déchirant la chair.",
 Bear,Ours,LGN,Créature-jeton : ours,,"Les ours sont vicieux quand ils ne dorment pas. Celui-ci n'a pas dormi depuis des lustres.",
 Beast,Bête,M14,Créature-jeton : bête,,,
+Beast,Bête,KLD,Créature-jeton : bête,,,
+Beast,Bête,CN2,Créature-jeton : bête,,,
 Beast,Bête,M15,Créature-jeton : bête,Contact mortel,,1
 Beast,Bête,M13,Créature-jeton : bête,,,
 Beast,Bête,M11,Créature-jeton : bête,,,
@@ -96,6 +99,7 @@ Caribou,Caribou,5ED,Créature-jeton : caribou,,,
 Caribou,Caribou,IA,Créature-jeton : caribou,,,
 Carnivore,Carnivore,TMP,Créature-jeton : bête,,,
 Carnivore,Carnivore,C13,Créature-jeton : bête,,,
+Carnivore,Carnivore,EMA,Créature-jeton : bête,,,
 Cat,Chat,MBS,Créature-jeton : chat,,,
 Cat,Chat,M14,Créature-jeton : chat,,,
 Cat,Chat,SOM,Créature-jeton : chat,,,
@@ -120,20 +124,23 @@ Cleric,Clerc,THS,Créature-enchantement jeton : clerc,,,
 Cleric,Clerc,GTC,Créature-jeton : clerc,"{3}{W}{B}{B}, {T}, sacrifiez cette créature : Renvoyez sur le champ de bataille une carte nommée Ange du pacte de mort depuis votre cimetière.",,
 Cloud Sprite,Farfadet des nuages,FUT,Créature-jeton : peuple fée,"Vol
 Le Farfadet des nuages ne peut bloquer que les créatures avec le vol.",,
-Clue,Indice,SOI,Artefact-jeton : Indice,"{2},Sacrifiez cet artefact, piochez une carte.","« Leur chant se faisait plus bruyant, mais la marée montait toujours. »
+-Clue,Indice,SOI,Artefact-jeton : Indice,"{2},Sacrifiez cet artefact, piochez une carte.","« Leur chant se faisait plus bruyant, mais la marée montait toujours. »
 —Journal de Tamiyo",1
-Clue,Indice,SOI,Artefact-jeton : Indice,"{2},Sacrifiez cet artefact, piochez une carte.","« Pour chaque question, il y a 3 réponces. »
+-Clue,Indice,SOI,Artefact-jeton : Indice,"{2},Sacrifiez cet artefact, piochez une carte.","« Pour chaque question, il y a 3 réponces. »
 —Journal de Tamiyo",2
-Clue,Indice,SOI,Artefact-jeton : Indice,"{2},Sacrifiez cet artefact, piochez une carte.","« Les anges vont de pair avec les mystères. »
+-Clue,Indice,SOI,Artefact-jeton : Indice,"{2},Sacrifiez cet artefact, piochez une carte.","« Les anges vont de pair avec les mystères. »
 —Journal de Tamiyo",3
-Clue,Indice,SOI,Artefact-jeton : Indice,"{2},Sacrifiez cet artefact, piochez une carte.","« Se rapeller de faire chercher le manoir de Markov à Jenrik. »
+-Clue,Indice,SOI,Artefact-jeton : Indice,"{2},Sacrifiez cet artefact, piochez une carte.","« Se rapeller de faire chercher le manoir de Markov à Jenrik. »
 —Journal de Tamiyo",4
-Clue,Indice,SOI,Artefact-jeton : Indice,"{2},Sacrifiez cet artefact, piochez une carte.","« Les symboles — quand ont-ils changés ? »
+-Clue,Indice,SOI,Artefact-jeton : Indice,"{2},Sacrifiez cet artefact, piochez une carte.","« Les symboles — quand ont-ils changés ?. »
 —Journal de Tamiyo",5
-Clue,Indice,SOI,Artefact-jeton : Indice,"{2},Sacrifiez cet artefact, piochez une carte.","« Pensez à cela: le berger tourne autour de son troupeau. Pourquoi ? »
+-Clue,Indice,SOI,Artefact-jeton : Indice,"{2},Sacrifiez cet artefact, piochez une carte.","« Pensez à cela: le berger tourne autour de son troupeau. Pourquoi ? »
 —Journal de Tamiyo",6
 Construct,Construction,WWK,Créature-artefact-jeton : construction,Piétinement,,
 Construct,Construction,CNS,Créature-artefact-jeton : construction,Défenseur,,
+Construct,Construction,CN2,Créature-artefact-jeton : construction,Défenseur,,
+Construct,Construction,KLD,Créature-artefact-jeton : construction,,,1
+Construct,Construction,KLD,Créature-artefact-jeton : construction,,,2
 Demon,Démon,ORI,Créature-jeton : démon,Vol,,
 Demon,Démon,MRD,Créature-jeton : démon,Vol,,
 Demon,Démon,PR3,Créature-jeton : démon,Vol,,
@@ -155,6 +162,7 @@ Djinn,Djinn,5ED,Créature-artefact-jeton : djinn,Vol,,
 Djinn,Djinn,6ED,Créature-artefact-jeton : djinn,Vol,,
 Djinn Monk,Djinn et Moine,DTK,Créature-jeton : djinn et moine,Vol,,
 Dragon,Dragon,ARC,Créature-jeton : dragon,Vol,,
+Dragon,Dragon,CN2,Créature-jeton : dragon,Vol,,
 Dragon,Dragon,ONS,Créature-jeton : dragon,Vol,,
 Dragon,Dragon,PR2,Créature-jeton : dragon,Vol,"Les étoiles brillent, le vent souffle, les dragons ragent",
 Dragon,Dragon,MMA,Créature-jeton : dragon,Vol,,
@@ -164,6 +172,8 @@ Dragon,Dragon,WWK,Créature-jeton : dragon,Vol,,
 Dragon,Dragon,SCG,Créature-jeton : dragon,Vol,,
 Dragon,Dragon,RTR,Créature-jeton : dragon,Vol,,
 Dragon,Dragon,M14,Créature-jeton : dragon,"Vol
+{R} : Cette créature gagne +1/+0 jusqu'à la fin du tour.",,
+Dragon,Dragon,EMA,Créature-jeton : dragon,"Vol
 {R} : Cette créature gagne +1/+0 jusqu'à la fin du tour.",,
 Dragon,Dragon,ARB,Créature-jeton : dragon,"Vol, dévorement 2",,
 Dragon,Dragon,ALA,Créature-jeton : dragon,Vol,,
@@ -177,7 +187,9 @@ Drake,Drakôn,C15,Créature-jeton : drakôn,,,
 Drake,Drakôn,M13,Créature-jeton : drakôn,,,
 Eldrazi,Eldrazi,HOP,Créature-jeton : eldrazi,,,
 Eldrazi,Eldrazi,BFZ,Créature-jeton : eldrazi,,,
+Eldrazi Horror,Horreur Eldrazi,EMN,Créature-jeton : Horreur et Eldrazi,,,
 Eldrazi Scion,Eldrazi et Scion,OGW,Créature-jeton : eldrazi et scion,Sacrifiez cette créature : Ajoutez {C} à votre réserve.,,3
+Eldrazi Scion,Eldrazi et Scion,DDR,Créature-jeton : eldrazi et scion,Sacrifiez cette créature : Ajoutez {C} à votre réserve.,,
 Eldrazi Scion,Eldrazi et Scion,OGW,Créature-jeton : eldrazi et scion,Sacrifiez cette créature : Ajoutez {C} à votre réserve.,,4
 Eldrazi Scion,Eldrazi et Scion,OGW,Créature-jeton : eldrazi et scion,Sacrifiez cette créature : Ajoutez {C} à votre réserve.,,1
 Eldrazi Scion,Eldrazi et Scion,OGW,Créature-jeton : eldrazi et scion,Sacrifiez cette créature : Ajoutez {C} à votre réserve.,,2
@@ -200,6 +212,8 @@ Elemental,Élémental,RTR,Créature-jeton : élémental,Vigilance,,
 Elemental,Élémental,ROE,Créature-jeton : élémental,,,
 Elemental,Élémental,ONS,Créature-jeton : élémental,Piétinement,,
 Elemental,Élémental,MMA,Créature-jeton : élémental,,,
+Elemental,Élémental,EMA,Créature-jeton : élémental,,,1
+Elemental,Élémental,EMA,Créature-jeton : élémental,Vol,,2
 Elemental,Élémental,M14,Créature-jeton : élémental,,,2
 Elemental,Élémental,MRD,Créature-jeton : élémental,Célérité,,
 Elemental,Élémental,ZEN,Créature-jeton : élémental,Célérité,,
@@ -239,6 +253,7 @@ Elephant,Éléphant,DDD,Créature-jeton : éléphant,,,
 Elephant,Éléphant,VMA,Créature-jeton : éléphant,,,
 Elephant,Éléphant,WWK,Créature-jeton : éléphant,,,
 Elephant,Éléphant,C15,Créature-jeton : éléphant,,,
+Elephant,Éléphant,EMA,Créature-jeton : éléphant,,,
 Elephant,Éléphant,C13,Créature-jeton : éléphant,,,
 Elephant,Éléphant,CNS,Créature-jeton : éléphant,,,
 Elephant,Éléphant,CMA,Créature-jeton : éléphant,,,
@@ -255,6 +270,7 @@ Elephant,Éléphant,ROE,Créature-jeton : éléphant,,,
 Elephant,Éléphant,TSP,Créature-jeton : éléphant,,,
 Elf Druid,Elfe et Druide,C14,Créature-jeton : elfe et druide,{T} : Ajoutez {G} à votre réserve.,,
 Elf Warrior,Elfe et guerrier,DPA,Créature-jeton : elfe et guerrier,,,
+Elf Warrior,Elfe et guerrier,EMA,Créature-jeton : elfe et guerrier,,,
 Elf Warrior,Elfe et guerrier,LRW,Créature-jeton : elfe et guerrier,,,
 Elf Warrior,Elfe et guerrier,ORI,Créature-jeton : elfe et guerrier,,,
 Elf Warrior,Elfe et guerrier,DDA,Créature-jeton : elfe et guerrier,,,
@@ -282,6 +298,7 @@ Germ,Germe,C14,Créature-jeton : germe,,,
 Germ,Germe,MM2,Créature-jeton : germe,,,
 Germ,Germe,C15,Créature-jeton : germe,,,
 Giant,Géant,FUT,Créature-jeton : géant,,,
+Giant Adephage,Adéphage géant,GTC,Créature-jeton : insecte,"Piétinement À chaque fois que l'Adéphage géant inflige des blessures de combat à un joueur, mettez sur le champ de bataille un jeton qui est une copie de l'Adéphage géant.",,token
 Giant Chicken,Poulet et Géant,UGL,Créature-jeton : poulet et géant,,,
 Giant Teddy Bear,Ours en peluche géant,UNH,Créature-jeton : ours en peluche géant,Cette créature est rose.,,
 Giant Warrior,Géant et guerrier,MMA,Créature-jeton : géant et guerrier,,,
@@ -293,6 +310,8 @@ Goat,Chèvre,C14,Créature-jeton : chèvre,,,
 Goat,Chèvre,M14,Créature-jeton : chèvre,,,
 Goat,Chèvre,M13,Créature-jeton : chèvre,,,
 Goblin,Gobelin,RAV,Créature-jeton : gobelin,,,
+Goblin,Gobelin,CN2,Créature-jeton : gobelin,Cette créature ne peut pas bloquer,,
+Goblin,Gobelin,EMA,Créature-jeton : gobelin,,,
 Goblin,Gobelin,RTR,Créature-jeton : gobelin,,,
 Goblin,Gobelin,SOM,Créature-jeton : gobelin,,,
 Goblin,Gobelin,ORI,Créature-jeton : gobelin,,,
@@ -335,6 +354,7 @@ Goblin Soldier,Gobelin et Soldat,AP,Créature-jeton : gobelin et soldat,,"Ils s'
 Goblin Soldier,Gobelin et Soldat,VMA,Créature-jeton : gobelin et soldat,,,
 Goblin Soldier,Gobelin et Soldat,PR1,Créature-jeton : gobelin et soldat,,"Ils s'interrogent rarement sur leurs ordres. Bien sûr, ils les comprennent rarement.",
 Goblin Soldier,Gobelin et Soldat,EVE,Créature-jeton : gobelin et soldat,,,
+Goblin Soldier,Gobelin et Soldat,EMA,Créature-jeton : gobelin et soldat,,,
 Goblin Warrior,Gobelin et guerrier,SHM,Créature-jeton : gobelin et guerrier,,,
 Gold,Or,C15,Artefact-jeton,Sacrifiez cet artefact : Ajoutez un mana de la couleur de votre choix à votre réserve.,,
 Gold,Or,JOU,Artefact-jeton,Sacrifiez cet artefact : Ajoutez un mana de la couleur de votre choix à votre réserve.,,
@@ -374,9 +394,11 @@ Hound,Chien de chasse,TMP,Créature-jeton : chien de chasse,,,
 Human,Humain,AVR,Créature-jeton : humain,Célérité,,2
 Human,Humain,DKA,Créature-jeton : humain,,,
 Human,Humain,FNM,Créature-jeton : humain,,,
+Human,Humain,EMN,Créature-jeton : humain,,,
 Human,Humain,AVR,Créature-jeton : humain,,,1
-Human Cleric,Humain et Clerc,SOI,Créature-jeton : Humain et Clerc,,,
-Human Soldier,Humain et Soldat,SOI,Créature-jeton : Humain et Soldat,,,
+Human Cleric,Humain et Clerc,SOI,Créature-jeton : humain et clerc,,,
+Human Soldier,Humain et Soldat,SOI,Créature-jeton : humain et soldat,,,
+Human Wizard,Sorcier et Humain,EMN,Créature-jeton : humain et sorcier,,,
 Hydra,Hydre,JOU,Créature-jeton : hydre,,,
 Illusion,Illusion,MMA,Créature-jeton : illusion,Vol,,
 Illusion,Illusion,ZEN,Créature-jeton : illusion,,,
@@ -436,10 +458,12 @@ Land Mine,Mine terrestre,M15,Artefact-jeton,"{R}, sacrifiez cet artefact : Cet a
 Lightning Rager,Furie d'éclairs,C15,Créature-jeton : élémental,"Piétinement, Célérité
 Au début de l'étape de fin, sacrifiez cette créature.",,
 Lizard,Lézard,ARB,Créature-jeton : lézard,,,
+Lizard,Lézard,CN2,Créature-jeton : lézard,,,
 Llanowar Elves,Elfes de Llanowar,FUT,Créature-jeton : elfe et druide,{T} : Ajoutez {G} à votre réserve.,,
 Manifest,Manifestez,FRF,Créature,"#Vous pouvez couvrir une face cachée manifeste créature avec cette carte de rappel.
 Une créature manifestée peut être remis pour son coût de mana. Une carte face vers le bas peut également être retourné face visible pour son coût de mue.#",,
 Marit Lage,Marit Lage,CSP,Créature-jeton légendaire : avatar,"Vol, indestructible",,
+Marit Lage,Marit Lage,V16,Créature-jeton légendaire : avatar,"Vol, indestructible","Marit Lage repose rêveuse, mais pas morte. Quand se réveillera-t-elle de sa prison glaciale ?",
 Merfolk,Ondin,ZEN,Créature-jeton : ondin,,,
 Merfolk Wizard,Ondin et Sorcier,LRW,Créature-jeton : ondin et sorcier,,,
 Merfolk Wizard,Ondin et Sorcier,MOR,Créature-jeton : ondin et sorcier,,,
@@ -562,8 +586,12 @@ Serf,Serf,5ED,Créature-jeton : serf,,,
 Serf,Serf,HML,Créature-jeton : serf,,,
 Serf,Serf,6ED,Créature-jeton : serf,,,
 Serf,Serf,TSP,Créature-jeton : serf,,,
+Serf,Serf,EMA,Créature-jeton : serf,,,
 Shapeshifter,Changeforme,C15,Créature-jeton : changeforme,Changelin #(Cette carte a tous les types de créature à tout moment.)#,,
 Shapeshifter,Changeforme,LRW,Créature-jeton : changeforme,Changelin #(Cette carte a tous les types de créature à tout moment.)#,,
+Servo,Servo,KLD,Créature-artefact-jeton : Servo,,,1
+Servo,Servo,KLD,Créature-artefact-jeton : Servo,,,2
+Servo,Servo,KLD,Créature-artefact-jeton : Servo,,,3
 Sheep,Mouton,VIS,Créature-jeton : mouton,,,
 Rabid Sheep,Moutons Enragés,UGL,Créature-jeton : mouton,,,
 Sheep,Mouton,TSP,Créature-jeton : mouton,,,
@@ -602,6 +630,9 @@ Soldier,Soldat,SCG,Créature-jeton : soldat,,,
 Soldier,Soldat,ONS,Créature-jeton : soldat,,"Le devoir les rassemble.
 La fidélité les maintient ensemble.",
 Soldier,Soldat,ORI,Créature-jeton : soldat,,,
+Soldier,Soldat,CN2,Créature-jeton : soldat,,,1
+Soldier,Soldat,CN2,Créature-jeton : soldat,Défenseur,,2
+Soldier,Soldat,EMA,Créature-jeton : soldat,,,
 Soldier,Soldat,PLC,Créature-jeton : soldat,,,
 Soldier,Soldat,SOM,Créature-jeton : soldat,,,
 Soldier,Soldat,UGL,Créature-jeton : soldat,,,
@@ -641,15 +672,19 @@ Spider,Araignée,MMA,Créature-jeton : araignée,Portée,,
 Spider,Araignée,SHM,Créature-jeton : araignée,Portée,,
 Spider,Araignée,C15,Créature-jeton : araignée,Portée,,
 Spider,Araignée,ISD,Créature-jeton : araignée,Portée,,
+Spider,Araignée,EMN,Créature-jeton : araignée,Portée,,
 Spider,Araignée,JOU,Créature-enchantement jeton : araignée,Portée,,
 Spike,Épix,STH,Créature-jeton : épix,,,
 Spike,Épix,TPR,Créature-jeton : épix,,,
 Spirit,Esprit,PR1,Créature-jeton : esprit,Vol,"La joie de la renaissance éclipse les ténèbres de la mort",
 Spirit,Esprit,PR4,Créature-jeton : esprit,,,
 Spirit,Esprit,SHM,Créature-jeton : esprit,Vol,,
+Spirit,Esprit,CN2,Créature-jeton : esprit,Vol,,
 Spirit,Esprit,SOI,Créature-jeton : esprit,Vol,,
 Spirit,Esprit,MM2,Créature-jeton : esprit,Vol,,
 Spirit,Esprit,MIR,Créature-jeton : esprit,,,
+Spirit,Esprit,EMA,Créature-jeton : esprit,,,1
+Spirit,Esprit,EMA,Créature-jeton : esprit,Vol,,2
 Spirit,Esprit,MMQ,Créature-jeton : esprit,,,
 Spirit,Esprit,SOK,Créature-jeton : esprit,,,
 Spirit,Esprit,AVR,Créature-jeton : esprit,Vol,,2
@@ -706,6 +741,8 @@ Tetravite,Tetravite,4ED,Créature-artefact-jeton : tetravite,"Vol
 Cette créature ne peut pas être enchantée.",,
 Tetravite,Tetravite,AQ,Créature-artefact-jeton : tetravite,"Vol
 Cette créature ne peut pas être enchantée.",,
+The Monarch,Le Monarque,CN2,,"Au début de votre étape de fin, piochez une carte.
+À chaque fois qu'une créature vous inflige des blessures de combat, son contrôleur devient le monarque.",,
 Thopter,Mécanoptère,ORI,Créature-artefact-jeton : mécanoptère,Vol,,1
 Thopter,Mécanoptère,MBS,Créature-artefact-jeton : mécanoptère,Vol,,
 Thopter,Mécanoptère,TPR,Créature-artefact-jeton : mécanoptère,Vol,,
@@ -714,6 +751,9 @@ Thopter,Mécanoptère,ALA,Créature-artefact-jeton : mécanoptère,Vol,,
 Thopter,Mécanoptère,VMA,Créature-artefact-jeton : mécanoptère,Vol,,
 Thopter,Mécanoptère,EXO,Créature-artefact-jeton : mécanoptère,Vol,,
 Thopter,Mécanoptère,C13,Créature-artefact-jeton : mécanoptère,Vol,,
+Thopter,Mécanoptère,KLD,Créature-artefact-jeton : mécanoptère,Vol,,1
+Thopter,Mécanoptère,KLD,Créature-artefact-jeton : mécanoptère,Vol,,2
+Thopter,Mécanoptère,KLD,Créature-artefact-jeton : mécanoptère,Vol,,3
 Thrull,Srâne,5ED,Créature-jeton : srâne,,,
 Thrull,Srâne,TSP,Créature-jeton : srâne,,,
 Thrull,Srâne,C13,Créature-jeton : srâne,,,
@@ -742,6 +782,7 @@ Vampire,Vampire,ZEN,Créature-jeton : vampire,,,
 Voja,Voja,RAV,Créature-jeton légendaire : loup,,,
 Wall,Mur,MIR,Créature-artefact-jeton : mur,Défenseur,,
 Wall,Mur,MIR,Créature-jeton : mur,Défenseur,,
+Wall,Mur,EMA,Créature-jeton : mur,Défenseur,,
 Warrior,Guerrier,FRF,Créature-jeton : guerrier,,,
 Warrior,Guerrier,LGE,Créature-jeton : guerrier,,,
 Warrior,Guerrier,KTK,Créature-jeton : guerrier,,,2
@@ -773,7 +814,7 @@ Wolf,Loup,MM2,Créature-jeton : loup,,,
 Wolf,Loup,PRE,Créature-jeton : loup,,,
 Wolf,Loup,EVE,Créature-jeton : loup,,,
 Wolf,Loup,SOI,Créature-jeton : loup,,,
-Wolves of the Hunt,Loups de chasse,LEG,Créature-jeton : loups de chasse, Regroupement avec d'autres créatures nommées Loups de chasse,,
+Wolves of the Hunt,Loups de chasse,LEG,Créature-jeton : loup de chasse, regroupement avec d'autres créatures nommées Loups de chasse,,
 Wood,Bois,MIR,Créature-jeton : mur,Défenseur,,
 Worm,Ver,EVE,Créature-jeton : ver,,,
 Worm,Ver,MM2,Créature-jeton : ver,,,
@@ -785,6 +826,7 @@ Wurm,Guivre,VMA,Créature-jeton : guivre,Piétinement,,
 Wurm,Guivre,FNM,Créature-jeton : guivre,,,
 Wurm,Guivre,FUT,Créature-jeton : guivre,,,
 Wurm,Guivre,GPT,Créature-jeton : guivre,,,
+Wurm,Guivre,EMA,Créature-jeton : guivre,,,
 Wurm,Guivre,DGM,Créature-jeton : guivre,Piétinement,,
 Wurm,Guivre,AP,Créature-jeton : guivre,Piétinement,,
 Wurm,Guivre,C14,Créature-artefact-jeton : guivre,Contact mortel,,1
@@ -799,6 +841,8 @@ Wurm,Guivre,ODY,Créature-jeton : guivre,,"Quand les guivres n'ont pas faim
 Wurm,Guivre,M12,Créature-jeton : guivre,,,
 Wurm,Guivre,M13,Créature-jeton : guivre,,,
 Zombie,Zombie,SOI,Créature-jeton : zombie,,,
+Zombie,Zombie,CN2,Créature-jeton : zombie,,,
+Zombie,Zombie,EMA,Créature-jeton : zombie,,,
 Zombie,Zombie,M14,Créature-jeton : zombie,,,
 Zombie,Zombie,M15,Créature-jeton : zombie,,,
 Zombie,Zombie,M13,Créature-jeton : zombie,,,
@@ -833,7 +877,12 @@ Zombie,Zombie,CNS,Créature-jeton : zombie,,,
 Zombie,Zombie,DKA,Créature-jeton : zombie,,,
 Zombie,Zombie,DDJ,Créature-jeton : zombie,,,
 Zombie,Zombie,ODY,Créature-jeton : zombie,,,
+Zombie,Zombie,EMN,Créature-jeton : zombie,,,1
+Zombie,Zombie,EMN,Créature-jeton : zombie,,,2
+Zombie,Zombie,EMN,Créature-jeton : zombie,,,3
+Zombie,Zombie,EMN,Créature-jeton : zombie,,,4
 Zombie Giant,Zombie et Géant,ZEN,Créature-jeton : zombie et géant,,,
+Zombie Giant,Zombie et Géant,DDR,Créature-jeton : zombie et géant,,,
 Zombie Horror,Zombie et Horreur,DTK,Créature-jeton : zombie et horreur,,,
 Zombie Wizard,Zombie et Sorcier,ARB,Créature-jeton : zombie et sorcier,,,
 The Warrior,Le guerrier,HRO,Héros,"{T} : La créature ciblée que vous contrôlez acquiert la célérité #(Cette créature peut attaquer, {T} et {Q} dès qu'elle arrive sous votre contrôle.)# jusqu'à la fin du tour.",,

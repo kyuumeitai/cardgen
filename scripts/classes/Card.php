@@ -134,10 +134,18 @@ class Card {
 	}
 
 	public function getDisplayTitle ($useExtendedCharacters = true) {
+		global $config;
+		
+		//$language = $config['output.language'];
+		
 		$title = $this->displayTitle;
 		if (!$title) $title = $this->title;
 		$title = str_replace('Avatar: ', '', $title);
-		$title = str_replace('AE', 'Æ', $title);
+		if ($config['card.use.ligature'] != false) {
+			$title = str_replace('AE', 'Æ', $title);
+		} else {
+			$title = str_replace('AE', 'Ae', $title);
+		}
 		$title = str_replace('OE', 'Œ', $title);
 		$title = str_replace("'", '’', $title);
 
@@ -151,7 +159,7 @@ class Card {
 		$title = str_replace('Juzam', 'Juzám', $title);
 		$title = str_replace('Khabal', 'Khabál', $title);
 		$title = str_replace('Marton', 'Márton', $title);
-		$title = str_replace("Ma'ruf", "Ma'rûf", $title);
+		$title = str_replace("Ma’ruf", "Ma’rûf", $title);
 		$title = str_replace('Deja Vu', 'Déjà Vu', $title);
 		$title = str_replace('Dandan', 'Dandân', $title);
 		$title = str_replace('Bosium', 'Bösium', $title);

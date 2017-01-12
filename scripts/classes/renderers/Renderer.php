@@ -99,11 +99,25 @@ abstract class Renderer {
 				$chunk->value .= @$match[1];
 				if ($chunk->value != null || $chunk->newLine) $chunks[] = $chunk;
 				if ($match[2] == '#') $italic = !$italic;
-				$chunk = new Chunk();
-				$chunk->isItalic = $italic;
-				$chunk->isSymbol = $match[2] == '{';
-				$chunk->newLine = $match[2] == "\n";
-				$chunk->value = @$match[3];
+				if (preg_match('/^([\.,\)])([ \w].*)/',@$match[3],$part)) {
+					$chunk = new Chunk();
+					$chunk->isItalic = $italic;
+					$chunk->isSymbol = $match[2] == '{';
+					$chunk->newLine = $match[2] == "\n";
+					$chunk->value = @$part[1];
+					if ($chunk->value != null || $chunk->newLine) $chunks[] = $chunk;
+					$chunk = new Chunk();
+					$chunk->isItalic = $italic;
+					$chunk->isSymbol = $match[2] == '{';
+					$chunk->newLine = $match[2] == "\n";
+					$chunk->value = @$part[2];
+				} else {
+					$chunk = new Chunk();
+					$chunk->isItalic = $italic;
+					$chunk->isSymbol = $match[2] == '{';
+					$chunk->newLine = $match[2] == "\n";
+					$chunk->value = @$match[3];
+					}
 			}
 			// When there is some text left unprocessed by the regex, happens when there is an entitle in the last chunk.
 			//if(@strpos($text, $chunk->value) !== false)
@@ -144,6 +158,53 @@ abstract class Renderer {
 		$belowBaseline = 0;
 		for ($i=0, $n=count($chunks); $i < $n; $i++) {
 			$chunk = $chunks[$i];
+			
+			// Add Nonbreaking space to some punctuation.
+			$chunk->value = str_replace(' »', " »", $chunk->value);
+			$chunk->value = str_replace('« ', "« ", $chunk->value);
+			//$chunk->value = str_replace(' «', " «", $chunk->value);
+			$chunk->value = str_replace(' ;', " ;", $chunk->value);
+			$chunk->value = str_replace(' :', " :", $chunk->value);
+			$chunk->value = str_replace(' !', " !", $chunk->value);
+			$chunk->value = str_replace(' ?', " ?", $chunk->value);
+			$chunk->value = str_replace(' .', " .", $chunk->value);
+			
+			if (preg_match("/(\p{P} $|\p{P}$)/", $chunk->value)) {
+				$nonWrappedChunksWidth = 0;
+				for ($ii=$i+1; $ii < $n; $ii++) {
+				$nextChunk = $chunks[$ii];
+				$secondChunk = @$chunks[$ii+1];
+				$thirdChunk = @$chunks[$ii+2];
+				$fourthChunk = @$chunks[$ii+3];
+					if ($nextChunk->isSymbol) {
+						// Don't wrap in between punctuation and symbol.
+						$textSize = $font->getSize($chunk->value, $chunk->isItalic);
+						$nonWrappedChunksWidth += $textSize['width'];
+						list($symbolWidth) = $this->drawSymbol(null, 0, 0, $symbolHeight, $nextChunk->value, false, true);
+						$nonWrappedChunksWidth += $symbolSpacing + $symbolWidth;
+						if ($ii < $n - 1) $nonWrappedChunksWidth += $symbolSpacing; // Don't add spacing if this is the last chunk.
+						if (@$secondChunk->isSymbol) {
+							// Don't wrap in between symbol and symbol.
+							list($symbolWidth) = $this->drawSymbol(null, 0, 0, $symbolHeight, $secondChunk->value, false, true);
+							$nonWrappedChunksWidth += $symbolSpacing + $symbolWidth;
+							if ($ii+1 < $n - 1) $nonWrappedChunksWidth += $symbolSpacing; // Don't add spacing if this is the last chunk.
+							if (@$thirdChunk->isSymbol) {
+								// Don't wrap in between symbol and symbol.
+								list($symbolWidth) = $this->drawSymbol(null, 0, 0, $symbolHeight, $thirdChunk->value, false, true);
+								$nonWrappedChunksWidth += $symbolSpacing + $symbolWidth;
+								if ($ii+1 < $n - 1) $nonWrappedChunksWidth += $symbolSpacing; // Don't add spacing if this is the last chunk.
+								}
+								if (@$fourthChunk->isSymbol) {
+									// Don't wrap in between symbol and symbol.
+									list($symbolWidth) = $this->drawSymbol(null, 0, 0, $symbolHeight, $fourthChunk->value, false, true);
+									$nonWrappedChunksWidth += $symbolSpacing + $symbolWidth;
+									if ($ii+1 < $n - 1) $nonWrappedChunksWidth += $symbolSpacing; // Don't add spacing if this is the last chunk.
+								}
+							} 
+						}
+						break;
+					}
+				}
 			if ($chunk->isSymbol) {
 				$xOffset += $symbolSpacing;
 				// Wrap if this symbol and any following symbols or non-whitespace text are too long.
@@ -159,9 +220,9 @@ abstract class Renderer {
 						if ($ii < $n - 1) $nonWrappedChunksWidth += $symbolSpacing; // Don't add spacing if this is the last chunk.
 					} else {
 						// Don't wrap in between a symbol and text (eg, when a period follows a symbol).
-						if (preg_match('/^([^\w]*)(\w|\)|[\p{P}])/', $nextChunk->value, $matches)) {
+						if (preg_match('/^([^\w]*)(\w|\))/', $nextChunk->value, $matches)||preg_match('/^(\p{P} |\p{P})$/', $nextChunk->value, $matches)) {
 							// Text starts with non-whitespace characters. Get their width.
-							$textSize = $font->getSize($matches[0], $nextChunk->isItalic);
+							$textSize = $font->getSize($matches[1], $nextChunk->isItalic);
 							list($symbolWidth) = $this->drawSymbol(null, 0, 0, $symbolHeight, $chunk->value, false, true);
 							$nonWrappedChunksWidth += $symbolSpacing + $symbolWidth;
 							$nonWrappedChunksWidth += $textSize['width'];
@@ -193,16 +254,8 @@ abstract class Renderer {
 				}
 				$spaceSize = $font->getSize(' ', $chunk->isItalic);
 				$spaceWidth = $spaceSize['width'];
-				if (substr($chunk->value, 0, 1) == ' ') $xOffset += $spaceWidth; // Starts with space.
-				// Add Nonbreaking space to some punctuation.
-				$chunk->value = str_replace(' »', " »", $chunk->value);
-				$chunk->value = str_replace('« ', "« ", $chunk->value);
-				//$chunk->value = str_replace(' «', " «", $chunk->value);
-				$chunk->value = str_replace(' ;', " ;", $chunk->value);
-				$chunk->value = str_replace(' :', " :", $chunk->value);
-				$chunk->value = str_replace(' !', " !", $chunk->value);
-				$chunk->value = str_replace(' ?', " ?", $chunk->value);
-				$chunk->value = str_replace(' .', " .", $chunk->value);
+				if (substr($chunk->value, 0, 1) == ' '||substr($chunk->value, 0, 1) == ' ') $xOffset += $spaceWidth; // Starts with space.
+				
 				// Break text into words and build an array of lines.
 				$words = explode(' ', $chunk->value);
 				$lines = array();
@@ -212,13 +265,16 @@ abstract class Renderer {
 					//$wordN++;
 					if ($word == null || $word == '') continue;
 					$testLine = $text;
-					if ($text != '') $testLine .= ' '; // Space between words.
+					if ($text != '') {
+						if (preg_match("/(^\p{P}$)/", $word)) $testLine .= ' '; // Add non-breaking space if the word is a punctuation.
+						else $testLine .= ' '; // Space between words.
+					}
 					$testLine .= $word;
 					$lineSize = $font->getSize($testLine, $chunk->isItalic);
 					if (count($lines) == 0) $lineSize['width'] += $xOffset; // Only the first line takes into account the xOffset.
-					if (!$canvas && $baseline < 600 && $this instanceof M15Renderer && @M15Renderer::$titleToTransform[strtolower($this->card->title)] == 'day' && $left < 75 && ($baseline + ((count($lines)) * $textLeading)) >= 197 && $this->card->pt != ''){
+					if (!$canvas && $baseline < 600 && $this instanceof M15Renderer && (@M15Renderer::$titleToTransform[strtolower($this->card->title)] == 'day'||@M15Renderer::$titleToTransform[strtolower($this->card->title)] == 'moon') && $left < 75 && ($baseline + ((count($lines)) * $textLeading)) >= 197 && $this->card->pt2 != ''){
 						$maxWidth = 567;
-					} else if ($this instanceof M15Renderer && @M15Renderer::$titleToTransform[strtolower($this->card->title)] == 'day' && $left < 75 && ($baseline + ((count($lines)) * $textLeading)) >= 844 && $this->card->pt != ''){
+					} else if ($this instanceof M15Renderer && (@M15Renderer::$titleToTransform[strtolower($this->card->title)] == 'day'||@M15Renderer::$titleToTransform[strtolower($this->card->title)] == 'moon') && $left < 75 && ($baseline + ((count($lines)) * $textLeading)) >= 844 && $this->card->pt2 != ''){
 						$maxWidth = 567;
 					}
 					if (!$canvas && $baseline < 600 && $this instanceof M15Renderer && $left < 75 && ($baseline + ((count($lines)) * $textLeading)) >= 265 && $this->card->pt != ''){
@@ -226,44 +282,6 @@ abstract class Renderer {
 					}
 					else if ($this instanceof M15Renderer && $left < 75 && ($baseline + ((count($lines)) * $textLeading)) >= 912 && $this->card->pt != ''){
 						$maxWidth = 514;
-					}
-					if (preg_match("/(\p{P} $|\p{P}$)/", $word)) {
-					$nonWrappedChunksWidth = 0;
-					for ($ii=$i+1; $ii < $n; $ii++) {
-					$nextChunk = $chunks[$ii];
-					$secondChunk = @$chunks[$ii+1];
-					$thirdChunk = @$chunks[$ii+2];
-					$fourthChunk = @$chunks[$ii+3];
-						if ($nextChunk->isSymbol) {
-							// Don't wrap in between punctuation and symbol.
-							$textSize = $font->getSize($word, $chunk->isItalic);
-							$nonWrappedChunksWidth += $textSize['width'];
-							list($symbolWidth) = $this->drawSymbol(null, 0, 0, $symbolHeight, $nextChunk->value, false, true);
-							$nonWrappedChunksWidth += $symbolSpacing + $symbolWidth;
-							if ($ii < $n - 1) $nonWrappedChunksWidth += $symbolSpacing; // Don't add spacing if this is the last chunk.
-							if (@$secondChunk->isSymbol) {
-								// Don't wrap in between symbol and symbol.
-								list($symbolWidth) = $this->drawSymbol(null, 0, 0, $symbolHeight, $secondChunk->value, false, true);
-								$nonWrappedChunksWidth += $symbolSpacing + $symbolWidth;
-								if ($ii+1 < $n - 1) $nonWrappedChunksWidth += $symbolSpacing; // Don't add spacing if this is the last chunk.
-								if (@$thirdChunk->isSymbol) {
-									// Don't wrap in between symbol and symbol.
-									list($symbolWidth) = $this->drawSymbol(null, 0, 0, $symbolHeight, $thirdChunk->value, false, true);
-									$nonWrappedChunksWidth += $symbolSpacing + $symbolWidth;
-									if ($ii+1 < $n - 1) $nonWrappedChunksWidth += $symbolSpacing; // Don't add spacing if this is the last chunk.
-									}
-									if (@$fourthChunk->isSymbol) {
-										// Don't wrap in between symbol and symbol.
-										list($symbolWidth) = $this->drawSymbol(null, 0, 0, $symbolHeight, $fourthChunk->value, false, true);
-										$nonWrappedChunksWidth += $symbolSpacing + $symbolWidth;
-										if ($ii+1 < $n - 1) $nonWrappedChunksWidth += $symbolSpacing; // Don't add spacing if this is the last chunk.
-									}
-								} 
-							} 
-							break;
-						}
-					} else {
-						$nonWrappedChunksWidth = 0;
 					}
 					if ($lineSize['width'] + @$nonWrappedChunksWidth > $maxWidth) {
 
@@ -302,7 +320,9 @@ abstract class Renderer {
 				}
 				if ($lineCount > 1) $baseline -= $textLeading; // Stay on the last line written.
 				$xOffset += $lineSize['width']; // Last line width.
-				if (substr($chunk->value, -1) == ' ' || mb_substr($chunk->value, -1) == ' ') $xOffset += $spaceWidth; // Ends with space.
+				if ($chunk->value != ' ') {
+					if (substr($chunk->value, -1) == ' ' || mb_substr($chunk->value, -1) == ' ') $xOffset += $spaceWidth; // Ends with space.
+				}
 			}
 		}
 		return array(

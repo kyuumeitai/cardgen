@@ -51,9 +51,9 @@ class M15Renderer extends CardRenderer {
 		$useMulticolorFrame = (strlen($costColors) > 1 && strpos($settings['card.multicolor.frames'], strval(strlen($costColors))) !== false) || ($card->isDualManaCost() && (strpos($settings['card.multicolor.frames'], strval(strlen($costColors))) !== false || strlen($costColors) == 2));
 		switch ($frameDir) {
 		case "timeshifted": $useMulticolorFrame = false; break;
-		case "transform-day": $useMulticolorFrame = false; $pts = explode("|", $card->pt); $card->pt = $pts[0]; break;
-		case "transform-moon": $useMulticolorFrame = false; $pts = explode("|", $card->pt); $card->pt = $pts[0]; break;
-		case "transform-spark": $useMulticolorFrame = false; $pts = explode("|", $card->pt); $card->pt = $pts[0]; break;
+		case "transform-day": $useMulticolorFrame = false; /*$pts = explode("|", $card->pt); $card->pt = $pts[0]; $card->pt2 = $pts[1]; */break;
+		case "transform-moon": $useMulticolorFrame = false; /*$pts = explode("|", $card->pt); $card->pt = $pts[0]; $card->pt2 = $pts[1]; */break;
+		case "transform-spark": $useMulticolorFrame = false; /*$pts = explode("|", $card->pt); $card->pt = $pts[0]; $card->pt2 = $pts[1]; */break;
 		case "transform-night": $useMulticolorFrame = false; break;
 		case "transform-eldrazi": $useMulticolorFrame = false; break;
 		case "fuse-left": $useMulticolorFrame = true; break;
@@ -66,7 +66,7 @@ class M15Renderer extends CardRenderer {
 		if ($config['art.use.xlhq.full.card'] != false && stripos($card->artFileName,'xlhq') != false) {
 			$this->drawArt($canvas, $card->artFileName, $settings['art.xlhq.top'], $settings['art.xlhq.left'], $settings['art.xlhq.bottom'], $settings['art.xlhq.right'], !$config['art.keep.aspect.ratio']);
 		}
-		else if(($card->isEldrazi() && $card->isArtefact()) || ($card->isDevoid() && $card->isArtefact()) || ($card->set == 'MPS' && $card->isArtefact()) || $card->title == 'Warping Wail' || $card->title == 'Spatial Contortion' || $card->title == 'Ghostfire' || $card->title == 'Gruesome Slaughter' || $card->title == "Titan's Presence" || $card->title == 'Scion of Ugin' || $card->title == 'Scour from Existence')
+		else if(($card->isEldrazi() && $card->isArtefact()) || ($card->isDevoid() && $card->isArtefact()) || (substr($card->set, 0, -3) == 'MPS_' && $card->isArtefact()) || $card->title == 'Warping Wail' || $card->title == 'Spatial Contortion' || $card->title == 'Ghostfire' || $card->title == 'Gruesome Slaughter' || $card->title == "Titan's Presence" || $card->title == 'Scion of Ugin' || $card->title == 'Scour from Existence')
 			$this->drawArt($canvas, $card->artFileName, 21, 17, 955, 703, !$config['art.keep.aspect.ratio']);
 		else if ((($frameDir == 'fullartbasicland') && $card->isBasicLand()) || ($card->set == "EXP" && $card->isLand()))
 			$this->drawArt($canvas, $card->artFileName, 103, 36, 842, 682, !$config['art.keep.aspect.ratio']);
@@ -135,7 +135,9 @@ class M15Renderer extends CardRenderer {
 				$bgImage = @imagecreatefrompng("images/m15/$frameDir/cards/Eldrazi$holofoil.png");
 			}	else if ($card->isDevoid() && $card->isArtefact() && (strlen($costColors) >= 2)) { //Devoid card with 2+ colors in casting cost
 				$bgImage = @imagecreatefrompng("images/m15/$frameDir/cards/Devoid_Gld$holofoil.png");
-			}	else if ($card->isDevoid() && $card->isArtefact()) {//Devoid card with ONE color in casting cost
+			}	/*else if (substr($card->set, 0, -3) == 'MPS_' && $card->isArtefact()) {
+				$bgImage = @imagecreatefrompng("images/m15/$frameDir/cards/Eldrazi$holofoil.png");
+			}	*/else if ($card->isDevoid() && $card->isArtefact()) {//Devoid card with ONE color in casting cost
 				$bgImage = @imagecreatefrompng("images/m15/$frameDir/cards/Devoid_" . $costColors . "$holofoil.png");
 			}	else if($card->isConspiracy() && $card->isArtefact()) {
 				if (preg_match('/\{([WUBRG])\}/',$card->legal,$matches)) $card->color = $matches[1];
@@ -144,7 +146,9 @@ class M15Renderer extends CardRenderer {
 			}	else if ($card->isArtefact() && $card->isVehicle()) {
 				$bgImage = @imagecreatefrompng("images/m15/$frameDir/cards/Vehicle$holofoil.png");
 			}	else if ($card->isArtefact()) {
-				$bgImage = @imagecreatefrompng("images/m15/$frameDir/cards/Art$holofoil.png");
+				if (substr($card->set, 0, -3) == 'MPS_') {
+					$bgImage = @imagecreatefrompng("images/m15/$frameDir/cards/Art$holofoil.png");
+				} else $bgImage = @imagecreatefrompng("images/m15/$frameDir/cards/Art$holofoil.png");
 				if(strpos($settings['card.artifact.color'], strval(strlen($costColors))) !== false){ //Artifact with color
 					if (strlen($costColors) >= 2) { //Artifact with 2+ color
 						$useMulticolorFrame = false;
@@ -225,8 +229,8 @@ class M15Renderer extends CardRenderer {
 		}
 
 		//Transform P/T
-		if(($frameDir == "transform-day" || $frameDir == "transform-spark" || $frameDir == "transform-moon") && isset($pts[1]))
-			$this->drawText($canvas, $settings['pt.transform.center.x'], $settings['pt.transform.center.y'], $settings['pt.transform.width'], $pts[1], $this->font('pt.transform'));
+		if(($frameDir == "transform-day" || $frameDir == "transform-spark" || $frameDir == "transform-moon") && isset($card->pt2))
+			$this->drawText($canvas, $settings['pt.transform.center.x'], $settings['pt.transform.center.y'], $settings['pt.transform.width'], $card->pt2, $this->font('pt.transform'));
 			
 		// Casting cost.
 		$costLeft = $this->drawCastingCost($canvas, $card->getCostSymbols(), $card->isDualManaCost() ? $settings['cost.top.dual'] : $settings['cost.top'], $settings['cost.right'], $settings['cost.size'], true);
@@ -236,6 +240,8 @@ class M15Renderer extends CardRenderer {
 		// Set and rarity.
 		if ($card->isConspiracy()) {
 			$rarityLeft = $this->drawRarity($canvas, $card->getDisplayRarity(), $card->getDisplaySet(), $settings['rarity.right'] - 20, $settings['rarity.center.y'], $settings['rarity.height'], $settings['rarity.width'], false);
+		} else if ($card->rarity == "B" && $card->set == 'VMA') {
+			$rarityLeft = $this->drawRarity($canvas, $card->getDisplayRarity(), $card->getDisplaySet(), $settings['rarity.right'], $settings['rarity.center.y'], $settings['rarity.height'], $settings['rarity.width'] * 1.5, false);
 		} else if (!$card->isBasicLand() || $settings['card.basic.land.set.symbols']) {
 			$rarityLeft = $this->drawRarity($canvas, $card->getDisplayRarity(), $card->getDisplaySet(), $settings['rarity.right'], $settings['rarity.center.y'], $settings['rarity.height'], $settings['rarity.width'], false);
 		} else {
@@ -344,11 +350,11 @@ class M15Renderer extends CardRenderer {
 		}
 
 		// Story Spotlight planeswalker watermark.
-		if($card->set == "KLD"||$card->set == 'PRE') {
+		if($card->set == "KLD"||$card->set == "AER"||$card->set == "AKH"||$card->set == "HOU"||$card->set == 'PRE') {
 			if ($story = $this->getStorySpotlight($card->title)) {
 				list($image, $width, $height) = getPNG("images/watermarks/story/$story[0].png", "Story Spotlight image not found for: $story[0]");
 				imagecopy($canvas, $image, (720 / 2) - ($width / 2), 645, 0, 0, $width, $height);
-				imagecopy($canvas, $image, (720 / 2) - ($width / 2), 645, 0, 0, $width, $height); // Too much alpha, need to apply twice.
+				//imagecopy($canvas, $image, (720 / 2) - ($width / 2), 645, 0, 0, $width, $height); // Too much alpha, need to apply twice.
 				imagedestroy($image);
 			}
 		}
@@ -461,7 +467,9 @@ class M15Renderer extends CardRenderer {
 			$collectorNumber[0] = str_pad($collectorNumber[0], 3, "0", STR_PAD_LEFT);
 			$collectorNumber[1] = str_pad($collectorNumber[1], 3, "0", STR_PAD_LEFT);
 			$card->collectorNumber = implode('/', $collectorNumber);
-
+			//$LineSizeTxtL1 = Font::getLargestWidth($card->collectorNumber,$this->font('collection')) * strlen($card->collectorNumber);
+			
+			if (substr($card->set, 0, -3) == 'MPS_') $card->setM15DisplaySet('MPS');
 			//$CollectionTxtL1 = $card->collectorNumber . "&#160;" . "&#160;" . $card->rarity;
 			$CollectionTxtL1 = $card->collectorNumber;
 			if (in_array($card->set,$promoset) !=false) {
@@ -472,7 +480,8 @@ class M15Renderer extends CardRenderer {
 				else $CollectionTxtL2 = $card->set . ' ' . "&#9733;" . ' ' . $lang . ' ' ;
 			}
 			else {
-				$CollectionTxtL2 = $card->set . ' ' . "&#8226;" . ' ' . $lang . ' ' ;
+				if (substr($card->set, 0, -3) == 'MPS_') $CollectionTxtL2 = $card->getM15DisplaySet() . ' ' . "&#9733;" . ' ' . $lang . ' ' ;
+				else $CollectionTxtL2 = $card->set . ' ' . "&#8226;" . ' ' . $lang . ' ' ;
 			}
 			$font = $settings['font.collection'];
 			$font = str_replace(' ','',$font);
@@ -498,7 +507,7 @@ class M15Renderer extends CardRenderer {
 				$this->drawText($canvas, $settings['collection.x'] + ($lineSizeL2[2]), $settings['collection.y'], null, $card->rarity, $this->font('collection', 'color:' . $footerColor));
 			}
 			if (@$story[1] != null) {
-				$this->drawText($canvas, $settings['collection.x'] + ($lineSizeL2[2] + $settings['artistOffset.x']), $settings['collection.y'], null, $story[1], $this->font('promo.text.type', 'color:' . $footerColor));
+				$this->drawText($canvas, $settings['collection.x'] + ($lineSizeL2[2] + $settings['artistOffset.x']), $settings['collection.y'], 170, $story[1], $this->font('promo.text.type', 'color:' . $footerColor));
 			} else if ((($promoSetText = $this->getPromoSetText($card->set))||($promoSetText = $this->getPromoSetText($card->getDisplaySet()))) && in_array($card->set, $promoset)) {
 				$this->drawText($canvas, $settings['collection.x'] + ($lineSizeL2[2] + $settings['artistOffset.x']), $settings['collection.y'], null, $promoSetText, $this->font('promo.text.type', 'color:' . $footerColor));
 			} else if (($promoCardText = $this->getPromoCardText($card->title)) && in_array($card->set, $promoset)){
@@ -508,9 +517,16 @@ class M15Renderer extends CardRenderer {
 			$this->drawText($canvas, $settings['collection.x'] + ($lineSizeL2[2] + $settings['artistOffset.x']), $settings['artist.y'], null, $card->artist, $this->font('artist', 'color:' . $footerColor));
 		}
 		if ($card->copyright) {
+			if ($config['card.use.set.date']) {
+				$date = $this->setDB->getSetDate($card->set);
+				if ($date == null) $date = date("Y");
+			}
+			else $date = date("Y");
 			$CopyrightTxt = $config['card.copyright.m15'];
+			$CopyrightTxt = str_replace('YYYY', "$date", $CopyrightTxt);
 			if (@$story[1] != null) {
 				$StoryTxt = 'mtgstory.com';
+				if ($language && strtolower($language) != 'english') $StoryTxt .= '/' . strtolower($config['card.lang']);
 				$storyFont = $settings['font.story.text.type'];
 				$storyFont = str_replace(' ','',$font);
 				$storyArrayfont=explode(",",$font);
@@ -536,6 +552,13 @@ class M15Renderer extends CardRenderer {
 			}
 		}
 
+	/*if ($config['output.card.full.border']) {
+		list($canvasFull, $width, $height) = getPNG("images/border/m15.png", "Image not found for: images/border/m15.png");
+		imagecopy($canvasFull, $canvas, 0, 0, 0, 0, 720, 1020);
+		imagedestroy($canvas);
+		$canvas = $canvasFull;
+	}*/
+	
 	echo "\n";
 	return $canvas;
 	}
@@ -570,8 +593,29 @@ class M15Renderer extends CardRenderer {
 	}
 
 	private function getStorySpotlight ($title) {
-		if (!M15Renderer::$titleToStorySpotlight) M15Renderer::$titleToStorySpotlight = csvToArray3('data/titleToStorySpotlight.csv');
-		return @M15Renderer::$titleToStorySpotlight[(string)strtolower($title)];
+		global $config;
+		$language = $config['output.language'];
+		$array = array();
+		if (!M15Renderer::$titleToStorySpotlight) M15Renderer::$titleToStorySpotlight = csvToArray13('data/titleToStorySpotlight.csv');
+		$data = @M15Renderer::$titleToStorySpotlight[(string)strtolower($title)];
+		if ($language && $language != 'english') {
+			switch ($language) {
+				case "chinese-china": $array = array(@$data[0],@$data[2] != "" ? $data[2] : $data[1]); break;
+				case "chinese-taiwan": $array = array($data[0],$data[3] != "" ? $data[3] : $data[1]); break;
+				case "french": $array = array($data[0],$data[4] != "" ? $data[4] : $data[1]); break;
+				case "french-oracle": $array = array($data[0],$data[4] != "" ? $data[4] : $data[1]); break;
+				case "german": $array = array($data[0],$data[5] != "" ? $data[5] : $data[1]); break;
+				case "italian": $array = array($data[0],$data[6] != "" ? $data[6] : $data[1]); break;
+				case "japanese": $array = array($data[0],$data[7] != "" ? $data[7] : $data[1]); break;
+				case "portugese": $array = array($data[0],$data[8] != "" ? $data[8] : $data[1]); break;
+				case "russian": $array = array($data[0],$data[9] != "" ? $data[9] : $data[1]); break;
+				case "spanish": $array = array($data[0],$data[10] != "" ? $data[10] : $data[1]); break;
+				case "korean": $array = array($data[0],$data[11] != "" ? $data[11] : $data[1]); break;
+				default: $array = array($data[0],$data[1]); break;
+			}
+		}
+		else $array = array($data[0],$data[1]);
+		if ($array[0] != '') return @$array;
 	}
 
 	/*private function getGodStars ($title) {
@@ -610,6 +654,7 @@ class M15Renderer extends CardRenderer {
 		$fullartbasic = explode(',', $settings['card.fullart.basic.land.frames.set']);
 		$expedition = explode(',', $settings['card.fullart.expedition.frames']);
 		$gameday = 'MGD';
+		$masterpiece = 'MPS_';
 		$conspiracy = explode(',',$settings['card.conspiracy.set']);
 		if (!$frameDir || $frameDir == 'transform-') $frameDir = "regular";
 		if ($frameDir == 'fullartbasicland' && in_array($set, $fullartbasic) === FALSE) $frameDir = "regular";
@@ -619,9 +664,10 @@ class M15Renderer extends CardRenderer {
 		if ($frameDir == 'fuse-' && in_array($set, $fuse) === FALSE) $frameDir = "regular";
 		if ($frameDir == 'nyxstars' && in_array($set, $nyxstars) === FALSE) $frameDir = "regular";
 		if ($frameDir == 'mgdpromo' && $set != $gameday) $frameDir = "regular";
+		if ($frameDir == 'masterpiece' && substr($set, 0, -3) != $masterpiece) $frameDir = "regular";
 		if ($frameDir == 'conspiracy' && in_array($set, $conspiracy) === FALSE) $frameDir = "regular";
 		return $frameDir;
-	}	
+	}
 }
 
 ?>

@@ -169,6 +169,10 @@ Zombie,token
 Zombie Giant,token
 Zombie Horror,token
 Zombie Wizard,token
+Antelope,token
+Etherium Cell,token
+Gremlin,token
+Ragavan,token
 Emblem: Ajani Steadfast,emblem
 "Emblem: Chandra, Roaring Flame",emblem
 Emblem: Dack Fayden,emblem
@@ -205,3 +209,8 @@ Human Wizard,token
 "Emblem: Liliana, the Last Hope",emblem
 "Emblem: Tamiyo, Field Researcher",emblem
 The Monarch,token
+"Emblem: Chandra, Torch of Defiance",emblem
+Emblem: Dovin Baan,emblem
+"Emblem: Nissa, Vital Force",emblem
+"Emblem: Ob Nixilis",emblem
+Emblem: Tezzeret the Schemer,emblem
