@@ -1,4 +1,4 @@
-<?
+<?php
 ////////////////////////////////////////////////////////////////////////
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -54,14 +54,35 @@ class Decklist {
 			}
 
 			$pic = null;
-			if (!$config['decklist.ignore.sets'] && !$config['decklist.ignore.picture.numbers'] && preg_match('/ \(([1-9])\)/', $name, $matches))
+		if (!$config['decklist.ignore.sets'] && !$config['decklist.ignore.picture.numbers'] && preg_match('/ \((\d{1,4}|\d{4}(a|b)|\w{4,5}|[EJU])\)/', $name, $matches))
 				$pic = $matches[1];
 
-			$name = preg_replace('/ \(([1-9])\)/', '', $name);
+			$name = preg_replace('/ \((\d{1,4}|\d{4}(a|b)|\w{4,5}|[EJU])\)/', '', $name);
+			//$name = str_replace('The Ultimate Nightmare of Wizards of the Coast Customer Service', 'The Ultimate Nightmare of Wizards of the Coast® Customer Service', $name);
+			//$name = str_replace('El-Hajjaj', 'El-Hajjâj', $name);
+			//$name = str_replace('Junun', 'Junún', $name);
+			//$name = str_replace('Lim-Dul', 'Lim-Dûl', $name);
+			//$name = str_replace('Jotun', 'Jötun', $name);
+			//$name = str_replace('Ghazban', 'Ghazbán', $name);
+			//$name = str_replace('Ifh-Biff', 'Ifh-Bíff', $name);
+			//$name = str_replace('Juzam', 'Juzám', $name);
+			//$name = str_replace('Khabal', 'Khabál', $name);
+			//$name = str_replace('Marton', 'Márton', $name);
+			//$name = str_replace("Ma'ruf", "Ma'rûf", $name);
+			//$name = str_replace('Deja Vu', 'Déjà Vu', $name);
+			//$name = str_replace('Dandan', 'Dandân', $name);
+			//$name = str_replace('Bosium', 'Bösium', $name);
+			//$name = str_replace('Seance', 'Séance', $name);
+			//$name = str_replace('Saute', 'Sauté', $name);
 			//$name = str_replace('Æ, 'AE', $name);
+			$name = preg_replace('/"([\w ]+)"/', '“\\1”', $name);
+			
+			$pic = str_replace('left', 'Left', $pic);
+			$pic = str_replace('right', 'Right', $pic);
+			$pic = str_replace('Token', 'token', $pic);
 
 			for ($i = 0; $i < $qty; $i++) {
-				$card = $cardDB->getCard($name, $set, $pic);
+				$card = $cardDB->getCard(mb_strtolower($name), $set, $pic);
 				if (!$card) {
 					echo("\nLine $lineNumber: Card not found: $name");
 					if ($set || $pic) {

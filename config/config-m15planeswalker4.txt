@@ -1,0 +1,96 @@
+[prompt]
+
+[card generation]
+card.artist.gears = 0
+card.multicolor.gold.frame = 1
+
+[fonts]
+font.text = 20, MPlantin.ttf/MPlantinI.ttf, leading:30
+font.text.russian = 20, MinionPro-Cn.ttf/MinionPro-CnItalic.ttf, leading:30
+font.text.japanese = 14, mtgrulej.ttf, leading:20
+font.collection = 14, GothamMedium.ttf, leading:40
+font.artist = 15, BelerenBoldSmallCaps.ttf
+font.copyright = 13, MPlantin.ttf
+font.loyalty.starting = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+font.loyalty.change = 24, MPlantinB.ttf, centerY:true centerX:true
+font.promo.text.type = 12, GothamMedium.ttf
+
+[fonts - regular]
+font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 32, mtgnamej.ttf
+font.type = 25, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 25, mtgnamej.ttf
+font.promo.text.type = 12, GothamMedium.ttf
+
+[layout - regular]
+title.x = 51
+title.y = 68
+cost.right = 677
+cost.top = 35
+cost.top.dual = 37
+cost.size = 35
+art.top = 0
+art.left = 0
+art.bottom = 1020
+art.right = 720
+art.xlhq.top = -10
+art.xlhq.left = -12
+art.xlhq.bottom = 1030
+art.xlhq.right = 733
+type.x = 51
+type.y = 546
+rarity.center.y = 535
+rarity.right = 675
+rarity.height = 41
+rarity.width = 0
+
+text.1.top = 575
+text.1.left = 122
+text.1.bottom = 655
+text.1.right = 673
+
+text.2.top = 667
+text.2.left = 122
+text.2.bottom = 747
+text.2.right = 673
+
+text.3.top = 759
+text.3.left = 122
+text.3.bottom = 839
+text.3.right = 673
+
+text.4.top = 845
+text.4.left = 122
+text.4.bottom = 913
+text.4.right = 673
+
+text.pt.height.adjust = 7
+
+loyalty.starting.center.y = 943
+loyalty.starting.center.x = 641
+loyalty.starting.width = 114
+
+loyalty.1.center.x = 60
+loyalty.1.center.y = 615
+loyalty.1.center.width = 114
+
+loyalty.2.center.x = 60
+loyalty.2.center.y = 708
+loyalty.2.center.width = 114
+
+loyalty.3.center.x = 60
+loyalty.3.center.y = 800
+loyalty.3.center.width = 114
+
+loyalty.4.center.x = 60
+loyalty.4.center.y = 880
+loyalty.4.center.width = 114
+
+collection.x = 37
+collection.y = 977
+artistOffset.x = 25
+artist.y = 996
+copyrightLeft.x = 40
+copyrightPT.y = 996

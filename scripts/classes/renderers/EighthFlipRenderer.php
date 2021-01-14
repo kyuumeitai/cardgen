@@ -1,4 +1,4 @@
-<?
+<?php
 ////////////////////////////////////////////////////////////////////////
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -21,6 +21,17 @@ class EighthFlipRenderer extends CardRenderer {
 	public function render () {
 		global $config;
 
+		$languageFont = null;
+		$language = strtolower($config['output.language']);
+		if ($language && $language != 'english') {
+			if ($language == 'russian') $languageFont = '.russian';
+			if ($language == 'japanese') $languageFont = '.japanese';
+			if ($this->card->title == $this->card->getDisplayTitle()) $languageFont = null;
+		}
+		
+		/*if ($config['card.corrected.promo.symbol'] != FALSE) {
+			$this->card = CardDB::correctPromoSymbols($this->card);
+			}*/
 		echo $this->card . '...';
 		$card = $this->card;
 
@@ -33,7 +44,12 @@ class EighthFlipRenderer extends CardRenderer {
 		$canvas = imagecreatetruecolor(736, 1050);
 
 		// Art image.
-		$this->drawArt($canvas, $card->artFileName, $settings['art.top'], $settings['art.left'], $settings['art.bottom'], $settings['art.right'], !$config['art.keep.aspect.ratio']);
+		if ($config['art.use.xlhq.full.card'] != false && stripos($card->artFileName,'xlhq') != false) {
+			$this->drawArt($canvas, $card->artFileName, $settings['art.xlhq.top'], $settings['art.xlhq.left'], $settings['art.xlhq.bottom'], $settings['art.xlhq.right'], !$config['art.keep.aspect.ratio']);
+		}
+		else {
+			$this->drawArt($canvas, $card->artFileName, $settings['art.top'], $settings['art.left'], $settings['art.bottom'], $settings['art.right'], !$config['art.keep.aspect.ratio']);
+		}
 
 		echo '.';
 		$cards = explode("\n-----\n", $card->legal);
@@ -119,17 +135,17 @@ class EighthFlipRenderer extends CardRenderer {
 		echo '.';
 		// Set and rarity.
 		if (!$card->isBasicLand() || $settings['card.basic.land.set.symbols'])
-			$this->drawRarity($canvas, $card->rarity, $card->set, $settings['rarity.right'], $settings['rarity.center.y'], $settings['rarity.height'], $settings['rarity.width'], false);
+			$this->drawRarity($canvas, $card->getDisplayRarity(), $card->getDisplaySet(), $settings['rarity.right'], $settings['rarity.center.y'], $settings['rarity.height'], $settings['rarity.width'], false);
 
 		// Card title.
-		$this->drawText($canvas, $settings['title.x'], $settings['title.y'], $costLeft - $settings['title.x'], $card->getDisplayTitle(), $this->font('title'));
+		$this->drawText($canvas, $settings['title.x'], $settings['title.y'], $costLeft - $settings['title.x'], $card->getDisplayTitle(), $this->font("title$languageFont"));
 
 		echo '.';
 
 		// Type.
-		$this->drawText($canvas, $settings['type.x'], $settings['type.upper.y'], $ptLeft - $settings['type.x'], $card->type, $this->font('type'));
+		$this->drawText($canvas, $settings['type.x'], $settings['type.upper.y'], $ptLeft - $settings['type.x'], $card->type, $this->font("type$languageFont"));
 
-		$this->drawLegalAndFlavorText($canvas, $settings['text.upper.top'], $settings['text.left'], $settings['text.upper.bottom'], $settings['text.right'], $legal1, '', $this->font('text'), 0/*$heightAdjust*/);
+		$this->drawLegalAndFlavorText($canvas, $settings['text.upper.top'], $settings['text.left'], $settings['text.upper.bottom'], $settings['text.right'], $legal1, '', $this->font("text$languageFont"), 0/*$heightAdjust*/);
 
 		echo '.';
 
@@ -157,14 +173,14 @@ class EighthFlipRenderer extends CardRenderer {
 		// Card title.
 		$title2 = str_replace('AE', 'Æ', $title2);
 		$title2 = str_replace("'", '’', $title2);
-		$this->drawText($canvas, $settings['title.x'], $settings['title.lower.y'], $settings['cost.right'] - $settings['title.x'], $title2, $this->font('title'));
+		$this->drawText($canvas, $settings['title.x'], $settings['title.lower.y'], $settings['cost.right'] - $settings['title.x'], $title2, $this->font("title$languageFont"));
 
 		echo '.';
 
 		// Type.
-		$this->drawText($canvas, $settings['type.x'], $settings['type.lower.y'], $ptLeft - $settings['type.x'], $type2, $this->font('type'));
+		$this->drawText($canvas, $settings['type.x'], $settings['type.lower.y'], $ptLeft - $settings['type.x'], $type2, $this->font("type$languageFont"));
 
-		$this->drawLegalAndFlavorText($canvas, $settings['text.lower.top'], $settings['text.left'], $settings['text.lower.bottom'], $settings['text.right'], $legal2, '', $this->font('text'), 0/*$heightAdjust*/);
+		$this->drawLegalAndFlavorText($canvas, $settings['text.lower.top'], $settings['text.left'], $settings['text.lower.bottom'], $settings['text.right'], $legal2, '', $this->font("text$languageFont"), 0/*$heightAdjust*/);
 
 		// Back to normal orientation.
 		$canvas = imagerotate($canvas, 180, 0, -1);

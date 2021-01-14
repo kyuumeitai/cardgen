@@ -1,0 +1,14 @@
+Arden Angel,DC,W,Creature — Angel,4\4,,R,{4}{W}{W},"Flying
+At the beginning of your upkeep, if Arden Angel is in your graveyard, choose a number at random from 1 to 4. If the randomly chosen number is 1, return Arden Angel to play",,Greg Staples,
+Ashuza's Breath,DC,R,Sorcery,,,R,{1}{R},"For each creature, randomly choose a number from 0 to 2. Ashuza's Breath deals that amount of damage to that creature.",,Glen Angus,
+Camato Scout,DC,U,Creature — Merfolk,2\3,,R,{1}{U}{U},"As Camato Scout comes into play, choose a basic land type at random. Camato Scout has landwalk of that type.",,Christopher Moeller,
+Hapato's Might,DC,B,Instant,,,R,{2}{B},"Target creature gets +X/+0 until end of turn, where X is a random number from 0 to 6.",,Jeff Easley,
+Lydari Druid,DC,G,Creature — Druid,2\2,,R,{2}{G},"When Lydari Druid comes into play, randomly choose a basic land type for each land in play. Those lands become the type chosen this way. #(This effect doesn’t end at end of turn.)#",,Kev Walker,
+Lydari Elephant,DC,G,Creature — Elephant,*\*,,R,{4}{G},"As Lydari Elephant comes into play, choose two numbers at random from 3 to 7 one after the other. Lydari Elephant comes into play with power equal to the first number and toughness equal to the second.",,Heather Hudson,
+Murgish Cemetery,DC,B,Enchantment,,,R,{4}{B}{B},"{3}{B}, Discard a card: Put an X/X black Zombie creature token into play, where X is a random number from 2 to 6.",,Daren Bader,
+Saji's Torrent,DC,U,Instant,,,R,{1}{U},"Tap X creatures, where X is a random number from 0 to 5.",,Matt Cavotta,
+Tornellan Protector,DC,W,Creature — Cleric,1\2,,R,{2}{W},"{T}: Until end of turn, damage dealt to target player or creature is reduced by X, where X is a random number from 1 to 3.",,Eric Peterson,
+Velican Dragon,DC,R,Creature — Dragon,5\5,,R,{5}{R}{R},"Flying
+When Velican Dragon attacks or blocks, it gets +X/+0 until the end of turn, where X is a random number from 0 to 5.",,Daren Bader,
+Ancient Grudge,CUB,R,Instant,,"If there’s anything a werewolf hates, it’s a collar—especially Avacyn’s Collar, the symbol of her church.",C,{1}{R},"Destroy target artifact.
+Flashback {G} #(You may cast this card from your graveyard for its flashback cost. Then exile it.)#",,Wayne England,

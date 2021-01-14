@@ -1,4 +1,4 @@
-<?
+<?php
 ////////////////////////////////////////////////////////////////////////
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -16,10 +16,23 @@
 class PlanesWalkerRenderer extends CardRenderer {
 	static private $settingSections;
 	static private $titleToTransform;
+	static private $titleToPromoSetText;
+	static private $titleToPromoCardText;
 
 	public function render () {
 		global $config;
 
+		$languageFont = null;
+		$language = strtolower($config['output.language']);
+		if ($language && $language != 'english') {
+			if ($language == 'russian') $languageFont = '.russian';
+			if ($language == 'japanese') $languageFont = '.japanese';
+			if ($this->card->title == $this->card->getDisplayTitle()) $languageFont = null;
+		}
+		
+		/*if ($config['card.corrected.promo.symbol'] != FALSE) {
+			$this->card = CardDB::correctPromoSymbols($this->card);
+			}*/
 		echo $this->card . '...';
 		$card = $this->card;
 		$settings = $this->getSettings();
@@ -32,25 +45,31 @@ class PlanesWalkerRenderer extends CardRenderer {
 		$canvas = imagecreatetruecolor(736, 1050);
 
 		// Art image.
-		$this->drawArt($canvas, $card->artFileName, $settings['art.top'], $settings['art.left'], $settings['art.bottom'], $settings['art.right'], !$config['art.keep.aspect.ratio']);
+		if ($config['art.use.xlhq.full.card'] != false && stripos($card->artFileName,'xlhq') != false) {
+			$this->drawArt($canvas, $card->artFileName, $settings['art.xlhq.top'], $settings['art.xlhq.left'], $settings['art.xlhq.bottom'], $settings['art.xlhq.right'], !$config['art.keep.aspect.ratio']);
+		}
+		else {
+			$this->drawArt($canvas, $card->artFileName, $settings['art.top'], $settings['art.left'], $settings['art.bottom'], $settings['art.right'], !$config['art.keep.aspect.ratio']);
+		}
 
 		echo '.';
 
+		$promoset = explode(',',$config['card.promo.symbols']);
 		// Background image.
 		$borderImage = null;
 		$greyTitleAndTypeOverlay = null;
 		if ($card->isArtefact()) {
-			$bgImage = @imagecreatefrompng("images/planeswalker/$frameDir/cards/Art.png");
+			$bgImage = @imagecreatefrompng("images/eighth/planeswalker/$frameDir/cards/Art.png");
 		} else if ($useMulticolorFrame || $card->isDualManaCost()) {
 			// Multicolor frame.
 			if($settings['card.multicolor.gold.frame'])
-				$bgImage = @imagecreatefrompng("images/planeswalker/$frameDir/cards/Gld$costColors.png");
+				$bgImage = @imagecreatefrompng("images/eighth/planeswalker/$frameDir/cards/Gld$costColors.png");
 			else
-				$bgImage = @imagecreatefrompng("images/planeswalker/$frameDir/cards/$costColors.png");
+				$bgImage = @imagecreatefrompng("images/eighth/planeswalker/$frameDir/cards/$costColors.png");
 			if (!$bgImage) error("Background image not found for color: $costColors");
 		} else {
 			// Mono color frame.
-			$bgImage = @imagecreatefrompng("images/planeswalker/$frameDir/cards/" . $card->color . '.png');
+			$bgImage = @imagecreatefrompng("images/eighth/planeswalker/$frameDir/cards/" . $card->color . '.png');
 			if (!$bgImage) error('Background image not found for color "' . $card->color . '"');
 		}
 
@@ -59,7 +78,7 @@ class PlanesWalkerRenderer extends CardRenderer {
 
 		// Loyalty
 		if ($card->pt) {
-			$image = @imagecreatefrompng('images/planeswalker/loyalty/LoyaltyBegin.png');
+			$image = @imagecreatefrompng('images/eighth/planeswalker/loyalty/LoyaltyBegin.png');
 			if (!$image) error("Loyalty image not found");
 			imagecopy($canvas, $image, 605, 940, 0, 0, 127, 82);
 			imagedestroy($image);
@@ -73,19 +92,40 @@ class PlanesWalkerRenderer extends CardRenderer {
 		echo '.';
 
 		// Set and rarity.
-		$rarityLeft = $this->drawRarity($canvas, $card->rarity, $card->set, $settings['rarity.right'], $settings['rarity.center.y'], $settings['rarity.height'], $settings['rarity.width'], false);
+		$rarityLeft = $this->drawRarity($canvas, $card->getDisplayRarity(), $card->getDisplaySet(), $settings['rarity.right'], $settings['rarity.center.y'], $settings['rarity.height'], $settings['rarity.width'], false);
 
 		// Card title.
-		$this->drawText($canvas, $settings['title.x'], $settings['title.y'], $costLeft - $settings['title.x'], $card->getDisplayTitle(), $this->font('title'));
+		$this->drawText($canvas, $settings['title.x'], $settings['title.y'], $costLeft - $settings['title.x'], $card->getDisplayTitle(), $this->font("title$languageFont"));
 
 		echo '.';
 
 		// Type.
-		$this->drawText($canvas, $settings['type.x'], $settings['type.y'], $rarityLeft - $settings['type.x'], $card->type, $this->font('type'));
+		$this->drawText($canvas, $settings['type.x'], $settings['type.y'], $rarityLeft - $settings['type.x'], $card->type, $this->font("type$languageFont"));
 
 		// Legal text.
-		if (!preg_match_all('/((\+|-)?([0-9XYZ]+): )?(.*?)(?=$|[\+|-]?[0-9XYZ]+:)/s', $card->legal, $matches)) error('Missing legality change from legal text: ' . $card->title);
+		$card->legal = str_replace(' : ', ': ', $card->legal);
+		if (!preg_match_all('/((\+|-)?([0-9XYZ]+): )?(.*?)(?=$|[\+|-]?[0-9XYZ]+:)/s', $card->legal, $Result)) error('Missing legality change from legal text: ' . $card->title);
 		//print_r($matches);
+		
+		$Temp = Array();
+		$matches = Array();
+		$N = 0;
+		$Size_1 = count($Result);
+		$Size_2 = count($Result[0]);
+
+		for ($i = 0; $i < $Size_2; $i++) {
+			if (strlen($Result[0][$i]) > 1) {
+				$Temp[$N] = $i;
+				$N++;
+			}
+		}
+		
+		$Size_2 = count($Temp);
+		for ($i = 0; $i < $Size_1; $i++) {
+			for ($j = 0; $j < $Size_2; $j++) {
+				$matches[$i][$j] = trim($Result[$i][$Temp[$j]]);
+			}
+		}
 
 		$text_offset=0;
 		if(strlen($matches[0][0])==0)
@@ -104,7 +144,7 @@ class PlanesWalkerRenderer extends CardRenderer {
 		}
 
 		$this->drawText($canvas, $settings['loyalty.1.center.x'], $settings['loyalty.1.center.y'], $settings['loyalty.1.center.width'], ((!empty($matches[2][$text_offset+0]))?preg_replace('/([+|-])/', '{\\1}', $matches[2][$text_offset+0]):"\037").$matches[3][$text_offset+0], $this->font('loyalty.change', 'color:'.$white));
-		$this->drawLegalAndFlavorText($canvas, $settings['text.1.top'], $settings['text.1.left'], $settings['text.1.bottom'], $settings['text.1.right'], $matches[4][$text_offset+0], null, $this->font('text'), 0);
+		$this->drawLegalAndFlavorText($canvas, $settings['text.1.top'], $settings['text.1.left'], $settings['text.1.bottom'], $settings['text.1.right'], $matches[4][$text_offset+0], null, $this->font("text$languageFont"), 0);
 
 		//2
 		$this->loyaltyIcon($matches[2][$text_offset+1], 2,  $logaltyImage, $loyalty, $matches[3][$text_offset+1]);
@@ -114,7 +154,7 @@ class PlanesWalkerRenderer extends CardRenderer {
 		}
 
 		$this->drawText($canvas, $settings['loyalty.2.center.x'], $settings['loyalty.2.center.y'], $settings['loyalty.2.center.width'], ((!empty($matches[2][$text_offset+1]))?preg_replace('/([+|-])/', '{\\1}', $matches[2][$text_offset+1]):"\037").$matches[3][$text_offset+1], $this->font('loyalty.change', 'color:'.$white));
-		$this->drawLegalAndFlavorText($canvas, $settings['text.2.top'], $settings['text.2.left'], $settings['text.2.bottom'], $settings['text.2.right'], $matches[4][$text_offset+1], null, $this->font('text'), 0);
+		$this->drawLegalAndFlavorText($canvas, $settings['text.2.top'], $settings['text.2.left'], $settings['text.2.bottom'], $settings['text.2.right'], $matches[4][$text_offset+1], null, $this->font("text$languageFont"), 0);
 
 		//3
 		$this->loyaltyIcon($matches[2][$text_offset+2], 3,  $logaltyImage, $loyalty, $matches[3][$text_offset+2]);
@@ -124,7 +164,7 @@ class PlanesWalkerRenderer extends CardRenderer {
 		}
 
 		$this->drawText($canvas, $settings['loyalty.3.center.x'], $settings['loyalty.3.center.y'], $settings['loyalty.3.center.width'], ((!empty($matches[2][$text_offset+2]))?preg_replace('/([+|-])/', '{\\1}', $matches[2][$text_offset+2]):"\037").$matches[3][$text_offset+2], $this->font('loyalty.change', 'color:'.$white));
-		$this->drawLegalAndFlavorText($canvas, $settings['text.3.top'], $settings['text.3.left'], $settings['text.3.bottom'], $settings['text.3.right'], $matches[4][$text_offset+2], null, $this->font('text'), 10);
+		$this->drawLegalAndFlavorText($canvas, $settings['text.3.top'], $settings['text.3.left'], $settings['text.3.bottom'], $settings['text.3.right'], $matches[4][$text_offset+2], null, $this->font("text$languageFont"), 10);
 
 		// Artist and copyright.
 		// The artist color is white if the frame behind it is black.
@@ -137,7 +177,11 @@ class PlanesWalkerRenderer extends CardRenderer {
 			}
 			$this->drawText($canvas, $settings['artist.x'], $settings['artist.y'], $settings['artist.width'], $artistSymbol . $card->artist, $this->font('artist', 'color:' . $footerColor));
 		}
-		if ($card->copyright) $this->drawText($canvas, $settings['copyright.x'], $settings['copyright.y'], null, $card->copyright, $this->font('copyright', 'color:' . $footerColor));
+		if (($promoSet = $this->getPromoSetText($card->set)) && in_array($card->set, $promoset)) {
+			$this->drawText($canvas, $settings['copyright.x'], $settings['copyright.y'], null, $card->copyright . ' ' . $promoSet, $this->font('copyright', 'color:' . $footerColor));
+		} else if (($promoCard = $this->getPromoCardText($card->title)) && in_array($card->set, $promoset)){
+			$this->drawText($canvas, $settings['copyright.x'], $settings['copyright.y'], null, $card->copyright . ' ' . $promoCard, $this->font('copyright', 'color:' . $footerColor));
+		} else if ($card->copyright) $this->drawText($canvas, $settings['copyright.x'], $settings['copyright.y'], null, $card->copyright, $this->font('copyright', 'color:' . $footerColor));
 
 		//Art overlay
 		$overlayFileName = preg_replace('/(.*)\.(jpg|png)/i','$1-overlay.png', $card->artFileName);
@@ -148,58 +192,68 @@ class PlanesWalkerRenderer extends CardRenderer {
 		return $canvas;
 	}
 
+	private function getPromoSetText ($set) {
+		if (!PlanesWalkerRenderer::$titleToPromoSetText) PlanesWalkerRenderer::$titleToPromoSetText = csvToArray('data/setToPromoText.csv');
+		return @PlanesWalkerRenderer::$titleToPromoSetText[(string)strtolower($set)];
+	}
+	
+	private function getPromoCardText ($title) {
+		if (!PlanesWalkerRenderer::$titleToPromoCardText) PlanesWalkerRenderer::$titleToPromoCardText = csvToArray('data/titleToPromoText.csv');
+		return @PlanesWalkerRenderer::$titleToPromoCardText[(string)strtolower($title)];
+	}
+	
 	private function loyaltyIcon($sign, $slotNumber, &$logaltyImage, &$loyalty, $valor){
 		if ($sign == '+'){
-			$logaltyImage = @imagecreatefrompng('images/planeswalker/loyalty/LoyaltyUp.png');
+			$logaltyImage = @imagecreatefrompng('images/eighth/planeswalker/loyalty/LoyaltyUp.png');
 			switch($slotNumber){
 				case 1:
-					$loyalty['y'] = 687;
+					$loyalty['y'] = 665;
 					break;
 				case 2:
-					$loyalty['y'] = 785;
+					$loyalty['y'] = 759;
 					break;
 				case 3:
-					$loyalty['y'] = 876;
+					$loyalty['y'] = 854;
 					break;
 			}
-			$loyalty['x'] = 13;
-			$loyalty['w'] = 91;
-			$loyalty['h'] = 76;
+			$loyalty['x'] = -1;
+			$loyalty['w'] = 120;
+			$loyalty['h'] = 120;
 		} else if ($sign == '-'){
-			$logaltyImage = @imagecreatefrompng('images/planeswalker/loyalty/LoyaltyDown.png');
+			$logaltyImage = @imagecreatefrompng('images/eighth/planeswalker/loyalty/LoyaltyDown.png');
 			switch($slotNumber){
 				case 1:
-					$loyalty['y'] = 698;
+					$loyalty['y'] = 665;
 					break;
 				case 2:
-					$loyalty['y'] = 794;
+					$loyalty['y'] = 759;
 					break;
 				case 3:
-					$loyalty['y'] = 887;
+					$loyalty['y'] = 854;
 					break;
 			}
-			$loyalty['x'] = 13;
-			$loyalty['w'] = 91;
-			$loyalty['h'] = 75;
+			$loyalty['x'] = -1;
+			$loyalty['w'] = 120;
+			$loyalty['h'] = 120;
 		} else {
 			if($valor == '')
 				$logaltyImage = null;
 			else
-				$logaltyImage = @imagecreatefrompng('images/planeswalker/loyalty/LoyaltyZero.png');
+				$logaltyImage = @imagecreatefrompng('images/eighth/planeswalker/loyalty/LoyaltyZero.png');
 			switch($slotNumber){
 				case 1:
-					$loyalty['y'] = 691;
+					$loyalty['y'] = 665;
 					break;
 				case 2:
-					$loyalty['y'] = 787;
+					$loyalty['y'] = 759;
 					break;
 				case 3:
-					$loyalty['y'] = 880;
+					$loyalty['y'] = 854;
 					break;
 			}
-			$loyalty['x'] = 13;
-			$loyalty['w'] = 91;
-			$loyalty['h'] = 76;
+			$loyalty['x'] = -1;
+			$loyalty['w'] = 120;
+			$loyalty['h'] = 120;
 		}
 	}
 
@@ -213,7 +267,7 @@ class PlanesWalkerRenderer extends CardRenderer {
 	}
 
 	private function getFrameDir ($title, $set, $settings) {
-		if (!PlanesWalkerRenderer::$titleToTransform) PlanesWalkerRenderer::$titleToTransform = csvToArray('data/eighth/titleToTransform.csv');
+		if (!PlanesWalkerRenderer::$titleToTransform) PlanesWalkerRenderer::$titleToTransform = csvToArray('data/titleToTransform.csv');
 		$frameDir = 'transform-' . @PlanesWalkerRenderer::$titleToTransform[(string)strtolower($title)];
 		if (!$frameDir || $frameDir == 'transform-') $frameDir = "regular";
 		return $frameDir;

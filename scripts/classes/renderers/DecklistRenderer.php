@@ -1,4 +1,4 @@
-<?
+<?php
 ////////////////////////////////////////////////////////////////////////
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -87,6 +87,9 @@ class DecklistRenderer extends Renderer {
 				break;
 			case "Standard (T2)":
 				$format = "t2";
+				break;
+			case "Commander (Singleton)":
+				$format = "edh";
 				break;
 			}
 			$legalityImage = @imagecreatefrompng("images/decklist/$imageName $format.png");

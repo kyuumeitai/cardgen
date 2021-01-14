@@ -7,6 +7,8 @@ card.multicolor.gold.frame = 1
 
 [fonts]
 font.text = 24, MPlantin.ttf/MPlantinI.ttf, leading:45
+font.text.russian = 24, MinionPro-Cn.ttf/MinionPro-CnItalic.ttf, leading:45
+font.text.japanese = 18, mtgrulej.ttf, leading:30
 font.artist = 22, MatrixB.ttf>GaramondB.ttf, centerX:true
 font.copyright = 13, MPlantin.ttf
 font.loyalty.starting = 36, MatrixBSmallCaps.ttf>GaramondB.ttf, centerY:true centerX:true
@@ -14,15 +16,30 @@ font.loyalty.change = 24, MPlantinB.ttf, centerY:true centerX:true
 
 [fonts - regular]
 font.title = 35, MatrixB.ttf>GaramondB.ttf
+font.title.russian = 35, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf>MatrixB.ttf/MatrixBI.ttf
+font.title.japanese = 35, mtgnamej.ttf
 font.type = 30, MatrixB.ttf>GaramondB.ttf
+font.type.russian = 30, MinionPro-BoldCn.ttf
+font.type.japanese = 30, mtgnamej.ttf
+font.promo.text.type = 8, GothamMedium.ttf
 
 [fonts - transform-day]
 font.title = 35, MatrixB.ttf>GaramondB.ttf
+font.title.russian = 35, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf>MatrixB.ttf/MatrixBI.ttf
+font.title.japanese = 35, mtgnamej.ttf
 font.type = 30, MatrixB.ttf>GaramondB.ttf
+font.type.russian = 30, MinionPro-BoldCn.ttf
+font.type.japanese = 30, mtgnamej.ttf
+font.promo.text.type = 8, GothamMedium.ttf
 
 [fonts - transform-night]
 font.title = 35, MatrixB.ttf>GaramondB.ttf, color:255,255,255
+font.title.russian = 35, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf>MatrixB.ttf/MatrixBI.ttf, color:255,255,255
+font.title.japanese = 35, mtgnamej.ttf, color:255,255,255
 font.type = 30, MatrixB.ttf>GaramondB.ttf, color:255,255,255
+font.type.russian = 30, MinionPro-BoldCn.ttf, color:255,255,255
+font.type.japanese = 30, mtgnamej.ttf, color:255,255,255
+font.promo.text.type = 8, GothamMedium.ttf
 
 [layout - transform-day]
 title.x = 105
@@ -46,12 +63,16 @@ art.top = 0
 art.left = 0
 art.bottom = 1050
 art.right = 736
+art.xlhq.top = -27
+art.xlhq.left = -28
+art.xlhq.bottom = 1077
+art.xlhq.right = 765
 type.x = 52
 type.y = 650
-rarity.center.y = 637
+rarity.center.y = 638
 rarity.right = 690
 rarity.height = 45
-rarity.width = 0
+rarity.width = 76
 
 text.1.top = 688
 text.1.left = 123

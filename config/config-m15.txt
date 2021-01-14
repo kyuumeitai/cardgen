@@ -1,0 +1,375 @@
+
+[prompt]
+
+[card generation]
+card.timeshifted.frames = PLC
+card.fullart.expedition.frames = EXP
+card.fullart.basic.land.frames.set = UGL,UNH,ZEN,BFZ,OGW
+card.split.fuse.set = DGM
+card.nyxstars.set = THS,BNG,JOU,C15,CP2
+card.conspiracy.set = CNS,CN2
+card.fullart.land.frames = 1
+card.multicolor.frames = ;4,5
+card.multicolor.land.frames = 2
+card.multicolor.fetch.land.frames = 1
+card.multicolor.dual.borders = 1
+card.multicolor.grey.title.and.type = 0
+card.artifact.color = 1,2
+card.basic.land.set.symbols = 1
+card.dual.land.symbols = 0
+card.artist.gears = 0
+card.artist.and.copyright = 1
+
+[fonts]
+font.text = 30, MPlantin.ttf/MPlantinI.ttf, leading:30
+font.text.russian = 30, MinionPro-Cn.ttf/MinionPro-CnItalic.ttf, leading:30
+font.text.japanese = 20, mtgrulej.ttf, leading:20
+font.collection = 14, GothamMedium.ttf, leading:40
+font.promo.collection = 14, GothamMedium.ttf, leading:40
+font.artist = 15, BelerenBoldSmallCaps.ttf
+font.copyright = 10, MPlantin.ttf
+font.promo.text.type = 12, GothamMedium.ttf
+font.story.text.type = 12, GothamMedium.ttf
+
+[fonts - regular]
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 32, mtgnamej.ttf
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 25, mtgnamej.ttf
+font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+font.promo.text.type = 12, GothamMedium.ttf
+font.story.text.type = 12, GothamMedium.ttf
+
+[fonts - conspiracy]
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 32, mtgnamej.ttf
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 25, mtgnamej.ttf
+font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+font.promo.text.type = 12, GothamMedium.ttf
+font.story.text.type = 12, GothamMedium.ttf
+
+[fonts - mgdpromo]
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 32, mtgnamej.ttf
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf, color:255,255,255 shadow:true
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf, color:255,255,255 shadow:true
+font.type.japanese = 25, mtgnamej.ttf, color:255,255,255 shadow:true
+font.text = 30, MPlantin.ttf/MPlantinI.ttf, leading:30 color:255,255,255 shadow:true
+font.text.russian = 30, MinionPro-Cn.ttf/MinionPro-CnItalic.ttf, leading:30 color:255,255,255 shadow:true
+font.text.japanese = 20, mtgrulej.ttf, leading:20 color:255,255,255 shadow:true
+font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+font.promo.text.type = 12, GothamMedium.ttf
+font.story.text.type = 12, GothamMedium.ttf
+
+[fonts - fullartbasicland]
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 32, mtgnamej.ttf
+font.type = 24, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.type.russian = 24, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 24, mtgnamej.ttf
+font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+font.promo.text.type = 12, GothamMedium.ttf
+font.story.text.type = 12, GothamMedium.ttf
+
+[fonts - expedition]
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 32, mtgnamej.ttf
+font.type = 24, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.type.russian = 24, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 24, mtgnamej.ttf
+font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+
+[fonts - miracle]
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 32, mtgnamej.ttf
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 25, mtgnamej.ttf
+font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+font.promo.text.type = 12, GothamMedium.ttf
+
+[fonts - transform-spark]
+font.title = 30, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.title.russian = 30, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 30, mtgnamej.ttf
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 25, mtgnamej.ttf
+font.pt = 30,  BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+font.pt.transform = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+font.promo.text.type = 12, GothamMedium.ttf
+
+[fonts - transform-day]
+font.title = 30, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.title.russian = 30, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 30, mtgnamej.ttf
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 25, mtgnamej.ttf
+font.pt = 30,  BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+font.pt.transform = 20, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+font.promo.text.type = 12, GothamMedium.ttf
+
+[fonts - transform-night]
+font.title = 30, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf, color:255,255,255
+font.title.russian = 30, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf, color:255,255,255
+font.title.japanese = 30, mtgnamej.ttf, color:255,255,255
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf, color:255,255,255
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf, color:255,255,255
+font.type.japanese = 25, mtgnamej.ttf, color:255,255,255
+font.pt = 30,  BelerenBoldSmallCaps.ttf, centerY:true centerX:true color:255,255,255
+font.pt.transform = 20, BelerenBoldSmallCaps.ttf, centerY:true centerX:true color:255,255,255
+font.promo.text.type = 12, GothamMedium.ttf
+
+[fonts - transform-moon]
+font.title = 30, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.title.russian = 30, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 30, mtgnamej.ttf
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 25, mtgnamej.ttf
+font.pt = 30,  BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+font.pt.transform = 20, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+font.promo.text.type = 12, GothamMedium.ttf
+
+[fonts - transform-eldrazi]
+font.title = 30, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.title.russian = 30, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 30, mtgnamej.ttf
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 25, mtgnamej.ttf
+font.pt = 30,  BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+font.pt.transform = 20, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+font.promo.text.type = 12, GothamMedium.ttf
+
+[fonts - nyxstars]
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 32, mtgnamej.ttf
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 25, mtgnamej.ttf
+font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+font.promo.text.type = 12, GothamMedium.ttf
+
+[fonts - fuse-left]
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 32, mtgnamej.ttf
+font.type = 24, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 25, mtgnamej.ttf
+font.text = 30, MPlantin.ttf/MPlantinI.ttf, leading:30
+font.text.russian = 30, MinionPro-Cn.ttf/MinionPro-CnItalic.ttf, leading:30
+font.text.japanese = 20, mtgrulej.ttf, leading:20
+
+[fonts - fuse-right]
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 32, mtgnamej.ttf
+font.type = 24, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 25, mtgnamej.ttf
+font.text = 30, MPlantin.ttf/MPlantinI.ttf, leading:30
+font.text.russian = 30, MinionPro-Cn.ttf/MinionPro-CnItalic.ttf, leading:30
+font.text.japanese = 20, mtgrulej.ttf, leading:20
+
+[fonts - timeshifted]
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf, color:255,255,255 shadow:true
+font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf, color:255,255,255 shadow:true
+fons.title.japanese = 32, mtgnamej.ttf, color:255,255,255 shadow:true
+font.type = 24, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf, color:255,255,255 shadow:true
+font.type.russian = 25, MinionPro-BoldCn.ttf, color:255,255,255 shadow:true
+font.type.japanese = 25, mtgnamej.ttf, color:255,255,255 shadow:true
+font.text = 30, MPlantin.ttf/MPlantinI.ttf, leading:30
+font.text.russian = 30, MinionPro-Cn.ttf/MinionPro-CnItalic.ttf, leading:30
+font.text.japanese = 20, mtgrulej.ttf, leading:30
+font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true color:255,255,255 shadow:true
+
+[fonts - masterpiece]
+font.title = 32, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 32, mtgnamej.ttf
+font.type = 25, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 25, mtgnamej.ttf
+font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+font.promo.text.type = 12, GothamMedium.ttf
+font.story.text.type = 12, GothamMedium.ttf
+
+[layout - masterpiece]
+title.x = 51
+title.y = 86
+cost.right = 677
+cost.top = 53
+cost.top.dual = 55
+cost.size = 35
+
+[layout - miracle]
+
+[layout - conspiracy]
+
+[layout - timeshifted]
+
+[layout - transform-spark]
+title.x = 110
+title.y = 82
+pt.transform.center.x = 650
+pt.transform.center.y = 888
+pt.transform.width = 95
+
+[layout - transform-day]
+title.x = 110
+title.y = 82
+pt.transform.center.x = 650
+pt.transform.center.y = 888
+pt.transform.width = 95
+
+[layout - transform-night]
+title.x = 110
+title.y = 82
+type.x = 85
+type.art.x = 51
+pt.transform.center.x = 650
+pt.transform.center.y = 888
+pt.transform.width = 80
+
+[layout - transform-moon]
+title.x = 110
+title.y = 82
+pt.transform.center.x = 650
+pt.transform.center.y = 888
+pt.transform.width = 95
+
+[layout - transform-eldrazi]
+title.x = 110
+title.y = 82
+type.x = 51
+type.art.x = 51
+pt.transform.center.x = 650
+pt.transform.center.y = 888
+pt.transform.width = 80
+
+[layout - fullartbasicland]
+type.x = 51
+type2.x = 490
+type.y = 876
+type2.y = 876
+rarity.center.y = 867
+rarity.right = 675
+rarity.height = 41
+rarity.width = 0
+
+[layout - expedition]
+title.x = 51
+title.y = 82
+type.x = 51
+type.y = 881
+rarity.center.y = 870
+rarity.right = 675
+rarity.height = 41
+rarity.width = 0
+text.top = 647
+text.left = 52
+text.bottom = 808
+text.right = 665
+
+[layout - nyxstars]
+
+[layout - fuse-left]
+title.y = 84
+cost.top = 51
+text.top = 647
+text.left = 52
+text.bottom = 860
+text.right = 665
+artistOffset.x = 25
+artist.y = 996
+copyrightLeft.x = 40
+copyrightPT.y = 996
+copyright.y = 977
+
+[layout - fuse-right]
+title.y = 84
+cost.top = 51
+text.top = 647
+text.left = 52
+text.bottom = 860
+text.right = 665
+artistOffset.x = 25
+artist.y = 996
+copyrightLeft.x = 40
+copyrightPT.y = 996
+copyright.y = 977
+
+[layout - mgdpromo]
+title.y = 84
+cost.top = 51
+text.top = 708
+art.top = 106
+art.left = 24
+art.bottom = 952
+art.right = 684
+type.y = 680
+rarity.center.y = 668
+artistOffset.x = 25
+artist.y = 996
+copyrightLeft.x = 40
+copyrightPT.y = 996
+copyright.y = 977
+
+[layout - regular]
+title.x = 51
+title.y = 84
+cost.right = 677
+cost.top = 51
+cost.top.dual = 53
+cost.size = 35
+art.top = 107
+art.left = 43
+art.bottom = 569
+art.right = 674
+art.xlhq.top = -10
+art.xlhq.left = -12
+art.xlhq.bottom = 1030
+art.xlhq.right = 733
+type.x = 51
+type.y = 616
+type.indicator.x = 87
+indicator.x = 44
+indicator.y = 587
+indicator.size = 37
+rarity.center.y = 604
+rarity.right = 675
+rarity.height = 41
+rarity.width = 76
+text.top = 647
+text.left = 52
+textPT.bottom = 920
+text.bottom = 930
+text.right = 668
+text.pt.height.adjust = 14
+pt.center.y = 942
+pt.center.x = 629
+pt.width = 95
+collection.x = 37
+collection.y = 977
+artistOffset.x = 25
+artist.y = 996
+storyLeft.x = 22
+story.y = 977
+copyrightLeft.x = 40
+copyrightPT.y = 996
+copyright.y = 977
+promo.text.type.x = 142
+promo.text.type.y = 977

@@ -1,4 +1,4 @@
-<?
+<?php
 ////////////////////////////////////////////////////////////////////////
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -14,6 +14,11 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ////////////////////////////////////////////////////////////////////////
 require_once 'includes/global.php';
+require_once 'includes/newfunctions.php';
+ini_set('display_errors', 'On');
+error_reporting(E_ALL | E_STRICT);
+mb_internal_encoding("UTF-8");
+mb_regex_encoding("UTF-8");
 
 $pagedOutput = $argv[1] == 'pagedOutput=true';
 $decklistOnlyOutput = $argv[2] == 'decklistOnlyOutput=true';

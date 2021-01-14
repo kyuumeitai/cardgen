@@ -1,4 +1,4 @@
-<?
+<?php
 ////////////////////////////////////////////////////////////////////////
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -15,10 +15,16 @@
 ////////////////////////////////////////////////////////////////////////
 class MasterBase {
 	public $cards = array();
-
+	
 	static private $totalCardsInSet;
-
+	
 	public function __construct ($mwsFileName) {
+		// Normalize all new lines to \r\n before opening the file.
+		$mwsFileStr = file_get_contents($mwsFileName);
+		$mwsFileStr = preg_replace("/\r(?!\n)/s", "\r\n", $mwsFileStr);
+		$mwsFileStr = preg_replace("/(?<!\r)\n/s", "\r\n", $mwsFileStr);
+		file_put_contents($mwsFileName, $mwsFileStr);
+		
 		$mwsFile = fopen_utf8($mwsFileName, 'rb');
 		if (!$mwsFile) error('Unable to open masterbase CSV file: ' . $mwsFileName);
 
@@ -75,7 +81,7 @@ class MasterBase {
 				$colors = Card::getCostColors($cost2);
 				$color .= strlen($colors) == 1 ? $colors : 'Gld';
 			}
-			if (strpos($title, "/") !== FALSE && (($p != "" && $t != "") || $set == 'DKA' || $set == 'ISD')) {
+			if (strpos($title, "/") !== FALSE && (($p != "" && $t != "") || $set == 'DKA' || $set == 'ISD'||$set == 'ORI')) {
 				// flip cards fixes
 				$title1 = substr($title, 0, strpos($title, '/'));
 				$title2 = substr($title, strpos($title, '/') + 1);
@@ -122,15 +128,21 @@ class MasterBase {
 			// Legal.
 			$legal = $this->replaceDualManaSymbols($legal);
 			$legal = $this->replacePhyrexiaSymbols($legal);
+			$legal = str_replace('%%', '%', $legal);
 			$legal = preg_replace('/\%([0-9]+)/', '{\\1}', $legal);
-			$legal = preg_replace('/\%([WUBRGTXYZ])/', '{\\1}', $legal);
+			$legal = preg_replace('/%([WUBRGTXYZ])/', '{\\1}', $legal);
 			$legal = str_replace('%C', '{Q}', $legal);
+			$legal = str_replace('/\?([0-9X]+)/', '-\\1', $legal);
+			$legal = str_replace('\n-', '\n—', $legal);
 
 			$legal = str_replace("<hr>", "-----", $legal);
 			$flavor = str_replace("<hr>", "-----", $flavor);
 			$legal = str_replace("//", "-----", $legal);
 			$flavor = str_replace("//", "-----", $flavor);
-
+			
+			$legal = str_replace(".-----", "\r\n-----", $legal);
+			$flavor = str_replace(".-----", "\r\n-----", $flavor);
+			
 			//card specific
 			$legal = str_replace('El-Hajjaj', 'El-Hajjâj', $legal);
 			$legal = str_replace('Junun', 'Junún', $legal);
@@ -149,7 +161,7 @@ class MasterBase {
 			$legal = str_replace(' en-', ' #en#-', $legal);
 			$legal = str_replace(' il-', ' #il#-', $legal);
 			$legal = str_replace('Seance', 'Séance', $legal);
-
+						
 			$legal = preg_replace('/#([^#]+)# – /', '\\1 – ', $legal); // Remove italics from ability keywords.
 			$legal = str_replace("\r\n-----\r\n", "\n-----\n", $legal); // Flip card separator.
 			$legal = str_replace('Creature - ', 'Creature — ', $legal);
@@ -158,6 +170,7 @@ class MasterBase {
 			$legal = str_replace('AE', 'Æ', $legal);
 			$legal = str_replace(".]", ".)", $legal);
 			$legal = str_replace("\r\n", "\n", $legal);
+			
 			// Fix vanguard inconsistencies.
 			if (preg_match('/Starting & Max[^\+\-]+([\+\-][0-9]+)[^\+\-]+([\+\-][0-9]+)/', $legal, $matches))
 				$legal = 'Hand ' . $matches[1] . ', Life ' . $matches[2] . "\n" . substr($legal, 0, strpos($legal, ' Starting & Max'));
@@ -178,8 +191,11 @@ class MasterBase {
 			$flavor = preg_replace("/\r\n#- (.?)/", "\n#—\\1", $flavor);
 			$flavor = preg_replace("/ - /", "—", $flavor);
 			$flavor = str_replace('AE', 'Æ', $flavor);
+			$flavor = str_replace(' en-', ' #en#-', $flavor);
+			$flavor = str_replace(' Weatherlight', ' #Weatherlight#', $flavor);
 			$flavor = str_replace("\r\n", "\n", $flavor);
 			$flavor = str_replace('"', '”', $flavor); // " to ”
+			$flavor = str_replace("“Tovolar, my master. Gather the howlpack, for the Hunter’s Moon is nigh and Thraben’s walls grow weak.”", "“Tovolar, my master. Gather the howlpack, for the Hunter’s Moon is nigh and Thraben’s walls grow weak.”\n-----", $flavor);
 
 			// Store.
 			$card = new Card();
@@ -232,6 +248,7 @@ class MasterBase {
 		$text = str_replace('%K', '{BR}', $text);
 		$text = str_replace('%D', '{WU}', $text);
 		$text = str_replace('%N', '{S}', $text);
+		$text = str_replace('%&', '{C}', $text);
 
 		$text = str_replace('%E', '{2W}', $text);
 		$text = str_replace('%F', '{2U}', $text);

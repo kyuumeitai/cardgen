@@ -1,4 +1,5 @@
-<?
+<?php
+
 ////////////////////////////////////////////////////////////////////////
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -14,145 +15,223 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ////////////////////////////////////////////////////////////////////////
 abstract class CardRenderer extends Renderer {
-	public $card;
-	public $setDB;
 
-	public function __construct (SetDB $setDB) {
-		$this->setDB = $setDB;
-	}
+    public $card;
+    public $setDB;
 
-	// Draws the art image within the specified box, cropping the art if necessary to maintain proportions.
-	public function drawArt (&$canvas, $artFileName, $artTop, $artLeft, $artBottom, $artRight, $ignoreAspectRatio = false) {
-		$artImage = null;
-		if ($artFileName) {
-			switch (substr($artFileName, -4)) {
-			case ".jpg":
-			case "jpeg":
-				$artImage = @imagecreatefromjpeg($artFileName);
-				break;
-			case ".png":
-				$artImage = @imagecreatefrompng($artFileName);
-				break;
-			case ".gif":
-				$artImage = @imagecreatefromgif($artFileName);
-				break;
-			default:
-				error('Unknown art file extension: ' . $artFileName);
+    public function __construct(SetDB $setDB) {
+        $this->setDB = $setDB;
+    }
+    
+
+    // Draws the art image within the specified box, cropping the art if necessary to maintain proportions.
+    public function drawArt(&$canvas, $artFileName, $artTop, $artLeft, $artBottom, $artRight, $ignoreAspectRatio = false) {
+        $artImage = null;
+        if ($artFileName) {
+            switch (substr($artFileName, -4)) {
+                case ".jpg":
+                case "jpeg":
+                    $artImage = @imagecreatefromjpeg($artFileName);
+                    break;
+                case ".png":
+                    $artImage = @imagecreatefrompng($artFileName);
+                    break;
+                case ".gif":
+                    $artImage = @imagecreatefromgif($artFileName);
+                    break;
+                default:
+                    error('Unknown art file extension: ' . $artFileName);
+            }
+        }
+        if (!$artImage) {
+            echo '*art not found*';
+            return;
+        }
+        list($srcWidth, $srcHeight) = getimagesize($artFileName);
+        $destWidth = $artRight - $artLeft + 1;
+        $destHeight = $artBottom - $artTop + 1;
+        if ($ignoreAspectRatio) {
+            imagecopyresampled($canvas, $artImage, $artLeft, $artTop, 0, 0, $destWidth, $destHeight, $srcWidth, $srcHeight);
+            imagedestroy($artImage);
+            return;
+        }
+        if ($srcWidth > $srcHeight) {
+            $height = $srcWidth * ($destHeight / $destWidth);
+            $width = $srcWidth;
+            if ($height > $srcHeight) {
+                $width = $srcHeight * ($destWidth / $destHeight);
+                $height = $srcHeight;
+            }
+        } else {
+            $width = $srcHeight * ($destWidth / $destHeight);
+            $height = $srcHeight;
+            if ($width > $srcWidth) {
+                $height = $srcWidth * ($destHeight / $destWidth);
+                $width = $srcWidth;
+            }
+        }
+        $srcX = ($srcWidth - $width) / 2;
+        $srcY = ($srcHeight - $height) / 2;
+        imagecopyresampled($canvas, $artImage, $artLeft, $artTop, $srcX, $srcY, $destWidth, $destHeight, $width, $height);
+        imagedestroy($artImage);
+    }
+
+    public function drawLegalAndFlavorText($canvas, $top, $left, $bottom, $right, $legal, $flavor, $font, $heightAdjust = 0) {
+        $text = str_replace("\n", "\n\n", $legal);
+        if ($flavor)
+            $text .= "\n\n#" . $flavor . '#';
+        $this->drawTextWrappedAndScaled($canvas, $top, $left, $bottom, $right, $text, $font, true, $heightAdjust);
+    }
+
+    public function drawRarity($canvas, $rarity, $set, $right, $middle, $height, $width, $whiteBorder, $fallback = true) {
+		global $config;
+        $image = null;
+        $card = $this->card;
+		$preEXOSet = explode(',', $config['card.preexodus.sets']);
+		if ($rarity == 'T') $rarity = 'C';
+        if (!$image && $whiteBorder) {
+            foreach ($this->setDB->getAbbrevs($set) as $abbrev) {
+				if ($config['card.use.preexodus.all.black.set.symbol'] != FALSE && in_array($this->setDB->normalize($abbrev), $preEXOSet) != FALSE) {
+					list($image, $srcWidth, $srcHeight) = getPNG('images/preEighth/rarity/Pre-Exodus All Black Symbols (and Exodus Real Common Symbol)/' . $abbrev . '_' . $rarity . '.png');
+					if ($image)
+						break;
+					list($image, $srcWidth, $srcHeight) = getGIF('images/preEighth/rarity/Pre-Exodus All Black Symbols (and Exodus Real Common Symbol)/' . $abbrev . '_' . $rarity . '.gif');
+					if ($image)
+						break;
+				}
+                list($image, $srcWidth, $srcHeight) = getPNG('images/preEighth/rarity/' . $abbrev . '_' . $rarity . '.png');
+                if ($image)
+                    break;
+                list($image, $srcWidth, $srcHeight) = getGIF('images/preEighth/rarity/' . $abbrev . '_' . $rarity . '.gif');
+                if ($image)
+                    break;
+            }
+		}
+        if (!$image && $fallback) {
+            foreach ($this->setDB->getAbbrevs($set) as $abbrev) {
+				if ($config['card.use.preexodus.all.black.set.symbol'] != FALSE && in_array($this->setDB->normalize($abbrev), $preEXOSet) != FALSE) {
+					list($image, $srcWidth, $srcHeight) = getPNG('images/rarity/Pre-Exodus All Black Symbols (and Exodus Real Common Symbol)/' . $abbrev . '_' . $rarity . '.png');
+					if ($image)
+						break;
+					list($image, $srcWidth, $srcHeight) = getGIF('images/rarity/Pre-Exodus All Black Symbols (and Exodus Real Common Symbol)/' . $abbrev . '_' . $rarity . '.gif');
+					if ($image)
+						break;
+				}
+                list($image, $srcWidth, $srcHeight) = getPNG('images/rarity/' . $abbrev . '_' . $rarity . '.png');
+                if ($image)
+                    break;
+                list($image, $srcWidth, $srcHeight) = getGIF('images/rarity/' . $abbrev . '_' . $rarity . '.gif');
+                if ($image)
+                    break;
+            }
+		}
+		if (!$image && $fallback) {
+			if ($config['card.use.preexodus.all.black.set.symbol'] != FALSE && in_array($this->setDB->normalize($set), $preEXOSet) != FALSE) {
+				list($image, $srcWidth, $srcHeight) = getPNG('images/rarity/Pre-Exodus All Black Symbols (and Exodus Real Common Symbol)/' . $set . '_' . $rarity . '.png');
+				if (!$image){
+					list($image, $srcWidth, $srcHeight) = getGIF('images/rarity/Pre-Exodus All Black Symbols (and Exodus Real Common Symbol)/' . $set . '_' . $rarity . '.gif');
+				}
+			}
+			else {
+				list($image, $srcWidth, $srcHeight) = getPNG('images/rarity/' . $set . '_' . $rarity . '.png');
+				if (!$image) {
+					list($image, $srcWidth, $srcHeight) = getGIF('images/rarity/' . $set . '_' . $rarity . '.gif');
+				}
 			}
 		}
-		if (!$artImage) {
-			echo '*art not found*';
-			return;
-		}
-		list($srcWidth, $srcHeight) = getimagesize($artFileName);
-		$destWidth = $artRight - $artLeft + 1;
-		$destHeight = $artBottom - $artTop + 1;
-		if ($ignoreAspectRatio) {
-			imagecopyresampled($canvas, $artImage, $artLeft, $artTop, 0, 0, $destWidth, $destHeight, $srcWidth, $srcHeight);
-			imagedestroy($artImage);
-			return;
-		}
-		if ($srcWidth > $srcHeight) {
-			$height = $srcWidth * ($destHeight / $destWidth);
-			$width = $srcWidth;
-			if ($height > $srcHeight) {
-				$width = $srcHeight * ($destWidth / $destHeight);
-				$height = $srcHeight;
-			}
-		} else {
-			$width = $srcHeight * ($destWidth / $destHeight);
-			$height = $srcHeight;
-			if ($width > $srcWidth) {
-				$height = $srcWidth * ($destHeight / $destWidth);
-				$width = $srcWidth;
-			}
-		}
-		$srcX = ($srcWidth - $width) / 2;
-		$srcY = ($srcHeight - $height) / 2;
-		imagecopyresampled($canvas, $artImage, $artLeft, $artTop, $srcX, $srcY, $destWidth, $destHeight, $width, $height);
-		imagedestroy($artImage);
-	}
+        if ($image) {
+            $destWidth = $srcWidth;
+            $destHeight = $srcHeight;
+            // Resize height, keeping width in proportion.
+            if ($srcHeight > $height) {
+                $destWidth = $height * ($srcWidth / $srcHeight);
+                $destHeight = $height;
+            }
+            if ($width && $destWidth > $width) {
+                $destWidth = $width;
+                $destHeight = $width * ($srcHeight / $srcWidth);
+            }
+            imagecopyresampled($canvas, $image, $right - $destWidth, $middle - ($destHeight / 2), 0, 0, $destWidth, $destHeight, $srcWidth, $srcHeight);
+            imagedestroy($image);
+            $rarityLeft = $right - $destWidth - 5;
+        } else
+            $rarityLeft = $right;
+        return $rarityLeft;
+    }
 
-	public function drawLegalAndFlavorText ($canvas, $top, $left, $bottom, $right, $legal, $flavor, $font, $heightAdjust = 0) {
-		$text = str_replace("\n", "\n\n", $legal);
-		if ($flavor) $text .= "\n\n#" . $flavor . '#';
-		$this->drawTextWrappedAndScaled($canvas, $top, $left, $bottom, $right, $text, $font, true, $heightAdjust);
-	}
+    // Draws multiple symbols.
+    public function drawCastingCost($canvas, $symbols, $top, $right, $symbolSize, $shadow = false) {
+        // Figure width of all symbols.
+        $symbolsWidth = 0;
 
-	public function drawRarity ($canvas, $rarity, $set, $right, $middle, $height, $width, $whiteBorder, $fallback = true) {
-		$image = null;
-		if ($whiteBorder)
-			foreach ($this->setDB->getAbbrevs($set) as $abbrev){
-				list($image, $srcWidth, $srcHeight) = getPNG('images/preEighth/rarity/' . $abbrev . '_' . $rarity . '.png');
-				if ($image)
-					break;
-				list($image, $srcWidth, $srcHeight) = getGIF('images/preEighth/rarity/' . $abbrev . '_' . $rarity . '.gif');
-				if ($image)
-					break;
-			}
-		if (!$image && $fallback)
-			foreach ($this->setDB->getAbbrevs($set) as $abbrev) {
-				list($image, $srcWidth, $srcHeight) = getPNG('images/eighth/rarity/' . $abbrev . '_' . $rarity . '.png');
-				if ($image)
-					break;
-				list($image, $srcWidth, $srcHeight) = getGIF('images/eighth/rarity/' . $abbrev . '_' . $rarity . '.gif');
-				if ($image)
-					break;
-			}
-		if ($image) {
-			$destWidth = $srcWidth;
-			$destHeight = $srcHeight;
-			// Resize height, keeping width in proportion.
-			if ($srcHeight > $height) {
-				$destWidth = $height * ($srcWidth / $srcHeight);
-				$destHeight = $height;
-			}
-			if ($width && $destWidth > $width) {
-				$destWidth = $width;
-				$destHeight = $width * ($srcHeight / $srcWidth);
-			}
-			imagecopyresampled($canvas, $image, $right - $destWidth, $middle - ($destHeight / 2), 0, 0, $destWidth, $destHeight, $srcWidth, $srcHeight);
-			imagedestroy($image);
-			$rarityLeft = $right - $destWidth - 5;
-		} else
-			$rarityLeft = $right;
-		return $rarityLeft;
-	}
-
+        foreach ($symbols as $symbol) {
+            list($width) = $this->drawSymbol(null, 0, 0, $symbolSize, $symbol, false);
+            $symbolsWidth += $width + 4;
+        }
+        // Output casting cost symbols from left to right.
+        $x = $right - $symbolsWidth;
+        $left = $x - 5;
+        foreach ($symbols as $symbol) {
+            list($width) = $this->drawSymbol($canvas, $top, $x, $symbolSize, $symbol, $shadow);
+            $x += $width + 4;
+        }
+        return $left;
+    }
+	
 	// Draws multiple symbols.
-	public function drawCastingCost ($canvas, $symbols, $top, $right, $symbolSize, $shadow = false) {
-		// Figure width of all symbols.
-		$symbolsWidth = 0;
+    public function drawFutureshiftedCastingCost($canvas, $symbols, $top, $right, $symbolSize, $shadow = false) {
+        // Figure width of all symbols.
+        $symbolsWidth = 0;
 
-		foreach ($symbols as $symbol) {
-			list($width) = $this->drawSymbol(null, 0, 0, $symbolSize, $symbol, false);
-			$symbolsWidth += $width + 4;
-		}
-		// Output casting cost symbols from left to right.
-		$x = $right - $symbolsWidth;
-		$left = $x - 5;
-		foreach ($symbols as $symbol) {
-			list($width) = $this->drawSymbol($canvas, $top, $x, $symbolSize, $symbol, $shadow);
-			$x += $width + 4;
-		}
-		return $left;
-	}
+        foreach ($symbols as $symbol) {
+            list($width) = $this->drawSymbol(null, 0, 0, $symbolSize, $symbol, false);
+            $symbolsWidth += $width + 4;
+        }
+        // Output casting cost symbols from top to bottom.
+        $x = $right - $symbolsWidth;
+        $left = $x - 5;
+        foreach ($symbols as $symbol) {
+            list($width) = $this->drawSymbol($canvas, $top, $x, $symbolSize, $symbol, $shadow);
+            $x += $width + 4;
+        }
+        return $left;
+    }
+	
+	// Draws multiple symbols.
+    public function drawFutureshiftedTextlessCastingCost($canvas, $symbols, $top, $right, $symbolSize, $shadow = false) {
+        // Figure width of all symbols.
+        $symbolsWidth = 0;
 
-	public function drawTextWrappedAndScaled ($canvas, $top, $left, $bottom, $right, $text, $font, $center = true, $heightAdjust = 0) {
-		// Use font size from cache if possible.
-		$cachedFontSize = $this->writer->fontSizeDB->getSize($this->card->title, $font, $text, $right - $left, $bottom - $top);
-		if ($cachedFontSize) {
-			$font = clone $font;
-			$font->size = $cachedFontSize;
-		}
-		$fontSize = parent::drawTextWrappedAndScaled($canvas, $top, $left, $bottom, $right, $text, $font, $center, $heightAdjust);
-		// Store font size in cache if needed.
-		if (!$cachedFontSize) $this->writer->fontSizeDB->setSize($this->card->title, $font, $text, $right - $left, $bottom - $top, $fontSize);
-	}
+        foreach ($symbols as $symbol) {
+            list($width) = $this->drawSymbol(null, 0, 0, $symbolSize, $symbol, false);
+            $symbolsWidth += $width + 4;
+        }
+        // Output casting cost symbols from top to bottom.
+        $x = $right - $symbolsWidth;
+        $left = $x - 5;
+        foreach ($symbols as $symbol) {
+            list($width) = $this->drawSymbol($canvas, $top, $x, $symbolSize, $symbol, $shadow);
+            $x += $width + 4;
+        }
+        return $left;
+    }
 
-	public function getCardName() {
-		return $this->card->title;
-	}
+    public function drawTextWrappedAndScaled($canvas, $top, $left, $bottom, $right, $text, $font, $center = true, $heightAdjust = 0) {
+        // Use font size from cache if possible.
+        $cachedFontSize = $this->writer->fontSizeDB->getSize($this->card->title, $font, $text, $right - $left, $bottom - $top);
+        if ($cachedFontSize) {
+            $font = clone $font;
+            $font->size = $cachedFontSize;
+        }
+        $fontSize = parent::drawTextWrappedAndScaled($canvas, $top, $left, $bottom, $right, $text, $font, $center, $heightAdjust);
+        // Store font size in cache if needed.
+        if (!$cachedFontSize)
+            $this->writer->fontSizeDB->setSize($this->card->title, $font, $text, $right - $left, $bottom - $top, $fontSize);
+    }
+
+    public function getCardName() {
+        return $this->card->title;
+    }
+
 }
-
 ?>

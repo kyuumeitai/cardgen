@@ -6,12 +6,19 @@ card.multicolor.gold.frame = 1
 
 [fonts]
 font.text = 24, MPlantin.ttf/MPlantinI.ttf, leading:45
+font.text.russian = 24, MinionPro-Cn.ttf/MinionPro-CnItalic.ttf, leading:45
+font.text.japanese = 18, mtgrulej.ttf, leading:30
 font.artist = 22, MatrixB.ttf>GaramondB.ttf, centerX:true
 font.copyright = 13, MPlantin.ttf
 font.title = 35, MatrixB.ttf>GaramondB.ttf
+font.title.russian = 35, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf>MatrixB.ttf/MatrixBI.ttf
+font.title.japanese = 35, mtgnamej.ttf
 font.type = 30, MatrixB.ttf>GaramondB.ttf
+font.type.russian = 30, MinionPro-BoldCn.ttf
+font.type.japanese = 30, mtgnamej.ttf
 font.loyalty.starting = 36, MatrixBoldSmallCaps.ttf>GaramondB.ttf, centerY:true centerX:true
 font.loyalty.change = 24, MPlantinB.ttf, centerY:true centerX:true
+font.promo.text.type = 8, GothamMedium.ttf
 
 [layout]
 title.x = 43
@@ -24,29 +31,33 @@ art.top = 0
 art.left = 0
 art.bottom = 1050
 art.right = 736
+art.xlhq.top = -27
+art.xlhq.left = -28
+art.xlhq.bottom = 1077
+art.xlhq.right = 765
 type.x = 52
-type.y = 650
-rarity.center.y = 637
+type.y = 562
+rarity.center.y = 549
 rarity.right = 690
 rarity.height = 45
 rarity.width = 0
 
-text.1.top = 680
+text.1.top = 592
 text.1.left = 123
-text.1.bottom = 736
+text.1.bottom = 677
 text.1.right = 650
 
-text.2.top = 755
+text.2.top = 689
 text.2.left = 123
-text.2.bottom = 800
+text.2.bottom = 773
 text.2.right = 650
 
-text.3.top = 825
+text.3.top = 785
 text.3.left = 123
 text.3.bottom = 875
 text.3.right = 650
 
-text.4.top = 895
+text.4.top = 887
 text.4.left = 123
 text.4.bottom = 953
 text.4.right = 650
@@ -58,15 +69,15 @@ loyalty.starting.center.x = 670
 loyalty.starting.width = 114
 
 loyalty.1.center.x = 58
-loyalty.1.center.y = 710
+loyalty.1.center.y = 637
 loyalty.1.center.width = 114
 
 loyalty.2.center.x = 60
-loyalty.2.center.y = 780
+loyalty.2.center.y = 733
 loyalty.2.center.width = 114
 
 loyalty.3.center.x = 58
-loyalty.3.center.y = 851
+loyalty.3.center.y = 829
 loyalty.3.center.width = 114
 
 loyalty.4.center.x = 59

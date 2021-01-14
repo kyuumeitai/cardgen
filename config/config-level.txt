@@ -15,13 +15,21 @@ card.artist.gears = 0
 
 [fonts]
 font.text = 28, MPlantin.ttf/MPlantinI.ttf, leading:28
+font.text.russian = 28, MinionPro-Cn.ttf/MinionPro-CnItalic.ttf, leading:28
+font.text.japanese = 20, mtgrulej.ttf, leading:28
 font.artist = 22, MatrixB.ttf/GaramondBI.ttf
 font.copyright = 13, MPlantin.ttf
 
 [fonts - regular]
 font.title = 35, MatrixB.ttf/GaramondBI.ttf
+font.title.russian = 35, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 35, mtgnamej.ttf
 font.type = 30, MatrixB.ttf/GaramondBI.ttf
+font.type.russian = 30, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 30, mtgnamej.ttf
 font.pt = 36, MatrixBSmallCaps.ttf, centerY:true centerX:true
+font.pt.russian = 36, MinionPro-BoldCn.ttf, centerY:true centerX:true
+font.pt.japanese = 36, mtgnamej.ttf, centerY:true centerX:true
 
 [layout - level]
 title.x = 43
@@ -34,6 +42,10 @@ art.top = 104
 art.left = 42
 art.bottom = 584
 art.right = 692
+art.xlhq.top = -27
+art.xlhq.left = -28
+art.xlhq.bottom = 1077
+art.xlhq.right = 765
 type.x = 52
 type.y = 635
 rarity.center.y = 623

@@ -1,0 +1,16 @@
+﻿Name,Localized Name,Set,Type,Legal Text,Flavor,Version
+Festering Goblin,Eiternder Goblin,FUT,"Kreaturspielstein — Zombie, Goblin","Wenn der Eiternde Goblin aus dem Spiel auf den Friedhof gelegt wird, erh—lt eine Kreatur deiner Wahl -1/-1 bis zum Ende des Zuges.",,
+Goldmeadow Harrier,Goldwiesen-Schikanierer,FUT,"Kreaturspielstein — Kithkin, Soldat","{W}, {T}: Tappe eine Kreatur deiner Wahl.",,
+Llanowar Elves,Llanowarelfen,FUT,"Kreaturspielstein — Elf, Druide",{T}: Erh—he deinen Manavorrat um {G}.,,
+Metallic Sliver,Metallischer Remasuri,FUT,Artefaktkreaturspielstein — Remasuri,,,
+Spark Elemental,Funkenelementar,FUT,Kreaturspielstein — Elementarwesen,"Verursacht Trampelschaden, Eile #(Falls diese Kreatur ihren Blockern genug Schaden zuf—gen w—rde, um sie zu zerst—ren, kannst du sie den Rest des Schadens dem verteidigenden Spieler zuf—gen lassen. Diese Kreatur kann angreifen und {T}, sobald sie unter deine Kontrolle kommt.)#
+Opfere das Funkenelementar am Ende des Zuges.",,
+Cloud Sprite,Wolkent—nzer,FUT,Kreaturspielstein — Feenwesen,"Fliegend #(Diese Kreatur kann au—er von fliegenden Kreaturen und Kreaturen mit Reichweite nicht geblockt werden.)#
+Der Wolkent—nzer kann nur fliegende Kreaturen blocken.",,
+Assembly-Worker,Montagearbeiter,TSP,Artefaktkreaturspielstein — Montagearbeiter,,,
+Illusion,Illusion,MMA,Kreatur — Illusion,Fliegend,,
+Illusion,Illusion,ZEN,Kreatur — Illusion,,,
+Illusion,Illusion,DDM,Kreatur — Illusion,,,
+Illusion,Illusion,CHK,Kreatur — Illusion,Fliegend,,
+Shapeshifter,Gestaltwandler,C15,Kreatur — Gestaltwandler,Wandelwicht #(Diese Karte hat zu jedem Zeitpunkt alle Kreaturentypen.)#,,
+Shapeshifter,Gestaltwandler,LRW,Kreatur — Gestaltwandler,Wandelwicht #(Diese Karte hat zu jedem Zeitpunkt alle Kreaturentypen.)#,,

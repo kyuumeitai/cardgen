@@ -1,0 +1,49 @@
+Japanese:
+Card Title - Motoya Aporo Std @ 7.25pt
+Pronunciation - DFHS Gothic Std @ 3pt
+Card Type  -Motoya Aporo Std @ 6.25pt
+Rules Text - DF Maru Gothic Std @ varying sizes
+Flavor Text - DF Kyo Ka Sho Std @ 6pt
+
+Russian:
+Card Title - Minion Pro Cond @ 11pt
+Card Type  - Minion Pro Cond @ 9pt
+Rules Text - Minion Pro @ varying sizes
+Flavor Text - Minion Pro @ varying sizes?
+
+These don't include the new Japanese MotoyaAporo font used for card names and types.
+
+* Japanese:
+
+** DF Heisei Gothic W5 for furigana for names
+** DFTF Leisho Std W5 for names and types prior to M15
+** DF Maru Gothic W3 for abilities and reminder text
+** DF Kyokasho Std W4 for flavor text
+
+* Korean:
+
+** Yoon Iris B for names and types prior to Magic Origins
+** Yoon Iris L for other texts prior to Magic Origins
+
+** Yoon Sapphire B for names and types
+** Yoon Sapphire M for other texts
+
+* Russian:
+
+** Minion Pro Bold Cn for names and types: MinionPro-BoldCn.ttf
+** Minion Pro Cn for abilities: MinionPro-Cn.ttf
+** Minion Pro Cn It for reminder text and flavor text: MinionPro-CnItalic.ttf
+
+* Simplified Chinese:
+
+** DF Song W9-GB for names
+** DF Kai W5-A for types
+** DF Hei GB Std W3 for abilities and reminder text
+** DF Kai W5-GB for flavor text
+
+* Traditional Chinese:
+
+** DF Ming Std W9 for names
+** DF Kaishu Std W5 for types
+** DF Yuan Std W3 for abilities and reminder text
+** DF Fang Song Std W6 for flavor text

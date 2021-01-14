@@ -1,0 +1,57 @@
+
+[prompt]
+
+[card generation]
+card.artist.gears = 0
+
+[fonts]
+font.title = 30, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf, centerX:true
+font.title.russian = 30, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf, centerX:true
+font.title.japanese = 30, mtgnamej.ttf, centerX:true
+font.type = 22, JaceBeleren-Bold.ttf/JaceBeleren-BoldItalic.ttf>BelerenB.ttf, centerX:true
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf, centerX:true
+font.type.japanese = 30, mtgnamej.ttf, centerX:true
+font.text = 20, MPlantin.ttf/MPlantinI.ttf, leading:45
+font.text.russian = 20, MinionPro-Cn.ttf/MinionPro-CnItalic.ttf, leading:45
+font.text.japanese = 14, mtgrulej.ttf, leading:30
+font.chaos = 20, MPlantin.ttf/MPlantinI.ttf, leading:45
+font.chaos.russian = 20, MinionPro-Cn.ttf/MinionPro-CnItalic.ttf, leading:45
+font.chaos.japanese = 14, mtgrulej.ttf, leading:30
+font.artist = 16, BelerenBoldSmallCaps.ttf, centerX:true
+font.copyright = 12, MPlantin.ttf
+font.collection = 12, GothamMedium.ttf, leading:40
+font.promo.collection = 12, GothamMedium.ttf, leading:40
+font.promo.text.type = 12, GothamMedium.ttf
+font.story.text.type = 12, GothamMedium.ttf
+
+[layout]
+title.x = 525
+title.y = 70
+art.top = 0
+art.left = 0
+art.bottom = 736
+art.right = 1050
+art.xlhq.top = -28
+art.xlhq.left = -27
+art.xlhq.bottom = 765
+art.xlhq.right = 1077
+type.x = 525
+type.y = 524
+rarity.center.y = 516
+rarity.right = 823
+rarity.height = 24
+rarity.width = 0
+text.top = 535
+text.left = 115
+text.bottom = 615
+text.right = 931
+chaos.top = 628
+chaos.left = 190
+chaos.bottom = 690
+chaos.right = 938
+artist.x = 525
+artist.y = 722
+collection.x = 325
+collection.y = 736
+copyright.x = 525
+copyright.y = 736

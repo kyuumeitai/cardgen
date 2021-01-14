@@ -1,4 +1,4 @@
-<?
+<?php
 ////////////////////////////////////////////////////////////////////////
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -18,6 +18,7 @@ require_once 'version.php';
 set_time_limit(0);
 ini_set('memory_limit', '1024M');
 srand((float) microtime() * 10000000);
+date_default_timezone_set("America/Los_Angeles");
 
 $config = parse_ini_file('config/config.txt', false);
 
@@ -51,12 +52,51 @@ function getClassFile ($fileName, $path = '/') {
 }
 
 function warn ($message) {
+	global $config;
 	echo "WARNING: $message";
+	if ($config['log.errors.and.warnings']) {
+		$file = $config['cardgen.error.log'];
+		file_put_contents("$file", "WARNING: $message\r\n", FILE_APPEND);
+	}
 }
 
 function error ($message) {
+	global $config;
 	echo "\n\nERROR: $message";
-	exit();
+	if ($config['exit.on.error']) exit();
+	if ($config['log.errors.and.warnings']) {
+		$file = $config['cardgen.error.log'];
+		file_put_contents("$file", "ERROR: $message\r\n", FILE_APPEND);
+	}
+}
+
+function parse_csv_file($csvfile) {
+    $array = Array();
+    $rowcount = 0;
+    if (($handle = fopen($csvfile, "r")) !== FALSE) {
+        $max_line_length = defined('MAX_LINE_LENGTH') ? MAX_LINE_LENGTH : 10000;
+        $header = fgetcsv($handle, $max_line_length);
+        $header_colcount = count($header);
+        while (($row = fgetcsv($handle, $max_line_length)) !== FALSE) {
+            $row_colcount = count($row);
+            if ($row_colcount == $header_colcount) {
+                $entry = array_combine($header, $row);
+                $array[] = $entry;
+            }
+            else {
+                error_log("csvreader: Invalid number of columns at line " . ($rowcount + 2) . " (row " . ($rowcount + 1) . "). Expected=$header_colcount Got=$row_colcount");
+                return null;
+            }
+            $rowcount++;
+        }
+        //echo "Totally $rowcount rows found\n";
+        fclose($handle);
+    }
+    else {
+        error_log("csvreader: Could not read CSV \"$csvfile\"");
+        return null;
+    }
+    return $array;
 }
 
 // Converts a two column CSV into an associative array.
@@ -66,6 +106,16 @@ function csvToArray ($fileName) {
 	if (!$file) error('Unable to open file: ' . $fileName);
 	while (($data = fgetcsv($file, 6000, ',')) !== FALSE)
 		$array[(string)strtolower($data[0])] = trim($data[1]);
+	fclose($file);
+	return $array;
+}
+
+function csvToArray13 ($fileName) {
+	$array = array();
+	$file = fopen_utf8($fileName, 'r');
+	if (!$file) error('Unable to open file: ' . $fileName);
+	while (($data = fgetcsv($file, 6000, ',')) !== FALSE)
+		$array[(string)strtolower($data[0])] = array(trim($data[1]), isset($data[2]) ? trim($data[2]) : "", isset($data[3]) ? trim($data[3]) : "", isset($data[4]) ? trim($data[4]) : "", isset($data[5]) ? trim($data[5]) : "", isset($data[6]) ? trim($data[6]) : "", isset($data[7]) ? trim($data[7]) : "", isset($data[8]) ? trim($data[8]) : "", isset($data[9]) ? trim($data[9]) : "", isset($data[10]) ? trim($data[10]) : "", isset($data[11]) ? trim($data[11]) : "", isset($data[12]) ? trim($data[12]) : "", isset($data[13]) ? trim($data[13]) : "");
 	fclose($file);
 	return $array;
 }
@@ -260,49 +310,229 @@ function fopen_utf8 ($filename, $mode) {
 	return $file;
 }
 
-function url_validate( $link )
-    {        
-        $url_parts = @parse_url( $link );
+function getInnerSubstring($string,$delim){
+	$string = explode($delim, $string, 3);
+	return isset($string[1]) ? $string[1] : '';
+}
+	
+function getLastSubstring($string,$delim){
+	$string = explode($delim, $string, 3);
+	return isset($string[2]) ? $string[2] : '';
+}
 
-        if ( empty( $url_parts["host"] ) ) return( false );
+function in_array_r($needle, $haystack, $strict = true) {
+	foreach ($haystack as $item) {
+		if (($strict ? $item === $needle : $item == $needle) || (is_array($item) && in_array_r($needle, $item, $strict))) {
+			return true;
+		}
+	}
+ 
+   return false;
+}
 
-        if ( !empty( $url_parts["path"] ) )
-        {
-            $documentpath = $url_parts["path"];
+function objectToArray($o) { 
+	$a = array(); 
+	foreach ($o as $k => $v) $a[$k] = (is_array($v) || is_object($v)) ? objectToArray($v): $v;
+	return $a; 
+}
+
+function array_unique_multidimensional($input) {
+	$serialized = array_map('serialize', $input);
+	$unique = array_unique($serialized);
+	return array_intersect_key($input, $unique);
+}
+
+function objArraySearch($array,$index,$value){
+	$item = null;
+	foreach($array as $arrayInf) {
+		if($arrayInf->{$index}==$value){
+			return $arrayInf;
+		}
+	}
+    return $item;
+}
+
+function objArraySearchMultiple($array,$index1,$index2,$value1,$value2){
+	$item = null;
+	foreach($array as $arrayInf) {
+		if(strtolower($arrayInf->{$index1})==$value1){
+			$array2[] =  $arrayInf;
+		}
+	}
+	foreach($array2 as $arrayInf) {
+		if(strtolower($arrayInf->{$index2})==$value2){
+			return $arrayInf;
+		}
+	}
+    return $item;
+}
+
+function strposa($haystack, $needle, $offset=0) {
+    if(!is_array($needle)) $needle = array($needle);
+    foreach($needle as $query) {
+        if(strpos($haystack, $query, $offset) !== false) return true; // stop on first true result
+    }
+    return false;
+}
+
+/* strpos that takes an array of values to match against a string
+ * note the stupid argument order (to match strpos)
+ */
+function strpos_arr($haystack, $needle) {
+    if(!is_array($needle)) $needle = array($needle);
+    foreach($needle as $what) {
+        if(($pos = strpos($haystack, $what))!==false) return $pos;
+    }
+    return false;
+}
+
+function str_split_unicode($str, $l = 0) {
+    if ($l > 0) {
+        $ret = array();
+        $len = mb_strlen($str, "UTF-8");
+        for ($i = 0; $i < $len; $i += $l) {
+            $ret[] = mb_substr($str, $i, $l, "UTF-8");
         }
-        else
-        {
-            $documentpath = "/";
-        }
+        return $ret;
+    }
+    return preg_split("//u", $str, -1, PREG_SPLIT_NO_EMPTY);
+}
 
-        if ( !empty( $url_parts["query"] ) )
-        {
-            $documentpath .= "?" . $url_parts["query"];
-        }
+function smart_wordwrap($string, $width = 10, $break = "\n") {
+	// split on problem words over the line length
+	$pattern = sprintf('/([^ ]{%d,})/', $width);
+	$output = '';
+	$words = preg_split($pattern, $string, -1, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
+	
+	foreach ($words as $word) {
+		if (false !== strpos($word, ' ')) {
+			// normal behaviour, rebuild the string
+			$output .= $word;
+		} else {
+			// work out how many characters would be on the current line
+			$wrapped = explode($break, wordwrap($output, $width, $break));
+			$count = $width - (strlen(end($wrapped)) % $width);
+	
+			// fill the current line and add a break
+			$output .= substr($word, 0, $count) . $break;
+	
+			// wrap any remaining characters from the problem word
+			$output .= wordwrap(substr($word, $count), $width, $break, true);
+		}
+	}
+}
+/**
+ * Wraps any string to a given number of characters.
+ *
+ * This implementation is multi-byte aware and relies on {@link
+ * http://www.php.net/manual/en/book.mbstring.php PHP's multibyte
+ * string extension}.
+ *
+ * @see wordwrap()
+ * @link https://api.drupal.org/api/drupal/core%21vendor%21zendframework%21zend-stdlib%21Zend%21Stdlib%21StringWrapper%21AbstractStringWrapper.php/function/AbstractStringWrapper%3A%3AwordWrap/8
+ * @param string $string
+ *   The input string.
+ * @param int $width [optional]
+ *   The number of characters at which <var>$string</var> will be
+ *   wrapped. Defaults to <code>75</code>.
+ * @param string $break [optional]
+ *   The line is broken using the optional break parameter. Defaults
+ *   to <code>"\n"</code>.
+ * @param boolean $cut [optional]
+ *   If the <var>$cut</var> is set to <code>TRUE</code>, the string is
+ *   always wrapped at or before the specified <var>$width</var>. So if
+ *   you have a word that is larger than the given <var>$width</var>, it
+ *   is broken apart. Defaults to <code>FALSE</code>.
+ * @return string
+ *   Returns the given <var>$string</var> wrapped at the specified
+ *   <var>$width</var>.
+ */
+function mb_wordwrap($string, $width = 75, $break = "\n", $cut = false) {
+  $string = (string) $string;
+  if ($string === '') {
+    return '';
+  }
 
-        $host = $url_parts["host"];
-        $port = 80;
-        // Now (HTTP-)GET $documentpath at $host";
+  $break = (string) $break;
+  if ($break === '') {
+    trigger_error('Break string cannot be empty', E_USER_ERROR);
+  }
 
-        if (empty( $port ) ) $port = "80";
-        $socket = @fsockopen( $host, $port, $errno, $errstr, 30 );
-        if (!$socket)
-        {
-            return(false);
-        }
-        else
-        {
-            fwrite ($socket, "HEAD ".$documentpath." HTTP/1.0\r\nHost: $host\r\n\r\n");
-            $http_response = fgets( $socket, 22 );
-            
-            if ( ereg("200 OK", $http_response, $regs ) )
-            {
-                return(true);
-                fclose( $socket );
-            } else
-            {
-                return(false);
-            }
+  $width = (int) $width;
+  if ($width === 0 && $cut) {
+    trigger_error('Cannot force cut when width is zero', E_USER_ERROR);
+  }
+
+  if (strlen($string) === mb_strlen($string)) {
+    return wordwrap($string, $width, $break, $cut);
+  }
+
+  $stringWidth = mb_strlen($string);
+  $breakWidth = mb_strlen($break);
+
+  $result = '';
+  $lastStart = $lastSpace = 0;
+
+  for ($current = 0; $current < $stringWidth; $current++) {
+    $char = mb_substr($string, $current, 1);
+
+    $possibleBreak = $char;
+    if ($breakWidth !== 1) {
+      $possibleBreak = mb_substr($string, $current, $breakWidth);
+    }
+
+    if ($possibleBreak === $break) {
+      $result .= mb_substr($string, $lastStart, $current - $lastStart + $breakWidth);
+      $current += $breakWidth - 1;
+      $lastStart = $lastSpace = $current + 1;
+      continue;
+    }
+
+    if ($char === ' ') {
+      if ($current - $lastStart >= $width) {
+        $result .= mb_substr($string, $lastStart, $current - $lastStart) . $break;
+        $lastStart = $current + 1;
+      }
+
+      $lastSpace = $current;
+      continue;
+    }
+
+    if ($current - $lastStart >= $width && $cut && $lastStart >= $lastSpace) {
+      $result .= mb_substr($string, $lastStart, $current - $lastStart) . $break;
+      $lastStart = $lastSpace = $current;
+      continue;
+    }
+
+    if ($current - $lastStart >= $width && $lastStart < $lastSpace) {
+      $result .= mb_substr($string, $lastStart, $lastSpace - $lastStart) . $break;
+      $lastStart = $lastSpace = $lastSpace + 1;
+      continue;
+    }
+  }
+
+  if ($lastStart !== $current) {
+    $result .= mb_substr($string, $lastStart, $current - $lastStart);
+  }
+
+  return $result;
+}
+
+function imagettftextSp($image, $size, $angle, $x, $y, $color, $font, $text, $spacing = 0) {
+    if ($spacing == 0) {
+        imagettftext($image, $size, $angle, $x, $y, $color, $font, $text);
+    } else {
+        $temp_x = $x;
+        $temp_y = $y;
+        //to avoid special char problems
+        $char_array = preg_split('//u',$text, -1, PREG_SPLIT_NO_EMPTY);
+        foreach($char_array as $char) {
+            imagettftext($image, $size, $angle, $temp_x, $temp_y, $color, $font, $char);
+            $bbox = imagettfbbox($size, 0, $font, $char);
+            $temp_x += cos(deg2rad($angle)) * ($spacing + ($bbox[2] - $bbox[0]));
+            $temp_y -= sin(deg2rad($angle)) * ($spacing + ($bbox[2] - $bbox[0]));
         }
     }
+}
+
 ?>
