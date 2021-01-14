@@ -1,0 +1,20 @@
+Aswan Jaguar,AST,G,Creature — Jaguar,2\2,,R,{1}{G}{G},"When Aswan Jaguar comes into play, choose a random creature type from those in target opponent's deck.
+{G}{G},{T}: Bury target creature of the chosen type.",,Pat Morrissey,
+Call from the Grave,AST,B,Sorcery,,,R,{2}{B},Put a random creature from a random graveyard into play under your control. Call from the Grave deals to you an amount of damage equal to that creature's casting cost.,,Quinton Hoover,
+Faerie Dragon,AST,G,Creature — Dragon,1\3,,R,{2}{G}{G},"Flying
+{1}{G}{G}: Play a random effect.",,NéNé Thomas,
+Gem Bazaar,AST,Lnd,Land,,,R,,"When Gem Bazaar comes into play, choose a random color.
+{T}: Add to your mana pool one mana of the color last chosen. Then choose a random color.",,Liz Danforth,
+Goblin Polka Band,AST,R,Creature — Goblin,1\1,,R,{R}{R},"{2},{T}, Pay {R} for each target: Tap any number of random target creatures. Goblins tapped in this way do not untap during their controllers' next untap phases.",,Quinton Hoover,
+Necropolis of Azar,AST,B,Enchantment,,,R,{2}{B}{B},"Whenever a non-black creature is put into any graveyard from play, put a husk counter on Necropolis of Azar.
+{5}, Remove a husk counter from Necropolis of Azar: Put a Spawn of Azar token into play. Treat this token as a black creature with a random power and toughness, each no less than 1 and no greater than 3, that has swampwalk. #(If defending player controls any swamps this creature is unblockable.)#",,Rob Alexander,
+Orcish Catapult,AST,R,Instant,,,R,{X}{R}{R},Randomly distribute X -0/-1 counters among a random number of random target creatures.,,Melissa Benson,
+Pandora's Box,AST,Art,Artifact,,,R,{5},"{3},{T}: Choose a random creature card from all players' decks. For each player, flip a coin. If the flip ends up heads, put a token creature into play and treat it as though an exact copy of the chosen creature card were just played.",,Amy Weber,
+Power Struggle,AST,U,Enchantment,,,R,{2}{U}{U}{U},"During each player's upkeep, that player exchanges control of random target artifact, creature or land he or she controls, for control of random target permanent of the same type that a random opponent controls.",,Mark Tedin,
+Prismatic Dragon,AST,W,Creature — Dragon,2\3,,R,{2}{W}{W},"Flying
+During your upkeep, Prismatic Dragon becomes a random color permanently.
+{2}: Prismatic Dragon becomes a random color permanently. ",,Amy Weber,
+Rainbow Knights,AST,W,Creature — Human Knight,2\1,,R,{W}{W},"When Rainbow Knights comes into play, it gains protection from a random color permanently.
+{1}: First strike until end of turn.
+{W}{W}: +0/+0, +1/+0, or +2/+0 until end of turn, chosen at random. ",,Douglas Shuler,
+Whimsy,AST,U,Sorcery,,,R,{X}{U}{U},Play X random fast effects.,,Anson Maddocks,

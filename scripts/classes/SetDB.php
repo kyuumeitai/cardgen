@@ -1,4 +1,4 @@
-<?
+<?php
 ////////////////////////////////////////////////////////////////////////
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -17,6 +17,9 @@ class SetDB {
 	private $setToMainSet = array();
 	private $mainSetToOrdinal = array();
 	private $pre8thSets = array();
+	private $m15Sets = array();
+	private $eighthSets = array();
+	private $setToDate = array();
 
 	public function __construct () {
 		$file = fopen_utf8('data/sets.txt', 'r');
@@ -32,7 +35,7 @@ class SetDB {
 			$abbreviations = explode(',', substr($line, 0, $spaceIndex));
 			$mainSet = "";
 			foreach($abbreviations as $set)
-				if (strlen($mainSet) < strlen($set) &&  strlen($set)<=3) $mainSet = $set;
+				if (strlen($mainSet) < strlen($set) && strlen($set)<=3 || substr($set, 0, -3) == 'MPS_') $mainSet = $set;
 			$mainSet = strtoupper($mainSet);
 
 			$this->setToMainSet[(string)strtoupper($name)] = $mainSet;
@@ -53,6 +56,23 @@ class SetDB {
 			if (!$set) error('Error parsing "data/sets-pre8th.txt". Unknown set: ' . $line);
 			$this->pre8thSets[(string)$set] = true;
 		}
+		$file = fopen_utf8('data/sets-eighth.txt', 'r');
+		while (!feof($file)) {
+			$line = trim(fgets($file, 6000));
+			if (!$line) continue;
+			$set = $this->normalize($line);
+			if (!$set) error('Error parsing "data/sets-eighth.txt". Unknown set: ' . $line);
+			$this->eighthSets[(string)$set] = true;
+		}
+		$file = fopen_utf8('data/sets-m15.txt', 'r');
+		while (!feof($file)) {
+			$line = trim(fgets($file, 6000));
+			if (!$line) continue;
+			$set = $this->normalize($line);
+			if (!$set) error('Error parsing "data/sets-m15.txt". Unknown set: ' . $line);
+			$this->m15Sets[(string)$set] = true;
+		}
+		$this->setToDate = csvToArray('data/setToDate.csv');
 	}
 
 	public function normalize ($set) {
@@ -69,6 +89,22 @@ class SetDB {
 
 	public function isPre8th ($set) {
 		return @$this->pre8thSets[(string)$this->normalize($set)];
+	}
+	
+	public function isEighth ($set) {
+		return @$this->eighthSets[(string)$this->normalize($set)];
+	}
+	
+	public function isM15 ($set) {
+		return @$this->m15Sets[(string)$this->normalize($set)];
+	}
+	
+	public function getSetDate ($set) {
+		$date = null;
+		foreach ($this->getAbbrevs($set) as $abbrev) {
+			if (isset($this->setToDate[strtolower($abbrev)])) $date = $this->setToDate[strtolower($abbrev)];
+			if ($date) return $this->setToDate[strtolower($abbrev)];
+		}
 	}
 }
 

@@ -1,4 +1,4 @@
-<?
+<?php
 ////////////////////////////////////////////////////////////////////////
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -25,7 +25,11 @@ class ImageWriter {
 	public $decklistOnlyOutput;
 	public $titleToLevel;
 	public $titleToTransform;
+	public $titleToPlaneswalker4;
+	//public $titleToRendererOverride;
 	public $renderers = array();
+	public $titleToAltSet = array();
+	private $promoSet = array();
 
 	public function __construct () {
 		global $config;
@@ -37,9 +41,12 @@ class ImageWriter {
 		$this->fontSizeDB = new FontSizeDB($config['card.text.use.font.size.cache']);
 		$this->titleToLandColors = csvToArray('data/titleToLandColors.csv');
 		$this->titleToLevel = csvToArray('data/eighth/titleToLevel.csv');
-		$this->titleToTransform = csvToArray('data/eighth/titleToTransform.csv');
+		$this->titleToTransform = csvToArray('data/titleToTransform.csv');
+		$this->titleToPlaneswalker2 = csvToArray('data/titleToPlaneswalker2.csv');
+		$this->titleToPlaneswalker4 = csvToArray('data/titleToPlaneswalker4.csv');
 		$this->convertor = new Convertor();
 	}
+
 
 	public function setOutputType ($pagedOutput, $decklistOnlyOutput) {
 		$this->pagedOutput = $pagedOutput;
@@ -58,7 +65,7 @@ class ImageWriter {
 		if ($this->decklistOnlyOutput || $config['render.decklist']) {
 			$count = count($decklist->cards);
 			if ($count <= 75) {
-				// 75 or less and we assume this is a standard 60 card deck with upto a 15
+				// 75 or less and we assume this is a standard 60 card deck with up to a 15
 				// card sideboard.
 				$decklistRenderer = new DecklistRenderer();
 				$decklistRenderer->cards = $decklist->cards;
@@ -71,7 +78,7 @@ class ImageWriter {
 				$cardsPerDeckpage = isset($config['output.decklist.cardsperpage']) ? $config['output.decklist.cardsperpage'] : 50;
 				echo "\n";
 
-				warn('Large/Highlander deck detected, going to ' . $cardsPerDeckpage . ' card per page lists.');
+				warn('Large/Commander deck detected, going to ' . $cardsPerDeckpage . " card per page lists.\n");
 
 				$cardsRendered = 0 ;
 				while ($cardsRendered < $count) {
@@ -130,33 +137,181 @@ class ImageWriter {
 
 	public function getCardRenderer (Card $card) {
 		global $config;
+		
+		$isPre8th = $this->setDB->isPre8th($card->getDisplaySet()) && !$card->promo;
+		$isEighth = $this->setDB->isEighth($card->getDisplaySet()) && !$card->promo;
+		$isM15 = $this->setDB->isM15($card->getDisplaySet()) && !$card->promo;
 
 		$renderer = array();
+		$promoSet = explode(',', $config['card.promo.symbols']);
+		$override = $this->titleToRendererOverride($card->title, $card->set, $card->pic);
 		// Determine the correct CardRenderer.
-		if (strpos($card->title, "/") !== FALSE)
-			$renderer[] = new SplitRenderer($this->setDB);
-		else if(array_key_exists(strtolower($card->title), $this->titleToLevel))
-			$renderer[] = new LevelRenderer($this->setDB);
+		// Check overrides.
+		if ($override && !$this instanceof TransformRenderer && (in_array($card->set, $promoSet) || $card->set == 'TD0')) {
+			switch ($override) {
+				case 'PreEighth' : {
+					switch ($config['render.preEighth']) {
+						case 0 : {
+							switch ($config['render.eighth']) {
+								case 0 : $override = 'M15'; break;
+								case 1 : $override = 'Eighth'; break;
+							}
+						} break;
+						case 1 : break;
+					}
+				} break;
+				case 'Eighth' : {
+					switch ($config['render.eighth']) {
+						case 0 : {
+							switch ($config['render.m15']) {
+								case 0 : $override = 'PreEithth'; break;
+								case 1 : $override = 'M15'; break;
+							}
+						} break;
+						case 1 : break;
+					}
+				} break;
+				case 'Planeswalker' : {
+					switch ($config['render.eighth']) {
+						case 0 : $override = 'M15Planeswalker'; break;
+						case 1 : break;
+					}
+				} break;
+				case 'Planeswalker4' : {
+					switch ($config['render.eighth']) {
+						case 0 : $override = 'M15Planeswalker4'; break;
+						case 1 : break;
+					}
+				} break;
+				case 'M15' : {
+					switch ($config['render.m15']) {
+						case 0 : {
+							switch ($config['render.eighth']) {
+								case 0 : $override = 'PreEighth'; break;
+								case 1 : $override = 'Eighth'; break;
+							}
+						} break;
+						case 1 : break;
+					}
+				} break;
+				case 'M15Planeswalker' : {
+					switch ($config['render.m15']) {
+						case 0 : $override = 'Planeswalker'; break;
+						case 1 : break;
+					}
+				} break;
+				case 'M15Planeswalker4' : {
+					switch ($config['render.m15']) {
+						case 0 : $override = 'Planeswalker4'; break;
+						case 1 : break;
+					}
+				} break;
+				default : break;
+			}
+			$override .= 'Renderer';
+			$renderer[] = new $override($this->setDB);
+		}
+		// Token cards
+		else if (($card->isToken()||$card->isEmblem()) && $config['render.token']) {
+			$renderer[] = new TokenRenderer($this->setDB);
+		}
+		// Split Cards
+		else if (strpos($card->title, "/") !== FALSE && !$card->isToken()) {
+				$renderer[] = new SplitRenderer($this->setDB);
+		}
+		// Leveler Cards
+		else if(array_key_exists(strtolower($card->title), $this->titleToLevel)) {
+			if ($isM15 == FALSE) $renderer[] = new LevelRenderer($this->setDB);
+			else $renderer[] = new M15LevelRenderer($this->setDB);
+		}
+		// Transform Cards
 		else if(array_key_exists(strtolower($card->title), $this->titleToTransform) && strpos($card->legal, "\n-----\n") !== FALSE) {
-			$renderer[] = new TransformRenderer($this->setDB, $this->artDB, "day");
-			$renderer[] = new TransformRenderer($this->setDB, $this->artDB, "night");
-		} else if(strpos($card->legal, "\n-----\n") !== FALSE)
+			$side1 = $this->titleToTransform[strtolower($card->title)];
+			$title2 = preg_match("/\n-----\n(.*?)\n/s", $card->legal, $matches);
+			$side2 = @$this->titleToTransform[strtolower($matches[1])];
+			if (!isset($side2)) $side2 = 'night';
+			
+			$renderer[] = new TransformRenderer($this->setDB, $this->artDB, "$side1");
+			if ($config['card.transform.as.split'] == FALSE) {
+				$renderer[] = new TransformRenderer($this->setDB, $this->artDB, "$side2");
+			}
+		}
+		// Flip Cards
+		else if(strpos($card->legal, "\n-----\n") !== FALSE) {
 			$renderer[] = new EighthFlipRenderer($this->setDB);
-		else if ($card->set == "VAN" && $config['render.vanguard'])
+		}
+		// Vanguard Cards
+		else if (($card->set == "VAN"||$card->set == "VG") && $config['render.vanguard']) {
 			$renderer[] = new VanguardRenderer($this->setDB);
-		else if (strpos($card->title, "Jace, the Mind Sculptor")!== FALSE && $config['render.planeswalker'])
+		}
+		// Planeswalkers with 2 abilities
+			//M15 Style
+		else if(array_key_exists(strtolower($card->title), $this->titleToPlaneswalker2) && $this->setDB->isM15($card->getDisplaySet()) && $config['render.planeswalker'] && $config['render.m15']) {				
+			$renderer[] = new M15PlanesWalker2Renderer($this->setDB);
+		} 
+		// Planeswalkers with 4 abilities
+			//M15 Style
+		else if(array_key_exists(strtolower($card->title), $this->titleToPlaneswalker4) && $this->setDB->isM15($card->getDisplaySet()) && $config['render.planeswalker'] && $config['render.m15']) {				
+			$renderer[] = new M15PlanesWalker4Renderer($this->setDB);
+		} 
+			//Eighth Style as M15 Style
+		else if(array_key_exists(strtolower($card->title), $this->titleToPlaneswalker4) && !$this->setDB->isM15($card->getDisplaySet()) && $config['render.planeswalker'] && !$config['render.eighth']) {				
+			$renderer[] = new M15PlanesWalker4Renderer($this->setDB);
+		} 
+			//Eighth Style
+		else if(array_key_exists(strtolower($card->title), $this->titleToPlaneswalker4) && $config['render.planeswalker']) {				
 			$renderer[] = new PlanesWalker4Renderer($this->setDB);
-		else if (strpos($card->englishType, "Planeswalker")!== FALSE && $config['render.planeswalker'])
+		}
+		// Planeswalkers with 3 abilities
+			// M15 Style Planeswalkers
+		else if (strpos($card->englishType, "Planeswalker")!== FALSE && $this->setDB->isM15($card->getDisplaySet()) && $config['render.planeswalker'] && $config['render.m15']) {
+			$renderer[] = new M15PlanesWalkerRenderer($this->setDB);
+		}
+			// Eighth Style as M15 Style
+		else if (strpos($card->englishType, "Planeswalker")!== FALSE && $config['render.planeswalker'] && !$config['render.eighth']) {
+			$renderer[] = new M15PlanesWalkerRenderer($this->setDB);
+		}
+			// Eighth Style Planeswalkers
+		else if (strpos($card->englishType, "Planeswalker")!== FALSE && $config['render.planeswalker']) {
 			$renderer[] = new PlanesWalkerRenderer($this->setDB);
-		else if (strpos($card->englishType, "Plane")!== FALSE && $config['render.plane'])
+		}
+		// M15 Planechase Plane and Phenomenon
+		else if ((strpos($card->englishType, "Plane") !== FALSE  || strpos($card->englishType, "Phenomenon") !== FALSE) && $config['render.plane'] && $isM15 !== false) {
+			$renderer[] = new M15PlaneRenderer($this->setDB);
+		}
+		// Planechase Plane and Phenomenon
+		else if ((strpos($card->englishType, "Plane") !== FALSE  || strpos($card->englishType, "Phenomenon") !== FALSE) && $config['render.plane']) {
 			$renderer[] = new PlaneRenderer($this->setDB);
+		}
+		// M15 Archenemy Scheme
+		else if ($card->isScheme() && $config['render.scheme'] && $isM15 !== false) {
+			$renderer[] = new M15SchemeRenderer($this->setDB);
+		}
+		// Archenemy Scheme
+		else if ($card->isScheme() && $config['render.scheme']) {
+			$renderer[] = new SchemeRenderer($this->setDB);
+		}
+		// Theros Block Hero Cards
+		else if ($card->isHero() && $config['render.hero']) {
+			$renderer[] = new EighthRenderer($this->setDB);
+		}
+		// Everything Else
 		else {
-			$isPre8th = $this->setDB->isPre8th($card->set) && !$card->promo;
+			// Basic Land Style
 			if ($isPre8th && !$config['render.preEighth.basic.land.frames'] && $card->isBasicLand()) $isPre8th = false;
-			if ($config['render.preEighth'] && ($isPre8th || !$config['render.eighth']))
+			// Pre 8th Style
+			if ($config['render.preEighth'] && ($isPre8th || !$config['render.eighth']) && ($isPre8th || !$config['render.m15']))
 				$renderer[] = new PreEighthRenderer($this->setDB);
+			// Pre 8th as 8th Style
+			else if ($config['render.preEighth'] && ($isPre8th || $config['render.eighth']) && ($isPre8th || !$config['render.m15']))
+				$renderer[] = new EighthRenderer($this->setDB);
+			// M15 Style
+			else if ($config['render.m15'] && ($isM15 || !$config['render.eighth']))
+				$renderer[] = new M15Renderer($this->setDB);
+			// Everything Else
 			else if ($config['render.eighth']){
-					$renderer[] = new EighthRenderer($this->setDB);
+				$renderer[] = new EighthRenderer($this->setDB);
+			 
 			}
 		}
 		if (empty($renderer)) error('No renderer enabled for card: ' . $card);
@@ -175,12 +330,49 @@ class ImageWriter {
 	public function cleanOutputName ($card, $renderer) {
 		global $config;
 
+		$suffix = $config['output.suffix'];
 		$outputName = $renderer->getCardName();
-		if ($card->pic) $outputName .= ' (' . $card->pic . ')';
-		$outputName .= $config['output.suffix'];
+		if ($card->isToken() && $config['output.tokens.for.forge'] == false) {
+			$outputName .= ' Token';
+			if ($card->pic && $card->pic != 'token' && $config['output.short.pic'] != false) $outputName .= $card->pic;
+			else if ($card->pic && $card->pic != 'token') $outputName .= ' (' . $card->pic . ')';
+		}
+		else if ($card->isToken() && $config['output.tokens.for.forge'] != false) {
+			$suffix = null;
+			$outputName = strtolower(str_replace('Art', 'C', $card->color) . '_' . str_replace('*', 'n', $card->pt) . '_' . str_replace(' ', '_', $outputName));
+			$outputName = str_replace('/', '_', $outputName);
+			if ($card->pic) $outputName .= $card->pic;
+			$outputName .= '_' . strtolower($card->set);
+		} else {
+			if ($card->pic && $config['output.short.pic'] != false) $outputName .= $card->pic;
+			else if ($card->pic) $outputName .= ' (' . $card->pic . ')';
+		}
+		$outputName .= $suffix;
 
-		// Filenames can't contain ".
+		// Filenames can't contain " and ?.
 		if (strpos($outputName, '"') !== FALSE) $outputName = str_replace('"', '',  $outputName);
+		if (strpos($outputName, '?') !== FALSE) $outputName = str_replace('?', '',  $outputName);
+		
+		// Add missing special characters to filenames
+		if ($config['output.accent.characters.on.filename'] != false) {
+			$outputName = str_replace('El-Hajjaj', 'El-Hajjâj', $outputName);
+			$outputName = str_replace('Junun', 'Junún', $outputName);
+			$outputName = str_replace('Lim-Dul', 'Lim-Dûl', $outputName);
+			$outputName = str_replace('Jotun', 'Jötun', $outputName);
+			$outputName = str_replace('Ghazban', 'Ghazbán', $outputName);
+			$outputName = str_replace('Ifh-Biff', 'Ifh-Bíff', $outputName);
+			$outputName = str_replace('Juzam', 'Juzám', $outputName);
+			$outputName = str_replace('Khabal', 'Khabál', $outputName);
+			$outputName = str_replace('Marton', 'Márton', $outputName);
+			$outputName = str_replace("Ma'ruf", "Ma'rûf", $outputName);
+			$outputName = str_replace('Deja Vu', 'Déjà Vu', $outputName);
+			$outputName = str_replace('Dandan', 'Dandân', $outputName);
+			$outputName = str_replace('Bosium', 'Bösium', $outputName);
+			$outputName = str_replace('Seance', 'Séance', $outputName);
+			$outputName = str_replace('Saute', 'Sauté', $outputName);
+			$outputName = str_replace('Chicken a la King', 'Chicken à la King', $outputName);
+		}
+		
 		return $outputName;
 	}
 
@@ -312,6 +504,17 @@ class ImageWriter {
 							// Copy it into the page image.
 							$xCoord = $x + $offsetLeft + @$xOffsets[$cardIndex];
 							$yCoord = $y + $offsetTop + @$yOffsets[$cardIndex];
+							if ($this->setDB->isM15($renderer->card->getDisplaySet())) {
+								$width = 720 * 1.05;
+								$height = 1020 * 1.05;
+								$cardImageOversize = imagecreatetruecolor($width, $height);
+								imagecopyresampled($cardImageOversize, $cardImage, 0, 0, 0, 0, $width, $height, 720, 1020);
+								imagedestroy($cardImage);
+								$cardImageTmp = imagecreatetruecolor(736, 1050);
+								imagecopy($cardImageTmp, $cardImageOversize, 0, 0, 9, 9, $width, $height);
+								imagedestroy($cardImageOversize);
+								$cardImage = $cardImageTmp;
+							}
 							if ($tempRotate) {
 								$cardImageTmp = imagerotate($cardImage, 90, 0);
 								imagedestroy($cardImage);
@@ -320,7 +523,7 @@ class ImageWriter {
 								imagecopy($canvas, $cardImage, $xCoord, $yCoord, 0, 0, 1050, 736);
 							} else {
 								imagefilledrectangle($canvas, $xCoord - $borderSize, $yCoord - $borderSize, $xCoord + 736 + $borderSize, $yCoord + 1050 + $borderSize, $black);
-								imagecopy($canvas, $cardImage, $xCoord, $yCoord, 0, 0, 736, 1050);
+								imagecopy($canvas, $cardImage, $xCoord/* + $offsetX*/, $yCoord/* + $offsetY*/, 0, 0, 736, 1050);
 							}
 							imagedestroy($cardImage);
 							$i++;
@@ -369,6 +572,20 @@ class ImageWriter {
 		} else
 			error('Invalid output.extension: ' . $outputExt);
 	}
+	
+	public function titleToRendererOverride ($title, $set, $pic) {
+		$titleToRendererOverride = fopen_utf8("data/titleToRendererOverride.csv", 'rb');
+		if (!$titleToRendererOverride) error('Unable to open file: ' . $titleToRendererOverride);
+		$i = 0;
+		while (($row = fgetcsv($titleToRendererOverride, 300, ',', '"')) !== FALSE) {
+			if($i++ == 0) continue; //skip first line
+			
+			if ($title == $row[0] && $set == $row[1] && $pic == $row[2]) {
+				return (string)$row[3];
+			}
+			continue;
+		}
+	}
 
 	private function getOutputFileName ($outputDir, $fileName) {
 		global $config;
@@ -376,6 +593,7 @@ class ImageWriter {
 		$fileName = str_replace('Avatar: ', '', $fileName);
 		$fileName = str_replace(':', '', $fileName);
 		$fileName = str_replace('/', '', $fileName);
+		$fileName = iconv("UTF-8", "Windows-1252//TRANSLIT", $fileName);
 		return $outputDir . $fileName . '.' . $config['output.extension'];
 	}
 }

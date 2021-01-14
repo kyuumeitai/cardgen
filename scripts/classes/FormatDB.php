@@ -1,4 +1,4 @@
-<?
+<?php
 ////////////////////////////////////////////////////////////////////////
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -73,10 +73,13 @@ class FormatDB {
 
 			$legality[$format] = false;
 			$maindeckLegality[$format] = false;
+			$cardsPerDeckpage = isset($config['output.decklist.cardsperpage']) ? $config['output.decklist.cardsperpage'] : 50;
 
-			if (count($cards) < 60) {
+			if (count($cards) < 60 && count($cards) != $cardsPerDeckpage) {
 				if ($debug) {
+					$count = count($cards);
 					echo "Less than 60 cards.\n";
+					echo "$count";
 					echo "$format legal: false\n";
 				}
 				continue;

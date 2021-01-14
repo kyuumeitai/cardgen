@@ -1,4 +1,4 @@
-<?
+<?php
 ////////////////////////////////////////////////////////////////////////
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -143,6 +143,16 @@ class Font {
 
 	public function hashCode () {
 
+	}
+	
+	public static function getLargestWidth($text, $font, $italic = false) {
+		$strlen = strlen($text);
+		for ($i = 0; $i < $strlen; $i++)
+		{
+			$bbox = imagettfbbox($font->size, 0, $italic ? $font->italic : $font->regular, (binary)$text[$i]);
+			$characterWidth[$text[$i]] = $bbox[2];
+		}
+		return max($characterWidth);
 	}
 }
 

@@ -1,0 +1,125 @@
+
+[prompt]
+
+[card generation]
+card.timeshifted.frames = PLC
+card.multicolor.frames = ;2
+card.multicolor.land.frames = 2;2
+card.multicolor.fetch.land.frames = 1
+card.multicolor.dual.borders = 1
+card.multicolor.grey.title.and.type = 1
+card.artifact.color = 1,2
+card.basic.land.set.symbols = 1
+card.dual.land.symbols = 1
+card.artist.gears = 0
+
+[fonts]
+font.text = 26, MPlantin.ttf/MPlantinI.ttf, leading:28
+font.text.russian = 26, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf, leading:28
+font.text.japanese = 18, mtgrulej.ttf, leading:28
+font.collection = 14, GothamMedium.ttf, leading:40
+font.promo.collection = 14, RelayMediumMTG.ttf, leading:40
+font.artist = 15, BelerenBoldSmallCaps.ttf
+font.copyright = 10, MPlantin.ttf
+
+[fonts - regular]
+font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 32, mtgnamej.ttf
+font.type = 25, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 25, mtgnamej.ttf
+font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+font.pt.russian = 30, MinionPro-BoldCn.ttf, centerY:true centerX:true
+font.pt.japanese = 30, mtgnamej.ttf, centerY:true centerX:true
+
+[fonts - level]
+font.title = 32, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.title.russian = 32, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.title.japanese = 32, mtgnamej.ttf
+font.type = 25, JaceBeleren-Bold.ttf>BelerenB.ttf
+font.type.russian = 25, MinionPro-BoldCn.ttf/MinionPro-CnItalic.ttf
+font.type.japanese = 25, mtgnamej.ttf
+font.collection = 14, GothamMedium.ttf, leading:40
+font.promo.collection = 14, RelayMediumMTG.ttf, leading:40
+font.pt = 30, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+font.pt.russian = 30, MinionPro-BoldCn.ttf, centerY:true centerX:true
+font.pt.japanese = 30, mtgnamej.ttf, centerY:true centerX:true
+font.level = 20, BelerenBoldSmallCaps.ttf, centerY:true centerX:true
+
+[layout - level]
+title.x = 51
+title.y = 84
+cost.right = 677
+cost.top = 51
+cost.top.dual = 53
+cost.size = 35
+art.top = 107
+art.left = 43
+art.bottom = 569
+art.right = 674
+art.xlhq.top = -10
+art.xlhq.left = -12
+art.xlhq.bottom = 1030
+art.xlhq.right = 733
+type.x = 51
+type.y = 616
+rarity.center.y = 604
+rarity.right = 675
+rarity.height = 41
+rarity.width = 76
+
+text.1.top = 653
+text.1.left = 55
+text.1.bottom = 736
+text.1.right = 550
+
+text.2.top = 748
+text.2.left = 148
+text.2.bottom = 844
+text.2.right = 550
+
+text.3.top = 852
+text.3.left = 148
+text.3.bottom = 944
+text.3.right = 550
+
+text.pt.height.adjust = 7
+
+pt.1.center.x = 632
+pt.1.center.y = 694
+pt.1.width = 114
+
+pt.2.center.x = 632
+pt.2.center.y = 792
+pt.2.width = 114
+
+pt.3.center.x = 632
+pt.3.center.y = 896
+pt.3.width = 114
+
+level.2.center.x = 69
+level.2.center.y = 796
+level.2.width = 114
+
+level.3.center.x = 69
+level.3.center.y = 903
+level.3.width = 114
+
+name.2.center.x = 69
+name.2.center.y = 774
+name.2.width = 50
+
+name.3.center.x = 69
+name.3.center.y = 881
+name.3.width = 50
+
+collection.x = 37
+collection.y = 977
+artistOffset.x = 25
+artist.y = 996
+copyrightLeft.x = 40
+copyrightPT.y = 996
+copyright.y = 977
+promo.text.type.x = 142
+promo.text.type.y = 977
